@@ -26,24 +26,24 @@ use Goteo\Library\Text,
 <div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
     <div class="nav_wrapper">
-        <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
+        <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
             <ul class="nav<?/*flipsnap*/?>">
 
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
+                <li><a href="<?= SITE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
+                        <li><a href="<?= SITE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= SITE_URL ?>/subject/">課題を見る</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
+                <li><a href="<?= SITE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= SITE_URL ?>/posts_archive/">活動を知る</a></li>
 
                 <li>
                     <a href="/user/login/">支援する</a>
                     <ul class="sub">
                         <li><a href="/">プロジェクト</a></li>
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+                        <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
                     </ul>
                 </li>
                 <?php include 'view/m/header/menu.html.php' ?>

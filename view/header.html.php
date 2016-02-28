@@ -84,7 +84,7 @@ use Goteo\Library\Text,
     </div>
     <div class="logo_wrapper">
         <div class="inner">
-            <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
+            <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
             <div class="catchcopy">
                 このまち、わたしから未来を創る
             </div>
@@ -93,20 +93,20 @@ use Goteo\Library\Text,
     <div class="nav_wrapper">
         <div class="nav_inner">
             <ul>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
+                <li><a href="<?= SITE_URL ?>">ホーム</a></li>
+                <li><a href="<?= SITE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
+                        <li><a href="<?= SITE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= SITE_URL ?>/subject/">課題を見る</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
+                <li><a href="<?= SITE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= SITE_URL ?>/posts_archive/">活動を知る</a></li>
 
                 <li><a href="/user/login/">支援する</a>
                     <ul class="sub">
                         <li><a href="/">プロジェクト</a></li>
-                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+                        <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
                     </ul>
                 </li>
             </ul>

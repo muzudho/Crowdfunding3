@@ -31,7 +31,7 @@ use Goteo\Core\ACL,
         <?php if( isset( $_SESSION['user']->roles['project_owner'] ) || (isset( $_SESSION['user']->roles['localadmin'] ) && $_SESSION['user']->home == LG_PLACE_NAME)) { ?>
             <li class="create"><a class="button aqua" href="/project/create"><?php echo Text::get('regular-create'); ?></a></li>
         <?php } else { ?>
-            <li class="create"><a class="button aqua" href="<?php echo LOCALGOOD_WP_BASE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
+            <li class="create"><a class="button aqua" href="<?php echo SITE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
         <?php } ?>
         <?php /*<li class="search">
                 <form method="get" action="/discover/results">

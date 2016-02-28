@@ -46,13 +46,13 @@ jQuery(document).ready(function($) {
             </div><!--#to_page_top-->
             <div class="inner cf">
                 <ul>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>
-                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
+                    <li><a href="<?= SITE_URL ?>/about/">LOCAL GOODについて</a></li>
+                    <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+                    <li><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
+                    <li><a href="<?= SITE_URL ?>/user_guide/">ユーザーガイド</a></li>
+                    <li><a href="<?= SITE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
+                    <li><a href="<?= SITE_URL ?>/mailnews/">メルマガ登録</a></li>
+                    <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
                 </ul>
             </div>
         </div>

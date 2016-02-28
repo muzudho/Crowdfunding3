@@ -212,7 +212,7 @@ color:#20B3B2;
     <?/*<p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>*/?>
     <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a><?/*（横浜コミュニティデザイン・ラボ）*/?></p>
     <?/*<p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
-    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+    <p class="crea"><a href="<?php echo SITE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
     <p>
         このメールにお心当たりのない場合は、下記よりメールにてご連絡をお願いします。<br />
         <a href="mailto:<? echo GOTEO_CONTACT_MAIL; ?>"><? echo GOTEO_CONTACT_MAIL; ?></a>

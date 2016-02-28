@@ -514,3 +514,153 @@
 		※削除
 
 ────────────────────────────────────────────────────────────
+2016-02-29 05:07
+
+	解説
+		LOCALGOOD_WP_BASE_URL 定数を止め、SITE_URL に統一します。
+
+/config.php 145
+	×
+		define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost'); // link url in menu bar
+	○
+		※削除
+
+/controller/project.php 411
+	×
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) header("Location:" . LOCALGOOD_WP_BASE_URL . "/challenge");
+	○
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) header("Location:" . SITE_URL . "/challenge");
+
+/view/footer.html.php 36-42
+	×
+                <li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+                <li class="syoutorihikihou"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
+	○
+                <li class="about"><a href="<?= SITE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
+                <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+                <li class="syoutorihikihou"><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
+                <li><a href="<?= SITE_URL ?>/user_guide/">ユーザーガイド</a></li>
+                <li><a href="<?= SITE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
+                <li><a href="<?= SITE_URL ?>/mailnews/">メルマガ登録</a></li>
+                <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
+
+/view/header.html.php 87
+	×
+            <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
+	○
+            <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
+
+/view/header.html.php 96-109
+	×
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
+                    <ul class="sub">
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
+
+                <li><a href="/user/login/">支援する</a>
+                    <ul class="sub">
+                        <li><a href="/">プロジェクト</a></li>
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+	○
+                <li><a href="<?= SITE_URL ?>">ホーム</a></li>
+                <li><a href="<?= SITE_URL ?>/earth_view/">課題を知る</a>
+                    <ul class="sub">
+                        <li><a href="<?= SITE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= SITE_URL ?>/subject/">課題を見る</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= SITE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= SITE_URL ?>/posts_archive/">活動を知る</a></li>
+
+                <li><a href="/user/login/">支援する</a>
+                    <ul class="sub">
+                        <li><a href="/">プロジェクト</a></li>
+                        <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
+
+/view/email/goteo.html.php 215
+	×
+	    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+	○
+	    <p class="crea"><a href="<?php echo SITE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+
+/view/header/menu.html.php 34
+	×
+            <li class="create"><a class="button aqua" href="<?php echo LOCALGOOD_WP_BASE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
+	○
+            <li class="create"><a class="button aqua" href="<?php echo SITE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
+
+/view/m/footer.html.php 49-55
+	×
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
+	○
+                    <li><a href="<?= SITE_URL ?>/about/">LOCAL GOODについて</a></li>
+                    <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+                    <li><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
+                    <li><a href="<?= SITE_URL ?>/user_guide/">ユーザーガイド</a></li>
+                    <li><a href="<?= SITE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
+                    <li><a href="<?= SITE_URL ?>/mailnews/">メルマガ登録</a></li>
+                    <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
+
+/view/m/header.html.php 29-46
+	×
+        <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
+        <div class="nav_inner viewport">
+            <ul class="nav<?/*flipsnap*/?>">
+
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
+                    <ul class="sub">
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
+
+                <li>
+                    <a href="/user/login/">支援する</a>
+                    <ul class="sub">
+                        <li><a href="/">プロジェクト</a></li>
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+	○
+        <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
+        <div class="nav_inner viewport">
+            <ul class="nav<?/*flipsnap*/?>">
+
+                <li><a href="<?= SITE_URL ?>/earth_view/">課題を知る</a>
+                    <ul class="sub">
+                        <li><a href="<?= SITE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                        <li><a href="<?= SITE_URL ?>/subject/">課題を見る</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?= SITE_URL ?>/data/">データを見る</a></li>
+                <li><a href="<?= SITE_URL ?>/posts_archive/">活動を知る</a></li>
+
+                <li>
+                    <a href="/user/login/">支援する</a>
+                    <ul class="sub">
+                        <li><a href="/">プロジェクト</a></li>
+                        <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
+
+/local-settings.php 68
+	×
+		define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost');
+	○
+		※削除
+
+────────────────────────────────────────────────────────────
