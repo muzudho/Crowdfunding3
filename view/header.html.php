@@ -86,7 +86,7 @@ use Goteo\Library\Text,
         <div class="inner">
             <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
             <div class="catchcopy">
-                このまち、わたしから未来を創る
+                みんなでプロジェクトを応援する
             </div>
         </div>
     </div>
