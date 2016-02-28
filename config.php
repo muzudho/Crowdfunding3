@@ -142,7 +142,6 @@ define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 define('SITE_URL'                    , 'http://localhost'); // endpoint url
 define('SRC_URL'                     , 'http://localhost'); // host for statics
 define('SEC_URL'                     , 'http://localhost'); // with SSL certified
-define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
 define('LG_PLACE_NAME'               , 'LOCAL GOOD FUKUOKA');   // this string record in database. `user_login_log` table, `node` field.
 
 //Sessions

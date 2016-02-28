@@ -33,7 +33,7 @@
         </div><!--#to_page_top-->
         <div class="inner cf">
             <ul class="footer_link">
-                <li class="about"><a href="<?= SITE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
+                <li class="about"><a href="<?= SITE_URL ?>/about/">このサイトについて</a></li>
                 <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                 <li class="syoutorihikihou"><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
                 <li><a href="<?= SITE_URL ?>/user_guide/">ユーザーガイド</a></li>
