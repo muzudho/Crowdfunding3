@@ -676,3 +676,31 @@
             <span>クラウド・ファウンディング・サイトを自作する人向けのデモ・サイト</span>
 
 ────────────────────────────────────────────────────────────
+2016-02-29 06:34
+
+	解説
+		キャッチコピーを変更。
+
+/view/header.html.php 89
+	×
+                このまち、わたしから未来を創る
+	○
+                みんなでプロジェクトを応援する
+
+────────────────────────────────────────────────────────────
+2016-02-29 07:36
+
+	解説
+		LOG_PATH 定数は使っていないので削除。
+
+/config.php 145
+	×
+		define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');	○
+		※削除
+
+/local-settings.php 68
+	×
+		define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');	○
+		※削除
+
+────────────────────────────────────────────────────────────
