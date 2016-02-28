@@ -88,7 +88,6 @@ use Goteo\Library\Text,
             <div class="catchcopy">
                 このまち、わたしから未来を創る
             </div>
-            <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
         </div>
     </div>
     <div class="nav_wrapper">

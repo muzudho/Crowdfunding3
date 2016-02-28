@@ -46,7 +46,6 @@ use Goteo\Library\Text,
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
                 <?php include 'view/m/header/menu.html.php' ?>
             </ul>
         </div>

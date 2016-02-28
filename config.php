@@ -144,7 +144,6 @@ define('SRC_URL'                     , 'http://localhost'); // host for statics
 define('SEC_URL'                     , 'http://localhost'); // with SSL certified
 define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost'); // link url in menu bar
 define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');
-define('LG_INTEGRATION_URL'          , '----integration site url----');
 define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
 define('LG_PLACE_NAME'               , 'LOCAL GOOD FUKUOKA');   // this string record in database. `user_login_log` table, `node` field.
 

@@ -450,4 +450,67 @@
 //        define('GOTEO_DB_SCHEMA'             , 'crowdfunding3');
 //
 ────────────────────────────────────────────────────────────
+2016-02-29 03:13
 
+	解説
+		「LOCAL GOOD全国版トップページ」リンクを外します。
+
+/config.php 147
+
+	×
+		define('LG_INTEGRATION_URL'          , '----integration site url----');
+
+	○
+		※削除
+
+/local-settings.php 70
+
+	×
+		define('LG_INTEGRATION_URL'          , '----integration site url----');
+
+	○
+		※削除
+
+/view/footer.html.php 37
+
+	×
+                <li><a href="<?= LG_INTEGRATION_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+	○
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+
+/view/footer.html.php 43
+
+	×
+                <li class="integration"><a href="<?= LG_INTEGRATION_URL ?>/">LOCAL GOOD全国版トップページ</a></li>
+	○
+                ※削除
+
+/view/header.html.php 91
+
+	×
+	            <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
+	○
+				※削除
+
+/view/m/footer.html.php 50
+
+	×
+                    <li><a href="<?= LG_INTEGRATION_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+	○
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
+
+/view/m/footer.html.php 56
+
+	×
+                    <li class="integration"><a href="<?= LG_INTEGRATION_URL ?>/">LOCAL GOOD全国版トップページ</a></li>
+	○
+		※削除
+
+/view/m/header.html.php 49
+
+	×
+	                <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
+	○
+		※削除
+
+────────────────────────────────────────────────────────────
