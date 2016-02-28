@@ -1,0 +1,453 @@
+────────────────────────────────────────
+追記 2016-02-27 02:02
+
+/.htaccess    2
+
+    解説
+        CORESERVER で動かす場合は、.htaccess を編集すること。
+        次の１行をコメントアウトする。
+
+    ×
+        Options +FollowSymLinks
+
+    ○
+        #Options +FollowSymLinks
+
+────────────────────────────────────────
+2016-02-22 22:22
+
+    解説
+        データベース作成
+
+    実行
+        CREATE SCHEMA `localgood703` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+
+────────────────────────────────────────
+2016-02-22 23:54
+
+/controller/admin.php   201-203
+
+    解説
+        「Text::」の脱字。
+
+    ×
+                    'list' => array('label' => _('Estado del envio automatico'), 'item' => false),
+                    'init' => array('label' => _('Iniciando un nuevo boletin'), 'item' => false),
+                    'init' => array('label' => _('Viendo listado completo'), 'item' => true)
+
+    ○
+                    'list' => array('label' => Text::_('Estado del envio automatico'), 'item' => false),
+                    'init' => array('label' => Text::_('Iniciando un nuevo boletin'), 'item' => false),
+                    'init' => array('label' => Text::_('Viendo listado completo'), 'item' => true)
+
+────────────────────────────────────────
+2016-02-23 00:19
+
+/core/model.php        63-95,108-109
+
+    解説
+        ＳＱＬクエリーのテーブル名の頭に「`gt_lg-common`.」というテーブル名修飾を
+        付けるフィルターをコメントアウト。
+
+    ×
+        /**
+         *
+         */
+        protected function queryFilter($query){
+
+            $_query = $query;
+
+            if (!empty($_query)){
+
+                $ret = preg_match_all('/user([A-Za-z_]*)\./s',$_query, $_match);
+                if ($ret > 0){
+                    $_matched = array_unique($_match[0]);
+                    foreach ( $_matched as $_m ){
+                        $_query = preg_replace("/" . preg_quote($_m) ."/", "`gt_lg-common`." . $_m, $_query);
+                    }
+                }
+
+                $ret = preg_match_all('/(FROM|JOIN|TABLE|INTO|INSERT|UPDATE|DELETE|REPLACE|\()\s+user([A-Za-z_]*)/s', $_query, $_match);
+                if ($ret > 0){
+                    $_matched = array_unique($_match[0]);
+                    foreach ( $_matched as $_m ){
+                        $trim_m = preg_replace("/\s+/", " ", $_m);
+                        $_e = explode(' ', $trim_m);
+                        if (isset($_e[1])  && (strpos($_e[1], 'user') !== false)){
+                            $_e[1] = '`gt_lg-common`.' . $_e[1];
+                            $_s = implode(' ', $_e);
+                            $_query = preg_replace("/" . preg_quote($_m) ."/", $_s, $_query);
+                        }
+                    }
+                }
+            }
+            return $_query;
+        }
+
+    ○
+         /**
+          *
+          */
+         protected function queryFilter($query){
+
+             $_query = $query;
+// 
+//             if (!empty($_query)){
+// 
+//                 $ret = preg_match_all('/user([A-Za-z_]*)\./s',$_query, $_match);
+//                 if ($ret > 0){
+//                     $_matched = array_unique($_match[0]);
+//                     foreach ( $_matched as $_m ){
+//                         $_query = preg_replace("/" . preg_quote($_m) ."/", "`gt_lg-common`." . $_m, $_query);
+//                     }
+//                 }
+// 
+//                 $ret = preg_match_all('/(FROM|JOIN|TABLE|INTO|INSERT|UPDATE|DELETE|REPLACE|\()\s+user([A-Za-z_]*)/s', $_query, $_match);
+//                 if ($ret > 0){
+//                     $_matched = array_unique($_match[0]);
+//                     foreach ( $_matched as $_m ){
+//                         $trim_m = preg_replace("/\s+/", " ", $_m);
+//                         $_e = explode(' ', $trim_m);
+//                         if (isset($_e[1])  && (strpos($_e[1], 'user') !== false)){
+//                             $_e[1] = '`gt_lg-common`.' . $_e[1];
+//                             $_s = implode(' ', $_e);
+//                             $_query = preg_replace("/" . preg_quote($_m) ."/", $_s, $_query);
+//                         }
+//                     }
+//                 }
+//             }
+             return $_query;
+         }
+
+────────────────────────────────────────
+2016-02-23 00:36
+
+    解説
+        ローカルグッド横浜の拠点を入れておくフィールドの追加。
+
+    実行
+        ALTER TABLE `user` 
+        ADD COLUMN `home` VARCHAR(50) NOT NULL COMMENT '(^q^)Add 2016-02-23' AFTER `node`;
+
+    実行（てきとう）
+        UPDATE `user` SET `home`='LOCAL GOOD FUKUOKA' WHERE `id`='root';
+
+────────────────────────────────────────
+2016-02-23 01:29
+
+    解説
+        ローカルグッド横浜版GOTEOに追加されている、管理者の操作ログを
+        記録していくテーブル。
+
+    実行
+        CREATE TABLE user_login_log
+        (
+            user VARCHAR(50) NOT NULL,
+            node VARCHAR(50) NOT NULL,
+            datetime TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+            token VARCHAR(50) NOT NULL,
+            expiration_date TIMESTAMP DEFAULT '0000-00-00 00:00:00' NOT NULL,
+            CONSTRAINT `PRIMARY` PRIMARY KEY (user, node)
+        );
+
+────────────────────────────────────────
+2016-02-23 02:32
+
+/local-settings.php
+
+    解説
+        データベース名を指定する項目が追加されていた。
+
+    設定例
+        // LocalGood Common Authentication Database
+        define('COMMON_AUTH_DB_SCHEMA'        , 'localgood703');    // dbname=...
+
+────────────────────────────────────────
+2016-02-23 18:49
+
+    解説
+        無かったテーブルを　適当に推測して追加。
+
+    CREATE TABLE `skill` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `name` VARCHAR(50) NULL,
+      `description` VARCHAR(50) NULL,
+      `parent_skill_id` INT NULL,
+      `order` INT NULL,
+      PRIMARY KEY (`id`));
+
+    CREATE TABLE `skill_lang` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `name` VARCHAR(50) NULL,
+      `lang` VARCHAR(50) NULL,
+      `description` VARCHAR(50) NULL,
+      PRIMARY KEY (`id`));
+
+    CREATE TABLE `user_skill` (
+      `user` VARCHAR(50) NOT NULL,
+      `skill` INT NULL,
+      PRIMARY KEY (`user`));
+
+    CREATE TABLE `project_skill` (
+      `project` VARCHAR(50) NOT NULL,
+      `skill` INT NULL,
+      PRIMARY KEY (`project`));
+
+────────────────────────────────────────
+2016-02-23 20:31
+
+    解説
+        データベースに言語「日本語」追加。
+        ルートユーザーに「日本語」選択可能可。
+        ルートユーザーの lang を「ja」に更新。
+
+    実行
+        INSERT INTO `lang` (`id`, `name`, `active`, `short`, `locale`) VALUES ('ja', 'Japanese', '1', 'JPN', 'ja_JP');
+        INSERT INTO `user_translang` (`user`, `lang`) VALUES ('root', 'ja');
+        UPDATE `user` SET `lang`='ja' WHERE `id`='root';
+────────────────────────────────────────────────────────────
+2016-02-24 00:04
+
+    解説
+        グーグル翻訳をかけたファイル。/db/texts(グーグル翻訳化).sql
+
+    実行
+        ★略
+────────────────────────────────────────────────────────────
+2016-02-24 15:53
+
+    解説
+        /locale/ja_JP/LC_MESSAGES/messages.mo ファイルを作りたい。
+        poedit を使って保存する。
+        この際、
+        /locale/ja_JP/LC_MESSAGES/messages.po にエラーが３件あるので、
+        %s の数が合っていない翻訳を修正する。
+        管理者でログインしている場合、ログアウトしてログインし直すと　翻訳が再描画される。
+
+    実行
+        ★略
+
+────────────────────────────────────────────────────────────
+2016-02-24 23:16
+
+/local-settings.php
+
+    解説
+        ログに記録される定数を追加。
+        「define('LG_NAME'                    , 'LOCAL GOOD FUKUOKA');」の下あたりに。
+
+    追加
+        define('LG_PLACE_NAME'              , 'LOCAL GOOD FUKUOKA');    // (^q^)適当に追加☆ user_login_log.node に記録される☆
+────────────────────────────────────────────────────────────
+2016-02-24 23:54
+
+    解説
+        template_lang.name と、
+        template_lang.purpose フィールドを使おうとしているソースコードの記述を削除。
+        template_lang テーブルに name, purpose フィールドはないので。
+
+/library/template.php 44-45
+    ×
+                            IFNULL(template_lang.name, template.name) as name,
+                            IFNULL(template_lang.purpose, template.purpose) as purpose,
+
+    ○
+                            template.name as name,
+                            template.purpose as purpose,
+
+/library/template.php 88-89
+    ×
+                            IFNULL(template_lang.name, template.name) as name,
+                            IFNULL(template_lang.purpose, template.purpose) as purpose,
+
+    ○
+                            template.name as name,
+                            template.purpose as purpose,
+────────────────────────────────────────────────────────────
+2016-02-25 16:40
+
+    解説
+        role テーブルに権限を追加。
+        root ユーザーに権限を付与。
+
+    実行
+        INSERT INTO `role` (`id`, `name`) VALUES ('project_owner', 'project_owner');
+        INSERT INTO `role` (`id`, `name`) VALUES ('localadmin', 'localadmin');
+        INSERT INTO `role` (`id`, `name`) VALUES ('vip', 'vip');
+        INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'project_owner', '*');
+        INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'localadmin', '*');
+        INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'vip', '*');
+────────────────────────────────────────────────────────────
+2016-02-25 18:04
+
+    解説
+        project テーブルにフィールド追加。
+        project_lang テーブルにフィールド追加。
+        evaluation テーブルを適当に追加。
+
+    実行
+        ALTER TABLE `project` 
+        ADD COLUMN `period_1r` INT NOT NULL AFTER `post_country`,
+        ADD COLUMN `period_2r` INT NOT NULL AFTER `period_1r`,
+        ADD COLUMN `evaluation` VARCHAR(50) NULL AFTER `period_2r`;
+
+        ALTER TABLE `project_lang` 
+        ADD COLUMN `evaluation` VARCHAR(50) NULL AFTER `subtitle`;
+
+        CREATE TABLE `evaluation` (
+          `id` VARCHAR(50) NOT NULL,
+          `name` VARCHAR(50) NULL,
+          `description` VARCHAR(50) NULL,
+          `url` VARCHAR(50) NULL,
+          `lang` VARCHAR(50) NULL,
+          `node` VARCHAR(50) NULL,
+          `content` VARCHAR(50) NULL,
+          `project` VARCHAR(50) NULL,
+          PRIMARY KEY (`id`));
+────────────────────────────────────────────────────────────
+2016-02-25 23:20
+
+    解説
+        skill テーブルのデータを適当に入れる。
+
+    実行
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('1', 'skill0', 'skill zero', '', '1');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('2', 'skill1', 'skill one', '1', '2');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('3', 'skill2', 'skill two', '1', '3');
+────────────────────────────────────────────────────────────
+// これは要らなくなった。
+//
+// 2016-02-26 01:38
+// 
+//     解説
+//         新規登録ユーザーに project_owner 権限を与えるテスト。
+// 
+//     実行
+//         INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('guest2', 'project_owner', '*');
+────────────────────────────────────────────────────────────
+2016-02-26 02:11
+
+    解説
+        /library/aws フォルダーを削除。
+
+    実行
+        /library/aws フォルダーを削除。
+────────────────────────────────────────────────────────────
+// ↓PHP 5.3.0 から dl() の使用は無効だった。
+//
+// 2016-02-26 19:07
+// 
+// C:\php\php.ini
+// 
+//     解説
+//         Apacheサーバーと PHP を組み合わせるときは enable_dl を ON に。
+//         それ以外のサーバーと PHP の組み合わせのときは
+//         セキュリティー上の都合で enable_dl を OFF に。
+//         dl は、PHPの動的ロード。
+// 
+//     ×
+//         enable_dl = Off
+//     ○
+//         enable_dl = On
+────────────────────────────────────────────────────────────
+// 2016-02-26 20:48 「2016-02-25 18:04」に統合。
+// ALTER TABLE `evaluation` 
+// ADD COLUMN `project` VARCHAR(50) NULL AFTER `content`;
+────────────────────────────────────────────────────────────
+2016-02-26 21:20
+
+    解説
+        翻訳テーブルの内容を更新。
+
+    実行
+        UPDATE `text` SET `text`='あなたは、サイト名のコミュニティと対話するには、必ず<a href=\"/user/login\">サインイン</a>する必要があります。' WHERE `id`='user-login-required' and`lang`='ja';
+
+    問題点
+        FIXME: このタグは　エスケープされてしまって、リンクではなく文字列としてそのまま表示されてしまう。
+
+────────────────────────────────────────────────────────────
+2016-02-27 02:47
+
+/config.php
+
+    解説
+        インデントを整えたり、
+        コメントを付加したり、
+        次の行（参考Ａを参照）を追加したりした。
+
+    参考Ａ
+        define('LG_PLACE_NAME'               , 'LOCAL GOOD FUKUOKA');   // this string record in database. `user_login_log` table, `node` field.
+
+────────────────────────────────────────────────────────────
+2016-02-28 23:57
+
+    解説
+        GitHub には、翻訳ファイルをコンパイルした .mo ファイルをアップロードしない設定になっている？
+        poedit を使うなどして、.mo ファイルを作っておく必要がある。
+
+────────────────────────────────────────────────────────────
+2016-02-29 03:13
+
+    解説
+        Googleアース・ビューを削除します。
+
+/config.php 256-260
+
+    ×
+        /****************************************************
+        CESIUM
+         ****************************************************/
+        define('LG_EARTHVIEW'                , 'http://map.yokohama.localgood.jp.il3c.com/');
+
+    ○
+        ※削除
+
+/local-settings.php 177-181
+
+    ×
+        /****************************************************
+        CESIUM
+         ****************************************************/
+        define('LG_EARTHVIEW'                , 'http://map.yokohama.localgood.jp.il3c.com/');
+
+    ○
+        ※削除
+
+/view/header.html.php 93
+
+    ×
+        <a class="earth_view" href="<? if(defined('LG_EARTHVIEW')){echo LG_EARTHVIEW;} ?>" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
+
+    ○
+        ※削除
+
+/view/m/header.html.php 49-51
+
+    ×
+                <li>
+                    <a class="earth_view" href="<? if(defined('LG_EARTHVIEW')){echo LG_EARTHVIEW;} ?>" target="_blank"><?/*<img src="<?= LOCALGOOD_WP_BASE_URL ?>/images/earth_view_icon.png" alt="Earth View" />*/?>Earth View</a>
+                </li>
+    ○
+        ※削除
+
+/view/css/header/earth_view_icon.png
+/view/images/header/earth_view_icon.png
+    ○
+        ※削除
+────────────────────────────────────────────────────────────
+//2016-02-29 03:35
+//
+//    解説
+//        データベースも新規に用意。
+//        `localgood703` と同等の内容にする。
+//        local-settings.php の設定も変えておく。
+//
+//    ○
+//        CREATE SCHEMA `crowdfunding3` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+//
+//        ～★略～    ※`localgood703` と同等の内容にする。
+//
+//        define('GOTEO_DB_SCHEMA'             , 'crowdfunding3');
+//
+────────────────────────────────────────────────────────────
+
