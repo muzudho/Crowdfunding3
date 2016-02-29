@@ -798,3 +798,15 @@
         INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'スキル３', 'ja', 'スキルの３番');
 
 ────────────────────────────────────────────────────────────
+2016-03-01 05:36
+
+    解説
+        [私のプロフィール] - [環境設定] ページの「はい」「いいえ」の日本語化。
+
+    実行
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('user-preferences-yes', 'sí', 'user');
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('user-preferences-no', 'no', 'user');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('user-preferences-yes', 'ja', 'はい');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('user-preferences-no', 'ja', 'いいえ');
+
+────────────────────────────────────────────────────────────
