@@ -810,3 +810,15 @@
         INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('user-preferences-no', 'ja', 'いいえ');
 
 ────────────────────────────────────────────────────────────
+2016-03-01 06:20
+
+    解説
+        公開プロフィール画面の日本語化。
+
+    実行
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('profile-user_detail-header', 'usuario detalles', 'profile');
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('profile-skills-header', 'habilidad', 'profile');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-user_detail-header', 'ja', 'ユーザー詳細');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-skills-header', 'ja', 'スキル');
+
+────────────────────────────────────────────────────────────
