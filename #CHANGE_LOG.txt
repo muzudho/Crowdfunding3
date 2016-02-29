@@ -822,3 +822,14 @@
         INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-skills-header', 'ja', 'スキル');
 
 ────────────────────────────────────────────────────────────
+2016-03-01 06:42
+
+    解説
+        ディスカバー画面の日本語化。
+
+    実行
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('discover-searcher-byskill-header', 'habilidad', 'discover');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('discover-searcher-byskill-header', 'ja', 'スキル別');
+
+────────────────────────────────────────────────────────────
+
