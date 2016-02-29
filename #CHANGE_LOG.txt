@@ -769,3 +769,19 @@
         INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('login-register-confirm_password-field-tips', 'ja', '確認のため、再度パスワードの入力をお願いします。');
 
 ────────────────────────────────────────────────────────────
+2016-03-01 04:19
+
+    解説
+        カテゴリーの日本語訳
+
+    実行
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('2', 'ja', 'ソーシャル', '社会変化を促進するプロジェクトは、との問題を解決するか、より良い幸福を達成するために人間関係を強化します。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('6', 'ja', 'コミュニケーション', 'その目的（例えば、市民ジャーナリズム、ドキュメンタリー、ブログ、ラジオ番組のために）、通知非難および/または通信することであるプロジェクト。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('7', 'ja', '技術の', '具体的な問題やニーズを解決するために、ソフトウェア、ハードウェア、ツール、などの技術開発。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('9', 'ja', '商業の', 'ビジネスイニシアチブであり、プロジェクト、および利益を生成することを願っています。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('10', 'ja', '教育の', 'その最も重要な目的の情報や学習プロジェクト。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('11', 'ja', '文化的な', '芸術や文化的な目的を持ったプロジェクト。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('13', 'ja', '生態学的な', '環境、持続可能性、および/または生物多様性のケアに関連しているプロジェクト。');
+        INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('14', 'ja', '科学的', '研究や調査、回答、解決策、新たな説明を探してプロジェクト。');
+
+────────────────────────────────────────────────────────────
