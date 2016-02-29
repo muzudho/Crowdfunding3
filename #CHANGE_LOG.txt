@@ -14,6 +14,20 @@
         #Options +FollowSymLinks
 
 ────────────────────────────────────────
+// 追記 2016-03-01 02:18
+// 
+//     解説
+//         MySQLは、バージョン 5.6 から、ストリクト・モード設定が有効になっている。
+//         MySQL 5.6 を使う場合、
+//         MySQL5.5 以前に書かれたコードは動かなくなることがあることから、
+//         ストリクト・モード設定を消して対応する。
+//         ローカルＰＣでテストしている場合、ＰＣを再起動するたびに実行しなおすこと。
+// 
+//     実行
+//         SET @@GLOBAL.sql_mode='';
+//         SELECT @@GLOBAL.sql_mode;
+// 
+────────────────────────────────────────
 2016-02-22 22:22
 
     解説
@@ -452,87 +466,87 @@
 ────────────────────────────────────────────────────────────
 2016-02-29 03:13
 
-	解説
-		「LOCAL GOOD全国版トップページ」リンクを外します。
+    解説
+        「LOCAL GOOD全国版トップページ」リンクを外します。
 
 /config.php 147
 
-	×
-		define('LG_INTEGRATION_URL'          , '----integration site url----');
+    ×
+        define('LG_INTEGRATION_URL'          , '----integration site url----');
 
-	○
-		※削除
+    ○
+        ※削除
 
 /local-settings.php 70
 
-	×
-		define('LG_INTEGRATION_URL'          , '----integration site url----');
+    ×
+        define('LG_INTEGRATION_URL'          , '----integration site url----');
 
-	○
-		※削除
+    ○
+        ※削除
 
 /view/footer.html.php 37
 
-	×
+    ×
                 <li><a href="<?= LG_INTEGRATION_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
-	○
+    ○
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
 
 /view/footer.html.php 43
 
-	×
+    ×
                 <li class="integration"><a href="<?= LG_INTEGRATION_URL ?>/">LOCAL GOOD全国版トップページ</a></li>
-	○
+    ○
                 ※削除
 
 /view/header.html.php 91
 
-	×
-	            <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
-	○
-				※削除
+    ×
+                <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
+    ○
+                ※削除
 
 /view/m/footer.html.php 50
 
-	×
+    ×
                     <li><a href="<?= LG_INTEGRATION_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
-	○
+    ○
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
 
 /view/m/footer.html.php 56
 
-	×
+    ×
                     <li class="integration"><a href="<?= LG_INTEGRATION_URL ?>/">LOCAL GOOD全国版トップページ</a></li>
-	○
-		※削除
+    ○
+        ※削除
 
 /view/m/header.html.php 49
 
-	×
-	                <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
-	○
-		※削除
+    ×
+                    <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
+    ○
+        ※削除
 
 ────────────────────────────────────────────────────────────
 2016-02-29 05:07
 
-	解説
-		LOCALGOOD_WP_BASE_URL 定数を止め、SITE_URL に統一します。
+    解説
+        LOCALGOOD_WP_BASE_URL 定数を止め、SITE_URL に統一します。
 
 /config.php 145
-	×
-		define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost'); // link url in menu bar
-	○
-		※削除
+    ×
+        define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost'); // link url in menu bar
+    ○
+        ※削除
 
 /controller/project.php 411
-	×
+    ×
             if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) header("Location:" . LOCALGOOD_WP_BASE_URL . "/challenge");
-	○
+    ○
             if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) header("Location:" . SITE_URL . "/challenge");
 
 /view/footer.html.php 36-42
-	×
+    ×
                 <li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                 <li class="syoutorihikihou"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
@@ -540,7 +554,7 @@
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
-	○
+    ○
                 <li class="about"><a href="<?= SITE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
                 <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                 <li class="syoutorihikihou"><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
@@ -550,13 +564,13 @@
                 <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
 
 /view/header.html.php 87
-	×
+    ×
             <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
-	○
+    ○
             <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
 
 /view/header.html.php 96-109
-	×
+    ×
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
@@ -571,7 +585,7 @@
                     <ul class="sub">
                         <li><a href="/">プロジェクト</a></li>
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
-	○
+    ○
                 <li><a href="<?= SITE_URL ?>">ホーム</a></li>
                 <li><a href="<?= SITE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
@@ -588,19 +602,19 @@
                         <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
 
 /view/email/goteo.html.php 215
-	×
-	    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
-	○
-	    <p class="crea"><a href="<?php echo SITE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+    ×
+        <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+    ○
+        <p class="crea"><a href="<?php echo SITE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
 
 /view/header/menu.html.php 34
-	×
+    ×
             <li class="create"><a class="button aqua" href="<?php echo LOCALGOOD_WP_BASE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
-	○
+    ○
             <li class="create"><a class="button aqua" href="<?php echo SITE_URL ?>/challenge"><?php echo Text::get('regular-create'); ?></a></li>
 
 /view/m/footer.html.php 49-55
-	×
+    ×
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
@@ -608,7 +622,7 @@
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
-	○
+    ○
                     <li><a href="<?= SITE_URL ?>/about/">LOCAL GOODについて</a></li>
                     <li><a href="<?= SITE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                     <li><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
@@ -618,7 +632,7 @@
                     <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
 
 /view/m/header.html.php 29-46
-	×
+    ×
         <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
             <ul class="nav<?/*flipsnap*/?>">
@@ -637,7 +651,7 @@
                     <ul class="sub">
                         <li><a href="/">プロジェクト</a></li>
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
-	○
+    ○
         <h1><a href="<?= SITE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
             <ul class="nav<?/*flipsnap*/?>">
@@ -658,80 +672,100 @@
                         <li><a href="<?= SITE_URL ?>/skills/">スキルを活かす</a></li>
 
 /local-settings.php 68
-	×
-		define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost');
-	○
-		※削除
+    ×
+        define('LOCALGOOD_WP_BASE_URL'       , 'http://localhost');
+    ○
+        ※削除
 
 ────────────────────────────────────────────────────────────
 2016-02-29 05:39
 
-	解説
-		サイト左上の文章を変更。
+    解説
+        サイト左上の文章を変更。
 
 /view/header.html.php 45
-	×
+    ×
             <span>横浜の地域課題プラットフォーム</span>
-	○
+    ○
             <span>クラウド・ファウンディング・サイトを自作する人向けのデモ・サイト</span>
 
 ────────────────────────────────────────────────────────────
 2016-02-29 06:34
 
-	解説
-		キャッチコピーを変更。
+    解説
+        キャッチコピーを変更。
 
 /view/header.html.php 89
-	×
+    ×
                 このまち、わたしから未来を創る
-	○
+    ○
                 みんなでプロジェクトを応援する
 
 ────────────────────────────────────────────────────────────
 2016-02-29 07:36
 
-	解説
-		LOG_PATH 定数は使っていないので削除。
+    解説
+        LOG_PATH 定数は使っていないので削除。
 
 /config.php 145
-	×
-		define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');	○
-		※削除
+    ×
+        define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');    ○
+        ※削除
 
 /local-settings.php 68
-	×
-		define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');	○
-		※削除
+    ×
+        define('LOG_PATH'                    , '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');    ○
+        ※削除
 
 ────────────────────────────────────────────────────────────
 2016-02-29 07:55
 
-	解説
-		LG_NAME 定数を削除。
+    解説
+        LG_NAME 定数を削除。
 
 /config.php 145
-	×
-		define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
-	○
-		※削除
+    ×
+        define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
+    ○
+        ※削除
 
 /local-settings.php 68
-	×
-		define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
-	○
-		※削除
+    ×
+        define('LG_NAME'                     , 'LOCAL GOOD FUKUOKA');
+    ○
+        ※削除
 
 /view/footer.html.php 36
-	×
+    ×
                 <li class="about"><a href="<?= SITE_URL ?>/about/"><?= LG_NAME; ?>について</a></li>
-	○
+    ○
                 <li class="about"><a href="<?= SITE_URL ?>/about/">このサイトについて</a></li>
 
 /view/css/csstidyonline.results.css 2044
-	×
-		line-height:16px;
-	○
-		※削除
+    ×
+        line-height:16px;
+    ○
+        ※削除
 
 ────────────────────────────────────────────────────────────
+2016-03-01 02:11
 
+    解説
+        purpose, textテーブルに翻訳の追加
+        ユーザー名            …(3〜20文字の半角英数字およびハイフンのみ)
+        メールアドレスを確認  …確認のため、再度メールアドレスの入力をお願いします。
+        パスワード            …(6文字以上の半角英数字)
+        パスワードを認証する  …確認のため、再度パスワードの入力をお願いします。
+
+    実行
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('login-register-userid-field-tips', '(3 a 20 caracteres alfanuméricos y el guión solamente)', 'login');
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('login-register-confirm-field-tips', 'Para la confirmación, gracias a entrar en la dirección de correo electrónico nuevo.', 'login');
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('login-register-password-field-tips', '(Más de 6 caracteres alfanuméricos)', 'login');
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('login-register-confirm_password-field-tips', 'Para la confirmación, gracias a introducir la contraseña de nuevo.', 'login');
+
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('login-register-userid-field-tips', 'ja', '(3〜20文字の半角英数字およびハイフンのみ)');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('login-register-confirm-field-tips', 'ja', '確認のため、再度メールアドレスの入力をお願いします。');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('login-register-password-field-tips', 'ja', '(6文字以上の半角英数字)');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('login-register-confirm_password-field-tips', 'ja', '確認のため、再度パスワードの入力をお願いします。');
+
+────────────────────────────────────────────────────────────
