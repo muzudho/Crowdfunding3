@@ -785,3 +785,16 @@
         INSERT INTO `category_lang` (`id`, `lang`, `name`, `description`) VALUES ('14', 'ja', '科学的', '研究や調査、回答、解決策、新たな説明を探してプロジェクト。');
 
 ────────────────────────────────────────────────────────────
+2016-03-01 04:55
+
+    解説
+        スキルの日本語化。
+
+    実行
+        INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('profile-field-skills', 'Por favor, seleccione una habilidad.', 'profile');
+        INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-field-skills', 'ja', 'スキルを選んでください。');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('1', 'スキル１', 'ja', 'スキルの１番');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('2', 'スキル２', 'ja', 'スキルの２番');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'スキル３', 'ja', 'スキルの３番');
+
+────────────────────────────────────────────────────────────
