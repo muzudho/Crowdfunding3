@@ -869,3 +869,72 @@
         UPDATE `page_node` SET `name`='プロジェクトを作成します。', `description`='どのようにプロジェクトを作成します' WHERE `page`='howto' and`node`='goteo' and`lang`='ja';
 
 ────────────────────────────────────────────────────────────
+2016-03-01 11:15
+
+    解説
+        ・データベースの skill, skill_lang テーブルの作り直し、データを入れなおし。
+        ・/library/superform/view/element/checkboxescustom.html.php を一から書き直し。
+        
+
+    実行
+        CREATE TABLE `skill` (
+          `id` VARCHAR(50) NOT NULL,
+          `name` VARCHAR(50) NULL,
+          `description` VARCHAR(50) NULL,
+          `parent_skill_id` VARCHAR(50) NULL,
+          `order` INT NULL,
+          PRIMARY KEY (`id`));
+
+        CREATE TABLE `skill_lang` (
+          `id` VARCHAR(50) NOT NULL,
+          `name` VARCHAR(50) NULL,
+          `lang` VARCHAR(50) NULL,
+          `description` VARCHAR(50) NULL,
+          PRIMARY KEY (`id`));
+
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a', 'A Gyo', 'a gyo', '', '1');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a_a', 'A', 'a', 'a', '2');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a_i', 'I', 'i', 'a', '3');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka', 'Ka Gyo', 'ka gyo', '', '4');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka_ka', 'Ka', 'ka', 'ka', '5');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka_ki', 'Ki', 'ki', 'ka', '6');
+
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a', 'あ行', 'ja', 'あの行');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a_a', 'あ', 'ja', 'あ');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a_i', 'い', 'ja', 'い');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka', 'か行', 'ja', 'か行');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka_ka', 'か', 'ja', 'か');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka_ki', 'き', 'ja', 'き');
+
+/library/superform/view/element/checkboxescustom.html.php
+    ×
+        ※全文削除
+    ○
+        <?php
+        foreach ($this['options'] as $key => $checkbox){
+            if(empty($checkbox->category)){
+                if($key != 0)
+                {
+                    // 最初の要素以外は、＜ul＞タグを一旦閉じます。
+                    echo '</ul>';
+                }
+
+                // 大見出し
+                echo '<p>' . $checkbox->label . '</p>';
+                // 開始ulタグ
+                echo '<ul';
+                if(PC_VIEW){
+                    echo ' class="heightLineParent"';
+                }
+                echo '>';
+
+            } else {
+                // 小見出し
+                echo '<li>' . $checkbox->getInnerHTML() . '</li>';
+            }
+        }
+
+        // 終了ulタグ
+        echo '</ul>';
+
+────────────────────────────────────────────────────────────
