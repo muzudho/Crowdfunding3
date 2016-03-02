@@ -364,7 +364,7 @@ die("test");
             $info = getimagesize($imgpath);
 
             // default width
-            $width = 580;
+            $new_width = 580;
 
             // 初期値
             $n_w = 500;
@@ -372,9 +372,9 @@ die("test");
 
             $ratio = 0;
 
-            if ($info[0] > $width){
-                $ratio = $width / $info[0];
-                $n_w = $width;
+            if ($info[0] > $new_width){
+                $ratio = $new_width / $info[0];
+                $n_w = $new_width;
                 $n_h = round($ratio * $info[1]);
             } else {
                 $n_w = $info[0];
@@ -389,12 +389,12 @@ die("test");
          *  - Sino, monamos la url de /image/
          *
 		 * @param type int $id
-		 * @param type int $width
-		 * @param type int $height
+		 * @param type int $new_width
+		 * @param type int $new_height
 		 * @param type int $crop
 		 * @return type string
 		 */
-		public function getLink ($width = 200, $height = 200, $crop = false) {
+		public function getLink ($new_width = 200, $new_height = 200, $crop = false) {
 
             $ret = "";
 
@@ -402,11 +402,11 @@ die("test");
 
             $tc = $crop ? 'c' : '';
 
-            $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
-            if (\file_exists($cache)) {
-                $ret = $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
+            $filename2 = $this->dir_cache . "{$new_width}x{$new_height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
+            if (\file_exists($filename2)) {
+                $ret = $src_url . "/data/cache/{$new_width}x{$new_height}{$tc}/{$this->name}";
             } else {
-                $ret = SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
+                $ret = SRC_URL . "/image/{$this->id}/{$new_width}/{$new_height}/" . $crop;
             }
 
             return $ret;
@@ -454,66 +454,105 @@ die("test");
 		}
 
 		/**
-		 * Muestra la imagen en pantalla.
-		 * @param type int	$width
-		 * @param type int	$height
+		 * 例えば /data/images といったフォルダーにアップロードされている画像を、
+         * /data/cache/128x128 といったフォルダーにコピーして、その画像バイナリを読み込みます。
+         *
+         * キャッシュがある場合はそれをしようし、なければコピーを作成します。
+         * この際、crop の指定があれば 画像をリサイズします。
+         *
+		 * @param type int	$new_width
+		 * @param type int	$new_height
+         * @param type bool $crop
 		 */
-        public function display ($width, $height, $crop) {
-            require_once PEAR . 'Image/Transform.php';
-            $it =& \Image_Transform::factory('GD');
-            if (\PEAR::isError($it)) {
-                die($it->getMessage() . '<br />' . $it->getDebugInfo());
+        public function display ($new_width, $new_height, $crop) {
+
+            // アップロードされている画像のパス
+            $filename1 = $this->dir_originals . $this->name;
+
+            // キャッシュ・ディレクトリの画像パス
+            $filename2 = $this->dir_cache . $new_width."x$new_height" . ($crop ? "c" : "") . DIRECTORY_SEPARATOR;
+            if(!is_dir($filename2)) {
+                mkdir($filename2);
             }
 
-            $cache = $this->dir_cache . $width."x$height" . ($crop ? "c" : "") . DIRECTORY_SEPARATOR;
-            if(!is_dir($cache)) mkdir($cache);
-
-			$cache .= $this->name;
-			//comprova si existeix  catxe
-			if(!is_file($cache)) {
-				$it->load($this->dir_originals . $this->name);
-
+			$filename2 .= $this->name;
+			if(!is_file($filename2)) {// キャッシュに画像がなければ
+    			
+                $b_toCopy = false;
 				if($crop) {
-					if ($width > $height) {
+                    
+                    // 元画像のファイルサイズを取得
+                    list($original_width, $original_height) = getimagesize($filename1);
 
-						$f = $height / $width;
-						$new_y = round($it->img_x * $f);
-						//
+                    // ドット抜き拡張子
+                    $file_type = strtolower(end(explode('.', $filename1)));
+            
+                    $b_toSave = true;
+                    if ($file_type === "jpg" || $file_type === "jpeg") {
+            
+                        $original_image = ImageCreateFromJPEG($filename1); //JPEGファイルを読み込む
+                        $new_image = ImageCreateTrueColor($new_width, $new_height); // 画像作成
+    
+                    } elseif ($file_type === "gif") {
+    
+                        $original_image = ImageCreateFromGIF($filename1); //GIFファイルを読み込む
+                        $new_image = ImageCreateTrueColor($new_width, $new_height); // 画像作成
+                    
+                        /* ----- 透過問題解決 ------ */
+                        $alpha = imagecolortransparent($original_image);  // 元画像から透過色を取得する
+                        imagefill($new_image, 0, 0, $alpha);       // その色でキャンバスを塗りつぶす
+                        imagecolortransparent($new_image, $alpha); // 塗りつぶした色を透過色として指定する
+    
+                    } elseif ($file_type === "png") {
+                    
+                        $original_image = ImageCreateFromPNG($filename1); //PNGファイルを読み込む
+                        $new_image = ImageCreateTrueColor($new_width, $new_height); // 画像作成
+                    
+                        /* ----- 透過問題解決 ------ */
+                        imagealphablending($new_image, false);  // アルファブレンディングをoffにする
+                        imagesavealpha($new_image, true);       // 完全なアルファチャネル情報を保存するフラグをonにする
+                    
+                    } else {
+                        // 何も当てはまらなかった場合、画像をそのままコピーする処理へ。
+                        $b_toSave = false;
+                        $b_toCopy = true;
 
-						if($new_y < $it->img_y) {
-							$at = round(( $it->img_y - $new_y ) / 2);
-							$it->crop($it->img_x, $new_y, 0, $at);
-							$it->img_y = $new_y;
-						}
+                    }
 
-						$it->resized = false;
-						$it->scaleByX($width);
-
-					} else {
-
-						$f = $width / $height;
-						$new_x = round($it->img_y * $f);
-
-						if($new_x < $it->img_x) {
-							$at = round(( $it->img_x - $new_x ) / 2);
-							$it->crop($new_x, $it->img_y, $at, 0);
-							$it->img_x = $new_x;
-						}
-
-						$it->resized = false;
-						$it->scaleByY($height);
-
-					}
-
-				}
-				else $it->fit($width,$height);
-
-				$it->save($cache);
-                chmod($cache, 0777);
+                    if($b_toSave){
+                        // 元画像から再サンプリング
+                        ImageCopyResampled($new_image,$original_image,0,0,0,0,$new_width,$new_height,$original_width,$original_height);
+            
+                        // 画像を保存
+                        if ($file_type === "jpg" || $file_type === "jpeg") {
+                            ImageJPEG($new_image, $filename2);
+                        } elseif ($file_type === "gif") {
+                            ImageGIF($new_image, $filename2);
+                        } elseif ($file_type === "png") {
+                            ImagePNG($new_image, $filename2);
+                        }
+                        
+                        // メモリを開放する
+                        imagedestroy($new_image);
+                        imagedestroy($original_image);
+                    }
+                                
+                } else {
+                    $b_toCopy = true;
+                    
+                }
+                
+                if($b_toCopy){
+                    if( !copy($filename1, $filename2)){
+                        echo "failed to copy $file...\n";
+                    }
+                }
+                
+                chmod($filename2, 0777);
             }
 
 			header("Content-type: " . $this->type);
-			readfile($cache);
+			readfile($filename2);
 			return true;
 		}
 
@@ -532,7 +571,7 @@ die("test");
     	public function toGIF () {
     	    $this->load();
     	    if(!$this->isGIF()) {
-                list($width, $height, $type) = getimagesize($this->tmp);
+                list($new_width, $new_height, $type) = getimagesize($this->tmp);
                 switch($type) {
                 	case 1:
                 		$image = imagecreatefromgif($this->tmp);
@@ -561,7 +600,7 @@ die("test");
         public function toJPG () {
     	    $this->load();
     	    if(!$this->isJPG()) {
-                list($width, $height, $type) = getimagesize($this->tmp);
+                list($new_width, $new_height, $type) = getimagesize($this->tmp);
                 switch($type) {
                 	case 1:
                 		$image = imagecreatefromgif($this->tmp);
@@ -590,7 +629,7 @@ die("test");
     	public function toPNG () {
     	    $this->load();
     	    if(!$this->isPNG()) {
-                list($width, $height, $type) = getimagesize($this->tmp);
+                list($new_width, $new_height, $type) = getimagesize($this->tmp);
                 switch($type) {
                 	case 1:
                 		$image = imagecreatefromgif($this->tmp);
