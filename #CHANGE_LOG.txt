@@ -878,33 +878,33 @@
 
     実行
         CREATE TABLE `skill` (
-          `id` VARCHAR(50) NOT NULL,
+          `id` INT NOT NULL,
           `name` VARCHAR(50) NULL,
           `description` VARCHAR(50) NULL,
-          `parent_skill_id` VARCHAR(50) NULL,
+          `parent_skill_id` INT NULL DEFAULT 0,
           `order` INT NULL,
           PRIMARY KEY (`id`));
 
         CREATE TABLE `skill_lang` (
-          `id` VARCHAR(50) NOT NULL,
+          `id` INT NOT NULL,
           `name` VARCHAR(50) NULL,
           `lang` VARCHAR(50) NULL,
           `description` VARCHAR(50) NULL,
           PRIMARY KEY (`id`));
 
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a', 'A Gyo', 'a gyo', '', '1');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a_a', 'A', 'a', 'a', '2');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('a_i', 'I', 'i', 'a', '3');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka', 'Ka Gyo', 'ka gyo', '', '4');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka_ka', 'Ka', 'ka', 'ka', '5');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('ka_ki', 'Ki', 'ki', 'ka', '6');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('1', 'A Gyo', 'a gyo', '0', '1');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('2', 'A', 'a', '1', '2');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('3', 'I', 'i', '1', '3');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('4', 'Ka Gyo', 'ka gyo', '0', '4');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('5', 'Ka', 'ka', '4', '5');
+        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('6', 'Ki', 'ki', '4', '6');
 
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a', 'あ行', 'ja', 'あの行');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a_a', 'あ', 'ja', 'あ');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('a_i', 'い', 'ja', 'い');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka', 'か行', 'ja', 'か行');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka_ka', 'か', 'ja', 'か');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('ka_ki', 'き', 'ja', 'き');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('1', 'あ行', 'ja', 'あの行');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('2', 'あ', 'ja', 'あ');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'い', 'ja', 'い');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('4', 'か行', 'ja', 'か行');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('5', 'か', 'ja', 'か');
+        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('6', 'き', 'ja', 'き');
 
 /library/superform/view/element/checkboxescustom.html.php
     ×
@@ -936,5 +936,34 @@
 
         // 終了ulタグ
         echo '</ul>';
+
+────────────────────────────────────────────────────────────// 「2016-03-01 11:15」版に変更を統合。
+//
+//2016-03-03 02:11
+//
+//    解説
+//        skill、skill_lang テーブルの id 列は、文字列型ではなく 数値型が正しい。
+//
+//    実行
+//        ALTER TABLE `skill` 
+//        CHANGE COLUMN `id` `id` INT NOT NULL ,
+//        CHANGE COLUMN `parent_skill_id` `parent_skill_id` INT NULL DEFAULT 0 ;
+//
+//        ALTER TABLE `skill_lang` 
+//        CHANGE COLUMN `id` `id` INT NOT NULL ;
+//
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('1', 'A Gyo', 'a gyo', '0', '1');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('2', 'A', 'a', '1', '2');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('3', 'I', 'i', '1', '3');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('4', 'Ka Gyo', 'ka gyo', '0', '4');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('5', 'Ka', 'ka', '4', '5');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('6', 'Ki', 'ki', '4', '6');
+
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('1', 'あ行', 'ja', 'あの行');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('2', 'あ', 'ja', 'あ');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'い', 'ja', 'い');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('4', 'か行', 'ja', 'か行');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('5', 'か', 'ja', 'か');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('6', 'き', 'ja', 'き');
 
 ────────────────────────────────────────────────────────────
