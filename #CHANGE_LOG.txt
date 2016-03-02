@@ -967,3 +967,57 @@
 //        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('6', 'き', 'ja', 'き');
 
 ────────────────────────────────────────────────────────────
+2016-03-03 03:59
+
+    解説
+        /view/images フォルダーと、その中の画像を全て削除。
+
+/view/images
+/view/images/*
+
+    実行
+        ★/view/images フォルダーと、その中の画像を全て削除。
+
+────────────────────────────────────────────────────────────
+2016-03-03 04:00
+
+    解説
+        /view/images フォルダーの中の画像を使っていた箇所を、
+        /view/css フォルダーの中の画像を使うように変更。
+
+/view/css/projects/common.css 27-41
+    ×
+        .widget.project .image .tagmark.green {
+            background:url('/view/images/project/tagmark_green.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.violet {
+            background: url('/view/images/project/tagmark_violet.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.red {
+            background:url('/view/images/project/tagmark_red.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.grey {
+            background:url('/view/images/project/tagmark_grey.png') 0 0 no-repeat;
+        }
+
+    ○
+        .widget.project .image .tagmark.green {
+            background:url('/view/css/project/tagmark_green.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.violet {
+            background: url('/view/css/project/tagmark_violet.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.red {
+            background:url('/view/css/project/tagmark_red.png') 0 0 no-repeat;
+        }
+
+        .widget.project .image .tagmark.grey {
+            background:url('/view/css/project/tagmark_grey.png') 0 0 no-repeat;
+        }
+
+────────────────────────────────────────────────────────────

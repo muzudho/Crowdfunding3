@@ -25,19 +25,19 @@
 }
 
 .widget.project .image .tagmark.green {
-    background:url('/view/images/project/tagmark_green.png') 0 0 no-repeat;
+    background:url('/view/css/project/tagmark_green.png') 0 0 no-repeat;
 }
 
 .widget.project .image .tagmark.violet {
-    background: url('/view/images/project/tagmark_violet.png') 0 0 no-repeat;
+    background: url('/view/css/project/tagmark_violet.png') 0 0 no-repeat;
 }
 
 .widget.project .image .tagmark.red {
-    background:url('/view/images/project/tagmark_red.png') 0 0 no-repeat;
+    background:url('/view/css/project/tagmark_red.png') 0 0 no-repeat;
 }
 
 .widget.project .image .tagmark.grey {
-    background:url('/view/images/project/tagmark_grey.png') 0 0 no-repeat;
+    background:url('/view/css/project/tagmark_grey.png') 0 0 no-repeat;
 }
 
 
