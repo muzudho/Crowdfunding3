@@ -67,7 +67,7 @@ class Log_daemon extends Log
      * @access public
      */
     function Log_daemon($name, $ident = '', $conf = array(),
-                        $level = PEAR_LOG_DEBUG)
+                        $level = P_LOG_DEBUG)
     {
         /* Ensure we have a valid integer value for $name. */
         if (empty($name) || !is_int($name)) {
@@ -193,14 +193,14 @@ class Log_daemon extends Log
     }
 
     /**
-     * Converts a PEAR_LOG_* constant into a syslog LOG_* constant.
+     * Converts a P_LOG_* constant into a syslog LOG_* constant.
      *
      * This function exists because, under Windows, not all of the LOG_*
-     * constants have unique values.  Instead, the PEAR_LOG_* were introduced
+     * constants have unique values.  Instead, the P_LOG_* were introduced
      * for global use, with the conversion to the LOG_* constants kept local to
      * to the syslog driver.
      *
-     * @param int $priority     PEAR_LOG_* value to convert to LOG_* value.
+     * @param int $priority     P_LOG_* value to convert to LOG_* value.
      *
      * @return  The LOG_* representation of $priority.
      *
@@ -209,14 +209,14 @@ class Log_daemon extends Log
     function _toSyslog($priority)
     {
         static $priorities = array(
-            PEAR_LOG_EMERG   => LOG_EMERG,
-            PEAR_LOG_ALERT   => LOG_ALERT,
-            PEAR_LOG_CRIT    => LOG_CRIT,
-            PEAR_LOG_ERR     => LOG_ERR,
-            PEAR_LOG_WARNING => LOG_WARNING,
-            PEAR_LOG_NOTICE  => LOG_NOTICE,
-            PEAR_LOG_INFO    => LOG_INFO,
-            PEAR_LOG_DEBUG   => LOG_DEBUG
+            P_LOG_EMERG   => LOG_EMERG,
+            P_LOG_ALERT   => LOG_ALERT,
+            P_LOG_CRIT    => LOG_CRIT,
+            P_LOG_ERR     => LOG_ERR,
+            P_LOG_WARNING => LOG_WARNING,
+            P_LOG_NOTICE  => LOG_NOTICE,
+            P_LOG_INFO    => LOG_INFO,
+            P_LOG_DEBUG   => LOG_DEBUG
         );
 
         /* If we're passed an unknown priority, default to LOG_INFO. */

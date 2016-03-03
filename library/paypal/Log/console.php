@@ -77,7 +77,7 @@ class Log_console extends Log
      * @access public
      */
     function Log_console($name, $ident = '', $conf = array(),
-                         $level = PEAR_LOG_DEBUG)
+                         $level = P_LOG_DEBUG)
     {
         $this->_id = md5(microtime());
         $this->_ident = $ident;
@@ -157,9 +157,9 @@ class Log_console extends Log
      * 
      * @param mixed  $message    String or object containing the message to log.
      * @param string $priority The priority of the message.  Valid
-     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
-     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
-     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
      * @return boolean  True on success or false on failure.
      * @access public
      */

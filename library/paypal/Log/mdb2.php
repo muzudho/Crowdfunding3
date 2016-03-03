@@ -113,7 +113,7 @@ class Log_mdb2 extends Log
      * @access public
      */
     function Log_mdb2($name, $ident = '', $conf = array(),
-                     $level = PEAR_LOG_DEBUG)
+                     $level = P_LOG_DEBUG)
     {
         $this->_id = md5(microtime());
         $this->_table = $name;
@@ -163,9 +163,9 @@ class Log_mdb2 extends Log
         if (!$this->_opened) {
             /* Use the DSN and options to create a database connection. */
             $this->_db = &MDB2::connect($this->_dsn, $this->_options);
-            if (PEAR::isError($this->_db)) {
-                return false;
-            }
+// FIXME:     if (PEAR::isError($this->_db)) {
+//                return false;
+//            }
 
             /* Create a prepared statement for repeated use in log(). */
             if (!$this->_prepareStatement()) {
@@ -226,9 +226,9 @@ class Log_mdb2 extends Log
      *
      * @param mixed  $message  String or object containing the message to log.
      * @param string $priority The priority of the message.  Valid
-     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
-     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
-     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
      * @return boolean  True on success or false on failure.
      * @access public
      */
@@ -272,29 +272,29 @@ class Log_mdb2 extends Log
         $this->_db->popExpect();
 
         /* Attempt to handle any errors. */
-        if (PEAR::isError($result)) {
-            /* We can only handle MDB2_ERROR_NOSUCHTABLE errors. */
-            if ($result->getCode() != MDB2_ERROR_NOSUCHTABLE) {
-                return false;
-            }
-
-            /* Attempt to create the target table. */
-            if (!$this->_createTable()) {
-                return false;
-            }
-
-            /* Recreate our prepared statement resource. */
-            $this->_statement->free();
-            if (!$this->_prepareStatement()) {
-                return false;
-            }
-
-            /* Attempt to re-execute the insertion query. */
-            $result = $this->_statement->execute($values);
-            if (PEAR::isError($result)) {
-                return false;
-            }
-        }
+// FIXME: if (PEAR::isError($result)) {
+//            /* We can only handle MDB2_ERROR_NOSUCHTABLE errors. */
+//            if ($result->getCode() != MDB2_ERROR_NOSUCHTABLE) {
+//                return false;
+//            }
+//
+//            /* Attempt to create the target table. */
+//            if (!$this->_createTable()) {
+//                return false;
+//            }
+//
+//            /* Recreate our prepared statement resource. */
+//            $this->_statement->free();
+//            if (!$this->_prepareStatement()) {
+//                return false;
+//            }
+//
+//            /* Attempt to re-execute the insertion query. */
+//            $result = $this->_statement->execute($values);
+//            if (PEAR::isError($result)) {
+//                return false;
+//            }
+//        }
 
         $this->_announce(array('priority' => $priority, 'message' => $message));
 
@@ -320,18 +320,18 @@ class Log_mdb2 extends Log
                 'message'   => array('type' => $this->_types['message'])
             )
         );
-        if (PEAR::isError($result)) {
-            return false;
-        }
+// FIXME: if (PEAR::isError($result)) {
+//            return false;
+//        }
 
         $result = $this->_db->manager->createIndex(
             $this->_table,
             'unique_id',
             array('fields' => array('id' => true), 'unique' => true)
         );
-        if (PEAR::isError($result)) {
-            return false;
-        }
+// FIXME: if (PEAR::isError($result)) {
+//            return false;
+//        }
 
         return true;
     }
@@ -353,6 +353,6 @@ class Log_mdb2 extends Log
                 $this->_types);
 
         /* Return success if we didn't generate an error. */
-        return (PEAR::isError($this->_statement) === false);
+        return false; // FIXME: (PEAR::isError($this->_statement) === false);
     }
 }

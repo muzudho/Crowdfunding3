@@ -30,14 +30,14 @@ class Log_observer
 
     /**
      * The minimum priority level of message that we want to hear about.
-     * PEAR_LOG_EMERG is the highest priority, so we will only hear messages
+     * P_LOG_EMERG is the highest priority, so we will only hear messages
      * with an integer priority value less than or equal to ours.  It defaults
-     * to PEAR_LOG_INFO, which listens to everything except PEAR_LOG_DEBUG.
+     * to P_LOG_INFO, which listens to everything except P_LOG_DEBUG.
      *
      * @var string
      * @access private
      */
-    public $_priority = PEAR_LOG_INFO;
+    public $_priority = P_LOG_INFO;
 
     /**
      * Creates a new basic Log_observer instance.
@@ -47,7 +47,7 @@ class Log_observer
      *
      * @access public
      */
-    function Log_observer($priority = PEAR_LOG_INFO)
+    function Log_observer($priority = P_LOG_INFO)
     {
         $this->_id = md5(microtime());
         $this->_priority = $priority;
@@ -67,7 +67,7 @@ class Log_observer
      * @return object               The newly created concrete Log_observer
      *                              instance, or null on an error.
      */
-    function &factory($type, $priority = PEAR_LOG_INFO, $conf = array())
+    function &factory($type, $priority = P_LOG_INFO, $conf = array())
     {
         $type = strtolower($type);
         $class = 'Log_observer_' . $type;

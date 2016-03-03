@@ -1406,26 +1406,801 @@
 ────────────────────────────────────────────────────────────
 2016-03-03 13:24
 
-	解説
-		PEAR ライブラリ用の設定も削除。
+    解説
+        PEAR ライブラリ用の設定も削除。
 
 /index.php 52-54
-	×
-		// Include path
-		//set_include_path(GOTEO_PATH . PATH_SEPARATOR . '.');
-	○
-		※削除
+    ×
+        // Include path
+        //set_include_path(GOTEO_PATH . PATH_SEPARATOR . '.');
+    ○
+        ※削除
 
 /config.php 31-37
-	×
-		define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
-		if (function_exists('ini_set')) {
-		    ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
-		} else {
-		    throw new Exception("No puedo a�adir las librer�as PEAR al include_path.");
-		}
-	○
-		※削除
+    ×
+        define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
+        if (function_exists('ini_set')) {
+            ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
+        } else {
+            throw new Exception("No puedo a�adir las librer�as PEAR al include_path.");
+        }
+    ○
+        ※削除
+
+────────────────────────────────────────────────────────────
+2016-03-03 13:44
+
+    解説
+        PayPal のコードから PEARライブラリを使っている部分を削除。
+
+/library/paypal/json.php 864-870
+    ×
+     * @todo Ultimately, this should just call PEAR::isError()
+     */
+    function isError($data, $code = null)
+    {
+        if (class_exists('pear')) {
+            return PEAR::isError($data, $code);
+        } elseif (is_object($data) && (get_class($data) == 'services_json_error' ||
+
+    ○
+     * 
+     */
+    function isError($data, $code = null)
+    {
+        if (is_object($data) && (get_class($data) == 'services_json_error' ||
+
+/library/paypal/json.php 877-902
+    ×
+        if (class_exists('PEAR_Error')) {
+
+            class Services_JSON_Error extends PEAR_Error
+            {
+                function Services_JSON_Error($message = 'unknown error', $code = null,
+                                             $mode = null, $options = null, $userinfo = null)
+                {
+                    parent::PEAR_Error($message, $code, $mode, $options, $userinfo);
+                }
+            }
+
+        } else {
+
+            /**
+             * @todo Ultimately, this class shall be descended from PEAR_Error
+             */
+            class Services_JSON_Error
+            {
+                function Services_JSON_Error($message = 'unknown error', $code = null,
+                                             $mode = null, $options = null, $userinfo = null)
+                {
+
+                }
+            }
+
+        }
+
+    ○
+        /**
+         * 
+         */
+        class Services_JSON_Error
+        {
+            function Services_JSON_Error($message = 'unknown error', $code = null,
+                                            $mode = null, $options = null, $userinfo = null)
+            {
+
+            }
+        }
+
+────────────────────────────────────────────────────────────
+2016-03-03 13:51
+
+    解説
+        paypal ライブラリの中に、PEAR の名前を冠した定数があるが、
+        ここから PEAR の名前を外します。
+        例えば PEAR_LOG_～ は、 P_LOG_～ に変えます。
+
+/library/paypal/log.php 431-439
+    ×
+        /**
+         * Returns the string representation of a PEAR_LOG_* integer constant.
+         *
+         * @param int $priority     A PEAR_LOG_* integer constant.
+         *
+         * @return string           The string representation of $level.
+         *
+         * @since   Log 1.0
+         */
+    ○
+        /**
+         * Returns the string representation of a P_LOG_* integer constant.
+         *
+         * @param int $priority     A P_LOG_* integer constant.
+         *
+         * @return string           The string representation of $level.
+         *
+         * @since   Log 1.0
+         */
+
+/library/paypal/log.php 443-450
+    ×
+            PEAR_LOG_EMERG   => 'emergency',
+            PEAR_LOG_ALERT   => 'alert',
+            PEAR_LOG_CRIT    => 'critical',
+            PEAR_LOG_ERR     => 'error',
+            PEAR_LOG_WARNING => 'warning',
+            PEAR_LOG_NOTICE  => 'notice',
+            PEAR_LOG_INFO    => 'info',
+            PEAR_LOG_DEBUG   => 'debug'
+    ○
+            P_LOG_EMERG   => 'emergency',
+            P_LOG_ALERT   => 'alert',
+            P_LOG_CRIT    => 'critical',
+            P_LOG_ERR     => 'error',
+            P_LOG_WARNING => 'warning',
+            P_LOG_NOTICE  => 'notice',
+            P_LOG_INFO    => 'info',
+            P_LOG_DEBUG   => 'debug'
+
+/library/paypal/log.php 456-482
+    ×
+        /**
+         * Returns the the PEAR_LOG_* integer constant for the given string
+         * representation of a priority name.  This function performs a
+         * case-insensitive search.
+         *
+         * @param string $name      String containing a priority name.
+         *
+         * @return string           The PEAR_LOG_* integer contstant corresponding
+         *                          the the specified priority name.
+         *
+         * @since   Log 1.9.0
+         */
+        function stringToPriority($name)
+        {
+            $levels = array(
+                'emergency' => PEAR_LOG_EMERG,
+                'alert'     => PEAR_LOG_ALERT,
+                'critical'  => PEAR_LOG_CRIT,
+                'error'     => PEAR_LOG_ERR,
+                'warning'   => PEAR_LOG_WARNING,
+                'notice'    => PEAR_LOG_NOTICE,
+                'info'      => PEAR_LOG_INFO,
+                'debug'     => PEAR_LOG_DEBUG
+            );
+
+            return $levels[strtolower($name)];
+        }
+
+    ○
+        /**
+         * Returns the the P_LOG_* integer constant for the given string
+         * representation of a priority name.  This function performs a
+         * case-insensitive search.
+         *
+         * @param string $name      String containing a priority name.
+         *
+         * @return string           The P_LOG_* integer contstant corresponding
+         *                          the the specified priority name.
+         *
+         * @since   Log 1.9.0
+         */
+        function stringToPriority($name)
+        {
+            $levels = array(
+                'emergency' => P_LOG_EMERG,
+                'alert'     => P_LOG_ALERT,
+                'critical'  => P_LOG_CRIT,
+                'error'     => P_LOG_ERR,
+                'warning'   => P_LOG_WARNING,
+                'notice'    => P_LOG_NOTICE,
+                'info'      => P_LOG_INFO,
+                'debug'     => P_LOG_DEBUG
+            );
+
+            return $levels[strtolower($name)];
+        }
+
+/library/paypal/log.php 29-45
+    ×
+        define('PEAR_LOG_EMERG',    0);     /** System is unusable */
+        define('PEAR_LOG_ALERT',    1);     /** Immediate action required */
+        define('PEAR_LOG_CRIT',     2);     /** Critical conditions */
+        define('PEAR_LOG_ERR',      3);     /** Error conditions */
+        define('PEAR_LOG_WARNING',  4);     /** Warning conditions */
+        define('PEAR_LOG_NOTICE',   5);     /** Normal but significant */
+        define('PEAR_LOG_INFO',     6);     /** Informational */
+        define('PEAR_LOG_DEBUG',    7);     /** Debug-level messages */
+
+        define('PEAR_LOG_ALL',      bindec('11111111'));  /** All messages */
+        define('PEAR_LOG_NONE',     bindec('00000000'));  /** No message */
+
+        /* Log types for PHP's native error_log() function. */
+        define('PEAR_LOG_TYPE_SYSTEM',  0); /** Use PHP's system logger */
+        define('PEAR_LOG_TYPE_MAIL',    1); /** Use PHP's mail() function */
+        define('PEAR_LOG_TYPE_DEBUG',   2); /** Use PHP's debugging connection */
+        define('PEAR_LOG_TYPE_FILE',    3); /** Append to a file */
+
+    ○
+        define('P_LOG_EMERG',    0);     /** System is unusable */
+        define('P_LOG_ALERT',    1);     /** Immediate action required */
+        define('P_LOG_CRIT',     2);     /** Critical conditions */
+        define('P_LOG_ERR',      3);     /** Error conditions */
+        define('P_LOG_WARNING',  4);     /** Warning conditions */
+        define('P_LOG_NOTICE',   5);     /** Normal but significant */
+        define('P_LOG_INFO',     6);     /** Informational */
+        define('P_LOG_DEBUG',    7);     /** Debug-level messages */
+
+        define('P_LOG_ALL',      bindec('11111111'));  /** All messages */
+        define('P_LOG_NONE',     bindec('00000000'));  /** No message */
+
+        /* Log types for PHP's native error_log() function. */
+        define('P_LOG_TYPE_SYSTEM',  0); /** Use PHP's system logger */
+        define('P_LOG_TYPE_MAIL',    1); /** Use PHP's mail() function */
+        define('P_LOG_TYPE_DEBUG',   2); /** Use PHP's debugging connection */
+        define('P_LOG_TYPE_FILE',    3); /** Append to a file */
+
+/library/paypal/log.php 88
+    ×
+        public $_priority = PEAR_LOG_INFO;
+    ○
+        public $_priority = P_LOG_INFO;
+
+/library/paypal/log.php 95
+    ×
+        public $_mask = PEAR_LOG_ALL;
+    ○
+        public $_mask = P_LOG_ALL;
+
+/library/paypal/log.php 132
+    ×
+                      $level = PEAR_LOG_DEBUG)
+    ○
+                      $level = P_LOG_DEBUG)
+
+/library/paypal/log.php 193
+    ×
+                        $level = PEAR_LOG_DEBUG)
+    ○
+                        $level = P_LOG_DEBUG)
+
+/library/paypal/log.php 245
+    ×
+     * message at the PEAR_LOG_EMERG log level.
+    ○
+     * message at the P_LOG_EMERG log level.
+
+/library/paypal/log.php 257
+    ×
+        return $this->log($message, PEAR_LOG_EMERG);
+    ○
+        return $this->log($message, P_LOG_EMERG);
+
+/library/paypal/log.php 262
+    ×
+     * message at the PEAR_LOG_ALERT log level.
+    ○
+     * message at the P_LOG_ALERT log level.
+
+/library/paypal/log.php 274
+    ×
+        return $this->log($message, PEAR_LOG_ALERT);
+    ○
+        return $this->log($message, P_LOG_ALERT);
+
+/library/paypal/log.php 279
+    ×
+     * message at the PEAR_LOG_CRIT log level.
+    ○
+     * message at the P_LOG_CRIT log level.
+
+/library/paypal/log.php 291
+    ×
+        return $this->log($message, PEAR_LOG_CRIT);
+    ○
+        return $this->log($message, P_LOG_CRIT);
+
+/library/paypal/log.php 296
+    ×
+     * message at the PEAR_LOG_ERR log level.
+    ○
+     * message at the P_LOG_ERR log level.
+
+/library/paypal/log.php 308
+    ×
+        return $this->log($message, PEAR_LOG_ERR);
+    ○
+        return $this->log($message, P_LOG_ERR);
+
+/library/paypal/log.php 313
+    ×
+     * message at the PEAR_LOG_WARNING log level.
+    ○
+     * message at the P_LOG_WARNING log level.
+
+/library/paypal/log.php 325
+    ×
+        return $this->log($message, PEAR_LOG_WARNING);
+    ○
+        return $this->log($message, P_LOG_WARNING);
+
+/library/paypal/log.php 330
+    ×
+     * message at the PEAR_LOG_NOTICE log level.
+    ○
+     * message at the P_LOG_NOTICE log level.
+
+/library/paypal/log.php 342
+    ×
+        return $this->log($message, PEAR_LOG_NOTICE);
+    ○
+        return $this->log($message, P_LOG_NOTICE);
+
+/library/paypal/log.php 347
+    ×
+     * message at the PEAR_LOG_INFO log level.
+    ○
+     * message at the P_LOG_INFO log level.
+
+/library/paypal/log.php 359
+    ×
+        return $this->log($message, PEAR_LOG_INFO);
+    ○
+        return $this->log($message, P_LOG_INFO);
+
+/library/paypal/log.php 364
+    ×
+     * message at the PEAR_LOG_DEBUG log level.
+    ○
+     * message at the P_LOG_DEBUG log level.
+
+/library/paypal/log.php 376
+    ×
+        return $this->log($message, PEAR_LOG_DEBUG);
+    ○
+        return $this->log($message, P_LOG_DEBUG);
+
+/library/paypal/Log/composite.php 46
+    ×
+                           $level = PEAR_LOG_DEBUG)
+    ○
+                           $level = P_LOG_DEBUG)
+
+/library/paypal/Log/composite.php 102-106
+    ×
+     *                              Valid values are: PEAR_LOG_EMERG,
+     *                              PEAR_LOG_ALERT, PEAR_LOG_CRIT,
+     *                              PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                              PEAR_LOG_NOTICE, PEAR_LOG_INFO, and
+     *                              PEAR_LOG_DEBUG.
+    ○
+     *                              Valid values are: P_LOG_EMERG,
+     *                              P_LOG_ALERT , P_LOG_CRIT,
+     *                              P_LOG_ERR   , P_LOG_WARNING,
+     *                              P_LOG_NOTICE, P_LOG_INFO, and
+     *                              P_LOG_DEBUG.
+
+/library/paypal/Log/console.php 80
+    ×
+                         $level = PEAR_LOG_DEBUG)
+    ○
+                         $level = P_LOG_DEBUG)
+
+/library/paypal/Log/console.php 160-162
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/daemon.php 70
+    ×
+                        $level = PEAR_LOG_DEBUG)
+    ○
+                        $level = P_LOG_DEBUG)
+
+/library/paypal/Log/daemon.php 196
+    ×
+     * Converts a PEAR_LOG_* constant into a syslog LOG_* constant.
+    ○
+     * Converts a P_LOG_* constant into a syslog LOG_* constant.
+
+/library/paypal/Log/daemon.php 199
+    ×
+     * constants have unique values.  Instead, the PEAR_LOG_* were introduced
+    ○
+     * constants have unique values.  Instead, the P_LOG_* were introduced
+
+/library/paypal/Log/daemon.php 203
+    ×
+     * @param int $priority     PEAR_LOG_* value to convert to LOG_* value.
+    ○
+     * @param int $priority     P_LOG_* value to convert to LOG_* value.
+
+/library/paypal/Log/daemon.php 212-219
+    ×
+            PEAR_LOG_EMERG   => LOG_EMERG,
+            PEAR_LOG_ALERT   => LOG_ALERT,
+            PEAR_LOG_CRIT    => LOG_CRIT,
+            PEAR_LOG_ERR     => LOG_ERR,
+            PEAR_LOG_WARNING => LOG_WARNING,
+            PEAR_LOG_NOTICE  => LOG_NOTICE,
+            PEAR_LOG_INFO    => LOG_INFO,
+            PEAR_LOG_DEBUG   => LOG_DEBUG
+    ○
+            P_LOG_EMERG   => LOG_EMERG,
+            P_LOG_ALERT   => LOG_ALERT,
+            P_LOG_CRIT    => LOG_CRIT,
+            P_LOG_ERR     => LOG_ERR,
+            P_LOG_WARNING => LOG_WARNING,
+            P_LOG_NOTICE  => LOG_NOTICE,
+            P_LOG_INFO    => LOG_INFO,
+            P_LOG_DEBUG   => LOG_DEBUG
+
+/library/paypal/Log/display.php 55
+    ×
+                         $level = PEAR_LOG_DEBUG)
+    ○
+                         $level = P_LOG_DEBUG)
+
+/library/paypal/Log/display.php 84-86
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/error_log.php 26
+    ×
+        public $_type = PEAR_LOG_TYPE_SYSTEM;
+    ○
+        public $_type = P_LOG_TYPE_SYSTEM;
+
+/library/paypal/Log/error_log.php 37
+    ×
+     * PEAR_LOG_TYPE_MAIL type is used.
+    ○
+     * P_LOG_TYPE_MAIL type is used.
+
+/library/paypal/Log/error_log.php 53
+    ×
+                           $level = PEAR_LOG_DEBUG)
+    ○
+                           $level = P_LOG_DEBUG)
+
+/library/paypal/Log/error_log.php 74-76
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/file.php 111
+    ×
+                      $level = PEAR_LOG_DEBUG)
+    ○
+                      $level = P_LOG_DEBUG)
+
+/library/paypal/Log/file.php 274-276
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/mail.php 80
+    ×
+                      $level = PEAR_LOG_DEBUG)
+    ○
+                      $level = P_LOG_DEBUG)
+
+/library/paypal/Log/mail.php 184-186
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/mcal.php 75
+    ×
+                      $level = PEAR_LOG_DEBUG)
+    ○
+                      $level = P_LOG_DEBUG)
+
+/library/paypal/Log/mcal.php 125-127
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/mdb2.php 116
+    ×
+                     $level = PEAR_LOG_DEBUG)
+    ○
+                     $level = P_LOG_DEBUG)
+
+/library/paypal/Log/mdb2.php 166-168
+    ×
+            if (PEAR::isError($this->_db)) {
+                return false;
+            }
+    ○
+            // FIXME:     if (PEAR::isError($this->_db)) {
+            //                return false;
+            //            }
+
+/library/paypal/Log/mdb2.php 229-231
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/mdb2.php 275-297
+    ×
+        if (PEAR::isError($result)) {
+            /* We can only handle MDB2_ERROR_NOSUCHTABLE errors. */
+            if ($result->getCode() != MDB2_ERROR_NOSUCHTABLE) {
+                return false;
+            }
+
+            /* Attempt to create the target table. */
+            if (!$this->_createTable()) {
+                return false;
+            }
+
+            /* Recreate our prepared statement resource. */
+            $this->_statement->free();
+            if (!$this->_prepareStatement()) {
+                return false;
+            }
+
+            /* Attempt to re-execute the insertion query. */
+            $result = $this->_statement->execute($values);
+            if (PEAR::isError($result)) {
+                return false;
+            }
+        }
+    ○
+        // FIXME: if (PEAR::isError($result)) {
+        //            /* We can only handle MDB2_ERROR_NOSUCHTABLE errors. */
+        //            if ($result->getCode() != MDB2_ERROR_NOSUCHTABLE) {
+        //                return false;
+        //            }
+        //
+        //            /* Attempt to create the target table. */
+        //            if (!$this->_createTable()) {
+        //                return false;
+        //            }
+        //
+        //            /* Recreate our prepared statement resource. */
+        //            $this->_statement->free();
+        //            if (!$this->_prepareStatement()) {
+        //                return false;
+        //            }
+        //
+        //            /* Attempt to re-execute the insertion query. */
+        //            $result = $this->_statement->execute($values);
+        //            if (PEAR::isError($result)) {
+        //                return false;
+        //            }
+        //        }
+
+/library/paypal/Log/mdb2.php 323-325
+    ×
+        if (PEAR::isError($result)) {
+            return false;
+        }
+    ○
+        // FIXME: if (PEAR::isError($result)) {
+        //            return false;
+        //        }
+
+/library/paypal/Log/mdb2.php 332-334
+    ×
+        if (PEAR::isError($result)) {
+            return false;
+        }
+    ○
+        // FIXME: if (PEAR::isError($result)) {
+        //            return false;
+        //        }
+
+/library/paypal/Log/mdb2.php 356
+    ×
+        return (PEAR::isError($this->_statement) === false);
+    ○
+        return false; // FIXME: (PEAR::isError($this->_statement) === false);
+
+/library/paypal/Log/null.php 31
+    ×
+                      $level = PEAR_LOG_DEBUG)
+    ○
+                      $level = P_LOG_DEBUG)
+
+/library/paypal/Log/null.php 44-46
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/observer.php 33-36
+    ×
+     * PEAR_LOG_EMERG is the highest priority, so we will only hear messages
+     * with an integer priority value less than or equal to ours.  It defaults
+     * to PEAR_LOG_INFO, which listens to everything except PEAR_LOG_DEBUG.
+    ○
+     * P_LOG_EMERG is the highest priority, so we will only hear messages
+     * with an integer priority value less than or equal to ours.  It defaults
+     * to P_LOG_INFO, which listens to everything except P_LOG_DEBUG.
+
+/library/paypal/Log/observer.php 40
+    ×
+        public $_priority = PEAR_LOG_INFO;
+    ○
+        public $_priority = P_LOG_INFO;
+
+/library/paypal/Log/observer.php 50
+    ×
+        function Log_observer($priority = PEAR_LOG_INFO)
+    ○
+        function Log_observer($priority = P_LOG_INFO)
+
+/library/paypal/Log/observer.php 70
+    ×
+        function &factory($type, $priority = PEAR_LOG_INFO, $conf = array())
+    ○
+        function &factory($type, $priority = P_LOG_INFO, $conf = array())
+
+/library/paypal/Log/sql.php 114
+    ×
+                     $level = PEAR_LOG_DEBUG)
+    ○
+                     $level = P_LOG_DEBUG)
+
+/library/paypal/Log/sql.php 226-228
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/sqlite.php 74
+    ×
+    function Log_sqlite($name, $ident = '', &$conf, $level = PEAR_LOG_DEBUG)
+    ○
+    function Log_sqlite($name, $ident = '', &$conf, $level = P_LOG_DEBUG)
+
+/library/paypal/Log/sqlite.php 154-156
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/syslog.php 41
+    ×
+                        $level = PEAR_LOG_DEBUG)
+    ○
+                        $level = P_LOG_DEBUG)
+
+/library/paypal/Log/syslog.php 90-92
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
+
+/library/paypal/Log/syslog.php 126-133
+    ×
+     * Converts a PEAR_LOG_* constant into a syslog LOG_* constant.
+     *
+     * This function exists because, under Windows, not all of the LOG_*
+     * constants have unique values.  Instead, the PEAR_LOG_* were introduced
+     * for global use, with the conversion to the LOG_* constants kept local to
+     * to the syslog driver.
+     *
+     * @param int $priority     PEAR_LOG_* value to convert to LOG_* value.
+    ○
+     * Converts a P_LOG_* constant into a syslog LOG_* constant.
+     *
+     * This function exists because, under Windows, not all of the LOG_*
+     * constants have unique values.  Instead, the P_LOG_* were introduced
+     * for global use, with the conversion to the LOG_* constants kept local to
+     * to the syslog driver.
+     *
+     * @param int $priority     P_LOG_* value to convert to LOG_* value.
+
+/library/paypal/Log/syslog.php 142-149
+    ×
+            PEAR_LOG_EMERG   => LOG_EMERG,
+            PEAR_LOG_ALERT   => LOG_ALERT,
+            PEAR_LOG_CRIT    => LOG_CRIT,
+            PEAR_LOG_ERR     => LOG_ERR,
+            PEAR_LOG_WARNING => LOG_WARNING,
+            PEAR_LOG_NOTICE  => LOG_NOTICE,
+            PEAR_LOG_INFO    => LOG_INFO,
+            PEAR_LOG_DEBUG   => LOG_DEBUG
+    ○
+            P_LOG_EMERG   => LOG_EMERG,
+            P_LOG_ALERT   => LOG_ALERT,
+            P_LOG_CRIT    => LOG_CRIT,
+            P_LOG_ERR     => LOG_ERR,
+            P_LOG_WARNING => LOG_WARNING,
+            P_LOG_NOTICE  => LOG_NOTICE,
+            P_LOG_INFO    => LOG_INFO,
+            P_LOG_DEBUG   => LOG_DEBUG
+
+/library/paypal/Log/win.php 46-53
+    ×
+                        PEAR_LOG_EMERG   => 'red',
+                        PEAR_LOG_ALERT   => 'orange',
+                        PEAR_LOG_CRIT    => 'yellow',
+                        PEAR_LOG_ERR     => 'green',
+                        PEAR_LOG_WARNING => 'blue',
+                        PEAR_LOG_NOTICE  => 'indigo',
+                        PEAR_LOG_INFO    => 'violet',
+                        PEAR_LOG_DEBUG   => 'black'
+    ○
+                        P_LOG_EMERG   => 'red',
+                        P_LOG_ALERT   => 'orange',
+                        P_LOG_CRIT    => 'yellow',
+                        P_LOG_ERR     => 'green',
+                        P_LOG_WARNING => 'blue',
+                        P_LOG_NOTICE  => 'indigo',
+                        P_LOG_INFO    => 'violet',
+                        P_LOG_DEBUG   => 'black'
+
+/library/paypal/Log/win.php 73
+    ×
+                          $level = PEAR_LOG_DEBUG)
+    ○
+                          $level = P_LOG_DEBUG)
+
+/library/paypal/Log/win.php 212-214
+    ×
+     *                  values are: PEAR_LOG_EMERG, PEAR_LOG_ALERT,
+     *                  PEAR_LOG_CRIT, PEAR_LOG_ERR, PEAR_LOG_WARNING,
+     *                  PEAR_LOG_NOTICE, PEAR_LOG_INFO, and PEAR_LOG_DEBUG.
+    ○
+     *                  values are:   P_LOG_EMERG,     P_LOG_ALERT,
+     *                  P_LOG_CRIT  , P_LOG_ERR  ,     P_LOG_WARNING,
+     *                  P_LOG_NOTICE, P_LOG_INFO , and P_LOG_DEBUG.
 
 ────────────────────────────────────────────────────────────
 

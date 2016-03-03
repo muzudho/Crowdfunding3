@@ -26,23 +26,23 @@
  * @package Log
  */
 
-define('PEAR_LOG_EMERG',    0);     /** System is unusable */
-define('PEAR_LOG_ALERT',    1);     /** Immediate action required */
-define('PEAR_LOG_CRIT',     2);     /** Critical conditions */
-define('PEAR_LOG_ERR',      3);     /** Error conditions */
-define('PEAR_LOG_WARNING',  4);     /** Warning conditions */
-define('PEAR_LOG_NOTICE',   5);     /** Normal but significant */
-define('PEAR_LOG_INFO',     6);     /** Informational */
-define('PEAR_LOG_DEBUG',    7);     /** Debug-level messages */
+define('P_LOG_EMERG',    0);     /** System is unusable */
+define('P_LOG_ALERT',    1);     /** Immediate action required */
+define('P_LOG_CRIT',     2);     /** Critical conditions */
+define('P_LOG_ERR',      3);     /** Error conditions */
+define('P_LOG_WARNING',  4);     /** Warning conditions */
+define('P_LOG_NOTICE',   5);     /** Normal but significant */
+define('P_LOG_INFO',     6);     /** Informational */
+define('P_LOG_DEBUG',    7);     /** Debug-level messages */
 
-define('PEAR_LOG_ALL',      bindec('11111111'));  /** All messages */
-define('PEAR_LOG_NONE',     bindec('00000000'));  /** No message */
+define('P_LOG_ALL',      bindec('11111111'));  /** All messages */
+define('P_LOG_NONE',     bindec('00000000'));  /** No message */
 
 /* Log types for PHP's native error_log() function. */
-define('PEAR_LOG_TYPE_SYSTEM',  0); /** Use PHP's system logger */
-define('PEAR_LOG_TYPE_MAIL',    1); /** Use PHP's mail() function */
-define('PEAR_LOG_TYPE_DEBUG',   2); /** Use PHP's debugging connection */
-define('PEAR_LOG_TYPE_FILE',    3); /** Append to a file */
+define('P_LOG_TYPE_SYSTEM',  0); /** Use PHP's system logger */
+define('P_LOG_TYPE_MAIL',    1); /** Use PHP's mail() function */
+define('P_LOG_TYPE_DEBUG',   2); /** Use PHP's debugging connection */
+define('P_LOG_TYPE_FILE',    3); /** Append to a file */
 
 /**
  * The Log:: class implements both an abstraction for various logging
@@ -85,14 +85,14 @@ class Log
      * @var integer
      * @access private
      */
-    public $_priority = PEAR_LOG_INFO;
+    public $_priority = P_LOG_INFO;
 
     /**
      * The bitmask of allowed log levels.
      * @var integer
      * @access private
      */
-    public $_mask = PEAR_LOG_ALL;
+    public $_mask = P_LOG_ALL;
 
     /**
      * Holds all Log_observer objects that wish to be notified of new messages.
@@ -129,7 +129,7 @@ class Log
      * @since Log 1.0
      */
     function &factory($handler, $name = '', $ident = '', $conf = array(),
-                      $level = PEAR_LOG_DEBUG)
+                      $level = P_LOG_DEBUG)
     {
         $handler = strtolower($handler);
         $class = 'Log_' . $handler;
@@ -190,7 +190,7 @@ class Log
      * @since Log 1.0
      */
     function &singleton($handler, $name = '', $ident = '', $conf = array(),
-                        $level = PEAR_LOG_DEBUG)
+                        $level = P_LOG_DEBUG)
     {
         static $instances;
         if (!isset($instances)) $instances = array();
@@ -242,7 +242,7 @@ class Log
 
     /**
      * A convenience function for logging a emergency event.  It will log a
-     * message at the PEAR_LOG_EMERG log level.
+     * message at the P_LOG_EMERG log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -254,12 +254,12 @@ class Log
      */
     function emerg($message)
     {
-        return $this->log($message, PEAR_LOG_EMERG);
+        return $this->log($message, P_LOG_EMERG);
     }
 
     /**
      * A convenience function for logging an alert event.  It will log a
-     * message at the PEAR_LOG_ALERT log level.
+     * message at the P_LOG_ALERT log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -271,12 +271,12 @@ class Log
      */
     function alert($message)
     {
-        return $this->log($message, PEAR_LOG_ALERT);
+        return $this->log($message, P_LOG_ALERT);
     }
 
     /**
      * A convenience function for logging a critical event.  It will log a
-     * message at the PEAR_LOG_CRIT log level.
+     * message at the P_LOG_CRIT log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -288,12 +288,12 @@ class Log
      */
     function crit($message)
     {
-        return $this->log($message, PEAR_LOG_CRIT);
+        return $this->log($message, P_LOG_CRIT);
     }
 
     /**
      * A convenience function for logging a error event.  It will log a
-     * message at the PEAR_LOG_ERR log level.
+     * message at the P_LOG_ERR log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -305,12 +305,12 @@ class Log
      */
     function err($message)
     {
-        return $this->log($message, PEAR_LOG_ERR);
+        return $this->log($message, P_LOG_ERR);
     }
 
     /**
      * A convenience function for logging a warning event.  It will log a
-     * message at the PEAR_LOG_WARNING log level.
+     * message at the P_LOG_WARNING log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -322,12 +322,12 @@ class Log
      */
     function warning($message)
     {
-        return $this->log($message, PEAR_LOG_WARNING);
+        return $this->log($message, P_LOG_WARNING);
     }
 
     /**
      * A convenience function for logging a notice event.  It will log a
-     * message at the PEAR_LOG_NOTICE log level.
+     * message at the P_LOG_NOTICE log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -339,12 +339,12 @@ class Log
      */
     function notice($message)
     {
-        return $this->log($message, PEAR_LOG_NOTICE);
+        return $this->log($message, P_LOG_NOTICE);
     }
 
     /**
      * A convenience function for logging a information event.  It will log a
-     * message at the PEAR_LOG_INFO log level.
+     * message at the P_LOG_INFO log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -356,12 +356,12 @@ class Log
      */
     function info($message)
     {
-        return $this->log($message, PEAR_LOG_INFO);
+        return $this->log($message, P_LOG_INFO);
     }
 
     /**
      * A convenience function for logging a debug event.  It will log a
-     * message at the PEAR_LOG_DEBUG log level.
+     * message at the P_LOG_DEBUG log level.
      *
      * @param   mixed   $message    String or object containing the message
      *                              to log.
@@ -373,7 +373,7 @@ class Log
      */
     function debug($message)
     {
-        return $this->log($message, PEAR_LOG_DEBUG);
+        return $this->log($message, P_LOG_DEBUG);
     }
 
     /**
@@ -429,9 +429,9 @@ class Log
     }
 
     /**
-     * Returns the string representation of a PEAR_LOG_* integer constant.
+     * Returns the string representation of a P_LOG_* integer constant.
      *
-     * @param int $priority     A PEAR_LOG_* integer constant.
+     * @param int $priority     A P_LOG_* integer constant.
      *
      * @return string           The string representation of $level.
      *
@@ -440,27 +440,27 @@ class Log
     function priorityToString($priority)
     {
         $levels = array(
-            PEAR_LOG_EMERG   => 'emergency',
-            PEAR_LOG_ALERT   => 'alert',
-            PEAR_LOG_CRIT    => 'critical',
-            PEAR_LOG_ERR     => 'error',
-            PEAR_LOG_WARNING => 'warning',
-            PEAR_LOG_NOTICE  => 'notice',
-            PEAR_LOG_INFO    => 'info',
-            PEAR_LOG_DEBUG   => 'debug'
+            P_LOG_EMERG   => 'emergency',
+            P_LOG_ALERT   => 'alert',
+            P_LOG_CRIT    => 'critical',
+            P_LOG_ERR     => 'error',
+            P_LOG_WARNING => 'warning',
+            P_LOG_NOTICE  => 'notice',
+            P_LOG_INFO    => 'info',
+            P_LOG_DEBUG   => 'debug'
         );
 
         return $levels[$priority];
     }
 
     /**
-     * Returns the the PEAR_LOG_* integer constant for the given string
+     * Returns the the P_LOG_* integer constant for the given string
      * representation of a priority name.  This function performs a
      * case-insensitive search.
      *
      * @param string $name      String containing a priority name.
      *
-     * @return string           The PEAR_LOG_* integer contstant corresponding
+     * @return string           The P_LOG_* integer contstant corresponding
      *                          the the specified priority name.
      *
      * @since   Log 1.9.0
@@ -468,14 +468,14 @@ class Log
     function stringToPriority($name)
     {
         $levels = array(
-            'emergency' => PEAR_LOG_EMERG,
-            'alert'     => PEAR_LOG_ALERT,
-            'critical'  => PEAR_LOG_CRIT,
-            'error'     => PEAR_LOG_ERR,
-            'warning'   => PEAR_LOG_WARNING,
-            'notice'    => PEAR_LOG_NOTICE,
-            'info'      => PEAR_LOG_INFO,
-            'debug'     => PEAR_LOG_DEBUG
+            'emergency' => P_LOG_EMERG,
+            'alert'     => P_LOG_ALERT,
+            'critical'  => P_LOG_CRIT,
+            'error'     => P_LOG_ERR,
+            'warning'   => P_LOG_WARNING,
+            'notice'    => P_LOG_NOTICE,
+            'info'      => P_LOG_INFO,
+            'debug'     => P_LOG_DEBUG
         );
 
         return $levels[strtolower($name)];
