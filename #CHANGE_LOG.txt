@@ -1,4 +1,17 @@
 ────────────────────────────────────────
+追記 2016-03-03 08:43
+
+/local-settings.php
+
+    解説
+        local-settings.php ファイルにはパスワードが含まれているため配布していない。
+        http://～略～/index.php にアクセスすると local-settings.php ファイルを作成するための指示が出てくるので
+        手順に従ってください。
+
+    実行
+        http://～略～/index.php にアクセスして手順に従う。
+
+────────────────────────────────────────
 追記 2016-02-27 02:02
 
 /.htaccess    2
@@ -12,6 +25,18 @@
 
     ○
         #Options +FollowSymLinks
+
+────────────────────────────────────────
+追記 2016-03-03 08:40
+
+     解説
+         GitHub には、翻訳ファイルをコンパイルした .mo ファイルをアップロードしない設定になっている？
+         poedit を使うなどして、.mo ファイルを作っておく必要がある。
+
+/locale/ja_JP/LC_MESSAGES/messages.po
+
+    実行
+        poedit で開いて保存。(messages.moファイルが作成される)
 
 ────────────────────────────────────────
 // 追記 2016-03-01 02:18
@@ -319,15 +344,15 @@
           `project` VARCHAR(50) NULL,
           PRIMARY KEY (`id`));
 ────────────────────────────────────────────────────────────
-2016-02-25 23:20
-
-    解説
-        skill テーブルのデータを適当に入れる。
-
-    実行
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('1', 'skill0', 'skill zero', '', '1');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('2', 'skill1', 'skill one', '1', '2');
-        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('3', 'skill2', 'skill two', '1', '3');
+//2016-02-25 23:20
+//
+//    解説
+//        skill テーブルのデータを適当に入れる。
+//
+//    実行
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('1', 'skill0', 'skill zero', '', '1');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('2', 'skill1', 'skill one', '1', '2');
+//        INSERT INTO `skill` (`id`, `name`, `description`, `parent_skill_id`, `order`) VALUES ('3', 'skill2', 'skill two', '1', '3');
 ────────────────────────────────────────────────────────────
 // これは要らなくなった。
 //
@@ -393,12 +418,12 @@
         define('LG_PLACE_NAME'               , 'LOCAL GOOD FUKUOKA');   // this string record in database. `user_login_log` table, `node` field.
 
 ────────────────────────────────────────────────────────────
-2016-02-28 23:57
-
-    解説
-        GitHub には、翻訳ファイルをコンパイルした .mo ファイルをアップロードしない設定になっている？
-        poedit を使うなどして、.mo ファイルを作っておく必要がある。
-
+// 2016-02-28 23:57
+// 
+//     解説
+//         GitHub には、翻訳ファイルをコンパイルした .mo ファイルをアップロードしない設定になっている？
+//         poedit を使うなどして、.mo ファイルを作っておく必要がある。
+// 
 ────────────────────────────────────────────────────────────
 2016-02-29 03:13
 
@@ -793,9 +818,9 @@
     実行
         INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('profile-field-skills', 'Por favor, seleccione una habilidad.', 'profile');
         INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-field-skills', 'ja', 'スキルを選んでください。');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('1', 'スキル１', 'ja', 'スキルの１番');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('2', 'スキル２', 'ja', 'スキルの２番');
-        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'スキル３', 'ja', 'スキルの３番');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('1', 'スキル１', 'ja', 'スキルの１番');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('2', 'スキル２', 'ja', 'スキルの２番');
+//        INSERT INTO `skill_lang` (`id`, `name`, `lang`, `description`) VALUES ('3', 'スキル３', 'ja', 'スキルの３番');
 
 ────────────────────────────────────────────────────────────
 2016-03-01 05:36
@@ -1199,7 +1224,5 @@
             return true;
         }
 
-
 ────────────────────────────────────────────────────────────
-
 
