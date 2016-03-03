@@ -312,10 +312,10 @@
     実行
         INSERT INTO `role` (`id`, `name`) VALUES ('project_owner', 'project_owner');
         INSERT INTO `role` (`id`, `name`) VALUES ('localadmin', 'localadmin');
-        INSERT INTO `role` (`id`, `name`) VALUES ('vip', 'vip');
+        //INSERT INTO `role` (`id`, `name`) VALUES ('vip', 'vip');
         INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'project_owner', '*');
         INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'localadmin', '*');
-        INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'vip', '*');
+        //INSERT INTO `user_role` (`user_id`, `role_id`, `node_id`) VALUES ('root', 'vip', '*');
 ────────────────────────────────────────────────────────────
 2016-02-25 18:04
 
@@ -1225,4 +1225,149 @@
         }
 
 ────────────────────────────────────────────────────────────
+// 「2016-02-25 16:40」にも反映。
+2016-03-03 09:39
 
+    解説
+        本家スペイン版GOTEO でも配布していない Goteo\Model\Vip を利用している機能を
+        削除する方針。
+        ソースコードを読んだところ、2013年頃に書かれている機能で
+        vip権限を持っているユーザーには、プロフィール編集画面にVIP用のなんらかの画像の
+        追加があるという仕組みのようだ。
+        もしかするとパトロンになったユーザーになんらかの画面がでてきたのかもしれないがコメントアウトされている。
+
+    実行
+//        DELETE FROM `role` WHERE `id`='vip';
+//        DELETE FROM `user_role` WHERE `user_id`='root' and`role_id`='vip';
+
+/controller/dashboard.php 98-100
+    ×
+            // vip/recomendador tiene una imagen adicional
+            $vip = ($option == 'profile' && isset($user->roles['vip'])) ? Model\User\Vip::get($user->id) : null;
+
+    ○
+            ※削除
+
+/controller/dashboard.php 109
+    ×
+                        Dashboard\Profile::process_profile($user, $vip, $errors, $log_action);
+    ○
+                        Dashboard\Profile::process_profile($user, $errors, $log_action);
+
+/controller/dashboard.php 173-175
+    ×
+                    if (isset($user->roles['vip'])) {
+                        $viewData['vip'] = Model\User\Vip::get($user->id);
+                    }
+    ○
+        ※削除
+
+/controller/dashboard/profile.php 29-38
+    ×
+        /**
+         * Tratamiento de formulario de datos de perfil
+         * 
+         * @param object $user instancia de Model\User  (por referencia)
+         * @param object $vip instancia de Model\User\Vip  (por referencia)
+         * @param array $errors  (por referencia)
+         * @param string $log_action  (por referencia)
+         * @return boolean si se guarda bien
+         */
+        public static function process_profile (&$user, &$vip, &$errors, &$log_action) {
+    ○
+        /**
+         * Tratamiento de formulario de datos de perfil
+         * 
+         * @param object $user instancia de Model\User  (por referencia)
+         * @param array $errors  (por referencia)
+         * @param string $log_action  (por referencia)
+         * @return boolean si se guarda bien
+         */
+        public static function process_profile (&$user, &$errors, &$log_action) {
+
+/controller/dashboard/profile.php 71-83
+    ×
+            // Tratamiento de la imagen vip mediante el modelo User\Vip
+            if ($vip instanceof Model\User\Vip) {
+                if (isset($_FILES['avatar_upload']) && $_FILES['avatar_upload']['error'] != UPLOAD_ERR_NO_FILE) {
+                    $vip->image = $_FILES['vip_image_upload'];
+                    $vip->save($errors);
+                }
+
+                // tratar si quitan la imagen vip
+                if ($vip->image instanceof Image && !empty($_POST['vip_image-' . $vip->image->id . '-remove'])) {
+                    $vip->image->remove();
+                    $vip->remove();
+                }
+            }
+    ○
+        ※削除
+
+/controller/user.php 496-501
+    ×
+                // a menos que este perfil sea de un vip, no pueden verlo
+                if (!isset($user->roles['vip'])) {
+                    $_SESSION['jumpto'] = '/user/profile/' . $id . '/' . $show;
+                    Message::Info(Text::get('user-login-required-to_see'));
+                    throw new Redirection(SEC_URL."/user/login");
+                }
+    ○
+        ※削除
+
+/model/home.php 46-47
+    ×
+                             'feed' => Text::_('Actividad reciente'),
+        //vipsys                     'patrons' => Text::_('Padrinos')
+    ○
+                             'feed' => Text::_('Actividad reciente')
+
+/model/home.php 54-55
+    ×
+        //callsys                     'calls' => Text::_('Convocatorias'),
+        //vipsys                     'patrons' => Text::_('Padrinos')
+    ○
+        //callsys                     'calls' => Text::_('Convocatorias')
+
+/model/home.php 74
+    ×
+        //vipsys                     'patrons' => '/admin/patron',
+    ○
+        ※削除
+
+/model/user.php 905-929
+    ×
+        /*
+         * Listado simple de los usuarios Colaboradores
+         */
+        public static function getVips() {
+
+            $list = array();
+
+            $query = static::query("
+                SELECT
+                    user.id as id,
+                    user.name as name
+                FROM    user
+                INNER JOIN user_role
+                    ON  user_role.user_id = user.id
+                    AND user_role.role_id = 'vip'
+                ORDER BY user.name ASC
+                ");
+
+            foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
+                $list[$item->id] = $item->name;
+            }
+
+            return $list;
+        }
+
+    ○
+        ※削除
+
+/view/admin/users/list.html.php 231
+    ×
+                    <?php echo $user->vip ? Text::_('VIP') : ''; ?>
+    ○
+        ※削除
+
+────────────────────────────────────────────────────────────

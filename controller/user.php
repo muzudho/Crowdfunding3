@@ -493,13 +493,6 @@ namespace Goteo\Controller {
                 }
 
 
-                // a menos que este perfil sea de un vip, no pueden verlo
-                if (!isset($user->roles['vip'])) {
-                    $_SESSION['jumpto'] = '/user/profile/' . $id . '/' . $show;
-                    Message::Info(Text::get('user-login-required-to_see'));
-                    throw new Redirection(SEC_URL."/user/login");
-                }
-
                 /*
                   // subpágina de cofinanciadores
                   if ($show == 'investors') {

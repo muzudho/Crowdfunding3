@@ -228,7 +228,6 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                     <?php echo $user->caller ? Text::_('Convocador') : ''; ?>
                     <?php echo $user->admin ? Text::_('Admin') : ''; ?>
                     <?php echo $user->manager ? Text::_('Gestor') : ''; ?>
-                    <?php echo $user->vip ? Text::_('VIP') : ''; ?>
                     <?php echo $user->localadmin ? Text::_('LocalAdmin') : ''; ?>
                 </td>
             </tr>

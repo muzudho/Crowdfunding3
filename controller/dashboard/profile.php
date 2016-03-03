@@ -30,12 +30,11 @@ namespace Goteo\Controller\Dashboard {
          * Tratamiento de formulario de datos de perfil
          * 
          * @param object $user instancia de Model\User  (por referencia)
-         * @param object $vip instancia de Model\User\Vip  (por referencia)
          * @param array $errors  (por referencia)
          * @param string $log_action  (por referencia)
          * @return boolean si se guarda bien
          */
-        public static function process_profile (&$user, &$vip, &$errors, &$log_action) {
+        public static function process_profile (&$user, &$errors, &$log_action) {
 
             $fields = array(
                 'user_name' => 'name',
@@ -66,20 +65,6 @@ namespace Goteo\Controller\Dashboard {
             if (!empty($_POST['avatar-' . $user->avatar->id . '-remove'])) {
                 $user->avatar->remove();
                 $user->avatar = '';
-            }
-
-            // Tratamiento de la imagen vip mediante el modelo User\Vip
-            if ($vip instanceof Model\User\Vip) {
-                if (isset($_FILES['avatar_upload']) && $_FILES['avatar_upload']['error'] != UPLOAD_ERR_NO_FILE) {
-                    $vip->image = $_FILES['vip_image_upload'];
-                    $vip->save($errors);
-                }
-
-                // tratar si quitan la imagen vip
-                if ($vip->image instanceof Image && !empty($_POST['vip_image-' . $vip->image->id . '-remove'])) {
-                    $vip->image->remove();
-                    $vip->remove();
-                }
             }
 
             // ojo si es receptor de pruebas, no machacarlo

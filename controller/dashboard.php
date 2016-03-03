@@ -96,9 +96,6 @@ namespace Goteo\Controller {
             // salto al perfil público
             if ($option == 'public') throw new Redirection('/user/profile/' . $user->id);
 
-            // vip/recomendador tiene una imagen adicional
-            $vip = ($option == 'profile' && isset($user->roles['vip'])) ? Model\User\Vip::get($user->id) : null;
-
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $log_action = null;
@@ -107,7 +104,7 @@ namespace Goteo\Controller {
                 switch ($option) {
                     // perfil publico
                     case 'profile':
-                        Dashboard\Profile::process_profile($user, $vip, $errors, $log_action);
+                        Dashboard\Profile::process_profile($user, $errors, $log_action);
                         break;
 
                     // datos personales
@@ -168,10 +165,6 @@ namespace Goteo\Controller {
                         if ($last !== false) {
                             $viewData["web-{$last->id}-edit"] = true;
                         }
-                    }
-
-                    if (isset($user->roles['vip'])) {
-                        $viewData['vip'] = Model\User\Vip::get($user->id);
                     }
 
                     break;

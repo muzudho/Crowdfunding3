@@ -43,8 +43,7 @@ namespace Goteo\Model {
                      'posts' => Text::_('Entradas de blog'),
                      'promotes' => Text::_('Proyectos destacados'),
 //callsys                     'drops' => Text::_('Capital Riego'),
-                     'feed' => Text::_('Actividad reciente'),
-//vipsys                     'patrons' => Text::_('Padrinos')
+                     'feed' => Text::_('Actividad reciente')
                  );
         }
 
@@ -52,8 +51,7 @@ namespace Goteo\Model {
             return array(
                      'posts' => Text::_('Novedades'),
                      'promotes' => Text::_('Proyectos'),
-//callsys                     'calls' => Text::_('Convocatorias'),
-//vipsys                     'patrons' => Text::_('Padrinos')
+//callsys                     'calls' => Text::_('Convocatorias')
                  );
         }
 
@@ -73,7 +71,6 @@ namespace Goteo\Model {
 //callsys                     'drops' => '/admin/calls',
 //callsys                     'calls' => '/admin/campaigns',
                      'posts' => '/admin/blog',
-//vipsys                     'patrons' => '/admin/patron',
                      'sponsors' => '/admin/sponsors'
                  );
         }
