@@ -49,9 +49,6 @@ if (GOTEO_MAINTENANCE === true && $_SERVER['REQUEST_URI'] != '/about/maintenance
     header('Location: /about/maintenance');
 }
 
-// Include path
-//set_include_path(GOTEO_PATH . PATH_SEPARATOR . '.');
-
 // Autoloader
 spl_autoload_register(
 

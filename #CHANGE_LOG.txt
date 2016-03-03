@@ -1404,3 +1404,28 @@
         ※削除
 
 ────────────────────────────────────────────────────────────
+2016-03-03 13:24
+
+	解説
+		PEAR ライブラリ用の設定も削除。
+
+/index.php 52-54
+	×
+		// Include path
+		//set_include_path(GOTEO_PATH . PATH_SEPARATOR . '.');
+	○
+		※削除
+
+/config.php 31-37
+	×
+		define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
+		if (function_exists('ini_set')) {
+		    ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
+		} else {
+		    throw new Exception("No puedo a�adir las librer�as PEAR al include_path.");
+		}
+	○
+		※削除
+
+────────────────────────────────────────────────────────────
+
