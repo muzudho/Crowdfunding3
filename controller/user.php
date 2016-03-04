@@ -154,7 +154,7 @@ namespace Goteo\Controller {
                 $user->name     = $_POST['username'];
                 $user->email    = $_POST['email'];
                 $user->password = $_POST['password'];
-                $user->active   = true; // アクティベーション済みにします。
+                $user->active   = true; // ログインできるようにします。（メール確認済みかどうかは、別にフラグ $confirmed があります）
                 $user->node     = \NODE_ID;
 
                 // ユーザーのデータセットを保存。この際、エラーがあれば配列に追加して返します。
@@ -659,12 +659,17 @@ namespace Goteo\Controller {
          * @param type string	$token
          */
         public function activate($token) {
+            // $token は記号のような長い文字列。
+            // 一致するユーザーのIDを取得。
             $query = Model\User::query('SELECT id FROM user WHERE token = ?', array($token));
             if ($id = $query->fetchColumn()) {
+                // ID からユーザー・データを取得。
                 $user = Model\User::get($id);
                 if (!$user->confirmed) {
-                    $user->confirmed = true;
+                    // メールでの確認が取れていないなら。
+                    $user->confirmed = true;// 確認が取れたというフラグを立てます。
                     $user->active = true;
+                    // ユーザー・データへの変更を保存します。エラーがあれば $error 配列に追加して返します。
                     if ($user->save($errors)) {
                         Message::Info(Text::get('user-activate-success'));
                         $_SESSION['user'] = $user;
