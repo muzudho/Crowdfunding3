@@ -166,24 +166,6 @@ define('CRON_PARAM'                  , '--------------');
 define('CRON_VALUE'                  , '--------------');
 
 
-/****************************************************
-Paypal constants (sandbox)
-* Must set cretentials on library/paypal/paypal_config.php as well
-****************************************************/
-define('PAYPAL_REDIRECT_URL'         , '---Sandbox/Production-url-----https://www.sandbox.paypal.com/webscr&cmd=');
-define('PAYPAL_DEVELOPER_PORTAL'     , '--developper-domain--');
-define('PAYPAL_DEVICE_ID'            , '--domain--');
-define('PAYPAL_APPLICATION_ID'       , '--PayPal-app-Id---');
-define('PAYPAL_BUSINESS_ACCOUNT'     , '--mail-like-paypal-account--');
-define('PAYPAL_IP_ADDRESS'           , '127.0.0.1');
-
-/****************************************************
-TPV [Bank Name] (depends on your bank)
-****************************************************/
-define('TPV_MERCHANT_CODE'           , 'xxxxxxxxx');
-define('TPV_REDIRECT_URL'            , '--bank-rest-api-url--');
-define('TPV_ENCRYPT_KEY'             , 'xxxxxxxxx');
-
 /*
 Any other payment system configuration should be setted here
 */

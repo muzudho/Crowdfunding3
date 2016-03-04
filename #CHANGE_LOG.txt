@@ -3163,28 +3163,55 @@
 		※削除
 
 ────────────────────────────────────────────────────────────
+2016-03-04 21:02
 
+	解説
+		不要になった confing.php、local-settings.php の項目の削除。
 
+/config.php 169-
+	×
+		/****************************************************
+		Paypal constants (sandbox)
+		* Must set cretentials on library/paypal/paypal_config.php as well
+		****************************************************/
+		define('PAYPAL_REDIRECT_URL'         , '---Sandbox/Production-url-----https://www.sandbox.paypal.com/webscr&cmd=');
+		define('PAYPAL_DEVELOPER_PORTAL'     , '--developper-domain--');
+		define('PAYPAL_DEVICE_ID'            , '--domain--');
+		define('PAYPAL_APPLICATION_ID'       , '--PayPal-app-Id---');
+		define('PAYPAL_BUSINESS_ACCOUNT'     , '--mail-like-paypal-account--');
+		define('PAYPAL_IP_ADDRESS'           , '127.0.0.1');
 
+		/****************************************************
+		TPV [Bank Name] (depends on your bank)
+		****************************************************/
+		define('TPV_MERCHANT_CODE'           , 'xxxxxxxxx');
+		define('TPV_REDIRECT_URL'            , '--bank-rest-api-url--');
+		define('TPV_ENCRYPT_KEY'             , 'xxxxxxxxx');
 
+	○
+		※削除
 
+/local-settings.php 97-
+	×
+		/****************************************************
+		Paypal constants (sandbox)
+		* Must set cretentials on library/paypal/paypal_config.php as well
+		****************************************************/
+		define('PAYPAL_REDIRECT_URL'         , '---Sandbox/Production-url-----https://www.sandbox.paypal.com/webscr&cmd=');
+		define('PAYPAL_DEVELOPER_PORTAL'     , '--developper-domain--');
+		define('PAYPAL_DEVICE_ID'            , '--domain--');
+		define('PAYPAL_APPLICATION_ID'       , '--PayPal-app-Id---');
+		define('PAYPAL_BUSINESS_ACCOUNT'     , '--mail-like-paypal-account--');
+		define('PAYPAL_IP_ADDRESS'           , '127.0.0.1');
 
+		/****************************************************
+		TPV [Bank Name] (depends on your bank)
+		****************************************************/
+		define('TPV_MERCHANT_CODE'           , 'xxxxxxxxx');
+		define('TPV_REDIRECT_URL'            , '--bank-rest-api-url--');
+		define('TPV_ENCRYPT_KEY'             , 'xxxxxxxxx');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	○
+		※削除
 
 ────────────────────────────────────────────────────────────
