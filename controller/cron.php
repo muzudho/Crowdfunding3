@@ -24,9 +24,7 @@ namespace Goteo\Controller {
         Goteo\Library\Text,
         Goteo\Library\Feed,
         Goteo\Library\Template,
-        Goteo\Library\Mail,
-        Goteo\Library\Paypal,
-        Goteo\Library\Tpv;
+        Goteo\Library\Mail;
 
     class Cron extends \Goteo\Core\Controller {
         
@@ -768,16 +766,9 @@ namespace Goteo\Controller {
                 $userData = Model\User::getMini($invest->user);
                 echo 'Tratando: Aporte (id: '.$invest->id.') de '.$userData->name.' ['.$userData->email.']<br />';
 
-                if (Paypal::doPay($invest, $errors)) {
-                    echo 'Aporte (id: '.$invest->id.') pagado al proyecto. Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />';
-                    $log_text = Text::_("Se ha realizado el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
-                    Model\Invest::setDetail($invest->id, 'payed', 'Se ha realizado el pago secundario al proyecto. Proceso cron/doPay');
-
-                } else {
-                    echo 'Fallo al pagar al proyecto el aporte (id: '.$invest->id.'). Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />' . implode('<br />', $errors);
-                    $log_text = Text::_("Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
-                    Model\Invest::setDetail($invest->id, 'pay-failed', 'Fallo al realizar el pago secundario: ' . implode('<br />', $errors) . '. Proceso cron/doPay');
-                }
+                echo 'Fallo al pagar al proyecto el aporte (id: '.$invest->id.'). Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />' . implode('<br />', $errors);
+                $log_text = Text::_("Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
+                Model\Invest::setDetail($invest->id, 'pay-failed', 'Fallo al realizar el pago secundario: ' . implode('<br />', $errors) . '. Proceso cron/doPay');
 
                 // Evento Feed
                 $log = new Feed();

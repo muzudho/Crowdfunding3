@@ -1102,25 +1102,8 @@ namespace Goteo\Model {
                             }
                         }
                     }
-
-                    // A ver si tiene tpv
-                    // si estan pendientes, ejecutados o pagados al proyecto es una incidencia
-                    $inv_tpv = self::getList(array(
-                        'methods' => 'tpv',
-                        'projects' => $project
-                    ));
-                    if (!empty($inv_tpv)) {
-//                        $Data['note'][] = "Los aportes de tpv son incidencias si están activos";
-                        foreach ($inv_tpv as $invId => $invest) {
-                            if ($invest->investStatus == 1) {
-                                $Data['tpv']['total']['fail'] += $invest->amount;
-                                $Data['note'][] = Text::_("El aporte TPV"). " {$invId} ".Text::_("no debería estar en estado '") . self::status($invest->investStatus) . "'";
-                            }
-                        }
-                    }
-
-
                     break;
+
                 case 4: // financiado
                 case 5: // exitoso
                     // en etos dos estados paypal(0) es incidencia en cualquier ronda
@@ -1170,40 +1153,6 @@ namespace Goteo\Model {
                             $Data['cash']['total'] = $Data['cash']['first'];
                         }
 
-                        // TPV
-                        $inv_tpv = self::getList(array(
-                            'methods' => 'tpv',
-                            'projects' => $project,
-                            'investStatus' => '1'
-                        ));
-                        if (!empty($inv_tpv)) {
-                            $Data['tpv']['first']['fail'] = 0;
-                            foreach ($inv_tpv as $invId => $invest) {
-                                $Data['tpv']['first']['users'][$invest->user] = $invest->user;
-                                $Data['tpv']['first']['invests']++;
-                                $Data['tpv']['first']['amount'] += $invest->amount;
-                            }
-                            $Data['tpv']['total'] = $Data['tpv']['first'];
-                        }
-
-
-                        // PAYPAL
-                        $inv_paypal = self::getList(array(
-                            'methods' => 'paypal',
-                            'projects' => $project
-                        ));
-                        if (!empty($inv_paypal)) {
-                            $Data['paypal']['first']['fail'] = 0;
-                            foreach ($inv_paypal as $invId => $invest) {
-                                if (in_array($invest->investStatus, array('0', '1', '3'))) {
-                                    $Data['paypal']['first']['users'][$invest->user] = $invest->user;
-                                    $Data['paypal']['first']['invests']++;
-                                    $Data['paypal']['first']['amount'] += $invest->amount;
-                                }
-                            }
-                            $Data['paypal']['total'] = $Data['paypal']['first'];
-                        }
-
                     } elseif ($act_eq === 'sum') {
                         // complicado: primero los de primera ronda, luego los de segunda ronda sumando al total
                         // calcular ultimo dia de primera ronda segun la fecha de pase
@@ -1227,48 +1176,6 @@ namespace Goteo\Model {
                             $Data['cash']['total'] = $Data['cash']['first'];
                         }
 
-                        // TPV first
-                        $inv_tpv = self::getList(array(
-                            'methods' => 'tpv',
-                            'projects' => $project,
-                            'investStatus' => '1',
-                            'date_until' => $last_day
-                        ));
-                        if (!empty($inv_tpv)) {
-                            $Data['tpv']['first']['fail'] = 0;
-                            foreach ($inv_tpv as $invId => $invest) {
-                                $Data['tpv']['first']['users'][$invest->user] = $invest->user;
-                                $Data['tpv']['first']['invests']++;
-                                $Data['tpv']['first']['amount'] += $invest->amount;
-                            }
-                            $Data['tpv']['total'] = $Data['tpv']['first'];
-                        }
-
-
-                        // PAYPAL first
-                        $inv_paypal = self::getList(array(
-                            'methods' => 'paypal',
-                            'projects' => $project,
-                            'date_until' => $last_day
-                        ));
-                        if (!empty($inv_paypal)) {
-                            $Data['paypal']['first']['fail'] = 0;
-                            foreach ($inv_paypal as $invId => $invest) {
-                                if (in_array($invest->investStatus, array('0', '1', '3'))) {
-                                    // a ver si cargo pendiente es incidencia...
-                                    if ($invest->investStatus == 0 && ($p0 === 'first' || $p0 === 'all')) {
-                                        $Data['paypal']['first']['fail'] += $invest->amount;
-                                        $Data['note'][] = "El aporte paypal {$invId} no debería estar en estado '".self::status($invest->investStatus)."'. <a href=\"/admin/invests/details/{$invId}\" target=\"_blank\">Abrir detalles</a>";
-                                        continue;
-                                    }
-                                    $Data['paypal']['first']['users'][$invest->user] = $invest->user;
-                                    $Data['paypal']['first']['invests']++;
-                                    $Data['paypal']['first']['amount'] += $invest->amount;
-                                }
-                            }
-                            $Data['paypal']['total'] = $Data['paypal']['first'];
-                        }
-
                         // CASH  second
                         $inv_cash = self::getList(array(
                             'methods' => 'cash',
@@ -1290,59 +1197,9 @@ namespace Goteo\Model {
                         }
 
 
-                        // TPV  second
-                        $inv_tpv = self::getList(array(
-                            'methods' => 'tpv',
-                            'projects' => $project,
-                            'investStatus' => '1',
-                            'date_from' => $passed
-
-                        ));
-                        if (!empty($inv_tpv)) {
-                            $Data['tpv']['second']['fail'] = 0;
-                            foreach ($inv_tpv as $invId => $invest) {
-                                $Data['tpv']['second']['users'][$invest->user] = $invest->user;
-                                $Data['tpv']['total']['users'][$invest->user] = $invest->user;
-                                $Data['tpv']['second']['invests']++;
-                                $Data['tpv']['total']['invests']++;
-                                $Data['tpv']['second']['amount'] += $invest->amount;
-                            }
-                            $Data['tpv']['total']['amount'] += $Data['tpv']['second']['amount'];
-                        }
-
-                        // PAYPAL second
-                        $inv_paypal = self::getList(array(
-                            'methods' => 'paypal',
-                            'projects' => $project,
-                            'date_from' => $passed
-                        ));
-                        if (!empty($inv_paypal)) {
-                            $Data['paypal']['second']['fail'] = 0;
-                            foreach ($inv_paypal as $invId => $invest) {
-                                if (in_array($invest->investStatus, array('0', '1', '3'))) {
-                                    // a ver si cargo pendiente es incidencia...
-                                    if ($invest->investStatus == 0 && $p0 === 'all') {
-                                        $Data['paypal']['second']['fail'] += $invest->amount;
-                                        $Data['paypal']['total']['fail'] += $invest->amount;
-                                        $Data['note'][] = "El aporte paypal {$invId} no debería estar en estado '".self::status($invest->investStatus)."'. <a href=\"/admin/invests/details/{$invId}\" target=\"_blank\">Abrir detalles</a>";
-                                        continue;
-                                    }
-                                    $Data['paypal']['second']['users'][$invest->user] = $invest->user;
-                                    $Data['paypal']['total']['users'][$invest->user] = $invest->user;
-                                    $Data['paypal']['second']['invests']++;
-                                    $Data['paypal']['total']['invests']++;
-                                    $Data['paypal']['second']['amount'] += $invest->amount;
-                                }
-                            }
-                            $Data['paypal']['total']['amount'] += $Data['paypal']['second']['amount'];
-                        }
-
-                        
                     } else {
                         $Data['note'][] = Text::_('No se ha calculado bien el parametro $act_eq');
                     }
-
-
 
                     break;
             }

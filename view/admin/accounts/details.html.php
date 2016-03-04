@@ -18,9 +18,7 @@
  *
  */
 
-use Goteo\Library\Text,
-    Goteo\Library\Paypal,
-    Goteo\Library\Tpv;
+use Goteo\Library\Text;
 
 $invest = $this['invest'];
 $project = $this['project'];
@@ -174,27 +172,3 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
         echo "{$log->date} : {$log->log} ({$log->type})<br />";
     } ?>
 </div>
-
-<?php if (isset($_GET['full']) && $_GET['full'] == 'show') : ?>
-<div class="widget">
-    <h3><?php echo Text::_("Detalles técnicos de la transaccion"); ?></h3>
-    <?php if (!empty($invest->preapproval)) :
-        $details = Paypal::preapprovalDetails($invest->preapproval);
-        ?>
-    <dl>
-        <dt><strong><?php echo Text::_("Detalles del preapproval"); ?>:</strong></dt>
-        <dd><?php echo \trace($details); ?></dd>
-    </dl>
-    <?php endif ?>
-
-    <?php if (!empty($invest->payment)) :
-        $details = Paypal::paymentDetails($invest->payment);
-        ?>
-    <dl>
-        <dt><strong><?php echo Text::_("Detalles del cargo"); ?>:</strong></dt>
-        <dd><?php echo \trace($details); ?></dd>
-    </dl>
-    <?php endif; ?>
-</div>
-<?php endif; ?>
-
