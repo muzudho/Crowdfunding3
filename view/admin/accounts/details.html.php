@@ -46,7 +46,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
         <strong><?php echo Text::_("Usuario"); ?>: </strong><?php echo $user->name ?> [<?php echo $user->email ?>]
     </p>
     <p>
-        <?php if ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2)) : ?>
+        <?php if ($invest->status < 1 || ($invest->method == 'cash' && $invest->status < 2)) : ?>
         <a href="/admin/accounts/cancel/<?php echo $invest->id ?>"
             onclick="return confirm('<?php echo Text::_("¿Estás seguro de querer cancelar este aporte y su preapproval?"); ?>');"
             class="button"><?php echo Text::_("Cancelar este aporte"); ?></a>&nbsp;&nbsp;&nbsp;
@@ -155,24 +155,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
         </dd>
     </dl>
 
-    <?php if ($invest->method == 'paypal') : ?>
-        <?php if (!isset($_GET['full'])) : ?>
-        <p>
-            <a href="/admin/accounts/details/<?php echo $invest->id; ?>/?full=show"><?php echo Text::_("Mostrar detalles técnicos"); ?></a>
-        </p>
-        <?php endif; ?>
-
-        <?php if (!empty($invest->transaction)) : ?>
-        <dl>
-            <dt><strong><?php echo Text::_("Detalles de la devolución"); ?>:</strong></dt>
-            <dd><?php echo Text::_("Hay que ir al panel de paypal para ver los detalles de una devolución"); ?></dd>
-        </dl>
-        <?php endif ?>
-    <?php elseif ($invest->method == 'tpv') : ?>
-        <p><?php echo Text::_("Hay que ir al panel del banco para ver los detalles de los aportes mediante TPV."); ?></p>
-    <?php else : ?>
-        <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
-    <?php endif ?>
+    <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
 
     <?php if (!empty($droped)) : ?>
     <h3><?php echo Text::_("Capital riego asociado"); ?></h3>

@@ -2239,3 +2239,656 @@
 		★略
 
 ────────────────────────────────────────────────────────────
+2016-03-04 18:42
+
+	解説
+		PayPal や、
+		TPV （VISA や MasterCard で支払う銀行）は削除方針。
+
+/controller/admin/accounts.php 197-224
+	×
+                    case 'paypal':
+                        $err = array();
+                        if (Paypal::cancelPreapproval($invest, $err)) {
+                            $errors[] = Text::_('Preaproval paypal cancelado.');
+                            $log_text = Text::_("El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+                        } else {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Fallo al cancelar el preapproval en paypal: ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
+                            if ($invest->cancel()) {
+                                $errors[] = Text::_('Aporte cancelado');
+                            } else{
+                                $errors[] = Text::_('Fallo al cancelar el aporte');
+                            }
+                        }
+                        break;
+                    case 'tpv':
+                        $err = array();
+                        if (Tpv::cancelPreapproval($invest, $err)) {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Aporte cancelado correctamente. ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
+                        } else {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Fallo en la operación. ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+                        }
+                        break;
+
+	○
+                    // ここに、支払い方法別でキャンセル処理を書いてください。
+
+/controller/admin/accounts.php 379-406
+	×
+                    case 'paypal':
+                        $err = array();
+                        if (Paypal::cancelPreapproval($invest, $err)) {
+                            $errors[] = Text::_('Preaproval paypal cancelado.');
+                            $log_text = Text::_("El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+                        } else {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Fallo al cancelar el preapproval en paypal: ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+                            if ($invest->cancel()) {
+                                $errors[] = Text::_('Aporte cancelado');
+                            } else{
+                                $errors[] = Text::_('Fallo al cancelar el aporte');
+                            }
+                        }
+                        break;
+                    case 'tpv':
+                        $err = array();
+                        if (Tpv::cancelPreapproval($invest, $err)) {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Aporte cancelado correctamente. ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
+                        } else {
+                            $txt_errors = implode('; ', $err);
+                            $errors[] = Text::_('Fallo en la operación. ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+                        }
+                        break;
+
+	○
+                    // ここに、支払い方法別でキャンセル処理を書いてください。
+
+/controller/admin/accounts.php 427-479
+	×
+                    case 'paypal':
+                        // a ver si tiene cuenta paypal
+                        $projectAccount = Model\Project\Account::get($invest->project);
+
+                        if (empty($projectAccount->paypal)) {
+                            // Erroraco!
+                            $errors[] = Text::_('El proyecto no tiene cuenta paypal!!, ponersela en la seccion Contrato del dashboard del autor');
+                            $log_text = null;
+
+                            // Evento Feed
+                            $log = new Feed();
+                            $log->setTarget($project->id);
+                            $log->populate('proyecto sin cuenta paypal (admin)', '/admin/projects',
+                                \vsprintf('El proyecto %s aun no ha puesto su %s !!!', array(
+                                    Feed::item('project', $project->name, $project->id),
+                                    Feed::item('relevant', 'cuenta PayPal')
+                            )));
+                            $log->doAdmin('project');
+                            unset($log);
+
+                            break;
+                        }
+
+                        $invest->account = $projectAccount->paypal;
+                        if (Paypal::pay($invest, $errors)) {
+                            $errors[] = Text::_('Cargo paypal correcto');
+                            $log_text = Text::_("El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+                            $invest->status = 1;
+                            
+                            // si era incidencia la desmarcamos
+                            if ($invest->issue) {
+                                Model\Invest::unsetIssue($invest->id);
+                                Model\Invest::setDetail($invest->id, 'issue-solved', 'La incidencia se ha dado por resuelta al ejecutar el aporte manualmente por el admin ' . $_SESSION['user']->name);
+                            }
+                            
+                            
+                        } else {
+                            $txt_errors = implode('; ', $errors);
+                            $errors[] = Text::_('Fallo al ejecutar cargo paypal: ') . $txt_errors . '<strong>POSIBLE INCIDENCIA NO COMUNICADA Y APORTE NO CANCELADO, HAY QUE TRATARLA MANUALMENTE</strong>';
+                            $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+                        }
+                        break;
+                    case 'tpv':
+                        if (Tpv::pay($invest, $errors)) {
+                            $errors[] = Text::_('Cargo sermepa correcto');
+                            $log_text = Text::_("El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s");
+                            $invest->status = 1;
+                        } else {
+                            $txt_errors = implode('; ', $errors);
+                            $errors[] = Text::_('Fallo al ejecutar cargo sermepa: ') . $txt_errors;
+                            $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores:") . $txt_errors;
+                        }
+                        break;
+
+	○
+                    // ここに、支払い方法別で 支払い処理を書いてください。
+
+/controller/cron.php 458-466
+	×
+//                                case 'paypal':
+//                                    $err = array();
+//                                    if (Paypal::cancelPreapproval($invest, $err, true)) {
+//                                        $log_text = Text::_("Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+//                                    } else {
+//                                        $txt_errors = implode('; ', $err);
+//                                        $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+//                                    }
+//                                    break;
+
+	○
+                    // ここに、支払い方法別でキャンセル処理を書いてください。
+
+/controller/cron.php 466-475
+	×
+                                case 'tpv':
+                                    // se habre la operación en optra ventana
+                                    $err = array();
+                                    if (Tpv::cancelPreapproval($invest, $err, true)) {
+                                        $log_text = Text::_("Se ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
+                                    } else {
+                                        $txt_errors = implode('; ', $err);
+                                        $log_text = Text::_("Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
+                                    }
+                                    break;
+	○
+		※削除
+
+/controller/cron.php 515-585
+	×
+                                case 'paypal':
+                                    if (empty($projectAccount->paypal)) {
+                                        if ($debug) echo '<br />El proyecto '.$project->name.' no tiene cuenta paypal.<br />';
+                                        Model\Invest::setDetail($invest->id, 'no-paypal-account', 'El proyecto no tiene cuenta paypal en el momento de ejecutar el preapproval. Proceso cron/execute');
+                                        break;
+                                    }
+
+                                    $invest->account = $projectAccount->paypal;
+                                    $err = array();
+                                    if (Paypal::pay($invest, $err)) {
+                                        $log_text = Text::_("Se ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+                                        if ($debug) echo ' -> Ok';
+                                        Model\Invest::setDetail($invest->id, 'executed', 'Se ha ejecutado el preapproval, ha iniciado el pago encadenado. Proceso cron/execute');
+                                        // si era incidencia la desmarcamos
+                                        if ($invest->issue) {
+                                            Model\Invest::unsetIssue($invest->id);
+                                            Model\Invest::setDetail($invest->id, 'issue-solved', 'La incidencia se ha dado por resuelta al ejecutarse correctamente en el proceso automático');
+                                        }
+                                    } else {
+                                        $txt_errors = implode('; ', $err);
+                                        echo 'Aporte ' . $invest->id . ': Fallo al ejecutar cargo paypal: ' . $txt_errors . '<br />';
+                                        @mail(\GOTEO_FAIL_MAIL,
+                                            'Fallo al ejecutar cargo Paypal ' . SITE_URL,
+                                            'Aporte ' . $invest->id . ': Fallo al ejecutar cargo paypal: ' . $txt_errors);
+                                        if ($debug) echo ' -> ERROR!!';
+                                        Model\Invest::setDetail($invest->id, 'execution-failed', 'Fallo al ejecutar el preapproval, no ha iniciado el pago encadenado: ' . $txt_errors . '. Proceso cron/execute');
+
+                                        // Notifiacion de incidencia al usuario
+                                        // Obtenemos la plantilla para asunto y contenido
+                                        $template = Template::get(37);
+                                        // Sustituimos los datos
+                                        $subject = str_replace('%PROJECTNAME%', $project->name, $template->title);
+                                        $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%AMOUNT%', '%DETAILS%');
+                                        $replace = array($userData->name, $project->name, SITE_URL . '/project/' . $project->id, $invest->amount, '');
+                                        $content = \str_replace($search, $replace, $template->text);
+                                        // iniciamos mail
+                                        $mailHandler = new Mail();
+                                        $mailHandler->from = GOTEO_CONTACT_MAIL;
+                                        $mailHandler->to = $userData->email;
+                                        $mailHandler->toName = $userData->name;
+                                        $mailHandler->subject = $subject;
+                                        $mailHandler->content = $content;
+                                        $mailHandler->html = true;
+                                        $mailHandler->template = $template->id;
+                                        if ($mailHandler->send()) {
+                                            Model\Invest::setDetail($invest->id, 'issue-notified', "Se ha notificado la incidencia al usuario");
+                                        } else {
+                                            Model\Invest::setDetail($invest->id, 'issue-notify-failed', "Ha fallado al enviar el mail de notificacion de la incidencia al usuario");
+                                            @mail(\GOTEO_FAIL_MAIL,
+                                                'Fallo al enviar email de notificacion de incidencia PayPal' . SITE_URL,
+                                                'Fallo al enviar email de notificacion de incidencia PayPal: <pre>' . print_r($mailHandler, 1). '</pre>');
+                                        }
+                                        
+                                    }
+                                    break;
+                                case 'tpv':
+                                    // los cargos con este tpv vienen ejecutados de base
+                                    if ($debug) echo ' -> Ok';
+                                /*
+                                    $err = array();
+                                    if (Tpv::pay($invest, $err)) {
+                                        echo 'Cargo sermepa correcto';
+                                        $log_text = "Se ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s";
+                                    } else {
+                                        $txt_errors = implode('; ', $err);
+                                        echo 'Fallo al ejecutar cargo sermepa: ' . $txt_errors;
+                                        $log_text = "Ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores: $txt_errors";
+                                    }
+                                 *
+                                 */
+                                    break;
+	○
+		※削除
+
+/controller/invest.php 33-34
+	×
+        //Goteo\Library\Paypal,
+        //Goteo\Library\Tpv;
+	○
+		※削除
+
+/controller/invest.php 42-43
+	×
+                    //'tpv' => 'tpv',
+                    //'paypal' => 'paypal'
+	○
+		※削除
+	
+/view/css/csstidyonline.results.css 8519-8527
+	×
+		div.widget.project-invest button.pay-tpv
+		{
+			background:url(/view/css/button/tpv.gif) no-repeat 0 0 transparent;
+			height:35px;
+			padding:3px;
+			text-indent:2000px;
+			width:178px;
+		}
+	○
+		※削除
+
+/view/css/csstidyonline.results.css 8528-8532
+	×
+		div.widget.project-invest button.pay-tpv:hover,div.widget.project-invest button.pay-paypal:hover
+		{
+			border:1px solid #20b2b3;
+		}
+	○
+		※削除
+
+/view/css/project/widget/invest.css 138-158
+	×
+		div.widget.project-invest button.pay-tpv {
+		    background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
+		    width: 178px;
+		    height: 35px;
+		    text-indent: 2000px;
+		    padding: 3px;
+		}
+
+		div.widget.project-invest button.pay-paypal {
+		    background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
+		    width: 145px;
+		    height: 32px;
+		    text-indent: 2000px;
+		    padding: 3px;
+		}
+
+		div.widget.project-invest button.pay-tpv:hover,
+		div.widget.project-invest button.pay-paypal:hover {
+		    border: 1px solid #20b2b3;
+		}
+	○
+		※削除
+
+/view/admin/accounts/details.html.php 49
+	×
+        <?php if ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2)) : ?>
+	○
+        <?php if ($invest->status < 1 || ($invest->method == 'cash' && $invest->status < 2)) : ?>
+
+/view/admin/invests/details.html.php 39
+	×
+        <?php if ($project->status == 3 && ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2))) : ?>
+	○
+        <?php if ($project->status == 3 && ($invest->status < 1 ||($invest->method == 'cash' && $invest->status < 2))) : ?>
+
+/view/admin/accounts/details.html.php 158-175
+	×
+    <?php if ($invest->method == 'paypal') : ?>
+        <?php if (!isset($_GET['full'])) : ?>
+        <p>
+            <a href="/admin/accounts/details/<?php echo $invest->id; ?>/?full=show"><?php echo Text::_("Mostrar detalles técnicos"); ?></a>
+        </p>
+        <?php endif; ?>
+
+        <?php if (!empty($invest->transaction)) : ?>
+        <dl>
+            <dt><strong><?php echo Text::_("Detalles de la devolución"); ?>:</strong></dt>
+            <dd><?php echo Text::_("Hay que ir al panel de paypal para ver los detalles de una devolución"); ?></dd>
+        </dl>
+        <?php endif ?>
+    <?php elseif ($invest->method == 'tpv') : ?>
+        <p><?php echo Text::_("Hay que ir al panel del banco para ver los detalles de los aportes mediante TPV."); ?></p>
+    <?php else : ?>
+        <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
+    <?php endif ?>
+
+	○
+    <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
+
+/view/m/css/cssmarge_mobile.css 7793-8713
+	×
+		div.widget.project-invest button.pay-tpv {
+		    background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
+		    width: 178px;
+		    height: 35px;
+		    text-indent: 2000px;
+		    padding: 3px;
+		}
+
+		div.widget.project-invest button.pay-paypal {
+		    background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
+		    width: 145px;
+		    height: 32px;
+		    text-indent: 2000px;
+		    padding: 3px;
+		}
+
+		div.widget.project-invest button.pay-tpv:hover,
+		div.widget.project-invest button.pay-paypal:hover {
+		    border: 1px solid #20b2b3;
+		}
+	○
+		削除
+
+/view/admin/invests/report.html.php 93-116
+	×
+        <tr>
+            <td><?php echo Text::_('PayPal'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($desglose['paypal']) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($goteo['paypal'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($proyecto['paypal'], 2) ?></td>
+        </tr>
+        <tr>
+            <td><?php echo Text::_('Tpv'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($desglose['tpv']) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($goteo['tpv'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($proyecto['tpv'], 2) ?></td>
+        </tr>
+        <tr>
+            <td><?php echo Text::_('Cash'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($desglose['cash']) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($goteo['cash'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($proyecto['cash'], 2) ?></td>
+        </tr>
+        <tr>
+            <td><?php echo Text::_('TOTAL'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format(($desglose['paypal'] + $desglose['tpv'] + $desglose['cash']), 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format(($goteo['paypal'] + $goteo['tpv'] + $goteo['cash']), 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format(($proyecto['paypal'] + $proyecto['tpv'] + $proyecto['cash']), 2) ?></td>
+        </tr>
+
+	○
+        <tr>
+            <td><?php echo Text::_('Cash'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($desglose['cash']   ) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($goteo   ['cash'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($proyecto['cash'], 2) ?></td>
+        </tr>
+        <tr>
+            <td><?php echo Text::_('TOTAL'); ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($desglose['cash'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($goteo   ['cash'], 2) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($proyecto['cash'], 2) ?></td>
+        </tr>
+
+/view/admin/invests/report.html.php 154-353
+	×
+		<?php if (!empty($Data['tpv'])) : ?>
+		    <h4><?php echo Text::_('TPV'); ?></h4>
+		    <table>
+		        <tr>
+		            <th></th>
+		            <th><?php echo Text::_("1a Ronda"); ?></th>
+		            <th><?php echo Text::_("2a Ronda"); ?></th>
+		            <th><?php echo Text::_('Total'); ?></th>
+		            <th></th>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_('Nº Usuarios'); ?></th>
+		            <td style="text-align:right;"><?php echo count($Data['tpv']['first']['users']) ?></td>
+		            <td style="text-align:right;"><?php echo count($Data['tpv']['second']['users']) ?></td>
+		            <td style="text-align:right;"><?php echo count($Data['tpv']['total']['users']) ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_('Nº Operaciones'); ?></th>
+		            <td style="text-align:right;"><?php echo $Data['tpv']['first']['invests'] ?></td>
+		            <td style="text-align:right;"><?php echo $Data['tpv']['second']['invests'] ?></td>
+		            <td style="text-align:right;"><?php echo $Data['tpv']['total']['invests'] ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_('Importe'); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['amount']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['amount']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['amount']) ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['tpv']['first']['fee']  = $Data['tpv']['first']['amount']  * 0.008;
+		            $Data['tpv']['second']['fee'] = $Data['tpv']['second']['amount'] * 0.008;
+		            $Data['tpv']['total']['fee']  = $Data['tpv']['total']['amount']  * 0.008;
+		            ?>
+		            <th>Comisi&oacute;n</th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['fee'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['fee'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['fee'], 2) ?></td>
+		            <td>banco 0,80&#37; de cada operaci&oacute;n</td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['tpv']['first']['net']  = $Data['tpv']['first']['amount']  - $Data['tpv']['first']['fee'];
+		            $Data['tpv']['second']['net'] = $Data['tpv']['second']['amount'] - $Data['tpv']['second']['fee'];
+		            $Data['tpv']['total']['net']  = $Data['tpv']['total']['amount']  - $Data['tpv']['total']['fee'];
+		            ?>
+		            <th><?php echo Text::_('Neto'); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['net'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['net'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['net'], 2) ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['tpv']['first']['goteo']  = $Data['tpv']['first']['net']  * 0.08;
+		            $Data['tpv']['second']['goteo'] = $Data['tpv']['second']['net'] * 0.08;
+		            $Data['tpv']['total']['goteo']  = $Data['tpv']['total']['net']  * 0.08;
+		            ?>
+		            <th><?php echo Text::_('Goteo'); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['goteo'], 2) ?></td>
+		            <td><?php echo Text::_("8%% del neto"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['tpv']['first']['project']  = $Data['tpv']['first']['net']  - $Data['tpv']['first']['goteo'];
+		            $Data['tpv']['second']['project'] = $Data['tpv']['second']['net'] - $Data['tpv']['second']['goteo'];
+		            $Data['tpv']['total']['project']  = $Data['tpv']['total']['net']  - $Data['tpv']['total']['goteo'];
+		            ?>
+		            <th><?php echo Text::_("Proyecto"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['project'], 2) ?></td>
+		            <td><?php echo Text::_("92%% del neto"); ?></td>
+		        </tr>
+		    </table>
+		<?php endif; ?>
+
+		<?php if (!empty($Data['paypal'])) : ?>
+		    <h4><?php echo Text::_('PayPal'); ?></h4>
+		    <table>
+		        <tr>
+		            <th></th>
+		            <th><?php echo Text::_("1a Ronda"); ?></th>
+		            <th><?php echo Text::_("2a Ronda"); ?></th>
+		            <th><?php echo Text::_('Total'); ?></th>
+		            <th></th>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_('Nº Usuarios'); ?></th>
+		            <td style="text-align:right;"><?php echo count($Data['paypal']['first']['users']) ?></td>
+		            <td style="text-align:right;"><?php echo count($Data['paypal']['second']['users']) ?></td>
+		            <td style="text-align:right;"><?php echo count($Data['paypal']['total']['users']) ?></td>
+		            <td><?php echo Text::_("Sin incidencias"); ?></td>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_('Nº Operaciones'); ?></th>
+		            <td style="text-align:right;"><?php echo $Data['paypal']['first']['invests'] ?></td>
+		            <td style="text-align:right;"><?php echo $Data['paypal']['second']['invests'] ?></td>
+		            <td style="text-align:right;"><?php echo $Data['paypal']['total']['invests'] ?></td>
+		            <td><?php echo Text::_("Sin incidencias"); ?></td>
+		        </tr>
+		        <tr>
+		            <th><?php echo Text::_("Importe Incidencias"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fail']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fail']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fail']) ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['ok']  = $Data['paypal']['first']['amount']  - $Data['paypal']['first']['fail'];
+		            $Data['paypal']['second']['ok'] = $Data['paypal']['second']['amount'] - $Data['paypal']['second']['fail'];
+		            $Data['paypal']['total']['ok']  = $Data['paypal']['total']['amount']  - $Data['paypal']['total']['fail'];
+		            ?>
+		            <th><?php echo Text::_("Importe"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['ok']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['ok']) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['ok']) ?></td>
+		            <td><?php echo Text::_("Preapprovals ejecutados correctamente"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['goteo']  = $Data['paypal']['first']['ok'] * 0.08;
+		            $Data['paypal']['second']['goteo'] = $Data['paypal']['second']['ok'] * 0.08;
+		            $Data['paypal']['total']['goteo']  = $Data['paypal']['total']['ok'] * 0.08;
+		            ?>
+		            <th><?php echo Text::_('Goteo'); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['goteo'], 2) ?></td>
+		            <td><?php echo Text::_("8%% de las operaciones correctas"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['project']  = $Data['paypal']['first']['ok']  - $Data['paypal']['first']['goteo'];
+		            $Data['paypal']['second']['project'] = $Data['paypal']['second']['ok'] - $Data['paypal']['second']['goteo'];
+		            $Data['paypal']['total']['project']  = $Data['paypal']['total']['ok']  - $Data['paypal']['total']['goteo'];
+		            ?>
+		            <th><?php echo Text::_("Proyecto"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['project'], 2) ?></td>
+		            <td><?php echo Text::_("92%% de las operaciones correctas"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['fee_goteo']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['goteo'] * 0.034);
+		            $Data['paypal']['second']['fee_goteo'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['goteo'] * 0.034);
+		            $Data['paypal']['total']['fee_goteo']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['goteo'] * 0.034);
+		            ?>
+		            <th><?php echo Text::_("Fee a Goteo"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_goteo'], 2) ?></td>
+		            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe de goteo (8%% del correcto)"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['fee_project']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['project'] * 0.034);
+		            $Data['paypal']['second']['fee_project'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['project'] * 0.034);
+		            $Data['paypal']['total']['fee_project']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['project'] * 0.034);
+		            ?>
+		            <th><?php echo Text::_("Fee al Promotor"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_project'], 2) ?></td>
+		            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe del proyecto (8%% del correcto)"); ?></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['net_goteo']  = $Data['paypal']['first']['goteo']  - $Data['paypal']['first']['fee_goteo'];
+		            $Data['paypal']['second']['net_goteo'] = $Data['paypal']['second']['goteo'] - $Data['paypal']['second']['fee_goteo'];
+		            $Data['paypal']['total']['net_goteo']  = $Data['paypal']['total']['goteo']  - $Data['paypal']['total']['fee_goteo'];
+		            ?>
+		            <th><?php echo Text::_("Neto Goteo"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_goteo'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_goteo'], 2) ?></td>
+		            <td></td>
+		        </tr>
+		        <tr>
+		            <?php
+		            $Data['paypal']['first']['net_project']  = $Data['paypal']['first']['project']  - $Data['paypal']['first']['fee_project'];
+		            $Data['paypal']['second']['net_project'] = $Data['paypal']['second']['project'] - $Data['paypal']['second']['fee_project'];
+		            $Data['paypal']['total']['net_project']  = $Data['paypal']['total']['project']  - $Data['paypal']['total']['fee_project'];
+		            ?>
+		            <th><?php echo Text::_("Neto Proyecto"); ?></th>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_project'], 2) ?></td>
+		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_project'], 2) ?></td>
+		            <td></td>
+		        </tr>
+		    </table>
+		<?php endif; ?>
+
+	○
+		※削除
+
+/view/admin/invests/report.html.php 112-113
+	×
+            <th><?php echo Text::_('PayPal'); ?></th>
+            <th><?php echo Text::_('Tpv'); ?></th>
+	○
+		※削除
+
+/view/admin/invests/report.html.php 118-119
+	×
+            <td style="text-align:right;"><?php echo \amount_format($estado[$id]['paypal']) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($estado[$id]['tpv']) ?></td>
+	○
+		※削除
+
+/view/admin/invests/report.html.php 128-129
+	×
+            <th><?php echo Text::_('PayPal'); ?></th>
+            <th><?php echo Text::_('Tpv'); ?></th>
+	○
+		※削除
+
+/view/admin/invests/report.html.php 134-135
+	×
+            <td style="text-align:right;"><?php echo \amount_format($usuario[$user->user]['paypal']) ?></td>
+            <td style="text-align:right;"><?php echo \amount_format($usuario[$user->user]['tpv']) ?></td>
+	○
+		※削除
+
+/model/invest.php 37
+	×
+            $method, // metodo de pago paypal/tpv
+	○
+            $method, // 支払い方法。'cash','axes'。
+
+/model/invest.php 1047-1050
+	×
+                //'paypal' => Text::_('Paypal'),
+                'axes' => Text::_('AXES'),
+                'tpv'    => Text::_('Tarjeta'),
+                'cash'   => Text::_('Manual')
+	○
+                'axes' => Text::_('AXES'),
+                'cash'   => Text::_('Manual')
+
+────────────────────────────────────────────────────────────
+

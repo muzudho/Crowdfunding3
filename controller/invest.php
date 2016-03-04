@@ -30,8 +30,6 @@ namespace Goteo\Controller {
         Goteo\Library\Mail,
         Goteo\Library\Template,
         Goteo\Library\Message,
-        //Goteo\Library\Paypal,
-        //Goteo\Library\Tpv;
         Goteo\Core\View
         ;
 
@@ -41,8 +39,6 @@ namespace Goteo\Controller {
         public static function _methods() {
              return array(
                     'cash' => 'cash',
-                    //'tpv' => 'tpv',
-                    //'paypal' => 'paypal'
                     'axes' => 'axes'
                 );
         }

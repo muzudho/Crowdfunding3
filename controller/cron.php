@@ -455,30 +455,12 @@ namespace Goteo\Controller {
                             if ($debug) echo 'Cancelar todo<br />';
 
                             switch ($invest->method) {
-//                                case 'paypal':
-//                                    $err = array();
-//                                    if (Paypal::cancelPreapproval($invest, $err, true)) {
-//                                        $log_text = Text::_("Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
-//                                    } else {
-//                                        $txt_errors = implode('; ', $err);
-//                                        $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
-//                                    }
-//                                    break;
+                                // ここに、支払い方法別でキャンセル処理を書いてください。
                                 case 'axes':
                                     if ($invest->cancel(true)) {
                                         $log_text = Text::_("Contribution is canceled");
                                     } else{
                                         $log_text = Text::_("Failed to cancel");
-                                    }
-                                    break;
-                                case 'tpv':
-                                    // se habre la operación en optra ventana
-                                    $err = array();
-                                    if (Tpv::cancelPreapproval($invest, $err, true)) {
-                                        $log_text = Text::_("Se ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
-                                    } else {
-                                        $txt_errors = implode('; ', $err);
-                                        $log_text = Text::_("Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
                                     }
                                     break;
                                 case 'cash':
@@ -530,77 +512,6 @@ namespace Goteo\Controller {
                                         }
                                     }
                                     break;*/
-                                case 'paypal':
-                                    if (empty($projectAccount->paypal)) {
-                                        if ($debug) echo '<br />El proyecto '.$project->name.' no tiene cuenta paypal.<br />';
-                                        Model\Invest::setDetail($invest->id, 'no-paypal-account', 'El proyecto no tiene cuenta paypal en el momento de ejecutar el preapproval. Proceso cron/execute');
-                                        break;
-                                    }
-
-                                    $invest->account = $projectAccount->paypal;
-                                    $err = array();
-                                    if (Paypal::pay($invest, $err)) {
-                                        $log_text = Text::_("Se ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
-                                        if ($debug) echo ' -> Ok';
-                                        Model\Invest::setDetail($invest->id, 'executed', 'Se ha ejecutado el preapproval, ha iniciado el pago encadenado. Proceso cron/execute');
-                                        // si era incidencia la desmarcamos
-                                        if ($invest->issue) {
-                                            Model\Invest::unsetIssue($invest->id);
-                                            Model\Invest::setDetail($invest->id, 'issue-solved', 'La incidencia se ha dado por resuelta al ejecutarse correctamente en el proceso automático');
-                                        }
-                                    } else {
-                                        $txt_errors = implode('; ', $err);
-                                        echo 'Aporte ' . $invest->id . ': Fallo al ejecutar cargo paypal: ' . $txt_errors . '<br />';
-                                        @mail(\GOTEO_FAIL_MAIL,
-                                            'Fallo al ejecutar cargo Paypal ' . SITE_URL,
-                                            'Aporte ' . $invest->id . ': Fallo al ejecutar cargo paypal: ' . $txt_errors);
-                                        if ($debug) echo ' -> ERROR!!';
-                                        Model\Invest::setDetail($invest->id, 'execution-failed', 'Fallo al ejecutar el preapproval, no ha iniciado el pago encadenado: ' . $txt_errors . '. Proceso cron/execute');
-
-                                        // Notifiacion de incidencia al usuario
-                                        // Obtenemos la plantilla para asunto y contenido
-                                        $template = Template::get(37);
-                                        // Sustituimos los datos
-                                        $subject = str_replace('%PROJECTNAME%', $project->name, $template->title);
-                                        $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%AMOUNT%', '%DETAILS%');
-                                        $replace = array($userData->name, $project->name, SITE_URL . '/project/' . $project->id, $invest->amount, '');
-                                        $content = \str_replace($search, $replace, $template->text);
-                                        // iniciamos mail
-                                        $mailHandler = new Mail();
-                                        $mailHandler->from = GOTEO_CONTACT_MAIL;
-                                        $mailHandler->to = $userData->email;
-                                        $mailHandler->toName = $userData->name;
-                                        $mailHandler->subject = $subject;
-                                        $mailHandler->content = $content;
-                                        $mailHandler->html = true;
-                                        $mailHandler->template = $template->id;
-                                        if ($mailHandler->send()) {
-                                            Model\Invest::setDetail($invest->id, 'issue-notified', "Se ha notificado la incidencia al usuario");
-                                        } else {
-                                            Model\Invest::setDetail($invest->id, 'issue-notify-failed', "Ha fallado al enviar el mail de notificacion de la incidencia al usuario");
-                                            @mail(\GOTEO_FAIL_MAIL,
-                                                'Fallo al enviar email de notificacion de incidencia PayPal' . SITE_URL,
-                                                'Fallo al enviar email de notificacion de incidencia PayPal: <pre>' . print_r($mailHandler, 1). '</pre>');
-                                        }
-                                        
-                                    }
-                                    break;
-                                case 'tpv':
-                                    // los cargos con este tpv vienen ejecutados de base
-                                    if ($debug) echo ' -> Ok';
-                                /*
-                                    $err = array();
-                                    if (Tpv::pay($invest, $err)) {
-                                        echo 'Cargo sermepa correcto';
-                                        $log_text = "Se ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s";
-                                    } else {
-                                        $txt_errors = implode('; ', $err);
-                                        echo 'Fallo al ejecutar cargo sermepa: ' . $txt_errors;
-                                        $log_text = "Ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores: $txt_errors";
-                                    }
-                                 *
-                                 */
-                                    break;
                                 case 'cash':
                                     // los cargos manuales no los modificamos
                                     if ($debug) echo ' Cash, nada que hacer -> Ok';

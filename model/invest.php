@@ -34,7 +34,7 @@ namespace Goteo\Model {
             $preapproval, //clave del preapproval
             $payment, //clave del cargo
             $transaction, // id de la transacción
-            $method, // metodo de pago paypal/tpv
+            $method, // 支払い方法。'cash','axes'。
             $status, //estado en el que se encuentra esta aportación:
                     // -1 en proceso, 0 pendiente, 1 cobrado (charged), 2 devuelto (returned)
             $issue, // aporte con incidencia
@@ -1044,9 +1044,7 @@ namespace Goteo\Model {
          */
         public static function methods () {
             return array (
-                //'paypal' => Text::_('Paypal'),
                 'axes' => Text::_('AXES'),
-                'tpv'    => Text::_('Tarjeta'),
                 'cash'   => Text::_('Manual')
             );
         }
