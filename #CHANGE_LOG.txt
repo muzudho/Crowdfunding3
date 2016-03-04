@@ -2208,18 +2208,18 @@
 //
 //2016-03-03 15:23
 //
-//	解説
-//		グーグル翻訳にかけた際、「%s」が「％s」になっている箇所があったので、置換する。
+//    解説
+//        グーグル翻訳にかけた際、「%s」が「％s」になっている箇所があったので、置換する。
 //
-//	実行
-//		文字列置換。（48箇所置換）
-//		texts テーブルをトランケートして、/db/texts.sql、/db/text(グーグル翻訳化).sql を入れなおす。
+//    実行
+//        文字列置換。（48箇所置換）
+//        texts テーブルをトランケートして、/db/texts.sql、/db/text(グーグル翻訳化).sql を入れなおす。
 ────────────────────────────────────────────────────────────
 2016-03-03 17:04
 
-	解説
-		・ロゴ画像を変えておいた。
-		・画像素材も追加。
+    解説
+        ・ロゴ画像を変えておいた。
+        ・画像素材も追加。
 
 /#画像素材
 /view/css/header/logo.pnp
@@ -2229,24 +2229,24 @@
 2016-03-04 17:14
 2016-03-04 17:50
 
-	解説
-		新規ユーザー・アカウントの　アクティベーション部分のソースを読んでいる最中。
-		コメントの追加。
+    解説
+        新規ユーザー・アカウントの　アクティベーション部分のソースを読んでいる最中。
+        コメントの追加。
 
 /controller/user.php
 
-	実行
-		★略
+    実行
+        ★略
 
 ────────────────────────────────────────────────────────────
 2016-03-04 18:42
 
-	解説
-		PayPal や、
-		TPV （VISA や MasterCard で支払う銀行）は削除方針。
+    解説
+        PayPal や、
+        TPV （VISA や MasterCard で支払う銀行）は削除方針。
 
 /controller/admin/accounts.php 197-224
-	×
+    ×
                     case 'paypal':
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
@@ -2276,11 +2276,11 @@
                         }
                         break;
 
-	○
+    ○
                     // ここに、支払い方法別でキャンセル処理を書いてください。
 
 /controller/admin/accounts.php 379-406
-	×
+    ×
                     case 'paypal':
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
@@ -2310,11 +2310,11 @@
                         }
                         break;
 
-	○
+    ○
                     // ここに、支払い方法別でキャンセル処理を書いてください。
 
 /controller/admin/accounts.php 427-479
-	×
+    ×
                     case 'paypal':
                         // a ver si tiene cuenta paypal
                         $projectAccount = Model\Project\Account::get($invest->project);
@@ -2369,11 +2369,11 @@
                         }
                         break;
 
-	○
+    ○
                     // ここに、支払い方法別で 支払い処理を書いてください。
 
 /controller/cron.php 458-466
-	×
+    ×
 //                                case 'paypal':
 //                                    $err = array();
 //                                    if (Paypal::cancelPreapproval($invest, $err, true)) {
@@ -2384,11 +2384,11 @@
 //                                    }
 //                                    break;
 
-	○
+    ○
                     // ここに、支払い方法別でキャンセル処理を書いてください。
 
 /controller/cron.php 466-475
-	×
+    ×
                                 case 'tpv':
                                     // se habre la operación en optra ventana
                                     $err = array();
@@ -2399,11 +2399,11 @@
                                         $log_text = Text::_("Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
                                     }
                                     break;
-	○
-		※削除
+    ○
+        ※削除
 
 /controller/cron.php 515-585
-	×
+    ×
                                 case 'paypal':
                                     if (empty($projectAccount->paypal)) {
                                         if ($debug) echo '<br />El proyecto '.$project->name.' no tiene cuenta paypal.<br />';
@@ -2475,84 +2475,84 @@
                                  *
                                  */
                                     break;
-	○
-		※削除
+    ○
+        ※削除
 
 /controller/invest.php 33-34
-	×
+    ×
         //Goteo\Library\Paypal,
         //Goteo\Library\Tpv;
-	○
-		※削除
+    ○
+        ※削除
 
 /controller/invest.php 42-43
-	×
+    ×
                     //'tpv' => 'tpv',
                     //'paypal' => 'paypal'
-	○
-		※削除
-	
+    ○
+        ※削除
+    
 /view/css/csstidyonline.results.css 8519-8527
-	×
-		div.widget.project-invest button.pay-tpv
-		{
-			background:url(/view/css/button/tpv.gif) no-repeat 0 0 transparent;
-			height:35px;
-			padding:3px;
-			text-indent:2000px;
-			width:178px;
-		}
-	○
-		※削除
+    ×
+        div.widget.project-invest button.pay-tpv
+        {
+            background:url(/view/css/button/tpv.gif) no-repeat 0 0 transparent;
+            height:35px;
+            padding:3px;
+            text-indent:2000px;
+            width:178px;
+        }
+    ○
+        ※削除
 
 /view/css/csstidyonline.results.css 8528-8532
-	×
-		div.widget.project-invest button.pay-tpv:hover,div.widget.project-invest button.pay-paypal:hover
-		{
-			border:1px solid #20b2b3;
-		}
-	○
-		※削除
+    ×
+        div.widget.project-invest button.pay-tpv:hover,div.widget.project-invest button.pay-paypal:hover
+        {
+            border:1px solid #20b2b3;
+        }
+    ○
+        ※削除
 
 /view/css/project/widget/invest.css 138-158
-	×
-		div.widget.project-invest button.pay-tpv {
-		    background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
-		    width: 178px;
-		    height: 35px;
-		    text-indent: 2000px;
-		    padding: 3px;
-		}
+    ×
+        div.widget.project-invest button.pay-tpv {
+            background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
+            width: 178px;
+            height: 35px;
+            text-indent: 2000px;
+            padding: 3px;
+        }
 
-		div.widget.project-invest button.pay-paypal {
-		    background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
-		    width: 145px;
-		    height: 32px;
-		    text-indent: 2000px;
-		    padding: 3px;
-		}
+        div.widget.project-invest button.pay-paypal {
+            background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
+            width: 145px;
+            height: 32px;
+            text-indent: 2000px;
+            padding: 3px;
+        }
 
-		div.widget.project-invest button.pay-tpv:hover,
-		div.widget.project-invest button.pay-paypal:hover {
-		    border: 1px solid #20b2b3;
-		}
-	○
-		※削除
+        div.widget.project-invest button.pay-tpv:hover,
+        div.widget.project-invest button.pay-paypal:hover {
+            border: 1px solid #20b2b3;
+        }
+    ○
+        ※削除
 
 /view/admin/accounts/details.html.php 49
-	×
+    ×
         <?php if ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2)) : ?>
-	○
+    ○
         <?php if ($invest->status < 1 || ($invest->method == 'cash' && $invest->status < 2)) : ?>
 
 /view/admin/invests/details.html.php 39
-	×
+    ×
         <?php if ($project->status == 3 && ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2))) : ?>
-	○
+    ○
         <?php if ($project->status == 3 && ($invest->status < 1 ||($invest->method == 'cash' && $invest->status < 2))) : ?>
 
 /view/admin/accounts/details.html.php 158-175
-	×
+    ×
     <?php if ($invest->method == 'paypal') : ?>
         <?php if (!isset($_GET['full'])) : ?>
         <p>
@@ -2572,36 +2572,36 @@
         <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
     <?php endif ?>
 
-	○
+    ○
     <p><?php echo Text::_("No hay nada que hacer con los aportes manuales."); ?></p>
 
 /view/m/css/cssmarge_mobile.css 7793-8713
-	×
-		div.widget.project-invest button.pay-tpv {
-		    background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
-		    width: 178px;
-		    height: 35px;
-		    text-indent: 2000px;
-		    padding: 3px;
-		}
+    ×
+        div.widget.project-invest button.pay-tpv {
+            background: url('/view/css/button/tpv.gif') no-repeat 0 0 transparent;
+            width: 178px;
+            height: 35px;
+            text-indent: 2000px;
+            padding: 3px;
+        }
 
-		div.widget.project-invest button.pay-paypal {
-		    background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
-		    width: 145px;
-		    height: 32px;
-		    text-indent: 2000px;
-		    padding: 3px;
-		}
+        div.widget.project-invest button.pay-paypal {
+            background: url('/view/css/button/paypal.gif') no-repeat 0 0 transparent;
+            width: 145px;
+            height: 32px;
+            text-indent: 2000px;
+            padding: 3px;
+        }
 
-		div.widget.project-invest button.pay-tpv:hover,
-		div.widget.project-invest button.pay-paypal:hover {
-		    border: 1px solid #20b2b3;
-		}
-	○
-		削除
+        div.widget.project-invest button.pay-tpv:hover,
+        div.widget.project-invest button.pay-paypal:hover {
+            border: 1px solid #20b2b3;
+        }
+    ○
+        削除
 
 /view/admin/invests/report.html.php 93-116
-	×
+    ×
         <tr>
             <td><?php echo Text::_('PayPal'); ?></td>
             <td style="text-align:right;"><?php echo \amount_format($desglose['paypal']) ?></td>
@@ -2627,7 +2627,7 @@
             <td style="text-align:right;"><?php echo \amount_format(($proyecto['paypal'] + $proyecto['tpv'] + $proyecto['cash']), 2) ?></td>
         </tr>
 
-	○
+    ○
         <tr>
             <td><?php echo Text::_('Cash'); ?></td>
             <td style="text-align:right;"><?php echo \amount_format($desglose['cash']   ) ?></td>
@@ -2642,253 +2642,268 @@
         </tr>
 
 /view/admin/invests/report.html.php 154-353
-	×
-		<?php if (!empty($Data['tpv'])) : ?>
-		    <h4><?php echo Text::_('TPV'); ?></h4>
-		    <table>
-		        <tr>
-		            <th></th>
-		            <th><?php echo Text::_("1a Ronda"); ?></th>
-		            <th><?php echo Text::_("2a Ronda"); ?></th>
-		            <th><?php echo Text::_('Total'); ?></th>
-		            <th></th>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_('Nº Usuarios'); ?></th>
-		            <td style="text-align:right;"><?php echo count($Data['tpv']['first']['users']) ?></td>
-		            <td style="text-align:right;"><?php echo count($Data['tpv']['second']['users']) ?></td>
-		            <td style="text-align:right;"><?php echo count($Data['tpv']['total']['users']) ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_('Nº Operaciones'); ?></th>
-		            <td style="text-align:right;"><?php echo $Data['tpv']['first']['invests'] ?></td>
-		            <td style="text-align:right;"><?php echo $Data['tpv']['second']['invests'] ?></td>
-		            <td style="text-align:right;"><?php echo $Data['tpv']['total']['invests'] ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_('Importe'); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['amount']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['amount']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['amount']) ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['tpv']['first']['fee']  = $Data['tpv']['first']['amount']  * 0.008;
-		            $Data['tpv']['second']['fee'] = $Data['tpv']['second']['amount'] * 0.008;
-		            $Data['tpv']['total']['fee']  = $Data['tpv']['total']['amount']  * 0.008;
-		            ?>
-		            <th>Comisi&oacute;n</th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['fee'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['fee'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['fee'], 2) ?></td>
-		            <td>banco 0,80&#37; de cada operaci&oacute;n</td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['tpv']['first']['net']  = $Data['tpv']['first']['amount']  - $Data['tpv']['first']['fee'];
-		            $Data['tpv']['second']['net'] = $Data['tpv']['second']['amount'] - $Data['tpv']['second']['fee'];
-		            $Data['tpv']['total']['net']  = $Data['tpv']['total']['amount']  - $Data['tpv']['total']['fee'];
-		            ?>
-		            <th><?php echo Text::_('Neto'); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['net'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['net'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['net'], 2) ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['tpv']['first']['goteo']  = $Data['tpv']['first']['net']  * 0.08;
-		            $Data['tpv']['second']['goteo'] = $Data['tpv']['second']['net'] * 0.08;
-		            $Data['tpv']['total']['goteo']  = $Data['tpv']['total']['net']  * 0.08;
-		            ?>
-		            <th><?php echo Text::_('Goteo'); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['goteo'], 2) ?></td>
-		            <td><?php echo Text::_("8%% del neto"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['tpv']['first']['project']  = $Data['tpv']['first']['net']  - $Data['tpv']['first']['goteo'];
-		            $Data['tpv']['second']['project'] = $Data['tpv']['second']['net'] - $Data['tpv']['second']['goteo'];
-		            $Data['tpv']['total']['project']  = $Data['tpv']['total']['net']  - $Data['tpv']['total']['goteo'];
-		            ?>
-		            <th><?php echo Text::_("Proyecto"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['project'], 2) ?></td>
-		            <td><?php echo Text::_("92%% del neto"); ?></td>
-		        </tr>
-		    </table>
-		<?php endif; ?>
+    ×
+        <?php if (!empty($Data['tpv'])) : ?>
+            <h4><?php echo Text::_('TPV'); ?></h4>
+            <table>
+                <tr>
+                    <th></th>
+                    <th><?php echo Text::_("1a Ronda"); ?></th>
+                    <th><?php echo Text::_("2a Ronda"); ?></th>
+                    <th><?php echo Text::_('Total'); ?></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_('Nº Usuarios'); ?></th>
+                    <td style="text-align:right;"><?php echo count($Data['tpv']['first']['users']) ?></td>
+                    <td style="text-align:right;"><?php echo count($Data['tpv']['second']['users']) ?></td>
+                    <td style="text-align:right;"><?php echo count($Data['tpv']['total']['users']) ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_('Nº Operaciones'); ?></th>
+                    <td style="text-align:right;"><?php echo $Data['tpv']['first']['invests'] ?></td>
+                    <td style="text-align:right;"><?php echo $Data['tpv']['second']['invests'] ?></td>
+                    <td style="text-align:right;"><?php echo $Data['tpv']['total']['invests'] ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_('Importe'); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['amount']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['amount']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['amount']) ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['tpv']['first']['fee']  = $Data['tpv']['first']['amount']  * 0.008;
+                    $Data['tpv']['second']['fee'] = $Data['tpv']['second']['amount'] * 0.008;
+                    $Data['tpv']['total']['fee']  = $Data['tpv']['total']['amount']  * 0.008;
+                    ?>
+                    <th>Comisi&oacute;n</th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['fee'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['fee'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['fee'], 2) ?></td>
+                    <td>banco 0,80&#37; de cada operaci&oacute;n</td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['tpv']['first']['net']  = $Data['tpv']['first']['amount']  - $Data['tpv']['first']['fee'];
+                    $Data['tpv']['second']['net'] = $Data['tpv']['second']['amount'] - $Data['tpv']['second']['fee'];
+                    $Data['tpv']['total']['net']  = $Data['tpv']['total']['amount']  - $Data['tpv']['total']['fee'];
+                    ?>
+                    <th><?php echo Text::_('Neto'); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['net'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['net'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['net'], 2) ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['tpv']['first']['goteo']  = $Data['tpv']['first']['net']  * 0.08;
+                    $Data['tpv']['second']['goteo'] = $Data['tpv']['second']['net'] * 0.08;
+                    $Data['tpv']['total']['goteo']  = $Data['tpv']['total']['net']  * 0.08;
+                    ?>
+                    <th><?php echo Text::_('Goteo'); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['goteo'], 2) ?></td>
+                    <td><?php echo Text::_("8%% del neto"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['tpv']['first']['project']  = $Data['tpv']['first']['net']  - $Data['tpv']['first']['goteo'];
+                    $Data['tpv']['second']['project'] = $Data['tpv']['second']['net'] - $Data['tpv']['second']['goteo'];
+                    $Data['tpv']['total']['project']  = $Data['tpv']['total']['net']  - $Data['tpv']['total']['goteo'];
+                    ?>
+                    <th><?php echo Text::_("Proyecto"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['project'], 2) ?></td>
+                    <td><?php echo Text::_("92%% del neto"); ?></td>
+                </tr>
+            </table>
+        <?php endif; ?>
 
-		<?php if (!empty($Data['paypal'])) : ?>
-		    <h4><?php echo Text::_('PayPal'); ?></h4>
-		    <table>
-		        <tr>
-		            <th></th>
-		            <th><?php echo Text::_("1a Ronda"); ?></th>
-		            <th><?php echo Text::_("2a Ronda"); ?></th>
-		            <th><?php echo Text::_('Total'); ?></th>
-		            <th></th>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_('Nº Usuarios'); ?></th>
-		            <td style="text-align:right;"><?php echo count($Data['paypal']['first']['users']) ?></td>
-		            <td style="text-align:right;"><?php echo count($Data['paypal']['second']['users']) ?></td>
-		            <td style="text-align:right;"><?php echo count($Data['paypal']['total']['users']) ?></td>
-		            <td><?php echo Text::_("Sin incidencias"); ?></td>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_('Nº Operaciones'); ?></th>
-		            <td style="text-align:right;"><?php echo $Data['paypal']['first']['invests'] ?></td>
-		            <td style="text-align:right;"><?php echo $Data['paypal']['second']['invests'] ?></td>
-		            <td style="text-align:right;"><?php echo $Data['paypal']['total']['invests'] ?></td>
-		            <td><?php echo Text::_("Sin incidencias"); ?></td>
-		        </tr>
-		        <tr>
-		            <th><?php echo Text::_("Importe Incidencias"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fail']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fail']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fail']) ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['ok']  = $Data['paypal']['first']['amount']  - $Data['paypal']['first']['fail'];
-		            $Data['paypal']['second']['ok'] = $Data['paypal']['second']['amount'] - $Data['paypal']['second']['fail'];
-		            $Data['paypal']['total']['ok']  = $Data['paypal']['total']['amount']  - $Data['paypal']['total']['fail'];
-		            ?>
-		            <th><?php echo Text::_("Importe"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['ok']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['ok']) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['ok']) ?></td>
-		            <td><?php echo Text::_("Preapprovals ejecutados correctamente"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['goteo']  = $Data['paypal']['first']['ok'] * 0.08;
-		            $Data['paypal']['second']['goteo'] = $Data['paypal']['second']['ok'] * 0.08;
-		            $Data['paypal']['total']['goteo']  = $Data['paypal']['total']['ok'] * 0.08;
-		            ?>
-		            <th><?php echo Text::_('Goteo'); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['goteo'], 2) ?></td>
-		            <td><?php echo Text::_("8%% de las operaciones correctas"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['project']  = $Data['paypal']['first']['ok']  - $Data['paypal']['first']['goteo'];
-		            $Data['paypal']['second']['project'] = $Data['paypal']['second']['ok'] - $Data['paypal']['second']['goteo'];
-		            $Data['paypal']['total']['project']  = $Data['paypal']['total']['ok']  - $Data['paypal']['total']['goteo'];
-		            ?>
-		            <th><?php echo Text::_("Proyecto"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['project'], 2) ?></td>
-		            <td><?php echo Text::_("92%% de las operaciones correctas"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['fee_goteo']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['goteo'] * 0.034);
-		            $Data['paypal']['second']['fee_goteo'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['goteo'] * 0.034);
-		            $Data['paypal']['total']['fee_goteo']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['goteo'] * 0.034);
-		            ?>
-		            <th><?php echo Text::_("Fee a Goteo"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_goteo'], 2) ?></td>
-		            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe de goteo (8%% del correcto)"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['fee_project']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['project'] * 0.034);
-		            $Data['paypal']['second']['fee_project'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['project'] * 0.034);
-		            $Data['paypal']['total']['fee_project']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['project'] * 0.034);
-		            ?>
-		            <th><?php echo Text::_("Fee al Promotor"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_project'], 2) ?></td>
-		            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe del proyecto (8%% del correcto)"); ?></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['net_goteo']  = $Data['paypal']['first']['goteo']  - $Data['paypal']['first']['fee_goteo'];
-		            $Data['paypal']['second']['net_goteo'] = $Data['paypal']['second']['goteo'] - $Data['paypal']['second']['fee_goteo'];
-		            $Data['paypal']['total']['net_goteo']  = $Data['paypal']['total']['goteo']  - $Data['paypal']['total']['fee_goteo'];
-		            ?>
-		            <th><?php echo Text::_("Neto Goteo"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_goteo'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_goteo'], 2) ?></td>
-		            <td></td>
-		        </tr>
-		        <tr>
-		            <?php
-		            $Data['paypal']['first']['net_project']  = $Data['paypal']['first']['project']  - $Data['paypal']['first']['fee_project'];
-		            $Data['paypal']['second']['net_project'] = $Data['paypal']['second']['project'] - $Data['paypal']['second']['fee_project'];
-		            $Data['paypal']['total']['net_project']  = $Data['paypal']['total']['project']  - $Data['paypal']['total']['fee_project'];
-		            ?>
-		            <th><?php echo Text::_("Neto Proyecto"); ?></th>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_project'], 2) ?></td>
-		            <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_project'], 2) ?></td>
-		            <td></td>
-		        </tr>
-		    </table>
-		<?php endif; ?>
+        <?php if (!empty($Data['paypal'])) : ?>
+            <h4><?php echo Text::_('PayPal'); ?></h4>
+            <table>
+                <tr>
+                    <th></th>
+                    <th><?php echo Text::_("1a Ronda"); ?></th>
+                    <th><?php echo Text::_("2a Ronda"); ?></th>
+                    <th><?php echo Text::_('Total'); ?></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_('Nº Usuarios'); ?></th>
+                    <td style="text-align:right;"><?php echo count($Data['paypal']['first']['users']) ?></td>
+                    <td style="text-align:right;"><?php echo count($Data['paypal']['second']['users']) ?></td>
+                    <td style="text-align:right;"><?php echo count($Data['paypal']['total']['users']) ?></td>
+                    <td><?php echo Text::_("Sin incidencias"); ?></td>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_('Nº Operaciones'); ?></th>
+                    <td style="text-align:right;"><?php echo $Data['paypal']['first']['invests'] ?></td>
+                    <td style="text-align:right;"><?php echo $Data['paypal']['second']['invests'] ?></td>
+                    <td style="text-align:right;"><?php echo $Data['paypal']['total']['invests'] ?></td>
+                    <td><?php echo Text::_("Sin incidencias"); ?></td>
+                </tr>
+                <tr>
+                    <th><?php echo Text::_("Importe Incidencias"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fail']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fail']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fail']) ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['ok']  = $Data['paypal']['first']['amount']  - $Data['paypal']['first']['fail'];
+                    $Data['paypal']['second']['ok'] = $Data['paypal']['second']['amount'] - $Data['paypal']['second']['fail'];
+                    $Data['paypal']['total']['ok']  = $Data['paypal']['total']['amount']  - $Data['paypal']['total']['fail'];
+                    ?>
+                    <th><?php echo Text::_("Importe"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['ok']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['ok']) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['ok']) ?></td>
+                    <td><?php echo Text::_("Preapprovals ejecutados correctamente"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['goteo']  = $Data['paypal']['first']['ok'] * 0.08;
+                    $Data['paypal']['second']['goteo'] = $Data['paypal']['second']['ok'] * 0.08;
+                    $Data['paypal']['total']['goteo']  = $Data['paypal']['total']['ok'] * 0.08;
+                    ?>
+                    <th><?php echo Text::_('Goteo'); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['goteo'], 2) ?></td>
+                    <td><?php echo Text::_("8%% de las operaciones correctas"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['project']  = $Data['paypal']['first']['ok']  - $Data['paypal']['first']['goteo'];
+                    $Data['paypal']['second']['project'] = $Data['paypal']['second']['ok'] - $Data['paypal']['second']['goteo'];
+                    $Data['paypal']['total']['project']  = $Data['paypal']['total']['ok']  - $Data['paypal']['total']['goteo'];
+                    ?>
+                    <th><?php echo Text::_("Proyecto"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['project'], 2) ?></td>
+                    <td><?php echo Text::_("92%% de las operaciones correctas"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['fee_goteo']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['goteo'] * 0.034);
+                    $Data['paypal']['second']['fee_goteo'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['goteo'] * 0.034);
+                    $Data['paypal']['total']['fee_goteo']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['goteo'] * 0.034);
+                    ?>
+                    <th><?php echo Text::_("Fee a Goteo"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_goteo'], 2) ?></td>
+                    <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe de goteo (8%% del correcto)"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['fee_project']  = ($Data['paypal']['first']['invests'] * 0.35) + ($Data['paypal']['first']['project'] * 0.034);
+                    $Data['paypal']['second']['fee_project'] = ($Data['paypal']['second']['invests'] * 0.35) + ($Data['paypal']['second']['project'] * 0.034);
+                    $Data['paypal']['total']['fee_project']  = ($Data['paypal']['total']['invests'] * 0.35) + ($Data['paypal']['total']['project'] * 0.034);
+                    ?>
+                    <th><?php echo Text::_("Fee al Promotor"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_project'], 2) ?></td>
+                    <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe del proyecto (8%% del correcto)"); ?></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['net_goteo']  = $Data['paypal']['first']['goteo']  - $Data['paypal']['first']['fee_goteo'];
+                    $Data['paypal']['second']['net_goteo'] = $Data['paypal']['second']['goteo'] - $Data['paypal']['second']['fee_goteo'];
+                    $Data['paypal']['total']['net_goteo']  = $Data['paypal']['total']['goteo']  - $Data['paypal']['total']['fee_goteo'];
+                    ?>
+                    <th><?php echo Text::_("Neto Goteo"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_goteo'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_goteo'], 2) ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <?php
+                    $Data['paypal']['first']['net_project']  = $Data['paypal']['first']['project']  - $Data['paypal']['first']['fee_project'];
+                    $Data['paypal']['second']['net_project'] = $Data['paypal']['second']['project'] - $Data['paypal']['second']['fee_project'];
+                    $Data['paypal']['total']['net_project']  = $Data['paypal']['total']['project']  - $Data['paypal']['total']['fee_project'];
+                    ?>
+                    <th><?php echo Text::_("Neto Proyecto"); ?></th>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['net_project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['net_project'], 2) ?></td>
+                    <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['net_project'], 2) ?></td>
+                    <td></td>
+                </tr>
+            </table>
+        <?php endif; ?>
 
-	○
-		※削除
+    ○
+        ※削除
 
 /view/admin/invests/report.html.php 112-113
-	×
+    ×
             <th><?php echo Text::_('PayPal'); ?></th>
             <th><?php echo Text::_('Tpv'); ?></th>
-	○
-		※削除
+    ○
+        ※削除
 
 /view/admin/invests/report.html.php 118-119
-	×
+    ×
             <td style="text-align:right;"><?php echo \amount_format($estado[$id]['paypal']) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($estado[$id]['tpv']) ?></td>
-	○
-		※削除
+    ○
+        ※削除
 
 /view/admin/invests/report.html.php 128-129
-	×
+    ×
             <th><?php echo Text::_('PayPal'); ?></th>
             <th><?php echo Text::_('Tpv'); ?></th>
-	○
-		※削除
+    ○
+        ※削除
 
 /view/admin/invests/report.html.php 134-135
-	×
+    ×
             <td style="text-align:right;"><?php echo \amount_format($usuario[$user->user]['paypal']) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($usuario[$user->user]['tpv']) ?></td>
-	○
-		※削除
+    ○
+        ※削除
 
 /model/invest.php 37
-	×
+    ×
             $method, // metodo de pago paypal/tpv
-	○
+    ○
             $method, // 支払い方法。'cash','axes'。
 
 /model/invest.php 1047-1050
-	×
+    ×
                 //'paypal' => Text::_('Paypal'),
                 'axes' => Text::_('AXES'),
                 'tpv'    => Text::_('Tarjeta'),
                 'cash'   => Text::_('Manual')
-	○
+    ○
                 'axes' => Text::_('AXES'),
                 'cash'   => Text::_('Manual')
 
 ────────────────────────────────────────────────────────────
+2016-03-04 19:55
 
+    解説
+        テスト中は [CASH]ボタン が表示されるように改造。
+
+/view/project/widget/invest.html.php
+    ×
+        <?php if (ACL::check('/admin')) : ?>
+
+    ○
+        <?php if (
+                    ACL::check('/admin')
+                ||  \GOTEO_ENV != 'real' // テスト中は [現金]ボタンを表示
+            ) : ?>
+
+────────────────────────────────────────────────────────────
