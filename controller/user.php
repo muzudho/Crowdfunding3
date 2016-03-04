@@ -131,27 +131,33 @@ namespace Goteo\Controller {
         public function register() {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+                // $_POST[] 配列の全てのペアの値をトリム。
                 foreach ($_POST as $key => $value) {
                     $_POST[$key] = trim($value);
                 }
 
+                // エラー配列が空っぽなら正常終了。何か入っていればエラー終了。
                 $errors = array();
 
+                // メールアドレスと、確認用メールアドレスを比較して、不一致ならエラー・メッセージを追加。
                 if (strcmp($_POST['email'], $_POST['remail']) !== 0) {
                     $errors['remail'] = Text::get('error-register-email-confirm');
                 }
+                // パスワードと、確認用パスワードを比較して、不一致ならエラー・メッセージを追加。
                 if (strcmp($_POST['password'], $_POST['rpassword']) !== 0) {
                     $errors['rpassword'] = Text::get('error-register-password-confirm');
                 }
 
-                $user = new Model\User();
-                $user->userid = $_POST['userid'];
-                $user->name = $_POST['username'];
-                $user->email = $_POST['email'];
+                // ユーザーのデータセット。
+                $user           = new Model\User();
+                $user->userid   = $_POST['userid'];
+                $user->name     = $_POST['username'];
+                $user->email    = $_POST['email'];
                 $user->password = $_POST['password'];
-                $user->active = true;
-                $user->node = \NODE_ID;
+                $user->active   = true; // アクティベーション済みにします。
+                $user->node     = \NODE_ID;
 
+                // ユーザーのデータセットを保存。この際、エラーがあれば配列に追加して返します。
                 $user->save($errors);
 
                 if (empty($errors)) {
@@ -162,39 +168,52 @@ namespace Goteo\Controller {
                     REPLACE INTO user_login_log (user, node, datetime)
                     VALUES (:user, :node, :datetime) ",
                         array(
-                            ':user' => trim($user->userid),
-                            ':node' => LG_PLACE_NAME,
+                            ':user'     => trim($user->userid),
+                            ':node'     => LG_PLACE_NAME,
                             ':datetime' => date('Y-m-d H:i:s')
                         )
                     );
+                    
+                    // ユーザーIDは、ログイン名を登録するときのID。
+                    // ID は ラテン文字をアスキー文字に変えるなどの変換を行ったもの。
+                    //
+                    // ユーザーIDで、ユーザーを取得
                     $user = Model\User::get(trim($user->userid));
-                    if(empty($user) ||$user->active) {
+                    // 関数の帰り値がfalse （失敗時）か、または ユーザー・データの active 変数が真なら。
+                    if( empty($user) || $user->active ) {
 //                        return $user;
 
+                        // 登録成功
                         Message::Info(Text::get('user-register-success'));
 
-                        $_SESSION['user'] = Model\User::get($user->id);
+                        // ID でデータを取得し、セッション変数にセット。
+                        $_SESSION['user'] = Model\User::get( $user->id );
 
-                        // creamos una cookie
-                        setcookie("goteo_user", $user->id, time() + 3600 * 24 * 365);
+                        // creamos una cookie. 有効期間は１年。
+                        setcookie( "goteo_user", $user->id, time() + 3600 * 24 * 365 );
 
-                        if (!empty($_SESSION['jumpto'])) {
+                        // jumpto セッション変数が設定されていれば、その内容へリダイレクトします。
+                        if ( !empty($_SESSION['jumpto']) ) {
                             $jumpto = $_SESSION['jumpto'];
-                            unset($_SESSION['jumpto']);
-                            throw new Redirection($jumpto);
+                            unset( $_SESSION['jumpto'] );
+                            throw new Redirection( $jumpto );
                         } else {
-                            throw new Redirection('/dashboard');
+                            // ダッシュボード画面へリダイレクト
+                            throw new Redirection( '/dashboard' );
                         }
 
                     } else {
-                        Message::Error(Text::get('user-account-inactive'));
+                        // ユーザー・アカウントがアクティブではありません。
+                        Message::Error( Text::get( 'user-account-inactive' ) );
                     }
                 } else {
-                    foreach ($errors as $field => $text) {
-                        Message::Error($text);
+                    foreach ( $errors as $field => $text ) {
+                        Message::Error( $text );
                     }
                 }
             }
+            
+            // ログイン画面を出力し、エラーも表示します。
             return new View(
                             VIEW_PATH . '/user/login.html.php',
                             array(
