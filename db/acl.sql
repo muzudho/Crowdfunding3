@@ -23,7 +23,6 @@ REPLACE INTO `acl` VALUES(21, '*', 'superadmin', '*', '/project/edit/*', 1, '201
 REPLACE INTO `acl` VALUES(22, '*', '*', '*', '/project/delete/*', 0, '2011-05-18 20:43:51');
 REPLACE INTO `acl` VALUES(23, '*', 'superadmin', '*', '/project/delete/*', 1, '2011-05-18 20:44:37');
 REPLACE INTO `acl` VALUES(24, '*', '*', '*', '/blog/*', 1, '2011-05-18 20:45:14');
-REPLACE INTO `acl` VALUES(25, '*', '*', '*', '/faq/*', 1, '2011-05-18 20:49:01');
 REPLACE INTO `acl` VALUES(26, '*', '*', '*', '/about/*', 1, '2011-05-18 20:49:01');
 REPLACE INTO `acl` VALUES(27, '*', 'superadmin', '*', '/user/edit/*', 1, '2011-05-18 20:56:56');
 REPLACE INTO `acl` VALUES(28, '*', 'checker', '*', '/project/edit/*', 1, '2013-02-22 10:25:05');

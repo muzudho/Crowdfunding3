@@ -42,7 +42,6 @@ namespace Goteo\Controller {
                 'supervisor' => array(
                     // paneles de admin permitidos
                     'texts',
-                    'faq',
                     'pages',
                     'licenses',
                     'icons',
@@ -123,16 +122,6 @@ namespace Goteo\Controller {
                         'translate' => array('label' => Text::_('Traduciendo Criterio'), 'item' => true)
                     ),
                     'filters' => array('section' => 'project')
-                ),
-                'faq' => array(
-                    'label' => Text::_('Admin faq'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Nueva Pregunta'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Pregunta'), 'item' => true),
-                        'translate' => array('label' => Text::_('Traduciendo Pregunta'), 'item' => true)
-                    ),
-                    'filters' => array('section' => 'node')
                 ),
             'home' => array(
                 'label' => Text::_('Elementos en portada'),
@@ -622,7 +611,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'blog' => $options['blog'],
                                 'texts' => $options['texts'],
-                                'faq' => $options['faq'],
                                 'pages' => $options['pages'],
                                 'categories' => $options['categories'],
                                 'skills' => $options['skills'],

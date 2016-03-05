@@ -2,1492 +2,4845 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-07 10:07+0100\n"
-"PO-Revision-Date: 2012-12-24 00:50+0100\n"
+"POT-Creation-Date: 2016-03-05 09:25+0900\n"
+"PO-Revision-Date: 2016-03-05 09:25+0900\n"
 "Last-Translator: Diana Wildschut\n"
 "Language-Team: Goteo translations\n"
-"Language: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: /home/zilog/development/webapps/Goteo\n"
-"X-Poedit-Language: Dutch\n"
-"X-Poedit-Country: The Netherlands\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: /home/zilog/development/webapps/Goteo\n"
-
-#: /home/zilog/development/webapps/Goteo/view/admin/index.html.php:67
-#: /home/zilog/development/webapps/Goteo/view/admin/feed.html.php:38
-msgid "Panel principal de administración"
-msgstr "Hoofd beheerpaneel"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:193
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:269
-msgid "Texto"
-msgstr "Tekst"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:194
-msgid "Agrupación"
-msgstr "Groep"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:199
-msgid "Filtrar por tipo:"
-msgstr "Rangschik per type:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:205
-msgid "Filtrar por agrupación:"
-msgstr "Rangschik per groep:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:211
-msgid "Buscar texto:"
-msgstr "Zoek tekst:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:258
-msgid "Aplicar"
-msgstr "Pas toe"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:406
-#, php-format
-msgid "El admin %s ha <span class=\"red\">tocado las fechas</span> del proyecto %s"
-msgstr "Admin %s heeft <span class=\"red\">de data veranderd</span> voor project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:408
-#, php-format
-msgid "Al admin %s le ha <span class=\"red\">fallado al tocar las fechas</span> del proyecto %s"
-msgstr "Admin %s heeft <span class=\"red\">de data niet veranderd</span> voor project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:411
-msgid "No se ha guardado correctamente. "
-msgstr "Is niet correct opgeslagen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:419
-msgid "Se han actualizado las cuentas del proyecto "
-msgstr "Project accounts zijn bijgewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:439
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Revisión</span>"
-msgstr "Admin %s heeft het project %s veranderd naar status <span class=\"red\">Review</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:441
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">Revisión</span>"
-msgstr "Mislukte poging door admin %s om project %s te zetten op status <span class=\"red\">Review</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:447
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">en Campaña</span>"
-msgstr "Admin %s heeft project %s gezet op status <span class=\"red\">in Campagne</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:449
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">en Campaña</span>"
-msgstr "Mislukte poging van admin %s om project %s te zetten op status <span class=\"red\">in Campagne</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:455
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Descartado</span>"
-msgstr "Admin %s heeft project %s gezet op status <span class=\"red\">Weggegooid</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:457
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">Descartado</span>"
-msgstr "Mislukte poging van admin %s om project %s te zetten op status <span class=\"red\">Weggegooid</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:463
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Edición</span>"
-msgstr "Admin %s heeft project %s gezet op status <span class=\"red\">Bewerken</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:465
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">Edición</span>"
-msgstr "Mislukte poging van admin %s om project %s te zetten op status <span class=\"red\">Bewerken</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:471
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Financiado</span>"
-msgstr "Admin %s heeft project %s gezet op status <span class=\"red\">Gefinancierd</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:473
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">Financiado</span>"
-msgstr "Mislukte poging van admin %s om project %s te zetten op status <span class=\"red\">Gefinancierd</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:479
-#, php-format
-msgid "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Retorno cumplido</span>"
-msgstr "Admin %s heeft project %s gezet op status <span class=\"red\">Return voldaan</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:481
-#, php-format
-msgid "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red\">Retorno cumplido</span>"
-msgstr "Mislukte poging van admin %s om project %s te zetten op status <span class=\"red\">Return voldaan</span>"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:491
-msgid "Cambio estado/fechas de un proyecto desde el admin"
-msgstr "Stause/datum is veranderd vanuit de adminconsole van een project"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:557
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2725
-msgid "Nombre"
-msgstr "Naam"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:558
-msgid "Enviado a revision"
-msgstr "Ter beoordeling opgestuurd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:624
-msgid "Revisión iniciada correctamente"
-msgstr "herziening correct gestart"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:630
-msgid "valoración iniciada (admin)"
-msgstr "validatie gestart (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:633
-#, php-format
-msgid "El admin %s ha %s la valoración de %s"
-msgstr "Admin %s heeft %s met %s gewaardeerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:646
-msgid "Datos editados correctamente"
-msgstr "Informatie is correct bewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:674
-msgid "La revisión se ha cerrado"
-msgstr "Herziening is nu gesloten"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:680
-msgid "valoración finalizada (admin)"
-msgstr "inschatting compleet (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:683
-#, php-format
-msgid "El admin %s ha dado por %s la valoración de %s"
-msgstr "Admin %s heeft %s op %s gewaardeerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:686
-msgid "Finalizada"
-msgstr "Compleet"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:728
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:765
-msgid "asignar revision (admin)"
-msgstr "herziening toekennen (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:731
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:768
-#, php-format
-msgid "El admin %s ha %s a %s la revisión de %s"
-msgstr "Admin %s heeft %s tot %s op %s gewaardeerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:734
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:893
-msgid "Asignado"
-msgstr "Toegekend"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:771
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:897
-msgid "Desasignado"
-msgstr "Niet toegekend"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:810
-msgid "Abiertas"
-msgstr "Geopend"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:811
-msgid "Cerradas"
-msgstr "Gesloten"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:874
-msgid "No hay proyecto sobre el que operar"
-msgstr "Niet toepasbaar op een bestaand project"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:906
-msgid " traduccion (admin)"
-msgstr "vertaling (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:909
-#, php-format
-msgid "El admin %s ha %s a %s la traducción del proyecto %s"
-msgstr "Admin %s heeft %s op %s de vertaling van project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:936
-msgid "El proyecto "
-msgstr "Het project"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:936
-msgid " se ha habilitado para traducir"
-msgstr " is beschikbaar voor vertaling"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:936
-msgid "Datos de traducción actualizados"
-msgstr "Details van de vertaling zijn bijgewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:943
-msgid "proyecto habilitado para traducirse (admin)"
-msgstr "project is beschikbaar voor vertaling (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:946
-#, php-format
-msgid "El admin %s ha %s la traducción del proyecto %s"
-msgstr "Admin %s heeft %s de vertaling van project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:949
-msgid "Habilitado"
-msgstr "Aangezet"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:960
-msgid "Ha fallado al habilitar la traducción del proyecto "
-msgstr "Niet gelukt om de vertaling van het project aan te zetten"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:984
-msgid "Se ha enviado un email a"
-msgstr "Er is een email gestuurd naar"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:984
-msgid "a la dirección"
-msgstr "naar het adres"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:986
-msgid "Ha fallado informar a"
-msgstr "Het is niet gelukt verslag uit te brengen aan"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:986
-msgid "de la posibilidad de traducción de su proyecto"
-msgstr "over de mogelijkheid tot vertaling van je project"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1020
-msgid "La traducción del proyecto "
-msgstr "Vertaling van dit project"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1020
-msgid " se ha finalizado"
-msgstr " is compleet"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1028
-msgid "traducción finalizada (admin)"
-msgstr "vertaling compleet (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1031
-#, php-format
-msgid "El admin %s ha dado por %s la traducción de %s"
-msgstr "Admin %s heeft %s ingesteld als vertaling van %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1042
-msgid "Falló al finalizar la traducción"
-msgstr "Het is niet gelukt de vertaling af te maken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1098
-msgid "Proyecto destacado correctamente"
-msgstr "Project is in de etalage gezet"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1106
-msgid "nuevo proyecto destacado en portada (admin)"
-msgstr "nieuw project getoond op de voorpagina (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1109
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1189
-#, php-format
-msgid "El admin %s ha %s el proyecto %s"
-msgstr "Admin %s heeft %s project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1112
-msgid "Destacado en portada"
-msgstr "Getoond op de voorpagina"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1122
-msgid "Destacado actualizado correctamente"
-msgstr "Het getoonde is correct geactualiseerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1186
-msgid "proyecto quitado portada (admin)"
-msgstr "project is verwijderd van de voorpagina (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1192
-msgid "Quitado de la portada"
-msgstr "Verwijderd van de voorpagina"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1200
-msgid "Proyecto quitado correctamente"
-msgstr "Project correct verwijderd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1281
-msgid "Datos guardados"
-msgstr "Data opgeslagen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1290
-msgid "nuevo banner de proyecto destacado en portada (admin)"
-msgstr "nieuwe project banner getoond op de voorpagina (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1293
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1355
-#, php-format
-msgid "El admin %s ha %s del proyecto %s"
-msgstr "Admin %s heeft %s in project %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1296
-msgid "Publicado un banner"
-msgstr "Een banner gepubliceerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1352
-msgid "banner de proyecto quitado portada (admin)"
-msgstr "project banner verwijderd van voorpagina (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1358
-msgid "Quitado el banner"
-msgstr "Een banner verwijderd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1454
-msgid "Pregunta añadida correctamente"
-msgstr "Vraag succesvol toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1457
-msgid "Pregunta editado correctamente"
-msgstr "Vraag succesvol bewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1579
-msgid "Criterio añadido correctamente"
-msgstr "Criterium succesvol toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1582
-msgid "Criterio editado correctamente"
-msgstr "Criterium succesvol bewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1703
-msgid "Nuevo tipo añadido correctamente"
-msgstr "Nieuw type succesvol toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1706
-msgid "Tipo editado correctamente"
-msgstr "Type succesvol bewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1712
-msgid "modificacion de tipo de retorno/recompensa (admin)"
-msgstr "verandering van type rendement/beloning (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1715
-#, php-format
-msgid "El admin %s ha %s el tipo de retorno/recompensa %s"
-msgstr "Admin %s heeft %s het type van teruggaaf/beloning %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1851
-msgid "Licencia añadida correctamente"
-msgstr "Licentie succesvol toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1854
-msgid "Licencia editada correctamente"
-msgstr "Licentie succesvol bewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1860
-msgid "modificacion de licencia (admin)"
-msgstr "bewerk licentie (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1863
-#, php-format
-msgid "El admin %s ha %s la licencia %s"
-msgstr "Admin %s heeft %s licentie %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:1982
-msgid "Entrada colocada en la portada correctamente"
-msgstr "Entry is succesvol op de voorpagina geplaatst"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2069
-msgid "Entrada colocada en el footer correctamente"
-msgstr "Entry is succesvol geplaatst in de voettekst"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2161
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2320
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4045
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4265
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4453
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4596
-msgid "Añadir"
-msgstr "Voeg toe"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2171
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2230
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2272
-msgid "Categoría"
-msgstr "Categorie"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2176
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2235
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4468
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4526
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4611
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4669
-msgid "Descripción"
-msgstr "Beschrijving"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2268
-msgid "Nueva categoría"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controller/admin.php:61
+msgid "Gestión de aportes"
+msgstr ""
+
+#: controller/admin.php:63 controller/admin.php:78 controller/admin.php:87
+#: controller/admin.php:99 controller/admin.php:109 controller/admin.php:119
+#: controller/admin.php:135 controller/admin.php:143 controller/admin.php:152
+#: controller/admin.php:162 controller/admin.php:181 controller/admin.php:198
+#: controller/admin.php:207 controller/admin.php:222 controller/admin.php:231
+#: controller/admin.php:237 controller/admin.php:247 controller/admin.php:262
+#: controller/admin.php:270 controller/admin.php:279 controller/admin.php:288
+#: controller/admin.php:297 controller/admin.php:306 controller/admin.php:318
+#: controller/translate.php:437 controller/translate.php:444
+#: controller/translate.php:451 controller/translate.php:458
+#: controller/translate.php:465 controller/translate.php:472
+#: controller/translate.php:479 controller/translate.php:486
+#: controller/translate.php:493 controller/translate.php:500
+#: controller/translate.php:507 controller/translate.php:514
+#: controller/translate.php:521 controller/translate.php:533
+#: controller/translate.php:540 controller/translate.php:547
+#: controller/translate.php:559 controller/translate.php:566
+#: controller/translate.php:573 controller/translate.php:580
+msgid "Listando"
+msgstr "Lijst"
+
+#: controller/admin.php:64 controller/admin.php:153
+#: view/admin/invests/details.html.php:56
+msgid "Detalles del aporte"
+msgstr "Details van bijdragen"
+
+#: controller/admin.php:65
+msgid "Cambiando el estado al aporte"
+msgstr ""
+
+#: controller/admin.php:66
+msgid "Aporte manual"
+msgstr "Handmatige bijdrage"
+
+#: controller/admin.php:67
+msgid "Reubicando el aporte"
+msgstr "Bijdrage aan het verplaatsen"
+
+#: controller/admin.php:68
+msgid "Ejecución del cargo"
+msgstr ""
+
+#: controller/admin.php:69
+msgid "Cancelando aporte"
+msgstr "Bijdrage weigeren"
+
+#: controller/admin.php:70
+msgid "Informe de proyecto"
+msgstr "Projectraportage"
+
+#: controller/admin.php:71
+msgid "Viendo logs"
+msgstr "Logs aan het bekijken"
+
+#: controller/admin.php:76 controller/translate.php:435
+#: controller/translate.php:564 library/content.php:43
+msgid "Banners"
+msgstr "Banners"
+
+#: controller/admin.php:79
+msgid "Nuevo Banner"
+msgstr "Nieuwe Banner"
+
+#: controller/admin.php:80
+msgid "Editando Banner"
+msgstr "Banner aan het bijwerken"
+
+#: controller/admin.php:81 controller/translate.php:438
+msgid "Traduciendo Banner"
+msgstr "Banner aan het vertalen"
+
+#: controller/admin.php:85 controller/translate.php:442
+#: controller/translate.php:571 library/content.php:42
+msgid "Blog"
+msgstr "Blog"
+
+#: controller/admin.php:88
+msgid "Nueva Entrada"
+msgstr "Nieuwe entry"
+
+#: controller/admin.php:89
+msgid "Editando Entrada"
+msgstr "Entry aan het bijwerken"
+
+#: controller/admin.php:90 controller/translate.php:445
+msgid "Traduciendo Entrada"
+msgstr "Entry aan het vertalen"
+
+#: controller/admin.php:91
+msgid "Ordenando las entradas en Portada"
+msgstr ""
+
+#: controller/admin.php:92
+msgid "Ordenando las entradas en el Footer"
+msgstr ""
+
+#: controller/admin.php:97
+msgid "Category"
+msgstr ""
+
+#: controller/admin.php:100
+msgid "Nueva Categoría"
 msgstr "Nieuwe categorie"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2273
+#: controller/admin.php:101
+msgid "Editando Categoría"
+msgstr "Categorie aan het bijwerken"
+
+#: controller/admin.php:102 controller/translate.php:466
+msgid "Traduciendo Categoría"
+msgstr "Categorie aan het vertalen"
+
+#: controller/admin.php:103 controller/admin.php:113
+msgid "Palabras clave"
+msgstr ""
+
+#: controller/admin.php:107
+msgid "Skills"
+msgstr ""
+
+#: controller/admin.php:110
+msgid "Nueva Skill"
+msgstr ""
+
+#: controller/admin.php:111
+msgid "Editando Skill"
+msgstr ""
+
+#: controller/admin.php:112
+msgid "Traduciendo Skill"
+msgstr ""
+
+#: controller/admin.php:117 controller/translate.php:491
+msgid "Criterios de revisión"
+msgstr "Criteria bekijken"
+
+#: controller/admin.php:120
+msgid "Nuevo Criterio"
+msgstr "Nieuw criterium"
+
+#: controller/admin.php:121
+msgid "Editando Criterio"
+msgstr "criterium aan het bewerken"
+
+#: controller/admin.php:122 controller/translate.php:494
+msgid "Traduciendo Criterio"
+msgstr "criterium aan het vertalen"
+
+#: controller/admin.php:127
+msgid "Elementos en portada"
+msgstr ""
+
+#: controller/admin.php:129
+msgid "Gestionando"
+msgstr ""
+
+#: controller/admin.php:133 controller/translate.php:505
+msgid "Glosario"
+msgstr "Overzicht"
+
+#: controller/admin.php:136
+msgid "Editando Término"
+msgstr "Termijn aan het bijwerken"
+
+#: controller/admin.php:137 controller/translate.php:508
+msgid "Traduciendo Término"
+msgstr "Termijn aan het vertalen"
+
+#: controller/admin.php:141 controller/translate.php:477
+msgid "Tipos de Retorno"
+msgstr "Soorten rendement"
+
+#: controller/admin.php:144
+msgid "Editando Tipo"
+msgstr "Type aan het bijwerken"
+
+#: controller/admin.php:145 controller/translate.php:480
+msgid "Traduciendo Tipo"
+msgstr "Type aan het vertalen"
+
+#: controller/admin.php:150 view/admin/accounts/viewer.html.php:48
+#: view/admin/index.html.php:75 view/admin/users/list.html.php:220
+msgid "Aportes"
+msgstr "Bijdragen"
+
+#: controller/admin.php:160 controller/translate.php:470 library/content.php:39
+msgid "Licencias"
+msgstr "Licenties"
+
+#: controller/admin.php:163
+msgid "Editando Licencia"
+msgstr "Licentie aan het bijwerken"
+
+#: controller/admin.php:164 controller/translate.php:473
+msgid "Traduciendo Licencia"
+msgstr "Licentie aan het vertalen"
+
+#: controller/admin.php:169 view/admin/newsletter/list.html.php:40
+msgid "Comunicaciones"
+msgstr "Communicatie"
+
+#: controller/admin.php:171
+msgid "Seleccionando destinatarios"
+msgstr "Ontvangers aan het selecteren"
+
+#: controller/admin.php:172
+msgid "Escribiendo contenido"
+msgstr "Inhoud aan het schrijven"
+
+#: controller/admin.php:173
+msgid "Comunicación enviada"
+msgstr "Communicatie ingediend"
+
+#: controller/admin.php:179 controller/translate.php:531
+msgid "Micronoticias"
+msgstr "MicroNieuws"
+
+#: controller/admin.php:182
+msgid "Nueva Micronoticia"
+msgstr "Nieuwe Microblog Entry"
+
+#: controller/admin.php:183
+msgid "Editando Micronoticia"
+msgstr "Microblog Entry aan het bijwerken"
+
+#: controller/admin.php:184 controller/translate.php:534
+msgid "Traduciendo Micronoticia"
+msgstr "Microblog Entry aan het vertalen"
+
+#: controller/admin.php:188
+msgid "Boletín"
+msgstr ""
+
+#: controller/admin.php:190
+msgid "Estado del envío automático"
+msgstr ""
+
+#: controller/admin.php:191
+msgid "Iniciando un nuevo boletín"
+msgstr ""
+
+#: controller/admin.php:192
+msgid "Viendo listado completo"
+msgstr ""
+
+#: controller/admin.php:196
+msgid "Page"
+msgstr ""
+
+#: controller/admin.php:199
+msgid "Editando Página"
+msgstr "Pagina aan het bijwerken"
+
+#: controller/admin.php:200
+msgid "Nueva Página"
+msgstr ""
+
+#: controller/admin.php:201
+msgid "Traduciendo Página"
+msgstr "Pagina aan het vertalen"
+
+#: controller/admin.php:205
+msgid "Gestión de proyectos"
+msgstr "Projectadministratie"
+
+#: controller/admin.php:208
+msgid "Fechas del proyecto"
+msgstr ""
+
+#: controller/admin.php:209
+msgid "Cuentas del proyecto"
+msgstr ""
+
+#: controller/admin.php:210
+msgid "Imágenes del proyecto"
+msgstr ""
+
+#: controller/admin.php:211
+msgid "Moviendo a otro Nodo el proyecto"
+msgstr ""
+
+#: controller/admin.php:212
+msgid "Asignando a una Convocatoria el proyecto"
+msgstr ""
+
+#: controller/admin.php:213
+msgid "Informe Financiero del proyecto"
+msgstr ""
+
+#: controller/admin.php:214
+msgid "Cambiando Id de proyecto"
+msgstr ""
+
+#: controller/admin.php:215 view/admin/projects/list.html.php:201
+msgid "Organizar imágenes"
+msgstr ""
+
+#: controller/admin.php:220 controller/translate.php:538 library/content.php:36
+#: model/home.php:44
+msgid "Proyectos destacados"
+msgstr "Deelnemende projecten"
+
+#: controller/admin.php:223
+msgid "Nuevo Destacado"
+msgstr "Nieuwe eigenschap"
+
+#: controller/admin.php:224
+msgid "Editando Destacado"
+msgstr "Eigenschap bijwerken"
+
+#: controller/admin.php:225 controller/translate.php:541
+msgid "Traduciendo Destacado"
+msgstr "Feature aan het vertalen"
+
+#: controller/admin.php:229 model/home.php:46
+msgid "Actividad reciente"
+msgstr "Recente activiteit"
+
+#: controller/admin.php:235
+msgid "Revisiones"
+msgstr "Reviews"
+
+#: controller/admin.php:238
+msgid "Iniciando briefing"
+msgstr "briefing wordt geinitialiseerd"
+
+#: controller/admin.php:239
+msgid "Editando briefing"
+msgstr "briefing aan het bijwerken"
+
+#: controller/admin.php:240 controller/review.php:252
+msgid "Informe"
+msgstr "Raportage"
+
+#: controller/admin.php:245
+msgid "Remuneration"
+msgstr ""
+
+#: controller/admin.php:248
+msgid "Gestionando recompensa"
+msgstr ""
+
+#: controller/admin.php:253 view/admin/users/manage.html.php:113
+msgid "Historial envíos"
+msgstr ""
+
+#: controller/admin.php:255
+msgid "Emails enviados"
+msgstr "Verzonden emails"
+
+#: controller/admin.php:260
+msgid "Apoyos institucionales"
+msgstr "Institutionele bijdragen"
+
+#: controller/admin.php:263
+msgid "Nuevo Patrocinador"
+msgstr "Nieuwe Sponsor"
+
+#: controller/admin.php:264
+msgid "Editando Patrocinador"
+msgstr "Sponsor aan het bijwerken"
+
+#: controller/admin.php:268 controller/translate.php:484
+msgid "Tags de blog"
+msgstr "Blog tags"
+
+#: controller/admin.php:271
+msgid "Nuevo Tag"
+msgstr "Nieuwe Tag"
+
+#: controller/admin.php:272
+msgid "Editando Tag"
+msgstr "Tag aan het bijwerken"
+
+#: controller/admin.php:273 controller/translate.php:487
+msgid "Traduciendo Tag"
+msgstr "Tag aan het vertalen"
+
+#: controller/admin.php:277 controller/translate.php:498
+msgid "Plantillas de email"
+msgstr "Email templates"
+
+#: controller/admin.php:280
+msgid "Editando Plantilla"
+msgstr "Template aan het bewerken"
+
+#: controller/admin.php:281 controller/translate.php:501
+msgid "Traduciendo Plantilla"
+msgstr "Template aan het vertalen"
+
+#: controller/admin.php:286 controller/translate.php:449
+msgid "Textos interficie"
+msgstr "Bedieningsteksten"
+
+#: controller/admin.php:289
+msgid "Editando Original"
+msgstr "Origineel aan het bijwerken"
+
+#: controller/admin.php:290 controller/translate.php:452
+msgid "Traduciendo Texto"
+msgstr "Tekst aan het vertalen"
+
+#: controller/admin.php:295
+msgid "Traducciones de proyectos"
+msgstr ""
+
+#: controller/admin.php:298
+msgid "Habilitando traducción"
+msgstr "Vertaling ingeschakeld"
+
+#: controller/admin.php:299
+msgid "Asignando traducción"
+msgstr "Vertaling toegewezen"
+
+#: controller/admin.php:304
+msgid "Gestión de usuarios"
+msgstr "Beheer Gebruikers"
+
+#: controller/admin.php:307
+msgid "Creando Usuario"
+msgstr "Gebruiker aanmaken"
+
+#: controller/admin.php:308
+msgid "Editando Usuario"
+msgstr "Gebruiker aan het bewerken"
+
+#: controller/admin.php:309
+msgid "Gestionando Usuario"
+msgstr "Gebruikersbeheer"
+
+#: controller/admin.php:310
+msgid "Suplantando al Usuario"
+msgstr "Gebruiker simuleren"
+
+#: controller/admin.php:311
+msgid "Moviendo a otro Nodo el usuario "
+msgstr ""
+
+#: controller/admin.php:316
+msgid "Niveles de meritocracia"
+msgstr "Verdienstenniveaus"
+
+#: controller/admin.php:319
+msgid "Editando Nivel"
+msgstr "Level aan het bijwerken"
+
+#: controller/admin.php:363 view/admin/users/list.html.php:229
+msgid "Admin"
+msgstr ""
+
+#: controller/admin.php:543
+msgid "Contenidos"
+msgstr ""
+
+#: controller/admin.php:544 controller/admin/users.php:460 model/home.php:53
+#: view/admin/index.html.php:73
 msgid "Proyectos"
 msgstr "Projecten"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2274
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4733
+#: controller/admin.php:545 view/admin/index.html.php:74
 msgid "Usuarios"
 msgstr "Gebruikers"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2275
+#: controller/admin.php:546 controller/translate.php:528 library/text.php:329
+msgid "Portada"
+msgstr "Voorpagina"
+
+#: controller/admin.php:547
+msgid "Textos y Traducciones"
+msgstr ""
+
+#: controller/admin.php:548
+msgid "Servicios"
+msgstr ""
+
+#: controller/admin.php:549
+msgid "Invest"
+msgstr ""
+
+#: controller/admin/accounts.php:114
+msgid "Ha fallado algo al reubicar el aporte"
+msgstr "Niet gelukt om de bijdrage te verplaatsen"
+
+#: controller/admin/accounts.php:198 controller/admin/accounts.php:380
+#, php-format
+msgid ""
+"El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s "
+"del dia %s"
+msgstr ""
+"Admin %s heeft een handatige bijdrage van %s van %s (id: %s) aan project %s "
+"op datum %s geweigerd"
+
+#: controller/admin/accounts.php:199 controller/admin/accounts.php:381
+#: controller/admin/accounts.php:389
+msgid "Aporte cancelado"
+msgstr "Bijdrage geweigerd"
+
+#: controller/admin/accounts.php:201 controller/admin/accounts.php:383
+#, php-format
+msgid ""
+"El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al "
+"proyecto %s del dia %s. "
+msgstr ""
+"Het is Admin %s niet gelukt een handmatige bijdrage van %s van %s (id: %s) "
+"aan project %s op datum %s te weigeren."
+
+#: controller/admin/accounts.php:202 controller/admin/accounts.php:384
+#: controller/admin/accounts.php:391
+msgid "Fallo al cancelar el aporte"
+msgstr "Niet gelukt de bijdrage te weigeren"
+
+#: controller/admin/accounts.php:307
+msgid "Ha fallado algo al crear el aporte manual"
+msgstr "Iets geks is fout gegaan bij het aanmaken van de handmatige bijdrage"
+
+#: controller/admin/accounts.php:372
+msgid ""
+"No debería poderse cancelar un aporte cuando el proyecto ya está financiado. "
+"Si es imprescindible, hacerlo desde el panel de paypal o tpv"
+msgstr ""
+"Het zou niet mogelijk moeten zijn om een bijdrage terug te nemen voor een "
+"project dat al volledig gefinancierd is. Als je echt wilt, doe het dan via "
+"het PayPal panel of de TPV."
+
+#: controller/admin/accounts.php:428
+msgid "Aporte al contado, nada que ejecutar."
+msgstr "Contante bijdrage, niets uit te voeren."
+
+#: controller/admin/accounts.php:429
+#, php-format
+msgid ""
+"El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la "
+"cantidad de %s (id: %s) al proyecto %s del dia %s"
+msgstr ""
+"Admin %s heeft handmatige bijdrage op naam van %s op status uitgevoerd "
+"gezet, bedrag %s (id: %s) aan project %s op datum %s"
+
+#: controller/admin/accounts.php:469
+msgid "Ha fallado al marcar donativo"
+msgstr ""
+
+#: controller/admin/categories.php:54 controller/admin/skills.php:37
+#: controller/admin/sponsors.php:54 controller/admin/tags.php:52
+msgid "Añadir"
+msgstr "Voeg toe"
+
+#: controller/admin/categories.php:64
+msgid "Categoría"
+msgstr "Categorie"
+
+#: controller/admin/categories.php:69 controller/admin/skills.php:52
+#: controller/translate.php:557 library/content.php:58 library/content.php:62
+#: library/content.php:66 library/content.php:70 library/content.php:74
+#: library/content.php:79 library/content.php:118
+#: view/admin/pages/list.html.php:37 view/admin/promote/edit.html.php:56
+#: view/admin/templates/list.html.php:62
+msgid "Descripción"
+msgstr "Beschrijving"
+
+#: controller/admin/categories.php:173
+msgid "Nueva categoría"
+msgstr "Nieuwe categorie"
+
+#: controller/admin/categories.php:179
+msgid "Subject category name"
+msgstr ""
+
+#: controller/admin/categories.php:182
 msgid "Prioridad"
 msgstr "Prioriteit"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2330
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2382
+#: controller/admin/mailing.php:168
+msgid "Solo se filtran donantes si se envia \"A los: Cofinanciadores\""
+msgstr ""
+
+#: controller/admin/pages.php:90
+msgid "modificacion de página institucional (admin)"
+msgstr ""
+
+#: controller/admin/projects.php:79
+#, php-format
+msgid ""
+"El admin %s ha <span class=\"red\">tocado las fechas</span> del proyecto "
+msgstr ""
+
+#: controller/admin/projects.php:81
+#, php-format
+msgid ""
+"Al admin %s le ha <span class=\"red\">fallado al tocar las fechas</span> del "
+"proyecto "
+msgstr ""
+
+#: controller/admin/projects.php:122 controller/admin/projects.php:175
+msgid "Se han actualizado los datos"
+msgstr ""
+
+#: controller/admin/projects.php:143
+msgid "El proyecto no está ni en Edición ni en Revisión, no se modifica nada."
+msgstr ""
+
+#: controller/admin/projects.php:151
+msgid "Ha fallado algo en el rebase, verificar el proyecto"
+msgstr ""
+
+#: controller/admin/projects.php:196
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Revision</"
+"span>"
+msgstr ""
+
+#: controller/admin/projects.php:198
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Revision</span>"
+msgstr ""
+
+#: controller/admin/projects.php:204
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">en "
+"Campa�a</span>"
+msgstr ""
+
+#: controller/admin/projects.php:206
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">en Campa�a</span>"
+msgstr ""
+
+#: controller/admin/projects.php:212
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+"\">Descartado</span>"
+msgstr ""
+"Admin %s heeft project %s gezet op status <span class=\"red\">Weggegooid</"
+"span>"
+
+#: controller/admin/projects.php:214
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Descartado</span>"
+msgstr ""
+"Mislukte poging van admin %s om project %s te zetten op status <span class="
+"\"red\">Weggegooid</span>"
+
+#: controller/admin/projects.php:220
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Edicion</"
+"span>"
+msgstr ""
+
+#: controller/admin/projects.php:222
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Edicion</span>"
+msgstr ""
+
+#: controller/admin/projects.php:228
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Retorno "
+"cumplido</span>"
+msgstr ""
+"Admin %s heeft project %s gezet op status <span class=\"red\">Return "
+"voldaan</span>"
+
+#: controller/admin/projects.php:230
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Retorno cumplido</span>"
+msgstr ""
+"Mislukte poging van admin %s om project %s te zetten op status <span class="
+"\"red\">Return voldaan</span>"
+
+#: controller/admin/projects.php:236
+#, php-format
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+"\">Financiado</span>"
+msgstr ""
+"Admin %s heeft project %s gezet op status <span class=\"red\">Gefinancierd</"
+"span>"
+
+#: controller/admin/projects.php:238
+#, php-format
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Financiado</span>"
+msgstr ""
+"Mislukte poging van admin %s om project %s te zetten op status <span class="
+"\"red\">Gefinancierd</span>"
+
+#: controller/admin/projects.php:247
+msgid "Cambio estado/fechas/cuentas/nodo de un proyecto desde el admin"
+msgstr ""
+
+#: controller/admin/projects.php:394
+msgid "Ha fallado al enviar el mail a"
+msgstr ""
+
+#: controller/admin/projects.php:394
+msgid "a la dirección"
+msgstr "naar het adres"
+
+#: controller/admin/projects.php:430 library/content.php:69
+#: library/content.php:73 library/content.php:78 library/content.php:91
+#: library/content.php:97 library/content.php:120
+#: view/admin/icons/list.html.php:45 view/admin/licenses/edit.html.php:39
+msgid "Nombre"
+msgstr "Naam"
+
+#: controller/admin/projects.php:431
+msgid "Enviado a revision"
+msgstr "Ter beoordeling opgestuurd"
+
+#: controller/admin/reviews.php:69
+msgid "valoración iniciada (admin)"
+msgstr "validatie gestart (admin)"
+
+#: controller/admin/reviews.php:72
+msgid "Iniciado"
+msgstr ""
+
+#: controller/admin/reviews.php:113
+msgid "valoración finalizada (admin)"
+msgstr "inschatting compleet (admin)"
+
+#: controller/admin/reviews.php:116
+msgid "Finalizada"
+msgstr "Compleet"
+
+#: controller/admin/reviews.php:164
+msgid "asignar revision (admin)"
+msgstr "herziening toekennen (admin)"
+
+#: controller/admin/reviews.php:167 controller/admin/translates.php:82
+msgid "Asignado"
+msgstr "Toegekend"
+
+#: controller/admin/reviews.php:201
+msgid "Desasignar revision (admin)"
+msgstr ""
+
+#: controller/admin/reviews.php:204 controller/admin/translates.php:91
+msgid "Desasignado"
+msgstr "Niet toegekend"
+
+#: controller/admin/reviews.php:248
+msgid "No iniciada"
+msgstr ""
+
+#: controller/admin/reviews.php:249
+msgid "Abierta"
+msgstr ""
+
+#: controller/admin/reviews.php:250
+msgid "Cerrada"
+msgstr ""
+
+#: controller/admin/rewards.php:123 view/admin/rewards/list.html.php:71
+#: view/review/activity/summary.html.php:32
+#: view/review/reviews/summary.html.php:42
+msgid "Pendiente"
+msgstr "In afwachting van uitvoering"
+
+#: controller/admin/rewards.php:124
+msgid "Cumplida"
+msgstr ""
+
+#: controller/admin/skills.php:47
+msgid "Skill"
+msgstr ""
+
+#: controller/admin/skills.php:159
+msgid "New skill"
+msgstr ""
+
+#: controller/admin/sponsors.php:70 controller/admin/sponsors.php:162
+#: controller/admin/sponsors.php:216
+msgid "Patrocinador"
+msgstr "Sponsor"
+
+#: controller/admin/sponsors.php:75 controller/admin/sponsors.php:167
+#: controller/admin/sponsors.php:217 library/content.php:119
+#: view/admin/projects/images.html.php:89
+msgid "Enlace"
+msgstr "Link"
+
+#: controller/admin/sponsors.php:81 controller/admin/sponsors.php:173
+msgid "Logo"
+msgstr "Logo"
+
+#: controller/admin/sponsors.php:86 controller/admin/sponsors.php:178
+#: controller/admin/sponsors.php:219 view/admin/banners/list.html.php:34
+#: view/admin/criteria/list.html.php:47 view/admin/home/list.html.php:57
+#: view/admin/home/list.html.php:115 view/admin/licenses/list.html.php:58
+#: view/admin/promote/list.html.php:35
+msgid "Posición"
+msgstr "Positie"
+
+#: controller/admin/sponsors.php:212
+msgid "Nuevo patrocinador"
+msgstr "Nieuwe sponsor"
+
+#: controller/admin/sponsors.php:218 view/admin/glossary/edit.html.php:38
+#: view/admin/glossary/edit.html.php:106
+msgid "Imagen"
+msgstr "Beeld"
+
+#: controller/admin/tags.php:62 controller/admin/tags.php:116
+#: controller/admin/tags.php:144
 msgid "Tag"
 msgstr "Tag"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2407
+#: controller/admin/tags.php:140
 msgid "Nuevo tag"
 msgstr "Nieuwe tag"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2509
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2623
-msgid "Operación sobre usuario (admin)"
-msgstr "Voer taak uit op gebruiker (admin)"
+#: controller/admin/tags.php:145
+msgid "Entradas"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2512
-#, php-format
-msgid "El admin %s ha %s del usuario %s"
-msgstr "Admin %s heeft %s van gebruiker %s"
+#: controller/admin/texts.php:39 view/admin/templates/list.html.php:35
+msgid "Todas las agrupaciones"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2525
-msgid "Datos actualizados"
-msgstr "Data bijgewerkt"
+#: controller/admin/texts.php:58 controller/admin/texts.php:144
+#: view/admin/texts/list.html.php:74
+msgid "Texto"
+msgstr "Tekst"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2556
+#: controller/admin/texts.php:59 view/admin/icons/list.html.php:47
+#: view/admin/licenses/list.html.php:57 view/admin/texts/list.html.php:75
+msgid "Agrupación"
+msgstr "Groep"
+
+#: controller/admin/texts.php:65
+msgid "Filtrar por agrupación:"
+msgstr "Rangschik per groep:"
+
+#: controller/admin/texts.php:71 view/translate/contents/list.html.php:68
+msgid "Buscar texto:"
+msgstr "Zoek tekst:"
+
+#: controller/admin/texts.php:104
+msgid "El texto ha sido actualizado"
+msgstr ""
+
+#: controller/admin/texts.php:133 view/admin/projects/images.html.php:102
+msgid "Aplicar"
+msgstr "Pas toe"
+
+#: controller/admin/translates.php:142
+msgid "proyecto habilitado para traducirse (admin)"
+msgstr "project is beschikbaar voor vertaling (admin)"
+
+#: controller/admin/translates.php:224
+msgid "traducción finalizada (admin)"
+msgstr "vertaling compleet (admin)"
+
+#: controller/admin/users.php:39
 msgid "Desactivado"
 msgstr "Niet beschikbaar"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2560
+#: controller/admin/users.php:43
 msgid "Activado"
 msgstr "Beschikbaar"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2564
+#: controller/admin/users.php:47
 msgid "Mostrado"
 msgstr "Getoond"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2568
+#: controller/admin/users.php:51
 msgid "Ocultado"
 msgstr "Verborgen"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2572
+#: controller/admin/users.php:55
 msgid "Hecho revisor"
 msgstr "Tot revisor benoemd"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2576
+#: controller/admin/users.php:59
 msgid "Quitado de revisor"
 msgstr "Verwijderd als revisor"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2580
+#: controller/admin/users.php:63
 msgid "Hecho traductor"
 msgstr "Als vertaler toegevoegd"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2584
+#: controller/admin/users.php:67
 msgid "Quitado de traductor"
 msgstr "Als vertaler verwijderd"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2588
+#: controller/admin/users.php:71
 msgid "Hecho admin"
 msgstr "Als admin toegevoegd"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2592
+#: controller/admin/users.php:75
 msgid "Quitado de admin"
 msgstr "Als admin verwijderd"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2604
-#, php-format
-msgid "Ha <strong>%s</strong> al usuario <strong>%s</strong> CORRECTAMENTE"
-msgstr "Heeft CORRECT <strong>%s</strong> bij gebruiker <strong>%s</strong>"
+#: controller/admin/users.php:79
+msgid "Hecho project owner"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2607
+#: controller/admin/users.php:83
+msgid "Quitado de project owner"
+msgstr ""
+
+#: controller/admin/users.php:87
+msgid "Hecho localadmin"
+msgstr ""
+
+#: controller/admin/users.php:91
+msgid "Quitado de localadmin"
+msgstr ""
+
+#: controller/admin/users.php:169
+msgid "el email"
+msgstr ""
+
+#: controller/admin/users.php:173
+msgid "la contraseña"
+msgstr ""
+
+#: controller/admin/users.php:181 controller/admin/users.php:298
+msgid "Operación sobre usuario"
+msgstr ""
+
+#: controller/admin/users.php:247
 #, php-format
 msgid "El admin %s ha %s al usuario %s"
 msgstr "Admin %s heeft %s bij gebruiker %s"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2612
-#, php-format
-msgid "Ha FALLADO cuando ha <strong>%s</strong> al usuario <strong>%s</strong>"
-msgstr "NIET GELUKT om <strong>%s</strong> bij gebruiker <strong>%s</strong>"
+#: controller/admin/users.php:290
+msgid "Ha FALLADO cuando ha"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2615
+#: controller/admin/users.php:290
+msgid "al usuario"
+msgstr ""
+
+#: controller/admin/users.php:291
 #, php-format
 msgid "Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s"
 msgstr "Admin %s <strong>NIET GELUKT/strong> om %s bij gebruiker %s"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2714
+#: controller/admin/users.php:358
+msgid ""
+"No se ha seleccionado ningún idioma, este usuario tendrá problemas en su "
+"panel de traducción!"
+msgstr ""
+
+#: controller/admin/users.php:390
+#, php-format
+msgid ""
+"El admin %s ha <span class=\"red\">movido</span> el usuario %s al nodo %s"
+msgstr ""
+
+#: controller/admin/users.php:392
+#, php-format
+msgid ""
+"Al admin %s le ha <span class=\"red\">fallado al mover</span> el usuario %s "
+"al nodo %s"
+msgstr ""
+
+#: controller/admin/users.php:441 view/admin/newsletter/detail.html.php:42
+#: view/admin/newsletter/list.html.php:88
 msgid "Activo"
 msgstr "Actief"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2715
+#: controller/admin/users.php:442 view/admin/newsletter/detail.html.php:43
+#: view/admin/newsletter/list.html.php:88 view/admin/users/list.html.php:224
 msgid "Inactivo"
 msgstr "Inactief"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2719
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4736
-msgid "Administrador"
-msgstr "Administrator"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2720
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4737
-msgid "Revisor"
-msgstr "Revisor"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2721
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4738
-msgid "Traductor"
-msgstr "Vertaler"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2724
-msgid "Fecha de alta"
-msgstr "Aanmaakdatum"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2773
-msgid "No se puede reubicar este aporte!"
-msgstr "Deze bijdrage kan niet verplaatst worden!"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2825
-msgid "Aporte reubicado"
-msgstr "Bijdrage verplaatst"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2828
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2909
-#, php-format
-msgid "%s ha aportado %s al proyecto %s en nombre de %s"
-msgstr "%s heeft bijgedragen %s aan project %s op naam van %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2839
-msgid "Aporte reubicado correctamente"
-msgstr "Bijdrage succesvol verplaatst"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2842
-#, php-format
-msgid "A fallado al cambiar el estado del aporte original (%s)"
-msgstr "Niet gelukt om de originele status van de bijdrage (%s) aan te passen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2846
-msgid "Ha fallado algo al reubicar el aporte"
-msgstr "Niet gelukt om de bijdrage te verplaatsen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2906
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5383
-msgid "Aporte manual"
-msgstr "Handmatige bijdrage"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2920
-msgid "Aporte manual creado correctamente"
-msgstr "Handmatige bijdrage correct aangemaakt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2923
-msgid "Ha fallado algo al crear el aporte manual"
-msgstr "Iets geks is fout gegaan bij het aanmaken van de handmatige bijdrage"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2971
-msgid "Solo los donativos"
-msgstr "Alleen donaties"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2972
-msgid "Solo los anónimos"
-msgstr "Alleen anoniem"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2973
-msgid "Solo los manuales"
-msgstr "Alleen handmatig"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2974
-msgid "Solo los de Bolsa"
-msgstr "Allen die van \"Markt\""
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:2984
-msgid "Instancia de proyecto no valida"
-msgstr "Project is niet in orde"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3018
-msgid "No debería poderse cancelar un aporte cuando el proyecto ya está financiado. Si es imprescindible, hacerlo desde el panel de paypal o tpv"
-msgstr "Het zou niet mogelijk moeten zijn om een bijdrage terug te nemen voor een project dat al volledig gefinancierd is. Als je echt wilt, doe het dan via het PayPal panel of de TPV."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3026
-msgid "Preaproval paypal cancelado."
-msgstr "PayPal voor-goedkeuring geweigerd."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3027
-#, php-format
-msgid "El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft de bijdrage en voor-goedkeuring van %s van %s via PayPal (id: %s) aan project %s op datum %s afgekeurd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3030
-msgid "Fallo al cancelar el preapproval en paypal: "
-msgstr "Niet gelukt om voor-goedkeuring bij paypall af te keuren:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3031
-#, php-format
-msgid "El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: "
-msgstr "Admin %s is het niet gelukt de bijdrage %s voor %s via PayPal (id: %s) aan project %s op datum %s te weigeren. <br/>Heeft de volgende foutmeldingen:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3033
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3054
-msgid "Aporte cancelado"
-msgstr "Bijdrage geweigerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3035
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3057
-msgid "Fallo al cancelar el aporte"
-msgstr "Niet gelukt de bijdrage te weigeren"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3043
-msgid "Aporte cancelado correctamente. "
-msgstr "Bijdrage succesvol geweigerd."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3044
-#, php-format
-msgid "El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft de heffing van een verkoper geweigerd van %s van %s via verkoper (id: %s) aan project %s op datum %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3047
-msgid "Fallo en la operación. "
-msgstr "Taak mislukt."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3053
-#, php-format
-msgid "El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft een handatige bijdrage van %s van %s (id: %s) aan project %s op datum %s geweigerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3056
-#, php-format
-msgid "El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. "
-msgstr "Het is Admin %s niet gelukt een handmatige bijdrage van %s van %s (id: %s) aan project %s op datum %s te weigeren."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3066
-msgid "Cargo cancelado (admin)"
-msgstr "Heffingen geweigerd (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3091
-msgid "El proyecto no tiene cuenta paypal!!, ponersela en la seccion Contrato del dashboard del autor"
-msgstr "Project heeft geen PayPal account!!! Voeg het toe in de sectie Contract van het dashboard van de auteur."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3098
-msgid "proyecto sin cuenta paypal (admin)"
-msgstr "Project zonder PayPal account (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3101
-#, php-format
-msgid "El proyecto %s aun no ha puesto su %s !!!"
-msgstr "Project %s heeft %s nog niet ingesteld!!!"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3104
-msgid "cuenta PayPal"
-msgstr "PayPal account"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3116
-msgid "Cargo paypal correcto"
-msgstr "Correct in rekening gebracht bij PayPal"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3117
-#, php-format
-msgid "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft een overboeking doorgevoerd aan %s voor de bijdrage van %s via PayPal (id: %s) aan project %s op datum %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3121
-msgid "Fallo al ejecutar cargo paypal: "
-msgstr "Mislukte overboeking bij PayPal:"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3127
-msgid "Cargo sermepa correcto"
-msgstr "SERPEMA (Servicaixa) overboeking was correct"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3128
-#, php-format
-msgid "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft een overboeking uitgevoerd aan %s voor de contributie van %s via verkoper (id: %s) aan project %s op datum %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3132
-msgid "Fallo al ejecutar cargo sermepa: "
-msgstr "Mislukt om SERPEMA (Servicaixa) overboeking uit te voeren: "
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3138
-msgid "Aporte al contado, nada que ejecutar."
-msgstr "Contante bijdrage, niets uit te voeren."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3139
-#, php-format
-msgid "El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la cantidad de %s (id: %s) al proyecto %s del dia %s"
-msgstr "Admin %s heeft handmatige bijdrage op naam van %s op status uitgevoerd gezet, bedrag %s (id: %s) aan project %s op datum %s"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3149
-msgid "Cargo ejecutado (admin)"
-msgstr "Betaling uitgevoerd (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3271
-msgid "Recaudado"
-msgstr "Verzameld"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3272
-msgid "Rev. PayPal"
-msgstr "Rev. PayPal"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3273
-msgid "Rev. TPV"
-msgstr "Rev. verkoper"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3274
-msgid "Pagos Online"
-msgstr "Online betalingen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3372
-msgid "Pendiente"
-msgstr "In afwachting van uitvoering"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3373
-msgid "Cumplido"
-msgstr "Bereikt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3406
-msgid "No tiene espacio de blog, Contacte con nosotros"
-msgstr "Je hebt geen blog, neem contact met ons op."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3410
-msgid "Lo sentimos, el blog para este nodo esta desactivado"
-msgstr "Sorry maar het blog is uitgeschakeld voor deze node"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3417
-msgid "No se ha encontrado ningún blog para este nodo"
-msgstr "We kunnen geen blog vinden voor deze node"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3482
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3863
-msgid "La entrada se ha actualizado correctamente"
-msgstr "Entry is succesvol bijgewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3485
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3872
-msgid "Se ha añadido una nueva entrada"
-msgstr "Een nieuwe entry is succesvol toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3496
-msgid "nueva entrada blog Goteo (admin)"
-msgstr "Nieuwe entry op Goteo blog (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3499
-#, php-format
-msgid "El admin %s ha %s en el blog Goteo la entrada \"%s\""
-msgstr "Admin %s heeft %s de entry \"%s\" in het Goteo blog"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3525
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3714
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3896
-msgid "Ha habido algun problema al guardar los datos"
-msgstr "Een of ander probleem (onbekend) is opgetreden bij het opslaan van data"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3548
-msgid "entrada quitada (admin)"
-msgstr "entry verwijderd (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3551
-#, php-format
-msgid "El admin %s ha %s la entrada \"%s\" del blog de Goteo"
-msgstr "Admin %s heeft %s entry \"%s\" van het Goteo blog"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3554
-msgid "Quitado"
-msgstr "Verwijderd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3563
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3920
-msgid "Entrada eliminada"
-msgstr "Entry is verwijderd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3565
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3940
-msgid "No se ha podido eliminar la entrada"
-msgstr "Kon entry niet verwijderen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3597
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3950
-msgid "Añadiendo una nueva entrada"
-msgstr "Nieuwe entry toe aan het voegen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3624
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3764
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3973
-msgid "La entrada esta corrupta, contacte con nosotros."
-msgstr "Deze entry is stuk, neem contact met ons op."
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3631
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3980
-msgid "Editando una entrada existente"
-msgstr "bestaande entry aan het bewerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3707
-msgid "El término se ha actualizado correctamente"
-msgstr "Termijn is succesvol bijgewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3709
-msgid "Se ha añadido un nuevo término"
-msgstr "Een nieuwe termijn is toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3731
-msgid "Término eliminado"
-msgstr "Termijn verwijderd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3733
-msgid "No se ha podido eliminar el término"
-msgstr "Termijn kon niet verwijderd worden"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3741
-msgid "Añadiendo un nuevo término"
-msgstr "Nieuwe termijn aan het toevoegen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3771
-msgid "Editando un término existente"
-msgstr "Een bestaande termijn aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3866
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4113
-msgid "Publicado"
-msgstr "Gepubliceerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3868
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5090
-msgid "Modificado"
-msgstr "Gemodificeerd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3874
-msgid "Añadido"
-msgstr "Toegevoegd"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3882
-msgid "modificacion de idea about (admin)"
-msgstr "Idea About bijgewerkt (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3885
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3929
-#, php-format
-msgid "El admin %s ha %s la Idea de fuerza \"%s\""
-msgstr "Admin %s heeft %s het idee van sterkte \"%s\""
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3926
-msgid "quitar de idea about (admin)"
-msgstr "Idea About verwijderen(admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:3932
-msgid "Eliminado"
-msgstr "Removed"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4055
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4148
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4220
-msgid "Noticia"
-msgstr "Nieuw onderdeel"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4061
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4154
-msgid "Entradilla"
-msgstr "Samenvatting"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4067
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4160
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4221
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4280
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4363
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4409
-msgid "Enlace"
-msgstr "Link"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4073
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4166
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4222
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4291
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4374
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4411
-msgid "Posición"
-msgstr "Positie"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4107
-msgid "nueva micronoticia (admin)"
-msgstr "Nieuw microblog (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4110
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4194
-#, php-format
-msgid "El admin %s ha %s la micronoticia \"%s\""
-msgstr "Admin %s heeft %s het microblog \"%s\""
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4191
-msgid "micronoticia quitada (admin)"
-msgstr "microblog entry verwijderd (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4216
-msgid "Nueva noticia"
-msgstr "Nieuw onderdeel toevoegen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4275
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4358
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4408
-msgid "Patrocinador"
-msgstr "Sponsor"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4286
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4369
-msgid "Logo"
-msgstr "Logo"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4404
-msgid "Nuevo patrocinador"
-msgstr "Nieuwe sponsor"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4410
-msgid "Imagen"
-msgstr "Beeld"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4463
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4521
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4555
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4606
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4664
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4698
-msgid "Campaña"
-msgstr "Campagne"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4551
-msgid "Nueva campaña"
-msgstr "Nieuwe campagne"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4556
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4699
-msgid "Aportes"
-msgstr "Bijdragen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4694
-msgid "Nuevo nodo"
-msgstr "Nieuwe node"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4731
+#: controller/admin/users.php:448
+msgid "Solo usuario"
+msgstr ""
+
+#: controller/admin/users.php:450
+msgid "Impulsores"
+msgstr ""
+
+#: controller/admin/users.php:451 view/admin/projects/list.html.php:176
 msgid "Cofinanciadores"
 msgstr "Co-financiers"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4732
-msgid "Autores"
-msgstr "Auteurs"
+#: controller/admin/users.php:452
+msgid "Colaboradores"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4805
-msgid "de proyectos que su nombre contenga"
-msgstr "project wiens naam bevat"
+#: controller/admin/users.php:456
+msgid "Fecha de alta"
+msgstr "Aanmaakdatum"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4807
-msgid "de cualquier proyecto"
-msgstr "van enig project"
+#: controller/admin/users.php:457 view/admin/users/add.html.php:32
+msgid "Nombre público"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4813
-msgid "en estado"
-msgstr "in status"
+#: controller/admin/users.php:458 view/admin/users/add.html.php:28
+#: view/admin/users/edit.html.php:36 view/admin/users/impersonate.html.php:34
+#: view/admin/users/list.html.php:193 view/admin/users/manage.html.php:35
+msgid "User ID"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4815
-msgid "en cualquier estado"
-msgstr "in enige status"
+#: controller/admin/users.php:459 view/admin/invests/report.html.php:89
+#: view/admin/invests/report.html.php:111
+#: view/admin/invests/report.html.php:127
+msgid "Cantidad"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4822
-msgid "mediante"
-msgstr "via"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4824
-msgid "mediante cualquier metodo"
-msgstr "hoe dan ook"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4834
-msgid "interesados en fin"
-msgstr "geinteresseerd in einde"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4843
-msgid "que sean"
-msgstr "die zijn"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4849
-msgid "que su nombre o email contenga"
-msgstr "wiens naam of email bevat"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4854
-msgid "que su contraseña sea igual que su email"
-msgstr "wiens password identiek is aan zijn email"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4878
-msgid "Fallo el SQL!!!!!"
-msgstr "SQL fout!!!"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:4883
-msgid "No se han encontrado destinatarios para "
-msgstr "We hebben geen ontvangers gevonden voor"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5078
-msgid "Nivel de meritocracia modificado"
-msgstr "Verdiensten bijgewerkt"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5084
-msgid "modificacion de meritocracia (admin)"
-msgstr "Verdiensten bijwerken (admin)"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5087
+#: controller/cron.php:215
 #, php-format
-msgid "El admin %s ha %s el nivel de meritocrácia %s"
-msgstr "Admin %s heeft %s verdienstenniveau %s"
+msgid "El proyecto %s ha %s obteniendo %s"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5180
+#: controller/cron.php:221
+#, php-format
+msgid "El proyecto %s ha fallado al, %s obteniendo %s"
+msgstr ""
+
+#: controller/cron.php:268
+#, php-format
+msgid "El proyecto %s ha sido %s obteniendo %s"
+msgstr ""
+
+#: controller/cron.php:274
+#, php-format
+msgid "El proyecto %s ha fallado al ser, %s obteniendo %s"
+msgstr ""
+
+#: controller/cron.php:459
+msgid "Contribution is canceled"
+msgstr ""
+
+#: controller/cron.php:461
+msgid "Failed to cancel"
+msgstr ""
+
+#: controller/cron.php:466
+#, php-format
+msgid ""
+"Se ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s"
+msgstr ""
+
+#: controller/cron.php:468
+#, php-format
+msgid ""
+"Ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s "
+"del dia %s. "
+msgstr ""
+
+#: controller/cron.php:770
+#, php-format
+msgid ""
+"Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de "
+"%s (id: %s) del dia %s"
+msgstr ""
+
+#: controller/cron/daily.php:320
+#, php-format
+msgid "Falta una semana para que acabe la convocatoria %s"
+msgstr ""
+
+#: controller/cron/daily.php:325
+#, php-format
+msgid "Faltan 3 dias para que acabe la convocatoria %s"
+msgstr ""
+
+#: controller/cron/daily.php:330
+#, php-format
+msgid "Ultimo día para la convocatoria %s"
+msgstr ""
+
+#: controller/project.php:87
+msgid "No tienes permiso para editar este proyecto"
+msgstr ""
+
+#: controller/review.php:50 controller/review.php:79
+msgid "No tienes asignada ninguna revisión de proyectos"
+msgstr ""
+
+#: controller/review.php:129
+msgid "Se ha dado por terminada tu revisión"
+msgstr ""
+
+#: controller/review.php:208
+msgid "No hay revisiones anteriores"
+msgstr ""
+
+#: controller/review.php:242
+msgid "Mi actividad"
+msgstr ""
+
+#: controller/review.php:244 controller/review.php:250
+msgid "Resumen"
+msgstr ""
+
+#: controller/review.php:248
+msgid "Mis revisiones"
+msgstr ""
+
+#: controller/review.php:251
+msgid "Evaluar"
+msgstr ""
+
+#: controller/review.php:256
+msgid "Mi historial"
+msgstr ""
+
+#: controller/review.php:258
+msgid "Listado"
+msgstr ""
+
+#: controller/translate.php:44
+msgid "No tienes ningún idioma, contacta con el administrador"
+msgstr ""
+
+#: controller/translate.php:334
+msgid "Tabla "
+msgstr ""
+
+#: controller/translate.php:334
+msgid " desconocida"
+msgstr ""
+
+#: controller/translate.php:432
 msgid "Gestión de Textos y Traducciones"
 msgstr "Beheer teksten en vertalingen"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5183
-msgid "Blog"
-msgstr "Blog"
+#: controller/translate.php:456
+msgid "Contenidos institucionales"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5185
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5194
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5202
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5211
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5219
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5228
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5236
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5244
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5253
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5262
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5270
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5278
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5286
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5297
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5305
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5314
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5322
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5333
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5343
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5382
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5394
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5416
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5425
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5441
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5457
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5468
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5476
-msgid "Listando"
-msgstr "Lijst"
+#: controller/translate.php:459
+msgid "Traduciendo contenido de Página"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5186
-msgid "Nueva Entrada"
-msgstr "Nieuwe entry"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5187
-msgid "Editando Entrada"
-msgstr "Entry aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5188
-msgid "Traduciendo Entrada"
-msgstr "Entry aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5192
-msgid "Textos interficie"
-msgstr "Bedieningsteksten"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5195
-msgid "Editando Original"
-msgstr "Origineel aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5196
-msgid "Traduciendo Texto"
-msgstr "Tekst aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5200
-msgid "FAQs"
-msgstr "FAQs"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5203
-msgid "Nueva Pregunta"
-msgstr "Nieuwe vraag"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5204
-msgid "Editando Pregunta"
-msgstr "Vraag aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5205
-msgid "Traduciendo Pregunta"
-msgstr "Vraag aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5209
-msgid "Páginas institucionales"
-msgstr "Institutionele pagina's"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5212
-msgid "Editando Página"
-msgstr "Pagina aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5213
-msgid "Traduciendo Página"
-msgstr "Pagina aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5217
+#: controller/translate.php:463
 msgid "Categorias e Intereses"
 msgstr "Categorieen en interesses"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5220
-msgid "Nueva Categoría"
-msgstr "Nieuwe categorie"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5221
-msgid "Editando Categoría"
-msgstr "Categorie aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5222
-msgid "Traduciendo Categoría"
-msgstr "Categorie aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5226
-msgid "Licencias"
-msgstr "Licenties"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5229
-msgid "Editando Licencia"
-msgstr "Licentie aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5230
-msgid "Traduciendo Licencia"
-msgstr "Licentie aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5234
-msgid "Tipos de Retorno"
-msgstr "Soorten rendement"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5237
-msgid "Editando Tipo"
-msgstr "Type aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5238
-msgid "Traduciendo Tipo"
-msgstr "Type aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5242
-msgid "Tags de blog"
-msgstr "Blog tags"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5245
-msgid "Nuevo Tag"
-msgstr "Nieuwe Tag"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5246
-msgid "Editando Tag"
-msgstr "Tag aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5247
-msgid "Traduciendo Tag"
-msgstr "Tag aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5251
-msgid "Criterios de revisión"
-msgstr "Criteria bekijken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5254
-msgid "Nuevo Criterio"
-msgstr "Nieuw criterium"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5255
-msgid "Editando Criterio"
-msgstr "criterium aan het bewerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5256
-msgid "Traduciendo Criterio"
-msgstr "criterium aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5260
-msgid "Plantillas de email"
-msgstr "Email templates"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5263
-msgid "Editando Plantilla"
-msgstr "Template aan het bewerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5264
-msgid "Traduciendo Plantilla"
-msgstr "Template aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5268
-msgid "Glosario"
-msgstr "Overzicht"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5271
-msgid "Editando Término"
-msgstr "Termijn aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5272
-msgid "Traduciendo Término"
-msgstr "Termijn aan het vertalen"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5276
+#: controller/translate.php:512
 msgid "Ideas about"
 msgstr "Ideas about"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5279
-msgid "Editando Idea"
-msgstr "Idea aan het bijwerken"
-
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5280
+#: controller/translate.php:515
 msgid "Traduciendo Idea"
 msgstr "Idea aan het vertalen"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5284
-msgid "Conteo de palabras"
-msgstr "Woordtelling"
+#: controller/translate.php:519
+msgid "Meritocracia"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5292
-msgid "Gestión de proyectos"
-msgstr "Projectadministratie"
+#: controller/translate.php:522
+msgid "Traduciendo Nivel"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5295
-msgid "Listado de proyectos"
-msgstr "Projectlijst"
+#: controller/translate.php:545
+msgid "Proyectos recomendados"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5298
-msgid "Cambiando las fechas del proyecto "
-msgstr "Project data aangepast"
+#: controller/translate.php:548
+msgid "Traduciendo recomendado"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5299
-msgid "Gestionando las cuentas del proyecto "
-msgstr "Beheer project accounts"
+#: controller/translate.php:554 view/admin/projects/list.html.php:128
+#: view/admin/tasks/list.html.php:61 view/admin/users/manage.html.php:47
+msgid "Nodo"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5303
-msgid "Revisiones"
-msgstr "Reviews"
+#: controller/translate.php:560
+msgid "Traduciendo"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5306
-msgid "Iniciando briefing"
-msgstr "briefing wordt geinitialiseerd"
+#: controller/translate.php:567
+msgid "Traduciendo banner"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5307
-msgid "Editando briefing"
-msgstr "briefing aan het bijwerken"
+#: controller/translate.php:574
+msgid "Traduciendo entrada"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5308
-msgid "Informe"
-msgstr "Raportage"
+#: controller/translate.php:578
+msgid "Páginas institucionales"
+msgstr "Institutionele pagina's"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5312
-msgid "Traducciones"
-msgstr "Vertalingen"
+#: controller/translate.php:581
+msgid "Traduciendo página"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5315
-msgid "Habilitando traducción"
-msgstr "Vertaling ingeschakeld"
+#: library/PHP-Gettext/tests/ExtensionTest.php:10
+#: library/PHP-Gettext/tests/ExtensionTest.php:25
+#: library/PHP-Gettext/tests/ExtensionTest.php:29
+#: library/PHP-Gettext/tests/InstanceTest.php:11
+#: library/PHP-Gettext/tests/InstanceTest.php:34
+#: library/PHP-Gettext/tests/InstanceTest.php:35
+#: library/PHP-Gettext/tests/InstanceTest.php:39
+#: library/PHP-Gettext/tests/PHPTest.php:11
+#: library/PHP-Gettext/tests/PHPTest.php:26
+#: library/PHP-Gettext/tests/PHPTest.php:27
+#: library/PHP-Gettext/tests/PHPTest.php:31
+#: library/PHP-Gettext/tests/gettext.php:8
+#: library/PHP-Gettext/tests/gettext.php:9
+#: library/PHP-Gettext/tests/gettext.php:10
+msgid "File does not exist"
+msgid_plural "Files donnot exists"
+msgstr[0] ""
+msgstr[1] ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5316
-msgid "Asignando traducción"
-msgstr "Vertaling toegewezen"
+#: library/PHP-Gettext/tests/ExtensionTest.php:11
+#: library/PHP-Gettext/tests/ExtensionTest.php:26
+#: library/PHP-Gettext/tests/ExtensionTest.php:30
+#: library/PHP-Gettext/tests/ExtensionTest.php:35
+#: library/PHP-Gettext/tests/ExtensionTest.php:36
+#: library/PHP-Gettext/tests/InstanceTest.php:12
+#: library/PHP-Gettext/tests/InstanceTest.php:36
+#: library/PHP-Gettext/tests/InstanceTest.php:40
+#: library/PHP-Gettext/tests/InstanceTest.php:45
+#: library/PHP-Gettext/tests/InstanceTest.php:46
+#: library/PHP-Gettext/tests/PHPTest.php:12
+#: library/PHP-Gettext/tests/PHPTest.php:28
+#: library/PHP-Gettext/tests/PHPTest.php:32
+#: library/PHP-Gettext/tests/PHPTest.php:37
+#: library/PHP-Gettext/tests/PHPTest.php:38
+#: library/PHP-Gettext/tests/gettext.php:11
+#: library/PHP-Gettext/tests/gettext.php:12
+#: library/PHP-Gettext/tests/gettext.php:13
+#: library/PHP-Gettext/tests/gettext.php:14
+#: library/PHP-Gettext/tests/gettext.php:15
+#: library/PHP-Gettext/tests/gettext.php:16
+msgid "File is too small"
+msgid_plural "Files are too small"
+msgstr[0] ""
+msgstr[1] ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5320
-msgid "Gestión de retornos colectivos cumplidos"
-msgstr "Beheer van collectief uitgekeerd rendement"
+#: library/PHP-Gettext/tests/ExtensionTest.php:12
+#: library/PHP-Gettext/tests/ExtensionTest.php:19
+#: library/PHP-Gettext/tests/ExtensionTest.php:27
+#: library/PHP-Gettext/tests/ExtensionTest.php:31
+#: library/PHP-Gettext/tests/InstanceTest.php:13
+#: library/PHP-Gettext/tests/InstanceTest.php:20
+#: library/PHP-Gettext/tests/InstanceTest.php:37
+#: library/PHP-Gettext/tests/InstanceTest.php:41
+#: library/PHP-Gettext/tests/PHPTest.php:13
+#: library/PHP-Gettext/tests/PHPTest.php:20
+#: library/PHP-Gettext/tests/PHPTest.php:29
+#: library/PHP-Gettext/tests/PHPTest.php:33
+msgid "Foobar"
+msgid_plural "Foobar"
+msgstr[0] ""
+msgstr[1] ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5328
-msgid "Gestión de usuarios"
-msgstr "Beheer Gebruikers"
+#: library/content.php:37
+msgid "Proyectos apadrinados"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5331
-msgid "Listado de usuarios"
-msgstr "gebruikerslijst"
+#: library/content.php:38
+msgid "Tipos de retorno/recompensa"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5334
-msgid "Creando Usuario"
-msgstr "Gebruiker aanmaken"
+#: library/content.php:40
+msgid "Categorías"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5335
-msgid "Editando Usuario"
-msgstr "Gebruiker aan het bewerken"
+#: library/content.php:41
+msgid "Noticias"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5336
-msgid "Gestionando Usuario"
-msgstr "Gebruikersbeheer"
+#: library/content.php:44
+msgid "Tags"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5337
-msgid "Suplantando al Usuario"
-msgstr "Gebruiker simuleren"
+#: library/content.php:45
+msgid "Criterios de evaluación"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5341
-msgid "Niveles de meritocracia"
-msgstr "Verdienstenniveaus"
+#: library/content.php:46
+msgid "Meritocrácia"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5344
-msgid "Editando Nivel"
-msgstr "Level aan het bijwerken"
+#: library/content.php:47
+msgid "Plantillas emails automáticos"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5348
-msgid "Comunicaciones"
-msgstr "Communicatie"
+#: library/content.php:48
+msgid "Glosario de términos"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5350
-msgid "Seleccionando destinatarios"
-msgstr "Ontvangers aan het selecteren"
+#: library/content.php:49
+msgid "Ideas de about"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5351
-msgid "Escribiendo contenido"
-msgstr "Inhoud aan het schrijven"
+#: library/content.php:57 library/content.php:61 library/content.php:65
+#: library/content.php:82 library/content.php:86 library/content.php:94
+#: library/content.php:100 library/content.php:104 library/content.php:109
+#: library/content.php:123 view/admin/blog/list.html.php:85
+#: view/admin/criteria/list.html.php:46 view/admin/glossary/list.html.php:34
+#: view/admin/promote/edit.html.php:51 view/admin/templates/edit.html.php:30
+msgid "Título"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5352
-msgid "Comunicación enviada"
-msgstr "Communicatie ingediend"
+#: library/content.php:83
+msgid "Entradilla"
+msgstr "Samenvatting"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5356
-msgid "Historial envios"
-msgstr "Verzendgeschiedenis"
+#: library/content.php:87
+msgid "Texto entrada"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5358
-msgid "Emails enviados"
-msgstr "Verzonden emails"
+#: library/content.php:88 library/content.php:106 library/content.php:111
+msgid "Leyenda media"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5377
-msgid "Gestión de aportes y transacciones"
-msgstr "Management van bijdragen en transacties"
+#: library/content.php:101 library/content.php:105 library/content.php:110
+#: view/admin/templates/edit.html.php:35
+msgid "Contenido"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5380
-msgid "Aportes a Proyectos"
-msgstr "Bijdragen aan projecten"
+#: library/content.php:121
+msgid "Texto extenso"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5384
-msgid "Reubicando el aporte"
-msgstr "Bijdrage aan het verplaatsen"
+#: library/content.php:122
+msgid "Leyenda"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5385
-msgid "Detalles del aporte"
-msgstr "Details van bijdragen"
+#: library/content.php:309 library/worth.php:100 model/post.php:301
+#: model/post.php:390
+msgid "Sin datos"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5386
-msgid "Ejecución del cargo ahora mismo"
-msgstr "Charges onmiddelijk uitvoeren"
+#: library/content.php:313
+msgid ""
+"No se peude traducir el contenido original, seleccionar un idioma para "
+"traducir"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5387
-msgid "Cancelando aporte"
-msgstr "Bijdrage weigeren"
+#: library/content.php:339 library/evaluation.php:215
+#: library/evaluation.php:278 library/page.php:208 library/page.php:239
+#: library/page.php:274 library/template.php:180 library/worth.php:119
+msgid "Ha fallado "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5388
-msgid "Informe de proyecto"
-msgstr "Projectraportage"
+#: library/content.php:339 library/evaluation.php:215
+#: library/evaluation.php:278 library/page.php:208 library/page.php:239
+#: library/page.php:274 library/template.php:180 library/worth.php:119
+msgid "con"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5392
-msgid "Transacciones económicas"
-msgstr "Geldelijke transacties"
+#: library/content.php:344
+msgid "Error sql al grabar el contenido multiidioma. "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5395
-msgid "Detalles de la transacción"
-msgstr "Transactiedetails"
+#: library/evaluation.php:173 library/page.php:162 library/template.php:139
+msgid "Registro sin id"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5396
-msgid "Viendo logs"
-msgstr "Logs aan het bekijken"
+#: library/evaluation.php:220 library/evaluation.php:283 library/page.php:213
+#: library/page.php:244 library/page.php:279
+msgid "Error sql al grabar el contenido de la pagina. "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5411
-msgid "Portada"
-msgstr "Voorpagina"
+#: library/feed.php:52 view/admin/icons/list.html.php:31
+msgid "Todo"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5414
-msgid "Micronoticias"
-msgstr "MicroNieuws"
+#: library/feed.php:56
+msgid "Administrador"
+msgstr "Administrator"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5417
-msgid "Nueva Micronoticia"
-msgstr "Nieuwe Microblog Entry"
+#: library/feed.php:60 model/invest.php:109
+#: view/admin/accounts/details.html.php:44 view/admin/invests/add.html.php:32
+#: view/admin/invests/details.html.php:36 view/admin/invests/list.html.php:33
+#: view/admin/invests/report.html.php:126
+#: view/admin/newsletter/detail.html.php:78
+#: view/admin/newsletter/init.html.php:38 view/admin/rewards/edit.html.php:18
+msgid "Usuario"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5418
-msgid "Editando Micronoticia"
-msgstr "Microblog Entry aan het bijwerken"
+#: library/feed.php:64 view/admin/accounts/details.html.php:43
+#: view/admin/accounts/list.html.php:29 view/admin/accounts/list.html.php:96
+#: view/admin/banners/edit.html.php:39 view/admin/banners/list.html.php:32
+#: view/admin/invests/details.html.php:35 view/admin/invests/list.html.php:30
+#: view/admin/invests/list.html.php:98 view/admin/invests/report.html.php:91
+#: view/admin/mailing/edit.html.php:104 view/admin/projects/list.html.php:124
+#: view/admin/promote/edit.html.php:40 view/admin/promote/list.html.php:33
+#: view/admin/reviews/list.html.php:63 view/admin/rewards/edit.html.php:17
+#: view/admin/rewards/list.html.php:13 view/admin/rewards/list.html.php:56
+#: view/admin/translates/list.html.php:54
+msgid "Proyecto"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5419
-msgid "Traduciendo Micronoticia"
-msgstr "Microblog Entry aan het vertalen"
+#: library/feed.php:68 view/admin/accounts/details.html.php:161
+#: view/admin/invests/list.html.php:45
+msgid "Convocatoria"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5423
-msgid "Banners"
-msgstr "Banners"
+#: library/feed.php:72
+msgid "Transferencias"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5426
-msgid "Nuevo Banner"
-msgstr "Nieuwe Banner"
+#: library/feed.php:76
+msgid "Sistema"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5427
-msgid "Editando Banner"
-msgstr "Banner aan het bijwerken"
+#: library/feed.php:264 library/feed.php:305 library/feed.php:389
+#: model/banner.php:226 model/blog.php:160 model/blog/post.php:429
+#: model/blog/post.php:459 model/blog/post/comment.php:197
+#: model/blog/post/tag.php:156 model/blog/post/tag.php:185
+#: model/category.php:184 model/criteria.php:126 model/glossary.php:167
+#: model/icon.php:180 model/image.php:126 model/image.php:189
+#: model/info.php:187 model/invest.php:404 model/license.php:168
+#: model/news.php:130 model/post.php:270 model/post.php:311
+#: model/promote.php:179 model/review.php:99 model/review.php:487
+#: model/review.php:506 model/skill.php:222 model/sponsor.php:163
+#: model/user.php:521 model/user.php:1323 model/user.php:1387
+#: model/user/interest.php:149 model/user/review.php:81
+#: model/user/skill.php:107 model/user/translate.php:217
+#: model/user/translate.php:245 model/user/web.php:87
+msgid "No se ha guardado correctamente. "
+msgstr "Is niet correct opgeslagen"
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5428
-msgid "Traduciendo Banner"
-msgstr "Banner aan het vertalen"
+#: library/i18n/Lang.php:86
+msgid "Error al insertar los datos "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5432
-msgid "Carrusel de blog"
-msgstr "Blog Carroussel"
+#: library/mail.php:163
+msgid "Fallo del servidor de correo interno"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5434
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5450
-msgid "Ordenando"
-msgstr "Aan het sorteren"
+#: library/mail.php:168
+msgid "No se ha podido enviar el mensaje: "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5435
-msgid "Colocando Entrada en la portada"
-msgstr "Entry op de voorpagina aan het plaatsen"
+#: library/page.php:167
+msgid "Registro sin lang"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5439
-msgid "Proyectos destacados"
-msgstr "Deelnemende projecten"
+#: library/page.php:172
+msgid "Registro sin node"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5442
-msgid "Nuevo Destacado"
-msgstr "Nieuwe eigenschap"
+#: library/page.php:177
+msgid "Registro sin nombre"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5443
-msgid "Editando Destacado"
-msgstr "Eigenschap bijwerken"
+#: library/sender.php:154
+msgid "HA FALLADO!!"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5444
-msgid "Traduciendo Destacado"
-msgstr "Feature aan het vertalen"
+#: library/template.php:106 library/template.php:130 model/message.php:188
+#: model/message.php:217 model/project.php:869 model/project.php:915
+#: model/project.php:1495 model/project.php:1509 model/project.php:1546
+#: model/project.php:1560 model/project.php:1574 model/project.php:1588
+#: model/project.php:1602 model/project.php:1616 model/project.php:1630
+#: model/user.php:334 model/user.php:366 model/user.php:540
+msgid "No se ha grabado correctamente. "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5448
-msgid "Entradas en el footer"
-msgstr "Entries in voettekst"
+#: library/template.php:144
+msgid "Registro sin titulo"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5451
-msgid "Colocando Entrada en el footer"
-msgstr "Entry in voettekst aan het plaatsen"
+#: library/template.php:149
+msgid "Registro sin contenido"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5455
-msgid "Actividad reciente"
-msgstr "Recente activiteit"
+#: library/template.php:186
+msgid "Error sql al grabar el contenido de la palntilla. "
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5463
-msgid "Convocatorias de patrocinadores"
-msgstr "Vragen om Sponsors"
+#: library/template.php:198 library/text.php:345
+msgid "Propósito general"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5466
-msgid "Apoyos institucionales"
-msgstr "Institutionele bijdragen"
+#: library/template.php:199
+msgid "Registro y acceso usuario"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5469
-msgid "Nuevo Patrocinador"
-msgstr "Nieuwe Sponsor"
+#: library/template.php:200
+msgid "Actividad proyecto"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5470
-msgid "Editando Patrocinador"
-msgstr "Sponsor aan het bijwerken"
+#: library/template.php:201
+msgid "Auto-tips difusión"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5474
-msgid "Gestión de campañas"
-msgstr "Campagne Management"
+#: library/template.php:202
+msgid "Proceso aporte"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5477
-msgid "Nueva Campaña"
-msgstr "Nieuwe Campagne"
+#: library/template.php:203
+msgid "Comunicación"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5478
-msgid "Editando Campaña"
-msgstr "Campagne aan het bijwerken"
+#: library/template.php:204
+msgid "Avisos al autor"
+msgstr ""
 
-#: /home/zilog/development/webapps/Goteo/controller/admin.php:5479
-msgid "Informe de estado de la Campaña"
-msgstr "Raporteer over de staat van de campagne"
+#: library/text.php:296 library/text.php:318
+msgid "Error al insertar los datos <pre>"
+msgstr ""
+
+#: library/text.php:330
+msgid "Pagina de perfil de usuario"
+msgstr ""
+
+#: library/text.php:331
+msgid "Proyecto, pública y formulario"
+msgstr ""
+
+#: library/text.php:332
+msgid "Generales del formulario de proyecto"
+msgstr ""
+
+#: library/text.php:333
+msgid "Gestión de perfil del usuario"
+msgstr ""
+
+#: library/text.php:334
+msgid "Datos personales del usuario"
+msgstr ""
+
+#: library/text.php:335
+msgid "Descripción del proyecto"
+msgstr ""
+
+#: library/text.php:336
+msgid "Costes del proyecto"
+msgstr ""
+
+#: library/text.php:337
+msgid "Retornos y recompensas del proyecto"
+msgstr ""
+
+#: library/text.php:338
+msgid "Colaboraciones del proyecto"
+msgstr ""
+
+#: library/text.php:339
+msgid "Previsualización del proyecto"
+msgstr ""
+
+#: library/text.php:340
+msgid "Dashboard del usuario"
+msgstr ""
+
+#: library/text.php:341
+msgid "Registro de usuarios"
+msgstr ""
+
+#: library/text.php:342
+msgid "Pagina de login"
+msgstr ""
+
+#: library/text.php:343
+msgid "Sección descubre proyectos"
+msgstr ""
+
+#: library/text.php:344
+msgid "Sección comunidad"
+msgstr ""
+
+#: library/text.php:346
+msgid "Blog/Actualizaciones"
+msgstr ""
+
+#: library/text.php:347
+msgid "Pagina de contacto"
+msgstr ""
+
+#: library/text.php:348
+msgid "Banderolos"
+msgstr ""
+
+#: library/text.php:349
+msgid "Pagina de aportar a un proyecto"
+msgstr ""
+
+#: library/text.php:350
+msgid "Tooltips para tipos de necesidades"
+msgstr ""
+
+#: library/text.php:351
+msgid "Banners y cabeceras"
+msgstr ""
+
+#: library/text.php:352
+msgid "Footer"
+msgstr ""
+
+#: library/text.php:353
+msgid "Cuentas de redes sociales"
+msgstr ""
+
+#: library/text.php:354
+msgid "Panel revisor"
+msgstr ""
+
+#: library/text.php:355
+msgid "Panel traductor"
+msgstr ""
+
+#: library/text.php:356
+msgid "Menu superior"
+msgstr ""
+
+#: library/text.php:357
+msgid "Eventos recientes"
+msgstr ""
+
+#: library/text.php:358
+msgid "Emails automaticos"
+msgstr ""
+
+#: library/text.php:359
+msgid "Avisos azules"
+msgstr ""
+
+#: library/text.php:360
+msgid "Errores catastroficos"
+msgstr ""
+
+#: library/text.php:361
+msgid "Convocatorias: publicos"
+msgstr ""
+
+#: library/text.php:362
+msgid "Convocatorias: formulario"
+msgstr ""
+
+#: library/text.php:363
+msgid "Convocatorias: dashboard"
+msgstr ""
+
+#: library/text.php:364
+msgid "Wall of friends"
+msgstr ""
+
+#: library/text.php:365
+msgid "Nodos"
+msgstr ""
+
+#: library/text.php:366
+msgid "Formulario Contrato"
+msgstr ""
+
+#: library/worth.php:104
+msgid "No se guardar sin nombre y cantidad"
+msgstr ""
+
+#: library/worth.php:125
+msgid "Error sql al grabar el nivel de meritocracia. "
+msgstr ""
+
+#: model/banner.php:173 model/invest.php:325 model/message.php:142
+#: model/review.php:61
+msgid "Falta proyecto"
+msgstr ""
+
+#: model/banner.php:176
+msgid "Falta imagen"
+msgstr ""
+
+#: model/blog/post/comment.php:162 model/glossary.php:116 model/info.php:130
+#: model/message.php:145
+msgid "Falta texto"
+msgstr ""
+
+#: model/blog/post/tag.php:122 model/category.php:143 model/icon.php:141
+#: model/license.php:124 model/skill.php:183 model/sponsor.php:112
+msgid "Falta nombre"
+msgstr ""
+
+#: model/criteria.php:83
+msgid "Falta seccion"
+msgstr ""
+
+#: model/criteria.php:86 model/glossary.php:113 model/info.php:127
+#: model/news.php:90 model/post.php:229 model/promote.php:142
+msgid "Falta título"
+msgstr ""
+
+#: model/home.php:36 view/admin/home/list.html.php:52
+msgid "Laterales"
+msgstr ""
+
+#: model/home.php:37
+msgid "Centrales"
+msgstr ""
+
+#: model/home.php:43
+msgid "Entradas de blog"
+msgstr ""
+
+#: model/home.php:52
+msgid "Novedades"
+msgstr ""
+
+#: model/home.php:60
+msgid "Selector proyectos"
+msgstr ""
+
+#: model/home.php:61
+msgid "Categorias de proyectos"
+msgstr ""
+
+#: model/home.php:62
+msgid "Resumen proyectos"
+msgstr ""
+
+#: model/home.php:63
+msgid "Resumen convocatorias"
+msgstr ""
+
+#: model/home.php:64
+msgid "Patrocinadores"
+msgstr ""
+
+#: model/home.php:142
+msgid "Falta elemento"
+msgstr ""
+
+#: model/home.php:145 model/promote.php:136
+msgid "Falta nodo"
+msgstr ""
+
+#: model/home.php:187 model/task.php:126 model/task.php:177 model/task.php:198
+#: model/user.php:559
+msgid "HA FALLADO!!! "
+msgstr ""
+
+#: model/icon.php:201
+msgid "Retorno colectivo"
+msgstr ""
+
+#: model/icon.php:202
+msgid "Recompensa individual"
+msgstr ""
+
+#: model/invest.php:108 view/admin/accounts/list.html.php:94
+#: view/admin/blog/list.html.php:86 view/admin/invests/list.html.php:96
+#: view/admin/newsletter/detail.html.php:50
+#: view/admin/newsletter/list.html.php:74 view/admin/sended/list.html.php:82
+msgid "Fecha"
+msgstr ""
+
+#: model/invest.php:110 view/admin/rewards/edit.html.php:24
+#: view/admin/rewards/list.html.php:57
+msgid "Recompensa"
+msgstr ""
+
+#: model/invest.php:111 view/admin/newsletter/detail.html.php:54
+msgid "Pendientes"
+msgstr ""
+
+#: model/invest.php:112
+msgid "Cumplidos"
+msgstr ""
+
+#: model/invest.php:316
+msgid "La cantidad no es correcta"
+msgstr ""
+
+#: model/invest.php:319
+msgid "Falta metodo de pago"
+msgstr ""
+
+#: model/invest.php:322 model/message.php:139
+msgid "Falta usuario"
+msgstr ""
+
+#: model/invest.php:372
+msgid "No ha conseguido Id de aporte"
+msgstr ""
+
+#: model/invest.php:454
+msgid "Envíanos esto: <br />"
+msgstr ""
+
+#: model/invest.php:1025
+msgid "Incompleto"
+msgstr ""
+
+#: model/invest.php:1026
+msgid "Preaprobado"
+msgstr ""
+
+#: model/invest.php:1027
+msgid "Cobrado"
+msgstr ""
+
+#: model/invest.php:1028
+msgid "Cancelado"
+msgstr ""
+
+#: model/invest.php:1029
+msgid "Pagado al proyecto"
+msgstr ""
+
+#: model/invest.php:1030
+msgid "Archivado (devuelto)"
+msgstr ""
+
+#: model/invest.php:1047
+msgid "AXES"
+msgstr ""
+
+#: model/invest.php:1048 view/admin/accounts/list.html.php:125
+#: view/admin/invests/list.html.php:124
+msgid "Manual"
+msgstr ""
+
+#: model/invest.php:1101
+msgid "El aporte PayPal"
+msgstr ""
+
+#: model/invest.php:1101
+msgid "no debería estar en estado '"
+msgstr ""
+
+#: model/invest.php:1129
+msgid ""
+"ATENCION! En segunda ronda pero NO está marcada la fecha de pase a segunda "
+"ronda!"
+msgstr ""
+
+#: model/invest.php:1201
+msgid "No se ha calculado bien el parametro $act_eq"
+msgstr ""
+
+#: model/license.php:216
+msgid "Normal"
+msgstr ""
+
+#: model/license.php:217
+msgid "Abierto"
+msgstr ""
+
+#: model/news.php:93 model/sponsor.php:115
+msgid "Falta url"
+msgstr ""
+
+#: model/post.php:400
+msgid "Ha fallado!!! "
+msgstr ""
+
+#: model/project.php:193
+msgid "El nuevo proyecto de "
+msgstr ""
+
+#: model/project.php:238
+msgid "ERROR al crear un nuevo proyecto"
+msgstr ""
+
+#: model/project.php:583
+msgid "El proyecto no tiene id"
+msgstr ""
+
+#: model/project.php:595
+msgid "El proyecto no tiene usuario creador"
+msgstr ""
+
+#: model/project.php:1641
+msgid "El proyecto no esta descartado ni en edicion"
+msgstr ""
+
+#: model/project.php:1671
+msgid "Fallo en la transaccion, el proyecto ha quedado como descartado"
+msgstr ""
+
+#: model/project.php:1832
+msgid "Fallo al verificar id única para el proyecto. "
+msgstr ""
+
+#: model/project.php:2505
+msgid "En primera ronda"
+msgstr ""
+
+#: model/project.php:2506
+msgid "En segunda ronda"
+msgstr ""
+
+#: model/project.php:2507
+msgid "Campaña completada"
+msgstr ""
+
+#: model/project/account.php:62
+msgid "No hay ningun proyecto al que asignar cuentas"
+msgstr ""
+
+#: model/project/account.php:79
+msgid ""
+"Las cuentas no se han asignado correctamente. Por favor, revise los datos."
+msgstr ""
+
+#: model/project/category.php:131
+msgid "No hay ninguna categoria para guardar"
+msgstr ""
+
+#: model/project/category.php:135 model/project/skill.php:134
+msgid "No hay ningun proyecto al que asignar"
+msgstr ""
+
+#: model/project/category.php:154
+msgid "La categoria"
+msgstr ""
+
+#: model/project/category.php:154
+msgid " no se ha asignado correctamente. Por favor, revise los datos."
+msgstr ""
+
+#: model/project/category.php:178
+msgid "No se ha podido quitar la categoria "
+msgstr ""
+
+#: model/project/cost.php:84
+msgid "No hay proyecto al que asignar el coste"
+msgstr ""
+
+#: model/project/cost.php:139 model/project/cost.php:168
+msgid "El coste "
+msgstr ""
+
+#: model/project/cost.php:139 model/project/cost.php:168
+#: model/project/reward.php:173 model/project/reward.php:204
+#: model/project/support.php:125 model/project/support.php:153
+msgid " no se ha grabado correctamente. Por favor, revise los datos."
+msgstr ""
+
+#: model/project/cost.php:191
+msgid "No se ha podido quitar el coste del proyecto "
+msgstr ""
+
+#: model/project/reward.php:121
+msgid "No hay proyecto al que asignar la recompensa/rettorno"
+msgstr ""
+
+#: model/project/reward.php:173 model/project/reward.php:204
+msgid "El retorno "
+msgstr ""
+
+#: model/project/reward.php:227
+msgid "No se ha podido quitar el retorno "
+msgstr ""
+
+#: model/project/skill.php:130
+msgid "No hay ninguna skill para guardar"
+msgstr ""
+
+#: model/project/skill.php:153
+msgid "La skill"
+msgstr ""
+
+#: model/project/skill.php:153
+msgid "no se ha asignado correctamente. Por favor, revise los datos."
+msgstr ""
+
+#: model/project/skill.php:177
+msgid "No se ha podido quitar la skill "
+msgstr ""
+
+#: model/project/skill.php:177
+msgid " del proyecto "
+msgstr ""
+
+#: model/project/support.php:76
+msgid "No hay proyecto al que asignar la colaboración"
+msgstr ""
+
+#: model/project/support.php:125 model/project/support.php:153
+msgid "La colaboración "
+msgstr ""
+
+#: model/project/support.php:181
+msgid "No se ha podido quitar la colaboracion del proyecto "
+msgstr ""
+
+#: model/promote.php:139
+msgid "Se muestra y no tiene proyecto"
+msgstr ""
+
+#: model/task.php:173 model/task.php:194
+msgid "Algo ha fallado"
+msgstr ""
+
+#: model/user.php:1118
+msgid "Admin Goteo"
+msgstr ""
+
+#: model/user.php:1119
+msgid "El usuario "
+msgstr ""
+
+#: model/user.php:1119
+msgid " se da de baja"
+msgstr ""
+
+#: model/user.php:1120
+msgid "Han solicitado la baja para el mail"
+msgstr ""
+
+#: model/user.php:1120
+msgid "que corresponde al usuario"
+msgstr ""
+
+#: model/user.php:1121
+msgid "y ha dejado el siguiente mensaje:"
+msgstr ""
+
+#: model/user.php:1421
+msgid "Usuario registrado"
+msgstr ""
+
+#: model/user/donor.php:312 model/user/donor.php:329 model/user/donor.php:347
+#: model/user/donor.php:368
+msgid ""
+"Los datos no se han guardado correctamente. Por favor, revise los datos."
+msgstr ""
+
+#: model/user/interest.php:127 model/user/skill.php:85
+msgid "No hay ningun interes para guardar"
+msgstr ""
+
+#: model/user/interest.php:130 model/user/review.php:62 model/user/skill.php:88
+#: model/user/translate.php:189
+msgid "No hay ningun usuario al que asignar"
+msgstr ""
+
+#: model/user/interest.php:173 model/user/skill.php:131
+msgid "No se ha podido quitar el interes "
+msgstr ""
+
+#: model/user/interest.php:173 model/user/review.php:105
+#: model/user/review.php:127 model/user/review.php:149 model/user/skill.php:131
+#: model/user/translate.php:266 model/user/translate.php:288
+#: model/user/web.php:115
+msgid " del usuario "
+msgstr ""
+
+#: model/user/review.php:59
+msgid "No hay una revision para asignar"
+msgstr ""
+
+#: model/user/review.php:105
+msgid "No se ha podido desasignar la revision "
+msgstr ""
+
+#: model/user/review.php:127
+msgid "No se ha podido marcar la revision "
+msgstr ""
+
+#: model/user/review.php:127 model/user/translate.php:266
+msgid " como lista. "
+msgstr ""
+
+#: model/user/review.php:149
+msgid "No se ha podido reabrir la revision "
+msgstr ""
+
+#: model/user/review.php:320
+msgid "No se ha aplicado la puntuacion. "
+msgstr ""
+
+#: model/user/translate.php:183
+msgid "No hay tipo de contenido o no el tipo no esta habilitado"
+msgstr ""
+
+#: model/user/translate.php:186
+msgid "No hay una traducción para asignar"
+msgstr ""
+
+#: model/user/translate.php:213
+msgid "No se ha creado el registro `user_translate`"
+msgstr ""
+
+#: model/user/translate.php:266
+msgid "No se ha podido marcar la traduccion "
+msgstr ""
+
+#: model/user/translate.php:288
+msgid "No se ha podido reabrir la traduccion "
+msgstr ""
+
+#: model/user/web.php:115
+msgid "No se ha podido quitar la web "
+msgstr ""
+
+#: view/admin/accounts/details.html.php:39
+msgid ""
+"Esta incidencia se dará por resuelta: se va a cancelar el preaproval, el "
+"aporte pasará a ser de tipo Cash y en estado Cobrado por goteo, seguimos?"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:39
+msgid "Nos han hecho la transferencia"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:49
+#: view/admin/invests/details.html.php:41
+msgid "¿Estás seguro de querer cancelar este aporte y su preapproval?"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:50
+#: view/admin/invests/details.html.php:42
+msgid "Cancelar este aporte"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:55
+msgid "¿Seguro que quieres ejecutar ahora el cargo del preapproval?"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:56
+#: view/admin/invests/details.html.php:48
+msgid "Ejecutar cargo ahora"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:60
+#: view/admin/invests/details.html.php:52
+msgid "Reubicar este aporte"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:64
+msgid "Es donativo"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:68
+msgid "Detalles de la transaccion"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:70 view/admin/rewards/edit.html.php:19
+#: view/admin/users/list.html.php:196
+msgid "Cantidad aportada"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:71
+#: view/admin/projects/list.html.php:144 view/admin/projects/list.html.php:145
+#: view/admin/projects/list.html.php:157 view/admin/users/list.html.php:210
+#: view/admin/worth/list.html.php:40
+msgid "yen"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:74
+msgid "Campaña: "
+msgstr ""
+
+#: view/admin/accounts/details.html.php:80 view/admin/accounts/list.html.php:97
+#: view/admin/banners/list.html.php:33 view/admin/invests/details.html.php:68
+#: view/admin/invests/list.html.php:99 view/admin/invests/report.html.php:110
+#: view/admin/projects/list.html.php:127 view/admin/promote/list.html.php:34
+#: view/admin/rewards/list.html.php:58 view/admin/tasks/edit.html.php:39
+#: view/admin/tasks/list.html.php:63
+msgid "Estado"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:81
+#: view/admin/invests/details.html.php:69
+msgid "OJO! que este aporte no fue confirmado."
+msgstr ""
+
+#: view/admin/accounts/details.html.php:81
+msgid "INCIDENCIA!"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:85
+#: view/admin/invests/details.html.php:73
+msgid "Fecha del aporte"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:89
+#: view/admin/invests/details.html.php:77
+msgid "Cargo ejecutado el: "
+msgstr ""
+
+#: view/admin/accounts/details.html.php:92
+#: view/admin/invests/details.html.php:80
+msgid "Dinero devuelto el: "
+msgstr ""
+
+#: view/admin/accounts/details.html.php:98 view/admin/invests/list.html.php:123
+#: view/admin/rewards/edit.html.php:30
+msgid "Donativo"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:100
+msgid "SI"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:100 view/admin/promote/edit.html.php:65
+msgid "NO"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:105
+#: view/admin/accounts/list.html.php:35 view/admin/invests/details.html.php:86
+#: view/admin/invests/list.html.php:36
+msgid "Método de pago"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:109
+msgid "Capital riego"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:112
+#: view/admin/invests/details.html.php:90
+msgid "Aporte anónimo"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:115
+#: view/admin/invests/details.html.php:93
+msgid "Donativo de"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:118
+msgid "Manual generado por admin"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:124
+msgid "Códigos de seguimiento"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:124
+msgid "Ir al aporte"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:139
+msgid "Recompensas elegidas"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:147
+msgid "Dirección"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:156
+msgid "No hay nada que hacer con los aportes manuales."
+msgstr ""
+
+#: view/admin/accounts/details.html.php:159
+msgid "Capital riego asociado"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:164
+msgid "Ver aporte completo de riego"
+msgstr ""
+
+#: view/admin/accounts/details.html.php:170
+msgid "Log"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:30 view/admin/invests/list.html.php:31
+#: view/admin/rewards/list.html.php:15
+msgid "Todos los proyectos"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:32
+msgid "Accounts Usuario"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:33 view/admin/invests/list.html.php:34
+msgid "Todos los usuarios"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:36 view/admin/licenses/list.html.php:40
+#: view/translate/contents/list.html.php:53
+msgid "Todos los tipos"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:38
+msgid "Estado del aporte"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:39 view/admin/invests/list.html.php:40
+#: view/admin/invests/list.html.php:43 view/admin/projects/list.html.php:81
+msgid "Todos los estados"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:41 view/admin/invests/details.html.php:62
+msgid "Campaña"
+msgstr "Campagne"
+
+#: view/admin/accounts/list.html.php:42
+msgid "Todas las campañas"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:44
+msgid "Para revisión"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:45 view/admin/invests/list.html.php:49
+#: view/admin/rewards/list.html.php:30
+msgid "Todos"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:47
+msgid "Visor de logs"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:49
+msgid "Support information"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:67
+msgid "Fecha desde"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:71
+msgid "Fecha hasta"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:75 view/admin/invests/list.html.php:76
+#: view/admin/list.html.php:65 view/admin/projects/list.html.php:93
+#: view/admin/rewards/list.html.php:40 view/admin/sended/list.html.php:66
+#: view/admin/skills/list.html.php:64 view/admin/templates/list.html.php:48
+#: view/admin/texts/list.html.php:58 view/admin/users/list.html.php:81
+#: view/translate/contents/list.html.php:71
+#: view/translate/texts/list.html.php:85
+msgid "Buscar"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:79 view/admin/invests/list.html.php:80
+#: view/admin/projects/list.html.php:106 view/admin/rewards/list.html.php:44
+#: view/admin/users/list.html.php:182
+msgid "Quitar filtros"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:84 view/admin/invests/list.html.php:85
+#: view/admin/projects/list.html.php:108 view/admin/rewards/list.html.php:49
+#: view/admin/sended/list.html.php:74 view/admin/texts/list.html.php:68
+#: view/admin/users/list.html.php:187
+msgid "Es necesario poner algun filtro, hay demasiados registros!"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:87 view/admin/invests/list.html.php:88
+#: view/admin/invests/report.html.php:100
+msgid "TOTAL"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:93 view/admin/invests/list.html.php:95
+msgid "Aporte ID"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:95 view/admin/invests/list.html.php:97
+#: view/admin/rewards/list.html.php:55
+msgid "Cofinanciador"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:98 view/admin/invests/list.html.php:100
+msgid "Metodo"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:99 view/admin/invests/list.html.php:101
+msgid "Estado aporte"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:100 view/admin/invests/list.html.php:102
+msgid "Importe"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:101 view/admin/invests/list.html.php:48
+#: view/admin/invests/list.html.php:103
+msgid "Extra"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:110 view/admin/invests/list.html.php:110
+#: view/admin/newsletter/list.html.php:85
+msgid "Detalles"
+msgstr ""
+
+#: view/admin/accounts/list.html.php:123
+msgid "Anónimo "
+msgstr ""
+
+#: view/admin/accounts/list.html.php:124
+msgid "Donativo "
+msgstr ""
+
+#: view/admin/accounts/list.html.php:133
+msgid "No hay transacciones que cumplan con los filtros."
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:43
+msgid "Seleccionar log por tipo y fecha"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:46
+msgid "Tipo de proceso"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:49
+msgid "Cargos"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:50
+msgid "Verificaciones"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:51
+msgid "Avisos"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:52
+msgid "Pagos"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:56
+msgid "Fecha del log"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:65
+msgid "archivo"
+msgstr ""
+
+#: view/admin/accounts/viewer.html.php:66
+msgid "No encontrado"
+msgstr ""
+
+#: view/admin/banners/edit.html.php:41
+msgid "Seleccionar el proyecto a mostrar en el banner"
+msgstr ""
+
+#: view/admin/banners/edit.html.php:49
+msgid "Imagen de fondo: 700 x 156 (estricto)"
+msgstr ""
+
+#: view/admin/banners/edit.html.php:54
+msgid "Fondo album"
+msgstr ""
+
+#: view/admin/banners/edit.html.php:54
+msgid "falla imagen"
+msgstr ""
+
+#: view/admin/banners/edit.html.php:58 view/admin/criteria/edit.html.php:81
+#: view/admin/edit.html.php:67 view/admin/icons/edit.html.php:48
+#: view/admin/licenses/edit.html.php:56 view/admin/pages/edit.html.php:60
+#: view/admin/projects/accounts.html.php:66
+#: view/admin/projects/dates.html.php:133
+#: view/admin/projects/evaluation.html.php:32
+#: view/admin/reviews/edit.html.php:47 view/admin/skills/edit.html.php:75
+#: view/admin/templates/edit.html.php:38
+#: view/admin/translates/edit.html.php:104 view/admin/worth/edit.html.php:40
+#: view/translate/contents/edit.html.php:55
+msgid "Guardar"
+msgstr ""
+
+#: view/admin/banners/list.html.php:25
+msgid "Nuevo banner"
+msgstr ""
+
+#: view/admin/banners/list.html.php:35
+msgid "Subir"
+msgstr ""
+
+#: view/admin/banners/list.html.php:36
+msgid "Bajar"
+msgstr ""
+
+#: view/admin/banners/list.html.php:37 view/admin/banners/list.html.php:50
+#: view/admin/criteria/list.html.php:58 view/admin/glossary/list.html.php:43
+#: view/admin/licenses/list.html.php:69 view/admin/list.html.php:30
+#: view/admin/pages/list.html.php:45 view/admin/promote/list.html.php:54
+#: view/admin/reviews/list.html.php:84 view/admin/skills/list.html.php:29
+#: view/admin/tasks/list.html.php:71 view/admin/templates/list.html.php:69
+#: view/admin/texts/list.html.php:27 view/admin/texts/list.html.php:82
+#: view/admin/translates/list.html.php:63 view/admin/worth/list.html.php:38
+msgid "Editar"
+msgstr ""
+
+#: view/admin/banners/list.html.php:38 view/admin/banners/list.html.php:51
+#: view/admin/criteria/list.html.php:66 view/admin/glossary/list.html.php:48
+#: view/admin/home/list.html.php:77 view/admin/home/list.html.php:135
+#: view/admin/list.html.php:31 view/admin/list.html.php:92
+#: view/admin/promote/list.html.php:63 view/admin/skills/list.html.php:30
+#: view/admin/skills/list.html.php:91 view/admin/texts/list.html.php:28
+msgid "Quitar"
+msgstr ""
+
+#: view/admin/banners/list.html.php:58 view/admin/blog/list.html.php:147
+#: view/admin/criteria/list.html.php:73 view/admin/glossary/list.html.php:55
+#: view/admin/icons/list.html.php:69 view/admin/licenses/list.html.php:86
+#: view/admin/list.html.php:109 view/admin/pages/list.html.php:59
+#: view/admin/projects/images.html.php:105
+#: view/admin/projects/list.html.php:110 view/admin/promote/list.html.php:70
+#: view/admin/reviews/list.html.php:143 view/admin/sended/list.html.php:107
+#: view/admin/skills/list.html.php:114 view/admin/tasks/list.html.php:82
+#: view/admin/templates/list.html.php:80 view/admin/texts/list.html.php:95
+#: view/admin/translates/list.html.php:75 view/admin/users/list.html.php:244
+msgid "No se han encontrado registros"
+msgstr ""
+
+#: view/admin/blog/list.html.php:38
+msgid "Nueva entrada"
+msgstr ""
+
+#: view/admin/blog/list.html.php:40
+msgid "Ordenar la portada"
+msgstr ""
+
+#: view/admin/blog/list.html.php:45
+msgid "Mostrar:"
+msgstr ""
+
+#: view/admin/blog/list.html.php:55
+msgid "Del proyecto:"
+msgstr ""
+
+#: view/admin/blog/list.html.php:57 view/admin/blog/list.html.php:69
+#: view/admin/mailing/list.html.php:66 view/admin/mailing/list.html.php:79
+msgid "Cualquiera"
+msgstr ""
+
+#: view/admin/blog/list.html.php:67
+msgid "Del nodo:"
+msgstr ""
+
+#: view/admin/blog/list.html.php:87
+msgid "Autor"
+msgstr ""
+
+#: view/admin/blog/list.html.php:94
+msgid "Publicada"
+msgstr ""
+
+#: view/admin/blog/list.html.php:110
+msgid "[Ver]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:112 view/admin/icons/list.html.php:56
+msgid "[Editar]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:115
+msgid "[Quitar de portada]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:117
+msgid "[Poner en portada]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:121
+msgid "[Quitar del footer]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:123
+msgid "[Poner en footer]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:127 view/admin/blog/list.html.php:128
+#: view/admin/icons/list.html.php:61
+msgid "[Traducir]"
+msgstr ""
+
+#: view/admin/blog/list.html.php:131 view/admin/criteria/list.html.php:66
+#: view/admin/glossary/list.html.php:48 view/admin/list.html.php:92
+#: view/admin/promote/list.html.php:63 view/admin/skills/list.html.php:91
+msgid "Seguro que deseas eliminar este registro?"
+msgstr ""
+
+#: view/admin/blog/list.html.php:131
+msgid "[Eliminar]"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:46 view/admin/criteria/edit.html.php:54
+msgid "Sección:"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:48
+msgid "Elige la sección"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:60
+msgid "Título:"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:65
+msgid "Descripción:"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:70
+msgid "Posición:"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:72
+msgid "Tal cual"
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:73
+msgid "Antes de "
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:74
+msgid "Después de "
+msgstr ""
+
+#: view/admin/criteria/edit.html.php:77
+msgid "number"
+msgstr ""
+
+#: view/admin/criteria/list.html.php:27
+msgid "Añadir criterio"
+msgstr ""
+
+#: view/admin/criteria/list.html.php:31
+msgid "Mostrar los criterios de la sección:"
+msgstr ""
+
+#: view/admin/criteria/list.html.php:64 view/admin/glossary/list.html.php:35
+#: view/admin/glossary/list.html.php:46 view/admin/licenses/list.html.php:78
+#: view/admin/list.html.php:32 view/admin/list.html.php:89
+#: view/admin/pages/list.html.php:51 view/admin/promote/list.html.php:61
+#: view/admin/skills/list.html.php:31 view/admin/skills/list.html.php:88
+#: view/admin/templates/list.html.php:73 view/admin/texts/list.html.php:86
+msgid "Traducir"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:38
+msgid "Quitar imagen"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:38
+msgid "remove"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:95
+msgid "Término"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:102
+msgid "Explicación del término"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:115
+msgid "Subir una imagen"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:130
+msgid "Vídeo"
+msgstr ""
+
+#: view/admin/glossary/edit.html.php:137
+msgid "Vista previa"
+msgstr ""
+
+#: view/admin/glossary/list.html.php:26
+msgid "Nuevo término"
+msgstr ""
+
+#: view/admin/glossary/list.html.php:33
+msgid "Edit"
+msgstr ""
+
+#: view/admin/home/add.html.php:34 view/admin/home/list.html.php:58
+#: view/admin/home/list.html.php:116
+msgid "Elemento"
+msgstr ""
+
+#: view/admin/home/list.html.php:94 view/admin/home/list.html.php:152
+msgid "Nuevo elemento"
+msgstr ""
+
+#: view/admin/home/list.html.php:110
+msgid "Central"
+msgstr ""
+
+#: view/admin/icons/edit.html.php:32
+msgid "Agrupación:"
+msgstr ""
+
+#: view/admin/icons/edit.html.php:34 view/admin/icons/list.html.php:59
+msgid "Ambas"
+msgstr ""
+
+#: view/admin/icons/edit.html.php:40
+msgid "Nombre:"
+msgstr ""
+
+#: view/admin/icons/edit.html.php:43
+msgid "Texto tooltip:"
+msgstr ""
+
+#: view/admin/icons/list.html.php:29
+msgid "Mostrar los tipos para:"
+msgstr ""
+
+#: view/admin/icons/list.html.php:46 view/admin/licenses/list.html.php:56
+msgid "Tooltip"
+msgstr ""
+
+#: view/admin/index.html.php:102
+msgid "Tareas pendientes"
+msgstr ""
+
+#: view/admin/index.html.php:107
+msgid "IR"
+msgstr ""
+
+#: view/admin/index.html.php:113
+msgid "No tienes tareas pendientes"
+msgstr ""
+
+#: view/admin/index.html.php:137 view/admin/recent/list.html.php:24
+msgid "actividad reciente"
+msgstr ""
+
+#: view/admin/index.html.php:138
+msgid "Ver Feeds por:"
+msgstr ""
+
+#: view/admin/index.html.php:157
+msgid "Ver más"
+msgstr ""
+
+#: view/admin/invests/add.html.php:28
+msgid "Importe:"
+msgstr ""
+
+#: view/admin/invests/add.html.php:34
+msgid "Seleccionar usuario que hace el aporte"
+msgstr ""
+
+#: view/admin/invests/add.html.php:41
+#: view/dashboard/projects/selector.html.php:27
+#: view/m/dashboard/projects/selector.html.php:27
+msgid "Proyecto:"
+msgstr ""
+
+#: view/admin/invests/add.html.php:43
+msgid "Seleccionar el proyecto al que se aporta"
+msgstr ""
+
+#: view/admin/invests/add.html.php:51
+msgid "Aporte anónimo:"
+msgstr ""
+
+#: view/admin/invests/add.html.php:55
+msgid "Generar aporte"
+msgstr ""
+
+#: view/admin/invests/details.html.php:47
+msgid ""
+"¿Seguro que quieres ejecutar ahora? ¿No quieres esperar a la ejecución "
+"automática al final de la ronda? ?"
+msgstr ""
+
+#: view/admin/invests/details.html.php:58
+msgid "Cantidad aportada:"
+msgstr ""
+
+#: view/admin/invests/details.html.php:96
+msgid "Manual generado por admin: "
+msgstr ""
+
+#: view/admin/invests/details.html.php:102
+msgid "Códigos de seguimiento: "
+msgstr ""
+
+#: view/admin/invests/details.html.php:102
+msgid "Ir a la transacción"
+msgstr ""
+
+#: view/admin/invests/details.html.php:115
+msgid "Recompensas elegidas:"
+msgstr ""
+
+#: view/admin/invests/details.html.php:123
+msgid "Dirección:"
+msgstr ""
+
+#: view/admin/invests/list.html.php:37
+msgid "Todos los métodos"
+msgstr ""
+
+#: view/admin/invests/list.html.php:39
+msgid "Estado de proyecto"
+msgstr ""
+
+#: view/admin/invests/list.html.php:42
+msgid "Estado de aporte"
+msgstr ""
+
+#: view/admin/invests/list.html.php:46
+msgid "Todas las convocatorias"
+msgstr ""
+
+#: view/admin/invests/list.html.php:52
+msgid "State support"
+msgstr ""
+
+#: view/admin/invests/list.html.php:69
+msgid "Alias/Email del usuario"
+msgstr ""
+
+#: view/admin/invests/list.html.php:89 view/admin/projects/list.html.php:112
+msgid "OJO! Resultado limitado a 999 registros como máximo."
+msgstr ""
+
+#: view/admin/invests/list.html.php:122
+msgid "Anónimo"
+msgstr ""
+
+#: view/admin/invests/list.html.php:132 view/admin/rewards/list.html.php:83
+msgid "No hay aportes que cumplan con los filtros."
+msgstr ""
+
+#: view/admin/invests/move.html.php:48
+msgid "Movemos el aporte de "
+msgstr ""
+
+#: view/admin/invests/move.html.php:48
+msgid "al proyecto"
+msgstr ""
+
+#: view/admin/invests/move.html.php:48 view/admin/reviews/report.html.php:35
+msgid "de"
+msgstr ""
+
+#: view/admin/invests/move.html.php:51
+msgid "Al proyecto"
+msgstr ""
+
+#: view/admin/invests/move.html.php:53
+msgid "Seleccionar el proyecto al que se mueve el aporte"
+msgstr ""
+
+#: view/admin/invests/move.html.php:61
+msgid "Reubicar"
+msgstr ""
+
+#: view/admin/invests/move.html.php:62
+msgid ""
+"El aporte original va a desaparecer de los cofinanciadores y no se va a "
+"tratar automaticamente al final de ronda, ¿Seguimos?"
+msgstr ""
+
+#: view/admin/invests/report.html.php:74
+msgid "Informe de financiación de "
+msgstr ""
+
+#: view/admin/invests/report.html.php:75
+msgid "Se encuentra en estado "
+msgstr ""
+
+#: view/admin/invests/report.html.php:80
+msgid "El proyecto tiene un "
+msgstr ""
+
+#: view/admin/invests/report.html.php:80
+msgid "conseguidos "
+msgstr ""
+
+#: view/admin/invests/report.html.php:82
+msgid "Informe de aportes"
+msgstr ""
+
+#: view/admin/invests/report.html.php:83
+msgid ""
+"Cantidades en bruto (no se tiene en cuenta ejecuciones fallidas ni "
+"comisiones PayPal ni SaNostra)"
+msgstr ""
+
+#: view/admin/invests/report.html.php:85
+msgid "Por destinatario"
+msgstr ""
+
+#: view/admin/invests/report.html.php:88
+msgid "M&eacute;todo"
+msgstr ""
+
+#: view/admin/invests/report.html.php:90
+msgid "Goteo"
+msgstr ""
+
+#: view/admin/invests/report.html.php:94 view/admin/invests/report.html.php:112
+#: view/admin/invests/report.html.php:128
+msgid "Cash"
+msgstr ""
+
+#: view/admin/invests/report.html.php:107
+msgid "Por estado"
+msgstr ""
+
+#: view/admin/invests/report.html.php:123
+msgid "Por cofinanciadores"
+msgstr ""
+
+#: view/admin/invests/report.html.php:143
+msgid "Informe de transacciones correctas"
+msgstr ""
+
+#: view/admin/invests/report.html.php:144
+msgid ""
+"Las incidencias NO se tienen en cuenta en el conteo de usuarios/operaciones "
+"ni en importes ni en comisiones ni en netos."
+msgstr ""
+
+#: view/admin/invests/report.html.php:147
+msgid "CASH"
+msgstr ""
+
+#: view/admin/invests/report.html.php:157
+msgid "1a Ronda"
+msgstr ""
+
+#: view/admin/invests/report.html.php:158
+msgid "2a Ronda"
+msgstr ""
+
+#: view/admin/invests/report.html.php:159
+msgid "Total"
+msgstr ""
+
+#: view/admin/invests/report.html.php:163
+msgid "Nº Usuarios"
+msgstr ""
+
+#: view/admin/invests/report.html.php:170
+msgid "Nº Operaciones"
+msgstr ""
+
+#: view/admin/invests/report.html.php:177
+msgid "Incidencias"
+msgstr ""
+
+#: view/admin/invests/report.html.php:181
+msgid "Aportes mediante PayPal, TPV o de Capital Riego activos"
+msgstr ""
+
+#: view/admin/invests/report.html.php:184
+msgid "Correcto"
+msgstr ""
+
+#: view/admin/invests/report.html.php:188
+msgid "Aportes de cash anteriores a la campa&ntilde;a"
+msgstr ""
+
+#: view/admin/invests/report.html.php:194
+msgid "Notas"
+msgstr ""
+
+#: view/admin/licenses/edit.html.php:31
+msgid "Grupo:"
+msgstr ""
+
+#: view/admin/licenses/edit.html.php:33
+msgid "Ninguno"
+msgstr ""
+
+#: view/admin/licenses/edit.html.php:42
+msgid "Texto tooltip"
+msgstr ""
+
+#: view/admin/licenses/edit.html.php:45 view/admin/tasks/edit.html.php:34
+msgid "Url"
+msgstr ""
+
+#: view/admin/licenses/edit.html.php:48
+msgid "Tipos"
+msgstr ""
+
+#: view/admin/licenses/list.html.php:30
+msgid "Mostrar por grupo:"
+msgstr ""
+
+#: view/admin/licenses/list.html.php:32
+msgid "Todos los grupos"
+msgstr ""
+
+#: view/admin/licenses/list.html.php:38
+msgid "Mostrar por tipo de retorno:"
+msgstr ""
+
+#: view/admin/licenses/list.html.php:54
+msgid "license name"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:27
+msgid "Base"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:28
+msgid "Aviso a los talleristas"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:36
+msgid ""
+"El asunto y el contenido actual se substiruira por el que hay en la "
+"plantilla. Seguimos?"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:52
+msgid "Las siguientes variables se sustituir&aacute;n en el contenido:"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:54
+msgid " Para el id de acceso del destinatario"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:55
+msgid " Para el email del destinatario"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:56
+msgid " Para el nombre del destinatario"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:57
+msgid " Para la url de esta plataforma "
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:59
+msgid " Para el id del proyecto"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:60
+msgid " Para el nombre del proyecto"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:61
+msgid " Para la url del proyecto"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:66
+msgid "Vamos a comunicarnos con "
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:70
+msgid "Seleccionar plantilla:"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:73
+msgid "Sin plantilla"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:78
+msgid "Cargar"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:82
+msgid "Asunto:"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:88
+msgid ""
+"Contenido: (en c&oacute;digo html; los saltos de linea deben ser con &lt;br /"
+"&gt;)"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:94
+msgid "Lista destinatarios:"
+msgstr ""
+
+#: view/admin/mailing/edit.html.php:111
+msgid "Has revisado el contenido y comprobado los destinatarios?"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:32
+msgid "A los"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:40
+msgid "De proyectos que el nombre contenga"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:44
+msgid "En estado"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:46 view/admin/tasks/list.html.php:34
+msgid "Cualquier estado"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:53
+msgid "Aportado mediante"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:55
+msgid "Cualquier metodo"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:64
+msgid "Interesados en fin"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:73
+msgid "Que el nombre o email contenga"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:77
+msgid "Que sean"
+msgstr ""
+
+#: view/admin/mailing/list.html.php:87
+msgid "Buscar destinatarios"
+msgstr ""
+
+#: view/admin/mailing/send.html.php:31
+msgid "La comunicación se ha enviado correctamente con este contenido:"
+msgstr ""
+
+#: view/admin/mailing/send.html.php:34
+msgid "Buscábamos comunicarnos con "
+msgstr ""
+
+#: view/admin/mailing/send.html.php:34
+msgid " y finalmente hemos enviado a los siguientes destinatarios: "
+msgstr ""
+
+#: view/admin/mailing/send.html.php:36
+msgid "Enviado a "
+msgstr ""
+
+#: view/admin/mailing/send.html.php:36
+msgid "Fallo al enviar a "
+msgstr ""
+
+#: view/admin/mailing/send.html.php:37
+msgid "al mail "
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:51
+msgid "Destinatarios"
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:52
+msgid "Enviados"
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:53
+msgid "Fallidos"
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:59
+#: view/admin/newsletter/list.html.php:90
+msgid "Si no ves"
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:72
+msgid "Viendo el listado completo de los "
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:76
+#: view/admin/newsletter/init.html.php:36 view/admin/users/edit.html.php:40
+#: view/admin/users/impersonate.html.php:38 view/admin/users/list.html.php:194
+#: view/admin/users/manage.html.php:43
+msgid "Email"
+msgstr ""
+
+#: view/admin/newsletter/detail.html.php:77
+#: view/admin/newsletter/init.html.php:37
+msgid "Alias"
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:30
+msgid "La newsletter está lista para enviar con "
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:30
+msgid "este contenido"
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:31
+msgid "Si todo está bien pulsar el botón para activar los envíos automáticos."
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:31
+msgid "Se comenzará a enviar automáticamente"
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:31
+msgid "ACTIVAR!"
+msgstr ""
+
+#: view/admin/newsletter/init.html.php:33
+msgid "Lista de destinatarios"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:27
+msgid "Boletin"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:28
+msgid "Testeo"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:38
+msgid ""
+"Seleccionar la plantilla. Se utilizará el contenido traducido, quizás "
+"quieras "
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:38
+msgid "revisarlas"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:39
+msgid "NOTA"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:39
+msgid ""
+"con este sistema no se pueden añadir variables en el contenido, se genera el "
+"mismo contenido para todos los destinatarios."
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:40
+msgid "Para contenido personalizado hay que usar la funcionalidad"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:42
+msgid "El envio se activará automáticamente, seguimos?"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:45
+msgid "Plantillas masivas"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:54
+msgid "Es una prueba (se envia a los destinatarios de pruebas)"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:62
+msgid "Iniciar"
+msgstr ""
+
+#: view/admin/newsletter/list.html.php:75
+msgid "Asunto"
+msgstr ""
+
+#: view/admin/pages/edit.html.php:56
+msgid "Cabecera"
+msgstr ""
+
+#: view/admin/pages/list.html.php:27
+msgid "Nueva P&aacute;gina"
+msgstr ""
+
+#: view/admin/pages/list.html.php:36
+msgid "Páginas"
+msgstr ""
+
+#: view/admin/pages/list.html.php:48 view/admin/promote/list.html.php:48
+msgid "Ver"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:29
+msgid "Instancia de proyecto corrupta"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:36
+msgid ""
+"Es necesario que un proyecto tenga una cuenta PayPal para ejecutar los "
+"cargos. La cuenta bancaria es solamente para tener toda la información en el "
+"mismo entorno pero no se utiliza en ningún proceso de este sistema."
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:42
+msgid "Cuenta bancaria"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:47
+msgid "Titular de la cuenta bancaria"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:52
+msgid "Cuenta PayPal"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:57
+msgid "Titular de la cuenta PayPal"
+msgstr ""
+
+#: view/admin/projects/accounts.html.php:62
+msgid "Permite uso de PayPal"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:40
+msgid "Fecha de creación"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:47
+msgid "Fecha de enviado a revisión"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:54
+msgid "Fecha de inicio de campaña"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:71
+msgid "Fecha de paso a segunda ronda"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:72
+msgid "(marca fin de primera ronda)"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:79
+msgid "Fecha de éxito"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:80
+msgid "(marca fin de segunda ronda)"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:87
+msgid "Fecha de cierre"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:97 view/admin/projects/dates.html.php:102
+msgid "El proyecto terminará la primera ronda el día"
+msgstr ""
+
+#: view/admin/projects/dates.html.php:99
+msgid "Day minimum required amount is to be achieved"
+msgstr ""
+
+#: view/admin/projects/images.html.php:51
+msgid "Volver"
+msgstr ""
+
+#: view/admin/projects/images.html.php:53
+msgid "Ver proyecto"
+msgstr ""
+
+#: view/admin/projects/images.html.php:55
+msgid "Editar proyecto"
+msgstr ""
+
+#: view/admin/projects/images.html.php:78
+msgid "gallery"
+msgstr ""
+
+#: view/admin/projects/images.html.php:86
+msgid "Sección"
+msgstr ""
+
+#: view/admin/projects/list.html.php:35
+msgid "Asignar traductores"
+msgstr ""
+
+#: view/admin/projects/list.html.php:43
+msgid "Alias/Email del autor"
+msgstr ""
+
+#: view/admin/projects/list.html.php:47
+msgid "De la categoría"
+msgstr ""
+
+#: view/admin/projects/list.html.php:49
+msgid "Cualquier categoría"
+msgstr ""
+
+#: view/admin/projects/list.html.php:75
+msgid "Nombre del proyecto"
+msgstr ""
+
+#: view/admin/projects/list.html.php:79 view/admin/reviews/list.html.php:39
+#: view/admin/tasks/list.html.php:32
+msgid "Mostrar por estado"
+msgstr ""
+
+#: view/admin/projects/list.html.php:82
+msgid "En negociacion"
+msgstr ""
+
+#: view/admin/projects/list.html.php:96
+msgid "Ordenar por"
+msgstr ""
+
+#: view/admin/projects/list.html.php:125 view/admin/reviews/list.html.php:64
+#: view/admin/translates/list.html.php:55
+msgid "Creador"
+msgstr ""
+
+#: view/admin/projects/list.html.php:126
+msgid "Recibido"
+msgstr ""
+
+#: view/admin/projects/list.html.php:129
+msgid "M&iacute;nimo"
+msgstr ""
+
+#: view/admin/projects/list.html.php:130
+msgid "&Oacute;ptimo"
+msgstr ""
+
+#: view/admin/projects/list.html.php:142
+msgid "En negociación"
+msgstr ""
+
+#: view/admin/projects/list.html.php:149
+msgid "information rate"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "ronda"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "Le quedan"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "días"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "Achieved"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "Cofin"
+msgstr ""
+
+#: view/admin/projects/list.html.php:157
+msgid "Colab"
+msgstr ""
+
+#: view/admin/projects/list.html.php:163
+msgid "IR A"
+msgstr ""
+
+#: view/admin/projects/list.html.php:164
+msgid "Edit project"
+msgstr ""
+
+#: view/admin/projects/list.html.php:165
+msgid "Impulsor"
+msgstr ""
+
+#: view/admin/projects/list.html.php:169
+msgid "Support situation"
+msgstr ""
+
+#: view/admin/projects/list.html.php:174
+msgid "Supporters List"
+msgstr ""
+
+#: view/admin/projects/list.html.php:182
+msgid "Fechas"
+msgstr ""
+
+#: view/admin/projects/list.html.php:184
+msgid "Esto es MUY DELICADO, seguimos?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:184
+msgid "Id"
+msgstr ""
+
+#: view/admin/projects/list.html.php:186
+msgid "El creador no podrá editarlo más, ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:186
+msgid "A revisión"
+msgstr ""
+
+#: view/admin/projects/list.html.php:187
+msgid ""
+"El proyecto va a comenzar los 40 dias de la primera ronda de campaña, "
+"¿comenzamos?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:187
+msgid "Publicar"
+msgstr ""
+
+#: view/admin/projects/list.html.php:188
+msgid "Mucho Ojo! si el proyecto esta en campaña, ¿Reabrimos la edicion?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:188
+msgid "Reabrir edición"
+msgstr ""
+
+#: view/admin/projects/list.html.php:189
+msgid "El proyecto pasara a ser un caso de éxito, ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:189
+msgid "Retorno Cumplido"
+msgstr ""
+
+#: view/admin/projects/list.html.php:190
+msgid "Lo echamos un paso atras, ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:190
+msgid "Retorno Pendiente"
+msgstr ""
+
+#: view/admin/projects/list.html.php:191
+msgid ""
+"El proyecto va a desaparecer del admin, solo se podra recuperar desde la "
+"base de datos, Ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:191
+msgid "Descartar"
+msgstr ""
+
+#: view/admin/projects/list.html.php:196
+msgid "GESTIONAR"
+msgstr ""
+
+#: view/admin/projects/list.html.php:197
+msgid "Se va a iniciar revisión de un proyecto en estado Edición, ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:197
+msgid "Iniciar revisión"
+msgstr ""
+
+#: view/admin/projects/list.html.php:198
+msgid "Ir a la revisión"
+msgstr ""
+
+#: view/admin/projects/list.html.php:199
+msgid "Ir a la traducción"
+msgstr ""
+
+#: view/admin/projects/list.html.php:200 view/admin/reviews/list.html.php:96
+msgid "Habilitar traducción"
+msgstr ""
+
+#: view/admin/projects/list.html.php:202
+msgid "Se va a enviar un mail automáticamente pero no cambiará el estado, ok?"
+msgstr ""
+
+#: view/admin/projects/list.html.php:202
+msgid "Rechazo express"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:47
+msgid "Caution id change"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:55
+msgid "Nueva ID para el proyecto"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:62
+msgid "OJO!! El proyecto est&aacute; publicado"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:65
+msgid "Caution pj error"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:66
+msgid "Lavel rebase"
+msgstr ""
+
+#: view/admin/projects/rebase.html.php:72
+msgid "Rebase"
+msgstr ""
+
+#: view/admin/promote/edit.html.php:42
+msgid "Seleccionar el proyecto a destacar"
+msgstr ""
+
+#: view/admin/promote/edit.html.php:51
+msgid "Máximo 24 caracteres"
+msgstr ""
+
+#: view/admin/promote/edit.html.php:56
+msgid "Máximo 100 caracteres"
+msgstr ""
+
+#: view/admin/promote/edit.html.php:62
+msgid "Publicado"
+msgstr "Gepubliceerd"
+
+#: view/admin/promote/edit.html.php:63
+msgid "SÍ"
+msgstr ""
+
+#: view/admin/promote/list.html.php:25
+msgid "Nuevo destacado"
+msgstr ""
+
+#: view/admin/promote/list.html.php:56
+msgid "Ocultar"
+msgstr ""
+
+#: view/admin/promote/list.html.php:58
+msgid "Mostrar"
+msgstr ""
+
+#: view/admin/recent/list.html.php:25
+msgid "Ver Feeds por"
+msgstr ""
+
+#: view/admin/reviews/edit.html.php:28
+msgid "Comentario de"
+msgstr ""
+
+#: view/admin/reviews/edit.html.php:38
+msgid "Comentario para el revisor"
+msgstr ""
+
+#: view/admin/reviews/edit.html.php:43
+msgid "Comentario para el productor"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:29
+msgid "Del proyecto"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:41
+msgid "Todas"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:47
+msgid "Asignados a"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:49
+msgid "De todos"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:66 view/admin/reviews/list.html.php:108
+msgid "Puntos"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:85
+msgid "Ver informe"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:87
+msgid "Cerrar"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:89
+msgid "Revisión cerrada"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:92
+msgid "Iniciar revision"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:95
+msgid "Ir a traducción"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:107 view/admin/users/list.html.php:226
+msgid "Revisor"
+msgstr "Revisor"
+
+#: view/admin/reviews/list.html.php:109
+msgid "Listo"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:116
+msgid "Listo "
+msgstr ""
+
+#: view/admin/reviews/list.html.php:116
+msgid "Reabrir"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:117 view/admin/translates/edit.html.php:52
+msgid "Desasignar"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:125
+msgid "Selecciona un nuevo revisor"
+msgstr ""
+
+#: view/admin/reviews/list.html.php:133 view/admin/translates/edit.html.php:67
+msgid "Asignar"
+msgstr ""
+
+#: view/admin/reviews/report.html.php:35
+msgid "Informe de revisión del proyecto"
+msgstr ""
+
+#: view/admin/reviews/report.html.php:36
+#: view/review/activity/summary.html.php:31
+#: view/review/history/details.html.php:38
+#: view/review/history/summary.html.php:31 view/review/report.html.php:43
+#: view/review/reviews/summary.html.php:32
+msgid "La edición del proyecto alcanzó el "
+msgstr ""
+
+#: view/admin/reviews/report.html.php:36
+msgid "y la puntuación promedio de la revisión"
+msgstr ""
+
+#: view/admin/reviews/report.html.php:44
+msgid "otorga puntos porque"
+msgstr ""
+
+#: view/admin/reviews/report.html.php:54
+msgid "evalua"
+msgstr ""
+
+#: view/admin/reviews/report.html.php:58
+msgid "propone"
+msgstr ""
+
+#: view/admin/rewards/edit.html.php:37
+msgid "Ninguna recompensa."
+msgstr ""
+
+#: view/admin/rewards/list.html.php:10
+msgid "Rewards Filtros"
+msgstr ""
+
+#: view/admin/rewards/list.html.php:23
+msgid "User"
+msgstr ""
+
+#: view/admin/rewards/list.html.php:28
+msgid "Mostrar por estado de recompensa"
+msgstr ""
+
+#: view/admin/rewards/list.html.php:66
+msgid "Modificar"
+msgstr ""
+
+#: view/admin/rewards/list.html.php:72
+msgid "Marcar cumplida"
+msgstr ""
+
+#: view/admin/rewards/list.html.php:74
+msgid "Cumplido"
+msgstr "Bereikt"
+
+#: view/admin/rewards/list.html.php:75
+msgid "Marcar pendiente"
+msgstr ""
+
+#: view/admin/sended/list.html.php:39
+msgid "ID, nombre o email del destinatario"
+msgstr ""
+
+#: view/admin/sended/list.html.php:44 view/admin/sended/list.html.php:81
+#: view/admin/templates/list.html.php:61
+msgid "Plantilla"
+msgstr ""
+
+#: view/admin/sended/list.html.php:46
+msgid "Todas las plantillas"
+msgstr ""
+
+#: view/admin/sended/list.html.php:58
+msgid "send date(from)"
+msgstr ""
+
+#: view/admin/sended/list.html.php:62
+msgid "send date(to)"
+msgstr ""
+
+#: view/admin/sended/list.html.php:80
+msgid "Destinatario"
+msgstr ""
+
+#: view/admin/sended/list.html.php:92
+msgid "Send history"
+msgstr ""
+
+#: view/admin/sended/list.html.php:96
+msgid "Reenviar"
+msgstr ""
+
+#: view/admin/skills/edit.html.php:62
+msgid "Parent_Skill"
+msgstr ""
+
+#: view/admin/tasks/edit.html.php:30
+msgid "Explicación"
+msgstr ""
+
+#: view/admin/tasks/edit.html.php:41
+msgid "PENDIENTE"
+msgstr ""
+
+#: view/admin/tasks/edit.html.php:43
+msgid "Realizada por"
+msgstr ""
+
+#: view/admin/tasks/edit.html.php:44
+msgid "Reabrirla"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:25
+msgid "Nueva Tarea"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:41
+msgid "Realizadas por"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:43
+msgid "Cualquier admin"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:62
+msgid "Tarea"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:75
+msgid "La tarea se eliminará irreversiblemente, ok?"
+msgstr ""
+
+#: view/admin/tasks/list.html.php:75
+msgid "Eliminar"
+msgstr ""
+
+#: view/admin/templates/list.html.php:33
+msgid "Filtrar agrupaci&oacute;n"
+msgstr ""
+
+#: view/admin/templates/list.html.php:42
+msgid "Filtrar por nombre o asunto"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:42
+msgid "Traductores para el proyecto "
+msgstr ""
+
+#: view/admin/translates/edit.html.php:46 view/admin/users/list.html.php:227
+msgid "Traductor"
+msgstr "Vertaler"
+
+#: view/admin/translates/edit.html.php:59
+msgid "Selecciona otro traductor"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:72
+msgid "Seguro que deseas dar por finalizada esta traducción?"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:72
+msgid "Cerrar la traducción"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:73
+msgid "Se va a enviar un email automaticamente, ok?"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:73
+msgid "Avisar al autor"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:82
+msgid "Proyecto que habilitamos"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:84
+msgid "Selecciona el proyecto"
+msgstr ""
+
+#: view/admin/translates/edit.html.php:93
+msgid "Idioma original del proyecto"
+msgstr ""
+
+#: view/admin/translates/list.html.php:25
+msgid "Nuevo proyecto para traducir"
+msgstr ""
+
+#: view/admin/translates/list.html.php:29
+msgid "Proyectos del usuario"
+msgstr ""
+
+#: view/admin/translates/list.html.php:31
+msgid "Todos los productores"
+msgstr ""
+
+#: view/admin/translates/list.html.php:37
+msgid "Asignados a traductor"
+msgstr ""
+
+#: view/admin/translates/list.html.php:39
+msgid "Todos los traductores"
+msgstr ""
+
+#: view/admin/translates/list.html.php:56
+msgid "Idioma"
+msgstr ""
+
+#: view/admin/users/add.html.php:28
+msgid ""
+"Solo letras, números y guion '-'. Sin espacios ni tildes ni 'ñ' ni 'ç' ni "
+"otros caracteres que no sean letra, número o guión."
+msgstr ""
+
+#: view/admin/users/add.html.php:36 view/admin/users/edit.html.php:54
+msgid "Email address"
+msgstr ""
+
+#: view/admin/users/add.html.php:40 view/admin/users/edit.html.php:58
+msgid "Contraseña"
+msgstr ""
+
+#: view/admin/users/add.html.php:40 view/admin/users/edit.html.php:58
+msgid "Mínimo 6 caracteres. Se va a encriptar y no se puede consultar"
+msgstr ""
+
+#: view/admin/users/add.html.php:44
+msgid "Crear este usuario"
+msgstr ""
+
+#: view/admin/users/add.html.php:45 view/admin/users/edit.html.php:29
+msgid ""
+"Atención! Le llegará email de verificación al usuario como si se hubiera "
+"registrado."
+msgstr ""
+
+#: view/admin/users/edit.html.php:32 view/admin/users/impersonate.html.php:30
+#: view/admin/users/list.html.php:192 view/admin/users/manage.html.php:31
+msgid "Nombre de usuario"
+msgstr ""
+
+#: view/admin/users/edit.html.php:44 view/admin/users/impersonate.html.php:42
+#: view/admin/users/manage.html.php:51
+msgid "Authority of user"
+msgstr ""
+
+#: view/admin/users/edit.html.php:48 view/admin/users/manage.html.php:83
+msgid "Estado de la cuenta"
+msgstr ""
+
+#: view/admin/users/edit.html.php:49 view/admin/users/manage.html.php:86
+msgid "Activa"
+msgstr ""
+
+#: view/admin/users/edit.html.php:49 view/admin/users/manage.html.php:88
+msgid "Inactiva"
+msgstr ""
+
+#: view/admin/users/edit.html.php:54 view/admin/users/edit.html.php:58
+msgid "After the change"
+msgstr ""
+
+#: view/admin/users/edit.html.php:62
+msgid "Actualizar"
+msgstr ""
+
+#: view/admin/users/edit.html.php:62
+msgid ""
+"Entiendes que vas a cambiar datos críticos de la cuenta de este usuario?"
+msgstr ""
+
+#: view/admin/users/edit.html.php:63
+msgid ""
+"Atención! Se están substituyendo directamente los datos introducidos, no "
+"habrá email de autorización."
+msgstr ""
+
+#: view/admin/users/impersonate.html.php:49
+msgid "Suplantar a este usuario"
+msgstr ""
+
+#: view/admin/users/impersonate.html.php:49
+msgid "Estás completamente seguro de entender lo que esás haciendo?"
+msgstr ""
+
+#: view/admin/users/impersonate.html.php:50
+msgid ""
+"Atención!! Con esto vas a dejar de estar logueado como el superadmin que "
+"eres y pasarás a estar logueado como este usuario con todos sus permisos y "
+"restricciones."
+msgstr ""
+
+#: view/admin/users/list.html.php:53
+msgid "Crear usuario"
+msgstr ""
+
+#: view/admin/users/list.html.php:59
+msgid "Con rol"
+msgstr ""
+
+#: view/admin/users/list.html.php:62
+msgid "Cualquier rol"
+msgstr ""
+
+#: view/admin/users/list.html.php:69
+msgid "Mostrar usuarios interesados categoría"
+msgstr ""
+
+#: view/admin/users/list.html.php:72
+msgid "Cualquier interés"
+msgstr ""
+
+#: view/admin/users/list.html.php:78
+msgid "Por nombre o email"
+msgstr ""
+
+#: view/admin/users/list.html.php:83
+msgid "Mostrar usuarios interesados en"
+msgstr ""
+
+#: view/admin/users/list.html.php:86
+msgid "Cualquier skill"
+msgstr ""
+
+#: view/admin/users/list.html.php:101
+msgid "Ver por"
+msgstr ""
+
+#: view/admin/users/list.html.php:195
+msgid "Amount of project"
+msgstr ""
+
+#: view/admin/users/list.html.php:197
+msgid "Registration Date"
+msgstr ""
+
+#: view/admin/users/list.html.php:214
+msgid "Gestionar"
+msgstr ""
+
+#: view/admin/users/list.html.php:218
+msgid "To management of support"
+msgstr ""
+
+#: view/admin/users/list.html.php:223
+msgid "Baja"
+msgstr ""
+
+#: view/admin/users/list.html.php:225 view/admin/users/manage.html.php:98
+msgid "Oculto"
+msgstr ""
+
+#: view/admin/users/list.html.php:228
+msgid "Convocador"
+msgstr ""
+
+#: view/admin/users/list.html.php:230
+msgid "Gestor"
+msgstr ""
+
+#: view/admin/users/list.html.php:231
+msgid "LocalAdmin"
+msgstr ""
+
+#: view/admin/users/manage.html.php:68
+msgid "Authorization"
+msgstr ""
+
+#: view/admin/users/manage.html.php:93
+msgid "Visibilidad"
+msgstr ""
+
+#: view/admin/users/manage.html.php:96
+msgid "Visible"
+msgstr ""
+
+#: view/admin/users/manage.html.php:106
+msgid "Cambiar email/contraseña"
+msgstr ""
+
+#: view/admin/users/manage.html.php:107
+msgid "Mover a otro Nodo"
+msgstr ""
+
+#: view/admin/users/manage.html.php:108
+msgid "Suplantar"
+msgstr ""
+
+#: view/admin/users/manage.html.php:110
+msgid "Crear aporte"
+msgstr ""
+
+#: view/admin/users/manage.html.php:112
+msgid "Historial aportes"
+msgstr ""
+
+#: view/admin/users/manage.html.php:123
+msgid "Idiomas de traductor"
+msgstr ""
+
+#: view/admin/users/manage.html.php:124
+msgid "¡No tiene ningún idioma asignado!"
+msgstr ""
+
+#: view/admin/worth/edit.html.php:31
+msgid "Nombre del nivel"
+msgstr ""
+
+#: view/admin/worth/edit.html.php:36 view/admin/worth/list.html.php:31
+msgid "Caudal"
+msgstr ""
+
+#: view/admin/worth/list.html.php:30
+msgid "Nivel"
+msgstr ""
+
+#: view/admin/worth/list.html.php:47
+msgid "IMPOSIBLE!!! No se han encontrado registros"
+msgstr ""
+
+#: view/dashboard/projects/rewards.html.php:113
+#: view/m/dashboard/projects/rewards.html.php:113
+msgid "Gestionar retornos"
+msgstr ""
+
+#: view/dashboard/projects/rewards.html.php:238
+msgid "Send it to reward seekers"
+msgstr ""
+
+#: view/dashboard/projects/selector.html.php:36
+msgid "not yet creat project"
+msgstr ""
+
+#: view/review/activity/summary.html.php:30
+msgid "El proyecto "
+msgstr "Het project"
+
+#: view/review/activity/summary.html.php:31
+#: view/review/reviews/summary.html.php:32
+msgid "la puntuación actual de la revisión es de "
+msgstr ""
+
+#: view/review/activity/summary.html.php:32
+#: view/review/reviews/summary.html.php:42
+msgid "Tu revisión está "
+msgstr ""
+
+#: view/review/activity/summary.html.php:32
+#: view/review/reviews/summary.html.php:42
+msgid "Lista"
+msgstr ""
+
+#: view/review/activity/summary.html.php:32
+#: view/review/reviews/summary.html.php:42
+msgid " Puedes completarla en "
+msgstr ""
+
+#: view/review/activity/summary.html.php:32
+#: view/review/reviews/summary.html.php:42
+msgid "tus revisiones"
+msgstr ""
+
+#: view/review/activity/summary.html.php:33
+#: view/review/reviews/summary.html.php:33
+msgid "Abrir el proyecto"
+msgstr ""
+
+#: view/review/activity/summary.html.php:33
+#: view/review/reviews/summary.html.php:33
+msgid "Abrir el perfil del creador"
+msgstr ""
+
+#: view/review/history/details.html.php:38
+msgid "la puntuación de tu revisión fue de "
+msgstr ""
+
+#: view/review/history/details.html.php:44
+msgid "Otrogaste puntos porque:"
+msgstr ""
+
+#: view/review/history/details.html.php:52
+#: view/review/reviews/report.html.php:53
+msgid "Tu evaluación "
+msgstr ""
+
+#: view/review/history/details.html.php:56
+msgid "Las mejoras que propusiste "
+msgstr ""
+
+#: view/review/history/summary.html.php:31
+msgid "la puntuación de la revisión fue de "
+msgstr ""
+
+#: view/review/history/summary.html.php:32
+msgid "Ver detalles de la revisión"
+msgstr ""
+
+#: view/review/index.html.php:43
+msgid "Mi panel de revisor / "
+msgstr ""
+
+#: view/review/reviews/evaluate.html.php:57
+msgid "Evaluación "
+msgstr ""
+
+#: view/review/reviews/evaluate.html.php:65
+msgid "Que mejorarías"
+msgstr ""
+
+#: view/review/reviews/evaluate.html.php:76
+msgid "Puntuación final de tu revisión: "
+msgstr ""
+
+#: view/review/reviews/report.html.php:39
+msgid "Puntuación de tu revisión: "
+msgstr ""
+
+#: view/review/reviews/report.html.php:45
+msgid "Otrogas puntos porque:"
+msgstr ""
+
+#: view/review/reviews/report.html.php:57
+msgid "Las mejoras que harías "
+msgstr ""
+
+#: view/review/reviews/selector.html.php:27
+msgid "Revisión:"
+msgstr ""
+
+#: view/review/reviews/summary.html.php:37
+msgid "Comentario del administrador:"
+msgstr ""
+
+#: view/review/reviews/summary.html.php:45
+msgid "Dar por terminada mi revisión"
+msgstr ""
+
+#~ msgid "Panel principal de administración"
+#~ msgstr "Hoofd beheerpaneel"
+
+#~ msgid "Filtrar por tipo:"
+#~ msgstr "Rangschik per type:"
+
+#~ msgid ""
+#~ "El admin %s ha <span class=\"red\">tocado las fechas</span> del proyecto "
+#~ "%s"
+#~ msgstr ""
+#~ "Admin %s heeft <span class=\"red\">de data veranderd</span> voor project "
+#~ "%s"
+
+#~ msgid ""
+#~ "Al admin %s le ha <span class=\"red\">fallado al tocar las fechas</span> "
+#~ "del proyecto %s"
+#~ msgstr ""
+#~ "Admin %s heeft <span class=\"red\">de data niet veranderd</span> voor "
+#~ "project %s"
+
+#~ msgid "Se han actualizado las cuentas del proyecto "
+#~ msgstr "Project accounts zijn bijgewerkt"
+
+#~ msgid ""
+#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+#~ "\">Revisión</span>"
+#~ msgstr ""
+#~ "Admin %s heeft het project %s veranderd naar status <span class=\"red"
+#~ "\">Review</span>"
+
+#~ msgid ""
+#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
+#~ "\"red\">Revisión</span>"
+#~ msgstr ""
+#~ "Mislukte poging door admin %s om project %s te zetten op status <span "
+#~ "class=\"red\">Review</span>"
+
+#~ msgid ""
+#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">en "
+#~ "Campaña</span>"
+#~ msgstr ""
+#~ "Admin %s heeft project %s gezet op status <span class=\"red\">in "
+#~ "Campagne</span>"
+
+#~ msgid ""
+#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
+#~ "\"red\">en Campaña</span>"
+#~ msgstr ""
+#~ "Mislukte poging van admin %s om project %s te zetten op status <span "
+#~ "class=\"red\">in Campagne</span>"
+
+#~ msgid ""
+#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+#~ "\">Edición</span>"
+#~ msgstr ""
+#~ "Admin %s heeft project %s gezet op status <span class=\"red\">Bewerken</"
+#~ "span>"
+
+#~ msgid ""
+#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
+#~ "\"red\">Edición</span>"
+#~ msgstr ""
+#~ "Mislukte poging van admin %s om project %s te zetten op status <span "
+#~ "class=\"red\">Bewerken</span>"
+
+#~ msgid "Cambio estado/fechas de un proyecto desde el admin"
+#~ msgstr "Stause/datum is veranderd vanuit de adminconsole van een project"
+
+#~ msgid "Revisión iniciada correctamente"
+#~ msgstr "herziening correct gestart"
+
+#~ msgid "El admin %s ha %s la valoración de %s"
+#~ msgstr "Admin %s heeft %s met %s gewaardeerd"
+
+#~ msgid "Datos editados correctamente"
+#~ msgstr "Informatie is correct bewerkt"
+
+#~ msgid "La revisión se ha cerrado"
+#~ msgstr "Herziening is nu gesloten"
+
+#~ msgid "El admin %s ha dado por %s la valoración de %s"
+#~ msgstr "Admin %s heeft %s op %s gewaardeerd"
+
+#~ msgid "El admin %s ha %s a %s la revisión de %s"
+#~ msgstr "Admin %s heeft %s tot %s op %s gewaardeerd"
+
+#~ msgid "Abiertas"
+#~ msgstr "Geopend"
+
+#~ msgid "Cerradas"
+#~ msgstr "Gesloten"
+
+#~ msgid "No hay proyecto sobre el que operar"
+#~ msgstr "Niet toepasbaar op een bestaand project"
+
+#~ msgid " traduccion (admin)"
+#~ msgstr "vertaling (admin)"
+
+#~ msgid "El admin %s ha %s a %s la traducción del proyecto %s"
+#~ msgstr "Admin %s heeft %s op %s de vertaling van project %s"
+
+#~ msgid " se ha habilitado para traducir"
+#~ msgstr " is beschikbaar voor vertaling"
+
+#~ msgid "Datos de traducción actualizados"
+#~ msgstr "Details van de vertaling zijn bijgewerkt"
+
+#~ msgid "El admin %s ha %s la traducción del proyecto %s"
+#~ msgstr "Admin %s heeft %s de vertaling van project %s"
+
+#~ msgid "Habilitado"
+#~ msgstr "Aangezet"
+
+#~ msgid "Ha fallado al habilitar la traducción del proyecto "
+#~ msgstr "Niet gelukt om de vertaling van het project aan te zetten"
+
+#~ msgid "Se ha enviado un email a"
+#~ msgstr "Er is een email gestuurd naar"
+
+#~ msgid "Ha fallado informar a"
+#~ msgstr "Het is niet gelukt verslag uit te brengen aan"
+
+#~ msgid "de la posibilidad de traducción de su proyecto"
+#~ msgstr "over de mogelijkheid tot vertaling van je project"
+
+#~ msgid "La traducción del proyecto "
+#~ msgstr "Vertaling van dit project"
+
+#~ msgid " se ha finalizado"
+#~ msgstr " is compleet"
+
+#~ msgid "El admin %s ha dado por %s la traducción de %s"
+#~ msgstr "Admin %s heeft %s ingesteld als vertaling van %s"
+
+#~ msgid "Falló al finalizar la traducción"
+#~ msgstr "Het is niet gelukt de vertaling af te maken"
+
+#~ msgid "Proyecto destacado correctamente"
+#~ msgstr "Project is in de etalage gezet"
+
+#~ msgid "nuevo proyecto destacado en portada (admin)"
+#~ msgstr "nieuw project getoond op de voorpagina (admin)"
+
+#~ msgid "El admin %s ha %s el proyecto %s"
+#~ msgstr "Admin %s heeft %s project %s"
+
+#~ msgid "Destacado en portada"
+#~ msgstr "Getoond op de voorpagina"
+
+#~ msgid "Destacado actualizado correctamente"
+#~ msgstr "Het getoonde is correct geactualiseerd"
+
+#~ msgid "proyecto quitado portada (admin)"
+#~ msgstr "project is verwijderd van de voorpagina (admin)"
+
+#~ msgid "Quitado de la portada"
+#~ msgstr "Verwijderd van de voorpagina"
+
+#~ msgid "Proyecto quitado correctamente"
+#~ msgstr "Project correct verwijderd"
+
+#~ msgid "Datos guardados"
+#~ msgstr "Data opgeslagen"
+
+#~ msgid "nuevo banner de proyecto destacado en portada (admin)"
+#~ msgstr "nieuwe project banner getoond op de voorpagina (admin)"
+
+#~ msgid "El admin %s ha %s del proyecto %s"
+#~ msgstr "Admin %s heeft %s in project %s"
+
+#~ msgid "Publicado un banner"
+#~ msgstr "Een banner gepubliceerd"
+
+#~ msgid "banner de proyecto quitado portada (admin)"
+#~ msgstr "project banner verwijderd van voorpagina (admin)"
+
+#~ msgid "Quitado el banner"
+#~ msgstr "Een banner verwijderd"
+
+#~ msgid "Pregunta añadida correctamente"
+#~ msgstr "Vraag succesvol toegevoegd"
+
+#~ msgid "Pregunta editado correctamente"
+#~ msgstr "Vraag succesvol bewerkt"
+
+#~ msgid "Criterio añadido correctamente"
+#~ msgstr "Criterium succesvol toegevoegd"
+
+#~ msgid "Criterio editado correctamente"
+#~ msgstr "Criterium succesvol bewerkt"
+
+#~ msgid "Nuevo tipo añadido correctamente"
+#~ msgstr "Nieuw type succesvol toegevoegd"
+
+#~ msgid "Tipo editado correctamente"
+#~ msgstr "Type succesvol bewerkt"
+
+#~ msgid "modificacion de tipo de retorno/recompensa (admin)"
+#~ msgstr "verandering van type rendement/beloning (admin)"
+
+#~ msgid "El admin %s ha %s el tipo de retorno/recompensa %s"
+#~ msgstr "Admin %s heeft %s het type van teruggaaf/beloning %s"
+
+#~ msgid "Licencia añadida correctamente"
+#~ msgstr "Licentie succesvol toegevoegd"
+
+#~ msgid "Licencia editada correctamente"
+#~ msgstr "Licentie succesvol bewerkt"
+
+#~ msgid "modificacion de licencia (admin)"
+#~ msgstr "bewerk licentie (admin)"
+
+#~ msgid "El admin %s ha %s la licencia %s"
+#~ msgstr "Admin %s heeft %s licentie %s"
+
+#~ msgid "Entrada colocada en la portada correctamente"
+#~ msgstr "Entry is succesvol op de voorpagina geplaatst"
+
+#~ msgid "Entrada colocada en el footer correctamente"
+#~ msgstr "Entry is succesvol geplaatst in de voettekst"
+
+#~ msgid "Operación sobre usuario (admin)"
+#~ msgstr "Voer taak uit op gebruiker (admin)"
+
+#~ msgid "El admin %s ha %s del usuario %s"
+#~ msgstr "Admin %s heeft %s van gebruiker %s"
+
+#~ msgid "Datos actualizados"
+#~ msgstr "Data bijgewerkt"
+
+#~ msgid "Ha <strong>%s</strong> al usuario <strong>%s</strong> CORRECTAMENTE"
+#~ msgstr "Heeft CORRECT <strong>%s</strong> bij gebruiker <strong>%s</strong>"
+
+#~ msgid ""
+#~ "Ha FALLADO cuando ha <strong>%s</strong> al usuario <strong>%s</strong>"
+#~ msgstr ""
+#~ "NIET GELUKT om <strong>%s</strong> bij gebruiker <strong>%s</strong>"
+
+#~ msgid "No se puede reubicar este aporte!"
+#~ msgstr "Deze bijdrage kan niet verplaatst worden!"
+
+#~ msgid "Aporte reubicado"
+#~ msgstr "Bijdrage verplaatst"
+
+#~ msgid "%s ha aportado %s al proyecto %s en nombre de %s"
+#~ msgstr "%s heeft bijgedragen %s aan project %s op naam van %s"
+
+#~ msgid "Aporte reubicado correctamente"
+#~ msgstr "Bijdrage succesvol verplaatst"
+
+#~ msgid "A fallado al cambiar el estado del aporte original (%s)"
+#~ msgstr ""
+#~ "Niet gelukt om de originele status van de bijdrage (%s) aan te passen"
+
+#~ msgid "Aporte manual creado correctamente"
+#~ msgstr "Handmatige bijdrage correct aangemaakt"
+
+#~ msgid "Solo los donativos"
+#~ msgstr "Alleen donaties"
+
+#~ msgid "Solo los anónimos"
+#~ msgstr "Alleen anoniem"
+
+#~ msgid "Solo los manuales"
+#~ msgstr "Alleen handmatig"
+
+#~ msgid "Solo los de Bolsa"
+#~ msgstr "Allen die van \"Markt\""
+
+#~ msgid "Instancia de proyecto no valida"
+#~ msgstr "Project is niet in orde"
+
+#~ msgid "Preaproval paypal cancelado."
+#~ msgstr "PayPal voor-goedkeuring geweigerd."
+
+#~ msgid ""
+#~ "El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal "
+#~ "(id: %s) al proyecto %s del dia %s"
+#~ msgstr ""
+#~ "Admin %s heeft de bijdrage en voor-goedkeuring van %s van %s via PayPal "
+#~ "(id: %s) aan project %s op datum %s afgekeurd"
+
+#~ msgid "Fallo al cancelar el preapproval en paypal: "
+#~ msgstr "Niet gelukt om voor-goedkeuring bij paypall af te keuren:"
+
+#~ msgid ""
+#~ "El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal "
+#~ "(id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes "
+#~ "errores: "
+#~ msgstr ""
+#~ "Admin %s is het niet gelukt de bijdrage %s voor %s via PayPal (id: %s) "
+#~ "aan project %s op datum %s te weigeren. <br/>Heeft de volgende "
+#~ "foutmeldingen:"
+
+#~ msgid "Aporte cancelado correctamente. "
+#~ msgstr "Bijdrage succesvol geweigerd."
+
+#~ msgid ""
+#~ "El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al "
+#~ "proyecto %s del dia %s"
+#~ msgstr ""
+#~ "Admin %s heeft de heffing van een verkoper geweigerd van %s van %s via "
+#~ "verkoper (id: %s) aan project %s op datum %s"
+
+#~ msgid "Fallo en la operación. "
+#~ msgstr "Taak mislukt."
+
+#~ msgid "Cargo cancelado (admin)"
+#~ msgstr "Heffingen geweigerd (admin)"
+
+#~ msgid ""
+#~ "El proyecto no tiene cuenta paypal!!, ponersela en la seccion Contrato "
+#~ "del dashboard del autor"
+#~ msgstr ""
+#~ "Project heeft geen PayPal account!!! Voeg het toe in de sectie Contract "
+#~ "van het dashboard van de auteur."
+
+#~ msgid "proyecto sin cuenta paypal (admin)"
+#~ msgstr "Project zonder PayPal account (admin)"
+
+#~ msgid "El proyecto %s aun no ha puesto su %s !!!"
+#~ msgstr "Project %s heeft %s nog niet ingesteld!!!"
+
+#~ msgid "cuenta PayPal"
+#~ msgstr "PayPal account"
+
+#~ msgid "Cargo paypal correcto"
+#~ msgstr "Correct in rekening gebracht bij PayPal"
+
+#~ msgid ""
+#~ "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante "
+#~ "PayPal (id: %s) al proyecto %s del dia %s"
+#~ msgstr ""
+#~ "Admin %s heeft een overboeking doorgevoerd aan %s voor de bijdrage van %s "
+#~ "via PayPal (id: %s) aan project %s op datum %s"
+
+#~ msgid "Fallo al ejecutar cargo paypal: "
+#~ msgstr "Mislukte overboeking bij PayPal:"
+
+#~ msgid "Cargo sermepa correcto"
+#~ msgstr "SERPEMA (Servicaixa) overboeking was correct"
+
+#~ msgid ""
+#~ "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV "
+#~ "(id: %s) al proyecto %s del dia %s"
+#~ msgstr ""
+#~ "Admin %s heeft een overboeking uitgevoerd aan %s voor de contributie van "
+#~ "%s via verkoper (id: %s) aan project %s op datum %s"
+
+#~ msgid "Fallo al ejecutar cargo sermepa: "
+#~ msgstr "Mislukt om SERPEMA (Servicaixa) overboeking uit te voeren: "
+
+#~ msgid "Cargo ejecutado (admin)"
+#~ msgstr "Betaling uitgevoerd (admin)"
+
+#~ msgid "Recaudado"
+#~ msgstr "Verzameld"
+
+#~ msgid "Rev. PayPal"
+#~ msgstr "Rev. PayPal"
+
+#~ msgid "Rev. TPV"
+#~ msgstr "Rev. verkoper"
+
+#~ msgid "Pagos Online"
+#~ msgstr "Online betalingen"
+
+#~ msgid "No tiene espacio de blog, Contacte con nosotros"
+#~ msgstr "Je hebt geen blog, neem contact met ons op."
+
+#~ msgid "Lo sentimos, el blog para este nodo esta desactivado"
+#~ msgstr "Sorry maar het blog is uitgeschakeld voor deze node"
+
+#~ msgid "No se ha encontrado ningún blog para este nodo"
+#~ msgstr "We kunnen geen blog vinden voor deze node"
+
+#~ msgid "La entrada se ha actualizado correctamente"
+#~ msgstr "Entry is succesvol bijgewerkt"
+
+#~ msgid "Se ha añadido una nueva entrada"
+#~ msgstr "Een nieuwe entry is succesvol toegevoegd"
+
+#~ msgid "nueva entrada blog Goteo (admin)"
+#~ msgstr "Nieuwe entry op Goteo blog (admin)"
+
+#~ msgid "El admin %s ha %s en el blog Goteo la entrada \"%s\""
+#~ msgstr "Admin %s heeft %s de entry \"%s\" in het Goteo blog"
+
+#~ msgid "Ha habido algun problema al guardar los datos"
+#~ msgstr ""
+#~ "Een of ander probleem (onbekend) is opgetreden bij het opslaan van data"
+
+#~ msgid "entrada quitada (admin)"
+#~ msgstr "entry verwijderd (admin)"
+
+#~ msgid "El admin %s ha %s la entrada \"%s\" del blog de Goteo"
+#~ msgstr "Admin %s heeft %s entry \"%s\" van het Goteo blog"
+
+#~ msgid "Quitado"
+#~ msgstr "Verwijderd"
+
+#~ msgid "Entrada eliminada"
+#~ msgstr "Entry is verwijderd"
+
+#~ msgid "No se ha podido eliminar la entrada"
+#~ msgstr "Kon entry niet verwijderen"
+
+#~ msgid "Añadiendo una nueva entrada"
+#~ msgstr "Nieuwe entry toe aan het voegen"
+
+#~ msgid "La entrada esta corrupta, contacte con nosotros."
+#~ msgstr "Deze entry is stuk, neem contact met ons op."
+
+#~ msgid "Editando una entrada existente"
+#~ msgstr "bestaande entry aan het bewerken"
+
+#~ msgid "El término se ha actualizado correctamente"
+#~ msgstr "Termijn is succesvol bijgewerkt"
+
+#~ msgid "Se ha añadido un nuevo término"
+#~ msgstr "Een nieuwe termijn is toegevoegd"
+
+#~ msgid "Término eliminado"
+#~ msgstr "Termijn verwijderd"
+
+#~ msgid "No se ha podido eliminar el término"
+#~ msgstr "Termijn kon niet verwijderd worden"
+
+#~ msgid "Añadiendo un nuevo término"
+#~ msgstr "Nieuwe termijn aan het toevoegen"
+
+#~ msgid "Editando un término existente"
+#~ msgstr "Een bestaande termijn aan het bijwerken"
+
+#~ msgid "Modificado"
+#~ msgstr "Gemodificeerd"
+
+#~ msgid "Añadido"
+#~ msgstr "Toegevoegd"
+
+#~ msgid "modificacion de idea about (admin)"
+#~ msgstr "Idea About bijgewerkt (admin)"
+
+#~ msgid "El admin %s ha %s la Idea de fuerza \"%s\""
+#~ msgstr "Admin %s heeft %s het idee van sterkte \"%s\""
+
+#~ msgid "quitar de idea about (admin)"
+#~ msgstr "Idea About verwijderen(admin)"
+
+#~ msgid "Eliminado"
+#~ msgstr "Removed"
+
+#~ msgid "Noticia"
+#~ msgstr "Nieuw onderdeel"
+
+#~ msgid "nueva micronoticia (admin)"
+#~ msgstr "Nieuw microblog (admin)"
+
+#~ msgid "El admin %s ha %s la micronoticia \"%s\""
+#~ msgstr "Admin %s heeft %s het microblog \"%s\""
+
+#~ msgid "micronoticia quitada (admin)"
+#~ msgstr "microblog entry verwijderd (admin)"
+
+#~ msgid "Nueva noticia"
+#~ msgstr "Nieuw onderdeel toevoegen"
+
+#~ msgid "Nueva campaña"
+#~ msgstr "Nieuwe campagne"
+
+#~ msgid "Nuevo nodo"
+#~ msgstr "Nieuwe node"
+
+#~ msgid "Autores"
+#~ msgstr "Auteurs"
+
+#~ msgid "de proyectos que su nombre contenga"
+#~ msgstr "project wiens naam bevat"
+
+#~ msgid "de cualquier proyecto"
+#~ msgstr "van enig project"
+
+#~ msgid "en estado"
+#~ msgstr "in status"
+
+#~ msgid "en cualquier estado"
+#~ msgstr "in enige status"
+
+#~ msgid "mediante"
+#~ msgstr "via"
+
+#~ msgid "mediante cualquier metodo"
+#~ msgstr "hoe dan ook"
+
+#~ msgid "interesados en fin"
+#~ msgstr "geinteresseerd in einde"
+
+#~ msgid "que sean"
+#~ msgstr "die zijn"
+
+#~ msgid "que su nombre o email contenga"
+#~ msgstr "wiens naam of email bevat"
+
+#~ msgid "que su contraseña sea igual que su email"
+#~ msgstr "wiens password identiek is aan zijn email"
+
+#~ msgid "Fallo el SQL!!!!!"
+#~ msgstr "SQL fout!!!"
+
+#~ msgid "No se han encontrado destinatarios para "
+#~ msgstr "We hebben geen ontvangers gevonden voor"
+
+#~ msgid "Nivel de meritocracia modificado"
+#~ msgstr "Verdiensten bijgewerkt"
+
+#~ msgid "modificacion de meritocracia (admin)"
+#~ msgstr "Verdiensten bijwerken (admin)"
+
+#~ msgid "El admin %s ha %s el nivel de meritocrácia %s"
+#~ msgstr "Admin %s heeft %s verdienstenniveau %s"
+
+#~ msgid "FAQs"
+#~ msgstr "FAQs"
+
+#~ msgid "Nueva Pregunta"
+#~ msgstr "Nieuwe vraag"
+
+#~ msgid "Editando Pregunta"
+#~ msgstr "Vraag aan het bijwerken"
+
+#~ msgid "Traduciendo Pregunta"
+#~ msgstr "Vraag aan het vertalen"
+
+#~ msgid "Editando Idea"
+#~ msgstr "Idea aan het bijwerken"
+
+#~ msgid "Conteo de palabras"
+#~ msgstr "Woordtelling"
+
+#~ msgid "Listado de proyectos"
+#~ msgstr "Projectlijst"
+
+#~ msgid "Cambiando las fechas del proyecto "
+#~ msgstr "Project data aangepast"
+
+#~ msgid "Gestionando las cuentas del proyecto "
+#~ msgstr "Beheer project accounts"
+
+#~ msgid "Traducciones"
+#~ msgstr "Vertalingen"
+
+#~ msgid "Gestión de retornos colectivos cumplidos"
+#~ msgstr "Beheer van collectief uitgekeerd rendement"
+
+#~ msgid "Listado de usuarios"
+#~ msgstr "gebruikerslijst"
+
+#~ msgid "Historial envios"
+#~ msgstr "Verzendgeschiedenis"
+
+#~ msgid "Gestión de aportes y transacciones"
+#~ msgstr "Management van bijdragen en transacties"
+
+#~ msgid "Aportes a Proyectos"
+#~ msgstr "Bijdragen aan projecten"
+
+#~ msgid "Ejecución del cargo ahora mismo"
+#~ msgstr "Charges onmiddelijk uitvoeren"
+
+#~ msgid "Transacciones económicas"
+#~ msgstr "Geldelijke transacties"
+
+#~ msgid "Detalles de la transacción"
+#~ msgstr "Transactiedetails"
+
+#~ msgid "Carrusel de blog"
+#~ msgstr "Blog Carroussel"
+
+#~ msgid "Ordenando"
+#~ msgstr "Aan het sorteren"
+
+#~ msgid "Colocando Entrada en la portada"
+#~ msgstr "Entry op de voorpagina aan het plaatsen"
+
+#~ msgid "Entradas en el footer"
+#~ msgstr "Entries in voettekst"
+
+#~ msgid "Colocando Entrada en el footer"
+#~ msgstr "Entry in voettekst aan het plaatsen"
+
+#~ msgid "Convocatorias de patrocinadores"
+#~ msgstr "Vragen om Sponsors"
+
+#~ msgid "Gestión de campañas"
+#~ msgstr "Campagne Management"
+
+#~ msgid "Nueva Campaña"
+#~ msgstr "Nieuwe Campagne"
+
+#~ msgid "Editando Campaña"
+#~ msgstr "Campagne aan het bijwerken"
+
+#~ msgid "Informe de estado de la Campaña"
+#~ msgstr "Raporteer over de staat van de campagne"

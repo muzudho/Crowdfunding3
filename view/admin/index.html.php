@@ -53,8 +53,8 @@ include 'view/header.html.php';
                         <legend><?php echo $section['label'] ?></legend>
                         <ul>
                             <?php foreach ($section['options'] as $oCode=>$option) :
-                                //$hide_list = array('blog', 'texts', 'tags', 'translates', 'worth', 'news', 'banners', 'faq');
-                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && $oCode != 'faq' && !empty($option['label'])):
+                                //$hide_list = array('blog', 'texts', 'tags', 'translates', 'worth', 'news', 'banners');
+                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
                                 echo '<li><a href="/admin/'.$oCode.'">'.$option['label'].'</a></li>';
                                 endif;
                             endforeach; ?>

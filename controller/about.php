@@ -38,7 +38,7 @@ namespace Goteo\Controller {
             }
 
             // paginas especificas
-            if ($id == 'faq' || $id == 'contact') {
+            if ($id == 'contact') {
                 throw new Redirection('/'.$id, Redirection::TEMPORARY);
             }
 

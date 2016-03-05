@@ -39,7 +39,6 @@ namespace Goteo\Library {
                 'license'   => Text::_('Licencias'),
                 'category'  => Text::_('Categorías'),
                 'news'      => Text::_('Noticias'),
-                'faq'       => Text::_('Faq'),
                 'post'      => Text::_('Blog'),
                 'banner'    => Text::_('Banners'),
                 'tag'       => Text::_('Tags'),
@@ -82,10 +81,6 @@ namespace Goteo\Library {
                 'news' => array (
                     'title' => Text::_('Título'),
                     'description' => Text::_('Entradilla')
-                ),
-                'faq' => array (
-                    'title' => Text::_('Título'),
-                    'description' => Text::_('Descripción')
                 ),
                 'post' => array (
                     'title' => Text::_('Título'),

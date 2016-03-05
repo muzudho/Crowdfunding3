@@ -216,12 +216,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'error-user-password-empty', 'ja', '�
 INSERT INTO text (id, lang, text) VALUES ( 'error-user-password-invalid', 'ja', 'パスワードが短すぎます。これは、少なくとも6つの文字を有していなければなりません。' );
 INSERT INTO text (id, lang, text) VALUES ( 'error-user-wrong-password', 'ja', 'パスワードが正しくありません。' );
 INSERT INTO text (id, lang, text) VALUES ( 'explain-project-progress', 'ja', 'このグラフは、視覚的な方法であなたは、システムによって完了し、基本的な評価と一緒に入力したデータのレベルについて説明します。プロジェクトを提出することができるようにするには、少なくとも80％に達する必要があります。窶徼温度窶上昇を行う基準は、あなたが提供する関連情報、あなたが入力したメディア、画像やリンク、あなたが選択したライセンスの開放度、に関してあなたの推定値の一貫性に関連していますなどを行う必要がある作業は、プロセスをガイドします右のツールチップの利点を取ることを忘れないでください。' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-ask-question', 'ja', 'これはあなたの質問を解決しませんでしたか？私達にメッセージを送信します。' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-investors-section-header', 'ja', '共同金融について' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-main-section-header', 'ja', 'アプローチ' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-nodes-section-header', 'ja', 'ローカル・ノードについて' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-project-section-header', 'ja', 'プロジェクトについて' );
-INSERT INTO text (id, lang, text) VALUES ( 'faq-sponsor-section-header', 'ja', 'プロモーターについて' );
 INSERT INTO text (id, lang, text) VALUES ( 'fatal-error-call', 'ja', 'あなたが存在していない探しているキャンペーン' );
 INSERT INTO text (id, lang, text) VALUES ( 'fatal-error-project', 'ja', '"あなたが探しているプロジェクト...<span class=""red"">存在しない ：（</span>"' );
 INSERT INTO text (id, lang, text) VALUES ( 'fatal-error-teapot', 'ja', '"<span class=""greenblue"">恥ずかしいです...</span>予期しないエラーが発生しました"' );
@@ -314,7 +308,7 @@ INSERT INTO text (id, lang, text) VALUES ( 'guide-dashboard-user-preferences', '
 INSERT INTO text (id, lang, text) VALUES ( 'guide-dashboard-user-profile', 'ja', 'あなたは、プロジェクトや共同融資、他の誰かの作成サイト名のコミュニティに参加するためにするかどうか、私たちは、あなたが慎重にプレゼンテーションのテキストを編集することをお勧めします、とあなたが識別するとプロフィール画像だけでなく、何をすべきかについての関連リンクを含めます' );
 INSERT INTO text (id, lang, text) VALUES ( 'guide-project-comment', 'ja', 'ガイドプロジェクトのコメント' );
 INSERT INTO text (id, lang, text) VALUES ( 'guide-project-contract-information', 'ja', '<strong>残された唯一の事は、あなたのプロジェクトが協調融資とサイト名を介してサポートしたい場合は、あなたのデータを記入することです。</strong><br><br>私たちはあなたが必要な資金を得ればあなたに連絡し、預金をすることができることができるように、このセクションの情報が必要です。団体の場合は、我々は組織の代表が正式に（団体の場合には、例えば、法令の方法や社長からOKと秘書の証明書によって）認定することをお勧めします。' );
-INSERT INTO text (id, lang, text) VALUES ( 'guide-project-costs', 'ja', '"<strong>このセクションでは、プロジェクトの見積費用に基づいて、短い事業計画を記入する必要があります。</strong><br><br>あなたは、タスク、インフラストラクチャー、または材料によって番号を打破する必要があります。コストについて現実的であることを試してみて、あなたが各1を必要とする理由を簡単に説明します。原則として、プロジェクトの大部分は、プロジェクトを推進し、第三者に委託されていない個人またはチームによって行われなければならないことを、覚えておいてください。計算のために、心の中でも約9％になるサービスのサイト名を提供するため、トランザクションのための手数料を、（持っています<a href=""/faq/sponsor#q98"" target=""new"">+私たちのよくある質問での情報</a>). <br><br><strong>非常に重要な</strong>：サイト名では、我々は必要と補足コスト区別します。後者は第二のキャンペーンの一環として得ることができるが、前者は完全に、資金を得るためにカバーしなければならない、プロジェクトが進行中である一度最適化コスト（プロモーション、デザイン、アウトリーチ、追加の単位など）をカバーするために、これらの補足的な費用は、プロジェクトの総費用の半分以上にすることはできません。"' );
+INSERT INTO text (id, lang, text) VALUES ( 'guide-project-costs', 'ja', '"<strong>このセクションでは、プロジェクトの見積費用に基づいて、短い事業計画を記入する必要があります。</strong><br><br>あなたは、タスク、インフラストラクチャー、または材料によって番号を打破する必要があります。コストについて現実的であることを試してみて、あなたが各1を必要とする理由を簡単に説明します。原則として、プロジェクトの大部分は、プロジェクトを推進し、第三者に委託されていない個人またはチームによって行われなければならないことを、覚えておいてください。計算のために、心の中でも約9％になるサービスのサイト名を提供するため、トランザクションのための手数料を. <br><br><strong>非常に重要な</strong>：サイト名では、我々は必要と補足コスト区別します。後者は第二のキャンペーンの一環として得ることができるが、前者は完全に、資金を得るためにカバーしなければならない、プロジェクトが進行中である一度最適化コスト（プロモーション、デザイン、アウトリーチ、追加の単位など）をカバーするために、これらの補足的な費用は、プロジェクトの総費用の半分以上にすることはできません。"' );
 INSERT INTO text (id, lang, text) VALUES ( 'guide-project-description', 'ja', '<strong>プロジェクトの概念的な側面を説明するには、このセクションを使用</strong><br><br>これは、サイトへの訪問者が見ることを第一の情報です。そのため、我々は編集と回避タイプミスに注意しているお勧めします。あなたは、ビデオや画像のための1つを含む必要なフィールドがあることがわかります。我々は、これらのサイト名を経由して資金を調達するためのキャンペーンを開始するために不可欠であると考えてい<br>ログイン最も価値のあるもの、あまりにもサイト名であることに注意してください：あなたのプロジェクトが社会にもたらすの無料情報や一般的な知識を、独創性は、欲望は、それを明確に推進チームは、プロジェクトが実現にもたらす能力と経験を持っていることを作り、興味がある人の広いコミュニティを引き付ける力を社会的な必要性に答えます。だから、私たちに、これらの点のすべての情報を与えることを忘れないでください。' );
 INSERT INTO text (id, lang, text) VALUES ( 'guide-project-error-mandatories', 'ja', 'いくつかの必須フィールドが欠落しています' );
 INSERT INTO text (id, lang, text) VALUES ( 'guide-project-preview', 'ja', '<strong>これは、プロジェクトに関するすべての情報をまとめたものです。</strong><br><br>いずれかの改善を行うことができるかどうかを確認するために、各フィールドに記載された情報を確認し、準備ができたときに、（下の送信ボタンをクリックして）私たちにプロジェクトを送るので、我々はそれを評価することができます。提案が送信されると、それ以上の変更は許可されません。<br><br>我々は唯一公開されているものについての注意やプロモーションの一定量を保証するために、毎月いくつかのプロジェクトを選択することができます注意してください。あなたは、あなたのプロジェクトが提案された目標を達成するのに役立ちます次のステップだけでなく、いくつかの推奨事項を示しているであろう、すぐにこの情報のすべてのメッセージを受信します。' );
@@ -682,7 +676,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'regular-edit', 'ja', '編集' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-facebook', 'ja', 'フェイスブック' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-facebook-url', 'ja', 'http://www.facebook.com/' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-fail_mark', 'ja', 'クローズ' );
-INSERT INTO text (id, lang, text) VALUES ( 'regular-faq', 'ja', 'よくある質問' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-first', 'ja', '最初' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-footer-contact', 'ja', '接触' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-footer-legal', 'ja', '法律用語' );
@@ -695,7 +688,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'regular-gotit_mark', 'ja', '助成�
 INSERT INTO text (id, lang, text) VALUES ( 'regular-go_up', 'ja', 'アップロード' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-header-about', 'ja', 'サイト名について' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-header-blog', 'ja', 'ブログ' );
-INSERT INTO text (id, lang, text) VALUES ( 'regular-header-faq', 'ja', 'よくある質問' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-header-glossary', 'ja', '用語集はサイト名で使用されます' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-hello', 'ja', 'こんにちは' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-home', 'ja', '開始' );

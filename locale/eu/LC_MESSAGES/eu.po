@@ -1,11 +1,27 @@
-msgid "Guardar"
-msgstr "Gorde"
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
 
 msgid "Guardar"
 msgstr "Gorde"
 
-msgid "El usuario se ha registrado correctamente. A continuación recibirás un mensaje de correo para activarlo."
-msgstr "Erabiltzailea ondo erregistratu da. Jarraian mezu bat jasoko duzu korreoan martxan jartzeko."
+msgid ""
+"El usuario se ha registrado correctamente. A continuación recibirás un mensaje "
+"de correo para activarlo."
+msgstr ""
+"Erabiltzailea ondo erregistratu da. Jarraian mezu bat jasoko duzu korreoan "
+"martxan jartzeko."
 
 msgid "La entrada se ha actualizado correctamente"
 msgstr "Sarrera ondo eguneratu izan da"
@@ -13,32 +29,21 @@ msgstr "Sarrera ondo eguneratu izan da"
 msgid "Se ha añadido una nueva entrada"
 msgstr "Sarrera berria gehitu izan da"
 
+#, fuzzy
 msgid "Ha habido algun problema al guardar los datos"
-msgstr "Nolabaiteko arazoa gertatu da, datuak gordetzerakoan"
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nolabaiteko arazoa gertatu da, datuak gordetzerakoan\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nolabaiteko arazoa gertatu datuak gordetzerakoan\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nolabaiteko arazoa gertatu da, datuak gordetzerakoan"
 
 msgid "No se ha encontrado la entrada"
 msgstr "Ez da sarrerarik aurkitu"
 
 msgid "La entrada está corrupta, contacta con nosotros"
 msgstr "Sarrera apurtuta dago, jarri zaitez harremanetan gurekin"
-
-msgid "La entrada está corrupta, contacta con nosotros"
-msgstr "Sarrera apurtuta dago, jarri zaitez harremanetan gurekin"
-
-msgid "La entrada está corrupta, contacta con nosotros"
-msgstr "Sarrera apurtuta dago, jarri zaitez harremanetan gurekin"
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Guardar"
-msgstr "Gorde"
 
 msgid "Debes iniciar sesión para interactuar con la comunidad de Goteo"
 msgstr "Saioa hasi behar duzu Goteo komunitatearekin elkarri eragiteko"
@@ -67,13 +72,11 @@ msgstr "Ezin duzu email kanpoa hutsik utzi"
 msgid "El email que has puesto no es válido"
 msgstr "Jarri duzun emaila ez da zuzena"
 
-msgid "No puedes dejar el campo de email vacío"
-msgstr "Ezin duzu email kanpoa hutsik utzi"
-
 msgid "La confirmación de correo electrónico no coincide"
 msgstr "Pasahitzaren baieztapena ez dator bat"
 
-msgid "Te hemos enviado un email para que confirmes el cambio de dirección electrónica"
+msgid ""
+"Te hemos enviado un email para que confirmes el cambio de dirección electrónica"
 msgstr "Emaila bidali dizugu helbide elektronikoaren aldaketa baieztatu dezazun"
 
 msgid "No has puesto la contraseña"
@@ -82,23 +85,14 @@ msgstr "Ez duzu pasahitza jarri"
 msgid "La contraseña no es correcta"
 msgstr "Pasahitza ez da zuzena"
 
-msgid "No has puesto la contraseña"
-msgstr "Ez duzu pasahitza jarri"
-
 msgid "La contraseña es demasiado corta"
 msgstr "Pasahitza laburregia da"
-
-msgid "No has puesto la contraseña"
-msgstr "Ez duzu pasahitza jarri"
 
 msgid "La confirmación de contraseña no coincide"
 msgstr "Pasahitzaren baieztapena ez dator bat"
 
 msgid "Has cambiado tu contraseña"
 msgstr "Zure pasahitza aldatu duzu"
-
-msgid "Ha habido algun problema al guardar los datos"
-msgstr "Nolabaiteko arazoa gertatu datuak gordetzerakoan"
 
 msgid "Tus preferencias de notificación se han guardado correctamente"
 msgstr "Zure jakinarazi preferentziak ondo gordeak izan dira"
@@ -112,7 +106,8 @@ msgstr "Barkatu, oraindik ezin da proiektu honetan berririk argitaratu..."
 msgid "Contacta con nosotr*s"
 msgstr "Gurekin harremanetan jarri"
 
-msgid "Lo sentimos, la publicación de novedades en este proyecto está desactivada"
+msgid ""
+"Lo sentimos, la publicación de novedades en este proyecto está desactivada"
 msgstr "Barkatu, baina berrien argitalpena proiektu honetan desaktibaturik dago"
 
 msgid "No se ha encontrado ningún blog para este proyecto"
@@ -127,26 +122,8 @@ msgstr "Ez da jasotzailerik aurkitu"
 msgid "todos/algunos de"
 msgstr "guztiak/batzuk"
 
-msgid "La entrada se ha actualizado correctamente"
-msgstr "Sarrera ondo eguneratu izan da"
-
-msgid "Se ha añadido una nueva entrada"
-msgstr "Sarrera berria gehitu izan da"
-
 msgid "Novedades"
 msgstr "Berriak"
-
-msgid "Novedades"
-msgstr "Berriak"
-
-msgid "Ha habido algun problema al guardar los datos"
-msgstr "Nolabaiteko arazoa gertatu da, datuak gordetzerakoan"
-
-msgid "No se ha encontrado la entrada"
-msgstr "Ez da sarrerarik aurkitu"
-
-msgid "La entrada está corrupta, contacta con nosotros"
-msgstr "Sarrera apurtuta dago, jarri zaitez harremanetan gurekin"
 
 msgid "Entrada eliminada"
 msgstr "Sarrera ezabatua izan da"
@@ -181,12 +158,6 @@ msgstr "Soslai publikoa"
 msgid "Mis proyectos"
 msgstr "Nire proiektuak"
 
-msgid "Resumen"
-msgstr "Laburpena"
-
-msgid "Novedades"
-msgstr "Berriak"
-
 msgid "Widget"
 msgstr "Widget"
 
@@ -196,8 +167,25 @@ msgstr "Banketxeko kontua"
 msgid "Gestión cofinanciadores"
 msgstr "Finantzakideen kudeaketa"
 
+#, fuzzy
 msgid "Colaboraciones"
-msgstr "Kolaborazioak"
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Kolaborazioak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Elkarlanak"
 
 msgid "Mis Traducciones"
 msgstr "Nire itzulpenak"
@@ -214,32 +202,11 @@ msgstr "Balioa"
 msgid "Retorno"
 msgstr "Itzulera"
 
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "Novedades"
-msgstr "Berriak"
-
-msgid "Mis Traducciones"
-msgstr "Nire itzulpenak"
-
-msgid "Perfil"
-msgstr "Soslaia"
-
-msgid "Administración"
-msgstr "Administrazioa"
-
 msgid "Administración"
 msgstr "Administrazioa"
 
 msgid "Revisión"
 msgstr "Berraztertze"
-
-msgid "Revisión"
-msgstr "Berraztertze"
-
-msgid "Traducción"
-msgstr "Itzulpena"
 
 msgid "Traducción"
 msgstr "Itzulpena"
@@ -262,14 +229,23 @@ msgstr "Artxibatuak"
 msgid "Tienes que indicar el importe"
 msgstr "Zenbatekoa ipini behar duzu"
 
-msgid "Eres el autor del proyecto, no puedes aportar personalmente a tu propio proyecto."
-msgstr "Proiektuaren sortzailea zara, ezin duzu zu legez zure proiektura dirua eman."
+msgid ""
+"Eres el autor del proyecto, no puedes aportar personalmente a tu propio proyecto."
+msgstr ""
+"Proiektuaren sortzailea zara, ezin duzu zu legez zure proiektura dirua eman."
 
-msgid "Ha ocurrido un error fatal al conectar con el TPV. Se ha reportado la incidencia, disculpa las molestias."
-msgstr "Errore larria gertatu da TPV-arekin kontaktatzerakoan, barkatu eragozpenak."
+msgid ""
+"Ha ocurrido un error fatal al conectar con el TPV. Se ha reportado la "
+"incidencia, disculpa las molestias."
+msgstr ""
+"Errore larria gertatu da TPV-arekin kontaktatzerakoan, barkatu eragozpenak."
 
-msgid "Ha ocurrido un error fatal al conectar con PayPal. Se ha reportado la incidencia, disculpa las molestias."
-msgstr "Errore larria gertatu da PayPal-ekin kontaktatzerakoan. Gertakariaren berri eman izan da, barkatu eragozpenak."
+msgid ""
+"Ha ocurrido un error fatal al conectar con PayPal. Se ha reportado la "
+"incidencia, disculpa las molestias."
+msgstr ""
+"Errore larria gertatu da PayPal-ekin kontaktatzerakoan. Gertakariaren berri eman "
+"izan da, barkatu eragozpenak."
 
 msgid "Ha habido algun problema al inicializar la transacción"
 msgstr "Nolabaiteko errorea gertatu da transakzio hasterakoan"
@@ -277,11 +253,9 @@ msgstr "Nolabaiteko errorea gertatu da transakzio hasterakoan"
 msgid "No se han recibido los datos necesarios"
 msgstr "Behar diren datuak ez dira jaso"
 
-msgid "No se han recibido los datos necesarios"
-msgstr "Behar diren datuak ez dira jaso"
-
 msgid "Renuncio a una recompensa individual, solo quiero ayudar al proyecto"
-msgstr "Norbanako sari bateri uko egin diozu, proiektua lagundu besterik ez duzu nahi"
+msgstr ""
+"Norbanako sari bateri uko egin diozu, proiektua lagundu besterik ez duzu nahi"
 
 msgid "Mensaje de agradecimiento enviado correctamente"
 msgstr "Eskertzeko mezua ondo bidali da"
@@ -298,21 +272,6 @@ msgstr "Oraindik ezin da mezurik proiektura bidali"
 msgid "Mensajes"
 msgstr "Mezuak"
 
-msgid "Mensajes"
-msgstr "Mezuak"
-
-msgid "Mensajes"
-msgstr "Mezuak"
-
-msgid "Mensajes"
-msgstr "Mezuak"
-
-msgid "Mensaje enviado correctamente"
-msgstr "Mezua ondo bidali da"
-
-msgid "Ha habido algun error al enviar el mensaje"
-msgstr "Nolabaiteko errorea gertatu da mezua bidaltzerakoan"
-
 msgid "Mensaje enviado correctamente"
 msgstr "Mezua ondo bidali da"
 
@@ -324,9 +283,6 @@ msgstr "Aurreikusi"
 
 msgid "Proyecto / Previsualización"
 msgstr "Proiektua / Aurreikusi"
-
-msgid "Perfil"
-msgstr "Soslaia"
 
 msgid "Paso 1: Usuario / Perfil"
 msgstr "1. urratsa: Erabiltzailea / Soslaia"
@@ -337,35 +293,17 @@ msgstr "Bultzataile"
 msgid "Paso 2: Datos personales"
 msgstr "2. urratsa: norbanakoaren datuak"
 
-msgid "Descripción"
-msgstr "Deskribapena"
-
 msgid "Paso 3: Descripción del proyecto"
 msgstr "3. urratsa: proiektuaren deskribapena"
-
-msgid "Costes"
-msgstr "Balioa"
 
 msgid "Paso 4: Proyecto / Costes"
 msgstr "4. urratsa: Proiektua / Gastuak"
 
-msgid "Retorno"
-msgstr "Itzulera"
-
 msgid "Paso 5: Proyecto / Retornos"
 msgstr "5. urratsa: Proiektua / Itzulerak"
 
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
 msgid "Paso 6: Proyecto / Colaboraciones"
 msgstr "6. urratsa: Proiektua / Elkarlanak"
-
-msgid "Previsualización"
-msgstr "Aurreikusi"
-
-msgid "Proyecto / Previsualización"
-msgstr "Proiektua / Aurreikusi"
 
 msgid "Mensaje de solicitud de revisión enviado correctamente"
 msgstr "Aztertzeko eskakizun mezua  ondo bidali da"
@@ -377,7 +315,8 @@ msgid "Mensaje de confirmación de recepción para revisión enviado correctamen
 msgstr "Aztertzeko jasotako baieztapen mezua ondo bidali da"
 
 msgid "Ha habido algún error al enviar el mensaje de confirmación de recepción"
-msgstr "Nolabaiteko errorea gertatu da jasotako baieztapenaren mezua bidaltzerakoan"
+msgstr ""
+"Nolabaiteko errorea gertatu da jasotako baieztapenaren mezua bidaltzerakoan"
 
 msgid "Todos los campos obligatorios se han cumplimentado"
 msgstr "Bete beharreko kanpo guztiak bete egin dira"
@@ -397,20 +336,18 @@ msgstr "Saioa hasi behar duzu finantzakideak ikusteko"
 msgid "Debes iniciar sesión para cofinanciar un proyecto"
 msgstr "Saioa hasi behar duzu proiektu bat aldi berean finantzatzeko"
 
-msgid "Debes iniciar sesión para interactuar con la comunidad de Goteo"
-msgstr "Saioa hasi behar duzu Goteo komunitatearekin elkarri eragiteko"
-
 msgid "El proyecto ya no está en campaña"
 msgstr "Proiektua ez dago kanpainan"
-
-msgid "Aun no se pueden enviar mensajes al proyecto"
-msgstr "Oraindik ezin da mezurik proiektura bidali"
 
 msgid "Has dado por terminada esta revisión, no puedes realizar más cambios"
 msgstr "Azterketa hau bukatutzat eman duzu, ezin duzu aldaketa gehiagorik egin."
 
-msgid "Los criterios y los campos de evaluación / mejoras se guardan automáticamente al modificarse"
-msgstr "Irizpideak eta ebaluatzeko / hobetzeko kanpoak automatikoki gordetzen dira aldatzerakoan "
+msgid ""
+"Los criterios y los campos de evaluación / mejoras se guardan automáticamente "
+"al modificarse"
+msgstr ""
+"Irizpideak eta ebaluatzeko / hobetzeko kanpoak automatikoki gordetzen dira "
+"aldatzerakoan "
 
 msgid "Error de acceso"
 msgstr "Sartzean errorea"
@@ -421,47 +358,11 @@ msgstr "Email egiaztapena ez dator bat"
 msgid "La comprobación de contraseña no coincide"
 msgstr "Pasahitz egiaztapena ez dator bat"
 
-msgid "El usuario se ha registrado correctamente. A continuación recibirás un mensaje de correo para activarlo."
-msgstr "Erabiltzailea ondo erregistratu da. Jarraian mezu bat jasoko duzu korreoan martxan jartzeko."
-
-msgid "No puedes dejar el campo de email vacío"
-msgstr "Ezin duzu email kanpoa hutsik utzi"
-
-msgid "El email que has puesto no es válido"
-msgstr "Jarri duzun emaila ez da zuzena"
-
-msgid "No puedes dejar el campo de email vacío"
-msgstr "Ezin duzu email kanpoa hutsik utzi"
-
-msgid "La confirmación de correo electrónico no coincide"
-msgstr "Pasahitzaren baieztapena ez dator bat"
-
-msgid "No has puesto la contraseña"
-msgstr "Ez duzu pasahitza jarri"
-
-msgid "La contraseña no es correcta"
-msgstr "Pasahitza ez da zuzena"
-
-msgid "No has puesto la contraseña"
-msgstr "Ez duzu pasahitza jarri"
-
-msgid "La contraseña es demasiado corta"
-msgstr "Pasahitza laburregia da"
-
-msgid "No has puesto la contraseña"
-msgstr "Ez duzu pasahitza jarri"
-
-msgid "La confirmación de contraseña no coincide"
-msgstr "Pasahitzaren baieztapena ez dator bat"
-
 msgid "Debes iniciar sesión para enviar mensajes"
 msgstr "Saioa hasi behar duzu mezuak bidaltzeko"
 
 msgid "Debes iniciar sesión para ver esta página"
 msgstr "Saioa hasi behar duzu web orri hau ikusi ahal izateko"
-
-msgid "Debes iniciar sesión para ver los cofinanciadores"
-msgstr "Saioa hasi behar duzu finantzakideak ikusteko"
 
 msgid "La cuenta de usuario se ha activado correctamente"
 msgstr "Erabiltzaile kontuan ondo martxan jarri da"
@@ -478,14 +379,15 @@ msgstr "Emaila ondo aldatua izan da ;)"
 msgid "Error al cambiar el email"
 msgstr "Errorea emaila aldatzerakoan"
 
-msgid "Error al cambiar el email"
-msgstr "Errorea emaila aldatzerakoan"
-
 msgid "El código de recuperación de contraseña no es válido"
 msgstr "Pasahitza berreskuratzeko kodea ez da zuzena"
 
-msgid "Te hemos enviado un email para reestablecer la contraseña de tu cuenta. Verifica también la carpeta de correo no deseado o spam."
-msgstr "Zure kontuan pasahitza berripintzeko emaila bidali dizuegu. Ikusi spam eta nahi ezkoen karpetak ere."
+msgid ""
+"Te hemos enviado un email para reestablecer la contraseña de tu cuenta. "
+"Verifica también la carpeta de correo no deseado o spam."
+msgstr ""
+"Zure kontuan pasahitza berripintzeko emaila bidali dizuegu. Ikusi spam eta nahi "
+"ezkoen karpetak ere."
 
 msgid "No se puede recuperar la contraseña de ninguna cuenta con estos datos"
 msgstr "Ezin da datu hauekin pasahitzik berreskuratu inongo kontutik"
@@ -493,35 +395,45 @@ msgstr "Ezin da datu hauekin pasahitzik berreskuratu inongo kontutik"
 msgid "La cuenta se ha dado de baja correctamente"
 msgstr "Harpidetza uzteko prozesua ondo bukatu da"
 
-msgid "No hemos podido completar el proceso para darte de baja. Por favor, contáctanos a hola@goteo.org"
-msgstr "Harpidetza uzteko prozesua ezin izan da bete. Kontakta ezazu gurekin hola@goteo.org helbidea bitartez"
+msgid ""
+"No hemos podido completar el proceso para darte de baja. Por favor, contáctanos "
+"a hola@goteo.org"
+msgstr ""
+"Harpidetza uzteko prozesua ezin izan da bete. Kontakta ezazu gurekin hola@goteo."
+"org helbidea bitartez"
 
 msgid "El código para completar el proceso de baja no es válido"
 msgstr "Harpidetza uzteko kodea ez da zuzena"
 
-msgid "Te hemos enviado un email para completar el proceso de baja. Verifica también la carpeta de correo no deseado o spam."
-msgstr "Harpidetza utzi prozesua betetzeko emaila bidali dizuegu. Ikusi spam eta nahi ezkoen karpetak ere."
+msgid ""
+"Te hemos enviado un email para completar el proceso de baja. Verifica también "
+"la carpeta de correo no deseado o spam."
+msgstr ""
+"Harpidetza utzi prozesua betetzeko emaila bidali dizuegu. Ikusi spam eta nahi "
+"ezkoen karpetak ere."
 
-msgid "No hemos encontrado ninguna cuenta con este email en nuestra base de datos para darla de baja"
-msgstr "Harpidetza uzteko email hori daukan konturil ez dugu aurkitu gure datu basean"
+msgid ""
+"No hemos encontrado ninguna cuenta con este email en nuestra base de datos para "
+"darla de baja"
+msgstr ""
+"Harpidetza uzteko email hori daukan konturil ez dugu aurkitu gure datu basean"
 
 msgid "Debes iniciar sesión o solicitar permisos para acceder a esa sección"
-msgstr "Saioa hasi behar duzu edo atal horretara sartzeko baimena eskatu behar duzu"
+msgstr ""
+"Saioa hasi behar duzu edo atal horretara sartzeko baimena eskatu behar duzu"
 
-msgid "segundo-segundos_minuto-minutos_hora-horas_día-días_semana-semanas_mes-meses_año-años_década-décadas"
-msgstr "segundo-segundoak_minutu-minutuak_hordua-horduak_egun-egunak_aste-asteak_hil-hileak_urte-urteak_hamarkada-hamarkadak"
+msgid ""
+"segundo-segundos_minuto-minutos_hora-horas_día-días_semana-semanas_mes-meses_a�"
+"�o-años_década-décadas"
+msgstr ""
+"segundo-segundoak_minutu-minutuak_hordua-horduak_egun-egunak_aste-asteak_hil-"
+"hileak_urte-urteak_hamarkada-hamarkadak"
 
 msgid "nada"
 msgstr "ezer ez"
 
 msgid "Primera"
 msgstr "Lehenengoa"
-
-msgid "Primera"
-msgstr "Lehenengoa"
-
-msgid "Última"
-msgstr "Azkenengoa"
 
 msgid "Última"
 msgstr "Azkenengoa"
@@ -568,9 +480,6 @@ msgstr "Irudia handiegia da"
 msgid "Error en el tamaño del archivo"
 msgstr "Errorea artxiboaren tamainan"
 
-msgid "Anónimo"
-msgstr "Ezezaguna"
-
 msgid "Tarea"
 msgstr "Eginkizuna"
 
@@ -580,23 +489,28 @@ msgstr "Azpiegitura"
 msgid "Material"
 msgstr "Materiala"
 
-msgid "Tarea"
-msgstr "Eginkizuna"
-
 msgid "Préstamo"
 msgstr "Mailegua"
 
 msgid "Fallo al subir la imagen"
 msgstr "Akatsa irudia igotzerakoan"
 
-msgid "Pon tu nombre completo para mejorar la valoración del proyecto de cara a determinar si publicarlo en Goteo."
-msgstr "Zure izena idatzi proiektuaren balorazioa hobetzeko, eta Goteo-n argitaratuko den ala ez jakiteko."
+msgid ""
+"Pon tu nombre completo para mejorar la valoración del proyecto de cara a "
+"determinar si publicarlo en Goteo."
+msgstr ""
+"Zure izena idatzi proiektuaren balorazioa hobetzeko, eta Goteo-n argitaratuko "
+"den ala ez jakiteko."
 
 msgid "El lugar de residencia del usuario no es válido"
 msgstr "Erabiltzailearen bizilekua ez da zuzena"
 
-msgid "Cuenta algo sobre ti, para mejorar la valoración del proyecto de cara a determinar si publicarlo en Goteo."
-msgstr "Konta ezazu zeozer zeuri buruz, proiektuaren balorazioa hobetzeko eta horrela Goteo-n argitaratua izango den ala ez jakiteko."
+msgid ""
+"Cuenta algo sobre ti, para mejorar la valoración del proyecto de cara a "
+"determinar si publicarlo en Goteo."
+msgstr ""
+"Konta ezazu zeozer zeuri buruz, proiektuaren balorazioa hobetzeko eta horrela "
+"Goteo-n argitaratua izango den ala ez jakiteko."
 
 msgid "Es recomendable indicar alguna web"
 msgstr "Gomendiozkoa da web orriren baten bat aipatzea"
@@ -610,7 +524,9 @@ msgstr "Erroreren bat dago idatzitako URL helbidean"
 msgid "Es obligatorio poner el nombre de la/el responsable del proyecto"
 msgstr "Proiektuaren erantzulearen izena idaztea derrigorrekoa da."
 
-msgid "Es obligatorio poner el documento de identificación de la/el responsable del proyecto"
+msgid ""
+"Es obligatorio poner el documento de identificación de la/el responsable del "
+"proyecto"
 msgstr "Proiektuaren erantzulearen NAN zenbakia idaztea derrigorrekoa da"
 
 msgid "El NIF no es correcto."
@@ -622,8 +538,12 @@ msgstr "Proiektuaren erantzulearen emaila idaztea derrigorrekoa da."
 msgid "La dirección de email no es correcta"
 msgstr "Email helbidea ez da zuzena"
 
-msgid "Es obligatorio poner el cargo que tienes dentro la organización que vas a representar"
-msgstr "Errepresentatuko duzun erakundearen barruan izango duzun karguaren izena idaztea derrigorrekoa da"
+msgid ""
+"Es obligatorio poner el cargo que tienes dentro la organización que vas a "
+"representar"
+msgstr ""
+"Errepresentatuko duzun erakundearen barruan izango duzun karguaren izena idaztea "
+"derrigorrekoa da"
 
 msgid "Es obligatorio poner el nombre de la organización"
 msgstr "Erakundearen izena idaztea derrigorrekoa da."
@@ -649,7 +569,8 @@ msgstr "Proiektuaren erantzulearen helbideo idaztea derrigorrekoa da."
 msgid "El código postal de la/el responsable del proyecto es obligatorio"
 msgstr "Proiektuaren erantzulearen posta kodea derrigorrekoa da"
 
-msgid "Es obligatorio poner el lugar de residencia de la/el responsable del proyecto"
+msgid ""
+"Es obligatorio poner el lugar de residencia de la/el responsable del proyecto"
 msgstr "Proiektuaren erantzulearen bizilekua idaztea derrigorrekoa da."
 
 msgid "El país de la/el responsable del proyecto es obligatorio"
@@ -679,8 +600,12 @@ msgstr "Proiektuaren deskribapenean derrigorrekoa da motibazioa azaltzea"
 msgid "Es obligatorio elegir al menos una categoria para el proyecto."
 msgstr "Proiektuarentzat kategoria bat aukeratzea gutxienez derrigorrekoa da."
 
-msgid "Recomendamos poner un vídeo para mejorar la valoración del proyecto a la hora de decidir si publicarlo o no en Goteo."
-msgstr "Bideoa jartzea proiektuaren balorazioa hobetzeko gomendatzen dugu, Goteo-n argitaratzeko erabakitzeko orduan."
+msgid ""
+"Recomendamos poner un vídeo para mejorar la valoración del proyecto a la hora "
+"de decidir si publicarlo o no en Goteo."
+msgstr ""
+"Bideoa jartzea proiektuaren balorazioa hobetzeko gomendatzen dugu, Goteo-n "
+"argitaratzeko erabakitzeko orduan."
 
 msgid "Es obligatorio poner el alcance potencial del proyecto"
 msgstr "Proiektuaren norainoko ahalmena ipintzea derrigorrekoa da."
@@ -709,8 +634,12 @@ msgstr "Informazio baten bat falta da gastuen banakapenean"
 msgid "Es obligatorio especificar algún coste"
 msgstr "Derrigorrekoa da gastu baten bat zehaztea"
 
-msgid "El coste óptimo no puede superar en más de un 50% al coste mínimo. O subes los costes imprescindibles o bajas los costes adicionales.\r\n"
-msgstr "Gastu hobezina ezin da 50%a baino gehiago gutxiengo gastuarekin konparatuz. Funtsezko gastuak igo ala ez funtsezko gastuak jaitsi."
+msgid ""
+"El coste óptimo no puede superar en más de un 50% al coste mínimo. O subes los "
+"costes imprescindibles o bajas los costes adicionales.\r\n"
+msgstr ""
+"Gastu hobezina ezin da 50%a baino gehiago gutxiengo gastuarekin konparatuz. "
+"Funtsezko gastuak igo ala ez funtsezko gastuak jaitsi.\n"
 
 msgid "Es obligatorio especificar si cuentas con otros recursos o no"
 msgstr "Derrigorrekoa da bestelako baliabideak dituzun ala ez zehaztea"
@@ -793,20 +722,39 @@ msgstr "Itzulera osatuta"
 msgid "Archivado"
 msgstr "Gordetuta"
 
-msgid "Finalmente hemos desestimado la propuesta para publicarla en Goteo, te invitamos a intentarlo con otra idea o concepto."
-msgstr "Azkenengoz zure proposamena Goteo-n argitatzeko ezeztatu dugu, baina beste ideia edo kontzeptu batekin saiatzera gonbidapena luzatzen dizugu."
+msgid ""
+"Finalmente hemos desestimado la propuesta para publicarla en Goteo, te invitamos "
+"a intentarlo con otra idea o concepto."
+msgstr ""
+"Azkenengoz zure proposamena Goteo-n argitatzeko ezeztatu dugu, baina beste ideia "
+"edo kontzeptu batekin saiatzera gonbidapena luzatzen dizugu."
 
-msgid "Cuando lo tengas listo mándalo a revisión. Necesitas llegar a un mínimo de información sobre el proyecto en el formulario."
-msgstr "Prest daukazunean aztertzera bidali ezazu. Proiektuari buruzko informazio minimoa sartu behar duzu formulario honen bitartez."
+msgid ""
+"Cuando lo tengas listo mándalo a revisión. Necesitas llegar a un mínimo de "
+"información sobre el proyecto en el formulario."
+msgstr ""
+"Prest daukazunean aztertzera bidali ezazu. Proiektuari buruzko informazio "
+"minimoa sartu behar duzu formulario honen bitartez."
 
-msgid "En breve nos pondremos en contacto contigo respecto al proyecto, una vez se lleve a cabo el proceso de revisión. A continuación lo publicaremos o bien te sugeriremos cosas para mejorarlo."
-msgstr "Proiektua aztertu ondoren, zurekin laster harremanetan jarriko gara. Argitaratuko dugu edo gauza batzuk hobetzeko gomendatuko dizugu."
+msgid ""
+"En breve nos pondremos en contacto contigo respecto al proyecto, una vez se "
+"lleve a cabo el proceso de revisión. A continuación lo publicaremos o bien te "
+"sugeriremos cosas para mejorarlo."
+msgstr ""
+"Proiektua aztertu ondoren, zurekin laster harremanetan jarriko gara. "
+"Argitaratuko dugu edo gauza batzuk hobetzeko gomendatuko dizugu."
 
 msgid "Difunde tu proyecto, ayuda a que consiga el máximo de aportaciones!"
-msgstr "Zabaldu zure proiektua eta saiatu zaitez ahalik eta diru laguntza gehien jasotzea!"
+msgstr ""
+"Zabaldu zure proiektua eta saiatu zaitez ahalik eta diru laguntza gehien "
+"jasotzea!"
 
-msgid "Has conseguido el mínimo o más en aportes de cofinanciación para el proyecto. Enseguida te contactaremos para hablar de dinero :)"
-msgstr "Proiektua funtsezko aldi bereko finantzaketa edo gehiago lortu duzu. Laster diruaren inguruan hitz egiteko zurekin harremanetan jarriko gara :)"
+msgid ""
+"Has conseguido el mínimo o más en aportes de cofinanciación para el proyecto. "
+"Enseguida te contactaremos para hablar de dinero :)"
+msgstr ""
+"Proiektua funtsezko aldi bereko finantzaketa edo gehiago lortu duzu. Laster "
+"diruaren inguruan hitz egiteko zurekin harremanetan jarriko gara :)"
 
 msgid "Has cumplido con los retornos :) Gracias por tu participación!"
 msgstr "Itzulerekin bete duzu :) Eskerrik asko parte hartzeagatik!"
@@ -814,8 +762,12 @@ msgstr "Itzulerekin bete duzu :) Eskerrik asko parte hartzeagatik!"
 msgid "No lo conseguiste :( Trata de mejorarlo e inténtalo de nuevo!"
 msgstr "Ez duzu lortu :( Hobetu eta saia zaitez berriro!"
 
-msgid "Mensaje de activación de cuenta enviado. Si no está en tu buzón de correo, revisa la carpeta de /Spam"
-msgstr "Kontua martxan jartzeko mezua bidali da. Zure postontzian ez badago, aztertu /Spam karpeta"
+msgid ""
+"Mensaje de activación de cuenta enviado. Si no está en tu buzón de correo, "
+"revisa la carpeta de /Spam"
+msgstr ""
+"Kontua martxan jartzeko mezua bidali da. Zure postontzian ez badago, aztertu /"
+"Spam karpeta"
 
 msgid "Es obligatorio escribir un nombre de acceso"
 msgstr "Sartzeko izena idaztea derrigorrekoa da"
@@ -844,14 +796,8 @@ msgstr "Ez duzu pasahitzik jarri"
 msgid "El código no es correcto"
 msgstr "Kodea ez da zuzena"
 
-msgid "El email que has puesto no es válido"
-msgstr "Jarri duzun emaila ez da zuzena"
-
 msgid "Ya hay un usuario registrado con este email"
 msgstr "Jada badago erabiltzaile bat email horrekin"
-
-msgid "La contraseña es demasiado corta"
-msgstr "Pasahitza laburregia da"
 
 msgid "http://www.facebook.com/"
 msgstr "http://www.facebook.com/"
@@ -868,23 +814,29 @@ msgstr "http://identi.ca/"
 msgid "http://es.linkedin.com/in/"
 msgstr "http://es.linkedin.com/in/"
 
-msgid "La contraseña es demasiado corta"
-msgstr "Pasahitza laburregia da"
-
-msgid "El email que has puesto no es válido"
-msgstr "Jarri duzun emaila ez da zuzena"
-
-msgid "Ya hay un usuario registrado con este email"
-msgstr "Jada badago erabiltzaile bat email horrekin"
-
-msgid "La cuenta está desactivada. Debes recuperar la contraseña para activarla de nuevo"
-msgstr "Kontua desaktibaturik dago. Pasahitza berreskuratu behar duzu, berriro martxan jartzeko"
+msgid ""
+"La cuenta está desactivada. Debes recuperar la contraseña para activarla de "
+"nuevo"
+msgstr ""
+"Kontua desaktibaturik dago. Pasahitza berreskuratu behar duzu, berriro martxan "
+"jartzeko"
 
 msgid "Envíanos un mensaje"
 msgstr "Bidaliguzu mezu bat"
 
+#, fuzzy
 msgid "Email"
-msgstr "Emaila"
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Emaila\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Email\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Email\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Email\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Email"
 
 msgid "Asunto"
 msgstr "Gaia"
@@ -903,9 +855,6 @@ msgstr "Goteo-ri buruz"
 
 msgid "Lo que nos mueve"
 msgstr "Mugitzen gaituena"
-
-msgid "Guardar"
-msgstr "Gorde"
 
 msgid "tooltip-updates-title"
 msgstr "tooltip-updates-title"
@@ -943,48 +892,6 @@ msgstr "tooltip-updates-allow_comments"
 msgid "Texto tooltip-updates-home"
 msgstr "tooltip-updates-home testua"
 
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "tooltip-updates-image"
-msgstr "tooltip-updates-image"
-
-msgid "tooltip-updates-image_upload"
-msgstr "tooltip-updates-image_upload"
-
-msgid "Imágenes actuales"
-msgstr "Oraingo irudiak"
-
-msgid "tooltip-updates-media"
-msgstr "tooltip-updates-media"
-
-msgid "Leyenda"
-msgstr "Legenda"
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "tooltip-updates-image"
-msgstr "tooltip-updates-image"
-
-msgid "tooltip-updates-image_upload"
-msgstr "tooltip-updates-image_upload"
-
-msgid "Imágenes actuales"
-msgstr "Oraingo irudiak"
-
-msgid "tooltip-updates-media"
-msgstr "tooltip-updates-media"
-
-msgid "Leyenda"
-msgstr "Legenda"
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Guardar"
-msgstr "Gorde"
-
 msgid "Comentarios"
 msgstr "Iruzkinak"
 
@@ -1000,24 +907,6 @@ msgstr "Twitter"
 msgid "Facebook"
 msgstr "Facebook"
 
-msgid "Comentarios"
-msgstr "Iruzkinak"
-
-msgid "Sin comentarios"
-msgstr "Ez dago iruzkinik"
-
-msgid "Compartir en:"
-msgstr "Konpartitu hemen:"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Comentarios"
-msgstr "Iruzkinak"
-
 msgid "Sin comentarios"
 msgstr "Ez dago iruzkinik"
 
@@ -1029,9 +918,6 @@ msgstr "Idatz ezazu zure iruzkina"
 
 msgid "Previsualizar"
 msgstr "Aurreikusi"
-
-msgid "Enviar"
-msgstr "Bidali"
 
 msgid "No se permiten comentarios en  esta entrada"
 msgstr "..."
@@ -1081,9 +967,6 @@ msgstr "Gehiago ikusi"
 msgid "Ver todos"
 msgstr "Guztiak ikusi"
 
-msgid "Mis proyectos"
-msgstr "Nire proiektuak"
-
 msgid "Proyectos que apoyo"
 msgstr "Babesten ditudan proiektuak"
 
@@ -1093,11 +976,15 @@ msgstr "HEDAPEN SINPLEAREN KODEA"
 msgid "CÓDIGO CON IMAGEN DE COFINANCIADOR"
 msgstr "FINANTZAKIDEAREN IRUDI KODEA"
 
+#, fuzzy
 msgid "Mi panel"
-msgstr "Nire iragarki-taula"
-
-msgid "Mi panel"
-msgstr "Nire iragarki-taula"
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nire iragarki-taula\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nire iragarki-taula\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Nire panela"
 
 msgid "Contraseña actual"
 msgstr "Oraingo pasahitza"
@@ -1108,35 +995,42 @@ msgstr "Goteo-n sartzeko orain erabiltzen duzun pasahitza idatz ezazu"
 msgid "Desde aquí puedes modificar los datos con que accedes a tu cuenta de Goteo."
 msgstr "Hemen Goteo-n sartzeko erabiltzen dituzun datuak aldatu ditzakezu."
 
-msgid "Datos de acceso"
-msgstr "Sartze datuak"
-
-msgid "Estos son tus datos actuales de acceso. Lo único que no se puede cambiar es el login de usuario."
-msgstr "Hauexek dira zure sartzeko oraingo datuak. Aldatu ahal den datu bakarra, sartzeko izena da."
+msgid ""
+"Estos son tus datos actuales de acceso. Lo único que no se puede cambiar es el "
+"login de usuario."
+msgstr ""
+"Hauexek dira zure sartzeko oraingo datuak. Aldatu ahal den datu bakarra, "
+"sartzeko izena da."
 
 msgid "Nombre de acceso"
 msgstr "Sartzeko izena"
 
-msgid "Email"
-msgstr "Email"
-
 msgid "Cambiar email"
 msgstr "Emaila aldatu"
 
-msgid "Desde aquí puedes cambiar la dirección de correo electrónico en que recibes los mensajes de Goteo."
-msgstr "Hemen Goteo-n sartzeko erabiltzen duzun posta elektroniko helbidea aldatu dezakezu."
+msgid ""
+"Desde aquí puedes cambiar la dirección de correo electrónico en que recibes "
+"los mensajes de Goteo."
+msgstr ""
+"Hemen Goteo-n sartzeko erabiltzen duzun posta elektroniko helbidea aldatu "
+"dezakezu."
 
-msgid "Email"
-msgstr "Email"
-
-msgid "Indica la nueva dirección de correo electrónico en que quieres recibir los mensajes de Goteo."
-msgstr "Zehaztu posta elektronikoko helbide berria, non Goteo-ko mezuak jaso nahi dituzun."
+msgid ""
+"Indica la nueva dirección de correo electrónico en que quieres recibir los "
+"mensajes de Goteo."
+msgstr ""
+"Zehaztu posta elektronikoko helbide berria, non Goteo-ko mezuak jaso nahi "
+"dituzun."
 
 msgid "Confirmar email"
 msgstr "Emaila baieztatu"
 
-msgid "Confirma la nueva dirección de correo electrónico en que quieres recibir los mensajes de Goteo."
-msgstr "Baieztatu Goteo-ko mezuak jasotzeko erabili nahi duzun posta elektroniko helbidea."
+msgid ""
+"Confirma la nueva dirección de correo electrónico en que quieres recibir los "
+"mensajes de Goteo."
+msgstr ""
+"Baieztatu Goteo-ko mezuak jasotzeko erabili nahi duzun posta elektroniko "
+"helbidea."
 
 msgid "Aplicar"
 msgstr "Aplikatu"
@@ -1159,23 +1053,30 @@ msgstr "Baieztatu pasahitz berria"
 msgid "Confirma la nueva contraseña con que quieres acceder a Goteo."
 msgstr "Baieztatu Goteo-n sartzeko erabili nahi duzun pasahitza."
 
-msgid "Aplicar"
-msgstr "Aplikatu"
-
 msgid "Cancelar la cuenta"
 msgstr "Kontua ezeztatu"
 
-msgid "Sólo debes cumplimentar estos datos si has creado un proyecto y quieres que sea cofinanciado y apoyado mediante Goteo.\r\n\r\nLa información de este apartado es necesaria para contactarte en caso de que obtengas la financiación requerida, y que así se pueda efectuar el ingreso."
-msgstr "Datu hauek bete behar dituzu, bakarrik alde berean finantzatu izatea nahi baduzu eta Goteo-ren partetik babestua izan nahi baduzu. Arlo honetako informazioa beharrezkoa da zurekin harremanetan jartzeko, behar duzun finantzazioa lortzen baduzu. Horrela diru sarrera jaso ahal duzu."
-
-msgid "Aplicar"
-msgstr "Aplikatu"
+msgid ""
+"Sólo debes cumplimentar estos datos si has creado un proyecto y quieres que sea "
+"cofinanciado y apoyado mediante Goteo.\r\n"
+"\r\n"
+"La información de este apartado es necesaria para contactarte en caso de que "
+"obtengas la financiación requerida, y que así se pueda efectuar el ingreso."
+msgstr ""
+"Datu hauek bete behar dituzu, bakarrik alde berean finantzatu izatea nahi baduzu "
+"eta Goteo-ren partetik babestua izan nahi baduzu. Arlo honetako informazioa "
+"beharrezkoa da zurekin harremanetan jartzeko, behar duzun finantzazioa lortzen "
+"baduzu. Horrela diru sarrera jaso ahal duzu."
 
 msgid "Nombre y apellidos"
 msgstr "Izen abizenak"
 
-msgid "Deben ser tu nombre y apellidos reales. Ten en cuenta que figurarás como responsable del proyecto."
-msgstr "Zure benetako izen abizenak izan behar dira. Kontuan hartu proiektuaren erantzulez agertuko zarela."
+msgid ""
+"Deben ser tu nombre y apellidos reales. Ten en cuenta que figurarás como "
+"responsable del proyecto."
+msgstr ""
+"Zure benetako izen abizenak izan behar dira. Kontuan hartu proiektuaren "
+"erantzulez agertuko zarela."
 
 msgid "Número de NIF / NIE / VAT"
 msgstr "IFZ / AIZ / VAT zenbakia "
@@ -1210,9 +1111,6 @@ msgstr "Ez"
 msgid "Marca ''Sí'' en las notificaciones automáticas que quieras bloquear"
 msgstr "''Bai'' aukeratu, blokeatu nahi dituzun jakinarazpen automatikoetan"
 
-msgid "Aplicar"
-msgstr "Aplikatu"
-
 msgid "Bloquear notificaciones de novedades sobre los proyectos que apoyo"
 msgstr "Babesten ditudan proiektuen inguruko berrien jakinarazpenak blokeatu"
 
@@ -1231,74 +1129,103 @@ msgstr "Kendu"
 msgid "URL"
 msgstr "URL"
 
-msgid "Indica las direcciones URL de páginas personales o de otro tipo vinculadas a ti."
-msgstr "Zehaztu web orri pertsonalen edo beste motatako URL helbideak, zurekin zerikusia dituztenak."
+msgid ""
+"Indica las direcciones URL de páginas personales o de otro tipo vinculadas a ti."
+msgstr ""
+"Zehaztu web orri pertsonalen edo beste motatako URL helbideak, zurekin zerikusia "
+"dituztenak."
 
 msgid "Aceptar"
 msgstr "Onartu"
 
-msgid "Quitar"
-msgstr "Kendu"
-
-msgid "Tanto si quieres presentar un proyecto como incorporarte como cofinanciador/a, para formar parte de la comunidad de Goteo te recomendamos que pongas atención en tu texto de presentación, que añadas links relevantes sobre lo que haces y subas una imagen de perfil con la que te identifiques."
-msgstr "Proiektua aldi batera finantzatzeko edota zure proiektua aurkezteko, Goteo-ko komunitatean sartzeko zure aurkezpen testua arretaz idazteko gomendatzen dizugu. Sartu ezazu zer egiten duzunaren balioko estekak, eta igo ezazu parekotzat daukazun irudiren baten bat."
-
-msgid "Aplicar"
-msgstr "Aplikatu"
+msgid ""
+"Tanto si quieres presentar un proyecto como incorporarte como cofinanciador/a, "
+"para formar parte de la comunidad de Goteo te recomendamos que pongas atención "
+"en tu texto de presentación, que añadas links relevantes sobre lo que haces y "
+"subas una imagen de perfil con la que te identifiques."
+msgstr ""
+"Proiektua aldi batera finantzatzeko edota zure proiektua aurkezteko, Goteo-ko "
+"komunitatean sartzeko zure aurkezpen testua arretaz idazteko gomendatzen dizugu. "
+"Sartu ezazu zer egiten duzunaren balioko estekak, eta igo ezazu parekotzat "
+"daukazun irudiren baten bat."
 
 msgid "Nombre de usuario/a"
 msgstr "Erabiltzaile izena"
 
-msgid "Tu nombre o nickname dentro de Goteo. Lo puedes cambiar siempre que quieras (ojo: no es lo mismo que el login de acceso, que ya no se puede modificar)."
-msgstr "Zure izena edo nickname Goteo barruan. Nahi duzun beste aldatu dezakezu (adi: hau ez da login izenaren bezala. Hori ezin da aldatu jada)."
+msgid ""
+"Tu nombre o nickname dentro de Goteo. Lo puedes cambiar siempre que quieras "
+"(ojo: no es lo mismo que el login de acceso, que ya no se puede modificar)."
+msgstr ""
+"Zure izena edo nickname Goteo barruan. Nahi duzun beste aldatu dezakezu (adi: "
+"hau ez da login izenaren bezala. Hori ezin da aldatu jada)."
 
 msgid "Lugar de residencia habitual"
 msgstr "Bizilekua"
 
 msgid "Este dato es importante para poderte vincular con un grupo local de Goteo."
-msgstr "Datu hau garrantzitsua da Goteo-ko bertoko talde batekin zu lotu ahal izateko."
+msgstr ""
+"Datu hau garrantzitsua da Goteo-ko bertoko talde batekin zu lotu ahal izateko."
 
 msgid "Imagen de perfil"
 msgstr "Soslaiko irudia"
 
-msgid "No es obligatorio que pongas una fotografía en tu perfil, pero ayuda a que los demás usuarios te identifiquen."
-msgstr "Ez da derrigorrekoa irudia zure soslaian jartzea, baina gainerako erabiltzaileak zu ezagutzeko laguntzen du."
-
-msgid "Subir imagen"
-msgstr "Irudia igo"
-
-msgid "No es obligatorio que pongas una fotografía en tu perfil, pero ayuda a que los demás usuarios te identifiquen."
-msgstr "Ez da derrigorrekoa irudia zure soslaian jartzea, baina gainerako erabiltzaileak zu ezagutzeko laguntzen du."
+msgid ""
+"No es obligatorio que pongas una fotografía en tu perfil, pero ayuda a que los "
+"demás usuarios te identifiquen."
+msgstr ""
+"Ez da derrigorrekoa irudia zure soslaian jartzea, baina gainerako erabiltzaileak "
+"zu ezagutzeko laguntzen du."
 
 msgid "Cuéntanos algo sobre ti"
 msgstr "Kontaiguzu zeozer zuri buruz"
 
-msgid "Como red social, Goteo pretende ayudar a difundir y financiar proyectos interesantes entre el máximo de gente posible. Para eso es importante la información que puedas compartir sobre tus habilidades o experiencia (profesional, académica, aficiones, etc).\r\n"
-msgstr "Sare soziala bezala, Goteo-k proiektu interesgarriak zabaldu eta finantzatu nahi du, ahalik eta jende multzo handiaren artean. Horretarako garrantzitsua da  zure gaitasunei eta esperientziari buruzko informazioa (profesionala, akademikoa, zaletasunak, etabar) ipintzea."
+msgid ""
+"Como red social, Goteo pretende ayudar a difundir y financiar proyectos "
+"interesantes entre el máximo de gente posible. Para eso es importante la "
+"información que puedas compartir sobre tus habilidades o experiencia "
+"(profesional, académica, aficiones, etc).\r\n"
+msgstr ""
+"Sare soziala bezala, Goteo-k proiektu interesgarriak zabaldu eta finantzatu nahi "
+"du, ahalik eta jende multzo handiaren artean. Horretarako garrantzitsua da  zure "
+"gaitasunei eta esperientziari buruzko informazioa (profesionala, akademikoa, "
+"zaletasunak, etabar) ipintzea.\n"
 
 msgid "Qué tipo de proyecto te motiva más"
 msgstr "Zer nola proiektu mota motibatzen zaitu gehien"
 
-msgid "Indica el tipo de proyectos que pueden conectar con tus intereses para cofinanciarlos y/o aportar con otros recursos, conocimientos o habilidades. Estas categorías son transversales, puedes seleccionar más de una."
-msgstr "Zehaztu zein proiektu dira zure interesekoak aldi berean finantzatzeko edota baliabideak jartzeko, ezagutza edo gaitasunak. Kategoria hauek zeharkakoak dira, bat baino gehiago aukeratu dezakezu."
+msgid ""
+"Indica el tipo de proyectos que pueden conectar con tus intereses para "
+"cofinanciarlos y/o aportar con otros recursos, conocimientos o habilidades. "
+"Estas categorías son transversales, puedes seleccionar más de una."
+msgstr ""
+"Zehaztu zein proiektu dira zure interesekoak aldi berean finantzatzeko edota "
+"baliabideak jartzeko, ezagutza edo gaitasunak. Kategoria hauek zeharkakoak dira, "
+"bat baino gehiago aukeratu dezakezu."
 
 msgid "Temas que te interesan"
 msgstr "Zure intereseko gaiak"
 
-msgid "A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han escrito otros usuarios. Estas categorías ayudan a vincular tu perfil con otras personas y con proyectos concretos."
-msgstr "Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen dute."
+msgid ""
+"A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han "
+"escrito otros usuarios. Estas categorías ayudan a vincular tu perfil con otras "
+"personas y con proyectos concretos."
+msgstr ""
+"Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak "
+"proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen "
+"dute."
 
 msgid "Qué puedes aportar a Goteo"
 msgstr "Zertan lagundu ahal duzun Goteo-n"
 
-msgid "Explica brevemente tus habilidades o los ámbitos en que podrías ayudar a un proyecto (traduciendo, difundiendo, testeando, programando, enseñando, etc)."
-msgstr "Azaldu laburki zure gaitasunak edo zein arloetan lagundu ahal izango zenukeen (itzultzen, zabaltzen, frogatzen, programatzen, irakasten, etabar)."
+msgid ""
+"Explica brevemente tus habilidades o los ámbitos en que podrías ayudar a un "
+"proyecto (traduciendo, difundiendo, testeando, programando, enseñando, etc)."
+msgstr ""
+"Azaldu laburki zure gaitasunak edo zein arloetan lagundu ahal izango zenukeen "
+"(itzultzen, zabaltzen, frogatzen, programatzen, irakasten, etabar)."
 
 msgid "Mis páginas web"
 msgstr "Nire web orriak"
-
-msgid "Indica las direcciones URL de páginas personales o de otro tipo vinculadas a ti."
-msgstr "Zehaztu web orri pertsonalen edo beste motatako URL helbideak, zurekin zerikusia dituztenak."
 
 msgid "Añadir"
 msgstr "Gehitu"
@@ -1306,68 +1233,49 @@ msgstr "Gehitu"
 msgid "Perfiles sociales"
 msgstr "Soslai sozialak"
 
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan entre amigos y familiares."
-msgstr "Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak lagunen eta familiakoen artean zabaltzea."
-
-msgid "http://www.facebook.com/"
-msgstr "http://www.facebook.com/"
+msgid ""
+"Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan "
+"entre amigos y familiares."
+msgstr ""
+"Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak lagunen "
+"eta familiakoen artean zabaltzea."
 
 msgid "Google+"
 msgstr "Google+"
 
-msgid "La red social de Google+ es muy nueva pero también puedes indicar tu usuario si ya la usas :)"
-msgstr "Google+ sare soziala nahiko berria da baina zure erabiltzaile izena ipini ahal duzu erabiltzen baduzu :)"
+msgid ""
+"La red social de Google+ es muy nueva pero también puedes indicar tu usuario si "
+"ya la usas :)"
+msgstr ""
+"Google+ sare soziala nahiko berria da baina zure erabiltzaile izena ipini ahal "
+"duzu erabiltzen baduzu :)"
 
-msgid "https://plus.google.com/"
-msgstr "https://plus.google.com/"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo de manera ágil y viral."
-msgstr "Posiblea da sare sozial honen bitartez, Goteo-ko proiektuak modu arinean eta birus-eran zabaltzea."
-
-msgid "http://twitter.com/#!/"
-msgstr "http://twitter.com/#!/"
+msgid ""
+"Esta red social puede ayudar a que difundas proyectos de Goteo de manera ágil y "
+"viral."
+msgstr ""
+"Posiblea da sare sozial honen bitartez, Goteo-ko proiektuak modu arinean eta "
+"birus-eran zabaltzea."
 
 msgid "Identi.ca"
 msgstr "Identi.ca"
 
-msgid "Este canal puede ayudar a que difundas proyectos de Goteo entre la comunidad afín al software libre."
-msgstr "Kanal honen bitartez posiblea da Goteo-ko proiektuak zabaltzea Software Librearen inguruko komunitateetan."
-
-msgid "http://identi.ca/"
-msgstr "http://identi.ca/"
+msgid ""
+"Este canal puede ayudar a que difundas proyectos de Goteo entre la comunidad afí"
+"n al software libre."
+msgstr ""
+"Kanal honen bitartez posiblea da Goteo-ko proiektuak zabaltzea Software "
+"Librearen inguruko komunitateetan."
 
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan entre contactos profesionales."
-msgstr "Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak laneko kontaktuen artean zabaltzea."
-
-msgid "http://es.linkedin.com/in/"
-msgstr "http://es.linkedin.com/in/"
-
-msgid "Aplicar"
-msgstr "Aplikatu"
-
-msgid "Anónimo"
-msgstr "Ezezaguna"
-
-msgid "Ver perfil"
-msgstr "Soslaia ikusi"
-
-msgid "Enviar mensaje"
-msgstr "Mezua bidali"
-
-msgid "Previsualizar"
-msgstr "Aurreikusi"
-
-msgid "Enviar"
-msgstr "Bidali"
+msgid ""
+"Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan "
+"entre contactos profesionales."
+msgstr ""
+"Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak laneko "
+"kontaktuen artean zabaltzea."
 
 msgid "Editar"
 msgstr "Editatu"
@@ -1384,47 +1292,46 @@ msgstr "Ezabatu"
 msgid "Estado del proyecto"
 msgstr "Proiektuaren egoera"
 
-msgid "Resumen"
-msgstr "Laburpena"
-
 msgid "Título descriptivo sobre la colaboración necesaria."
 msgstr "Behar den elkarlaneko tituloa"
 
 msgid "Tipo de ayuda"
 msgstr "Laguntza mota"
 
-msgid "Selecciona si el proyecto necesita ayuda en tareas concretas  o bien préstamos (de material, infraestructura, etc).  "
-msgstr "Aukera ezazu, proiektuak ekintza konkretuetan laguntza behar badu, edo maileguak behar badu (materialak, azpiegiturak, etabar)."
+msgid ""
+"Selecciona si el proyecto necesita ayuda en tareas concretas  o bien préstamos "
+"(de material, infraestructura, etc).  "
+msgstr ""
+"Aukera ezazu, proiektuak ekintza konkretuetan laguntza behar badu, edo maileguak "
+"behar badu (materialak, azpiegiturak, etabar)."
 
-msgid "Descripción"
-msgstr "Deskribapena"
+msgid ""
+"Explica brevemente en qué consiste la ayuda que necesita el proyecto, para "
+"facilitar que la gente la reconozca y se anime a colaborar. \r\n"
+msgstr ""
+"Laburki azaldu zertan datza proiektuak behar duen laguntza, jendea igarri eta "
+"laguntzen animatu dezala.\n"
 
-msgid "Explica brevemente en qué consiste la ayuda que necesita el proyecto, para facilitar que la gente la reconozca y se anime a colaborar. \r\n"
-msgstr "Laburki azaldu zertan datza proiektuak behar duen laguntza, jendea igarri eta laguntzen animatu dezala."
+msgid ""
+"<strong>En este apartado puedes especificar qué otras ayudas, aparte de "
+"financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> "
+"Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, "
+"difusión, etc), o bien préstamos específicos (de material, transporte, "
+"hardware, etc)."
+msgstr ""
+"<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, "
+"proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin "
+"ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak "
+"(materiala, garraioa, hardware-a, etabar)."
 
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
-
-msgid "<strong>En este apartado puedes especificar qué otras ayudas, aparte de financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc)."
-msgstr "<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak (materiala, garraioa, hardware-a, etabar)."
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "En Goteo los proyectos pueden recibir otro tipo de ayudas además de aportaciones monetarias. Hay gente que a lo mejor no puede ayudar económicamente pero sí con su talento, tiempo, energía, etc."
-msgstr "Goteon proiektuak bestelako laguntza mota jaso dezakete, diruaz gain. Badago jendea ekonomikoki agian ezin duela babestu, baina bai bere gaitasunarekin, denborarekin, energiarekin, etabar."
-
-msgid "Añadir"
-msgstr "Gehitu"
-
-msgid "Editar"
-msgstr "Editatu"
+msgid ""
+"En Goteo los proyectos pueden recibir otro tipo de ayudas además de "
+"aportaciones monetarias. Hay gente que a lo mejor no puede ayudar "
+"económicamente pero sí con su talento, tiempo, energía, etc."
+msgstr ""
+"Goteon proiektuak bestelako laguntza mota jaso dezakete, diruaz gain. Badago "
+"jendea ekonomikoki agian ezin duela babestu, baina bai bere gaitasunarekin, "
+"denborarekin, energiarekin, etabar."
 
 msgid "Publicado"
 msgstr "Argitaratua"
@@ -1435,308 +1342,296 @@ msgstr "Zirriborroa"
 msgid "No se ha publicado ninguna entrada "
 msgstr "Ez da sarrerarik argitaratu"
 
-msgid "Sí"
-msgstr "Bai"
-
-msgid "No"
-msgstr "Ez"
-
 msgid "Vista previa"
 msgstr "Aurrebista"
 
-msgid "<b>Es muy importante que los proyectos mantengan informados a sus cofinanciadores y el resto de personas potencialmente interesadas sobre cómo avanza su campaña. Desde este apartado puedes publicar mensajes de actualización sobre el proyecto, como una especie de blog público.</b>\r\n\r\nEn Goteo además, una vez se han logrado los fondos mínimos, para la segunda ronda de cofinanciación es crítico explicar regularmente cómo ha arrancado la producción, avances, problemas, etc que permitan la mayor transparencia posible y saber cómo evoluciona el inicio del proyecto, para así tratar de generar más interés y comunidad en torno al mismo."
-msgstr "<b>Oso garrantzitsua da proiektuak beraien finantzakideak, eta interesaturik egon ahal diren beste pertsonak, informatuta izatea bere kanpaina zelan mugitzen den aurrera. Arlo honetatik proiektuari aurrera pausuei buruzko mezuak idatz dezakezu, blog publikoa antzera.</b> Goteo-n gainera, behin gutxiengo diru kopurua lortu eta gero, 2. finantzaketa txanda hasten denean, garrantzia handia du maiz azaltzeak zelan hasi den produkzio zatia, eman diren aurrera pausuak, egon diren arazoak, etabar. Horrela prozesua ahalik eta garden ikusiko da eta jendea proiektuaren hasieraren jakinaren gainean egongo da, eta interesa eta komunitatea piztuko da honen inguruan."
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "tooltip-updates-title"
-msgstr "tooltip-updates-title"
-
-msgid "tooltip-updates-text"
-msgstr "tooltip-updates-text"
-
-msgid "tooltip-updates-image"
-msgstr "tooltip-updates-image"
-
-msgid "Subir imagen"
-msgstr "Irudia igo"
+msgid ""
+"<b>Es muy importante que los proyectos mantengan informados a sus "
+"cofinanciadores y el resto de personas potencialmente interesadas sobre cómo "
+"avanza su campaña. Desde este apartado puedes publicar mensajes de "
+"actualización sobre el proyecto, como una especie de blog público.</b>\r\n"
+"\r\n"
+"En Goteo además, una vez se han logrado los fondos mínimos, para la segunda "
+"ronda de cofinanciación es crítico explicar regularmente cómo ha arrancado la "
+"producción, avances, problemas, etc que permitan la mayor transparencia posible "
+"y saber cómo evoluciona el inicio del proyecto, para así tratar de generar más "
+"interés y comunidad en torno al mismo."
+msgstr ""
+"<b>Oso garrantzitsua da proiektuak beraien finantzakideak, eta interesaturik "
+"egon ahal diren beste pertsonak, informatuta izatea bere kanpaina zelan mugitzen "
+"den aurrera. Arlo honetatik proiektuari aurrera pausuei buruzko mezuak idatz "
+"dezakezu, blog publikoa antzera.</b> Goteo-n gainera, behin gutxiengo diru "
+"kopurua lortu eta gero, 2. finantzaketa txanda hasten denean, garrantzia handia "
+"du maiz azaltzeak zelan hasi den produkzio zatia, eman diren aurrera pausuak, "
+"egon diren arazoak, etabar. Horrela prozesua ahalik eta garden ikusiko da eta "
+"jendea proiektuaren hasieraren jakinaren gainean egongo da, eta interesa eta "
+"komunitatea piztuko da honen inguruan."
 
 msgid "Subir una imagen"
 msgstr "Irudi bat igo"
 
-msgid "tooltip-updates-image_upload"
-msgstr "tooltip-updates-image_upload"
-
-msgid "Imágenes actuales"
-msgstr "Oraingo irudiak"
-
-msgid "tooltip-updates-media"
-msgstr "tooltip-updates-media"
-
-msgid "Enviar"
-msgstr "Bidali"
-
-msgid "Leyenda"
-msgstr "Legenda"
-
-msgid "tooltip-updates-date"
-msgstr "tooltip-updates-date"
-
-msgid "tooltip-updates-allow_comments"
-msgstr "tooltip-updates-allow_comments"
-
 msgid "publica el widget del proyecto"
 msgstr "proiektuaren widget-a argitaratzen du"
-
-msgid "Editar"
-msgstr "Editatu"
 
 msgid "Coste"
 msgstr "Balioa"
 
-msgid "Descripción"
-msgstr "Deskribapena"
-
 msgid "Explica brevemente en qué consiste este coste."
 msgstr "Laburki azaldu zertan datza gastu hau."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "<strong>En este apartado puedes especificar qué otras ayudas, aparte de financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc)."
-msgstr "<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak (materiala, garraioa, hardware-a, etabar)."
-
-msgid "Guardar"
-msgstr "Gorde"
 
 msgid "Desglose de costes"
 msgstr "Gastuen banakapena"
 
-msgid "Cuanto más precisión en el desglose mejor valorará Goteo la información general del proyecto. "
-msgstr "Zenbat eta hobeago banakepena zehaztu, Goteo-k proiektuaren informazio orokorra orduan eta hobeago baloratuko du"
+msgid ""
+"Cuanto más precisión en el desglose mejor valorará Goteo la información "
+"general del proyecto. "
+msgstr ""
+"Zenbat eta hobeago banakepena zehaztu, Goteo-k proiektuaren informazio orokorra "
+"orduan eta hobeago baloratuko du"
 
-msgid "Vista previa"
-msgstr "Aurrebista"
-
-msgid "Vista previa"
-msgstr "Aurrebista"
-
-msgid "<strong>Éste es el apartado donde explicar con detalle los aspectos conceptuales del proyecto. </strong><br><br>Es lo primero con lo que cualquier usuario de la red se encontrará, así que cuida la redacción y evita las faltas de ortografía. Verás que hay campos obligatorios como incluir un vídeo o subir imágenes. Esto es así porque los consideramos imprescindibles para empezar con éxito una campaña de recaudación de fondos mediante Goteo.<br><br>\r\nTen en cuenta que lo más valorado en Goteo es: la información o conocimiento libre de interés general que tu proyecto aportará a la comunidad,  la originalidad, aspirar a resolver una demanda social,  el potencial para atraer a una comunidad amplia de personas interesadas, dejar claro que el equipo promotor posee las capacidades y experiencia para poder llevarlo a buen puerto. Así que no pierdas de vista informar sobre esos aspectos."
-msgstr "<strong>Arlo honetan proiektuaren alde kontzeptualak azalduko dira. </strong><br /><br />Hauxe izango da sareko erabiltzaileak aurkituko duten lehenengo gauza, beraz zaindu testua eta akats ortografikoak albo batean utzi. Derrigorreko kanpoak dagoela ikusiko duzu, adibidez, bideo sartu edo irudiak igo. Hauxe horrela da ukaezintzat ikusten ditugulako, Goteo bitartez, dirua jasotzeko kanpaina arrakastatsua hasi nahi bada.<br /><br />Kontutan izan Goteo-n baloratuena hauxe dela: zure proiektua komunitateari emango dion informazioa edo interes orokorreko ezagutza librea, originaltasuna, demanda soziala konpontzeko asmoa, interesaturik egon litekeen pertsona multzoa erakartzeko gaitasuna, argi eta garbi ustea proiekturen taldea gaitasuna esperientzia daukala proiektua ondo porturatzeko. Beraz ez ahaztu alde oien inguruan informatzea."
-
-msgid "Guardar"
-msgstr "Gorde"
+msgid ""
+"<strong>Éste es el apartado donde explicar con detalle los aspectos conceptuales "
+"del proyecto. </strong><br><br>Es lo primero con lo que cualquier usuario de la "
+"red se encontrará, así que cuida la redacción y evita las faltas de ortografí"
+"a. Verás que hay campos obligatorios como incluir un vídeo o subir imágenes. "
+"Esto es así porque los consideramos imprescindibles para empezar con éxito una "
+"campaña de recaudación de fondos mediante Goteo.<br><br>\r\n"
+"Ten en cuenta que lo más valorado en Goteo es: la información o conocimiento "
+"libre de interés general que tu proyecto aportará a la comunidad,  la "
+"originalidad, aspirar a resolver una demanda social,  el potencial para atraer a "
+"una comunidad amplia de personas interesadas, dejar claro que el equipo promotor "
+"posee las capacidades y experiencia para poder llevarlo a buen puerto. Así que "
+"no pierdas de vista informar sobre esos aspectos."
+msgstr ""
+"<strong>Arlo honetan proiektuaren alde kontzeptualak azalduko dira. </"
+"strong><br /><br />Hauxe izango da sareko erabiltzaileak aurkituko duten "
+"lehenengo gauza, beraz zaindu testua eta akats ortografikoak albo batean utzi. "
+"Derrigorreko kanpoak dagoela ikusiko duzu, adibidez, bideo sartu edo irudiak "
+"igo. Hauxe horrela da ukaezintzat ikusten ditugulako, Goteo bitartez, dirua "
+"jasotzeko kanpaina arrakastatsua hasi nahi bada.<br /><br />Kontutan izan Goteo-"
+"n baloratuena hauxe dela: zure proiektua komunitateari emango dion informazioa "
+"edo interes orokorreko ezagutza librea, originaltasuna, demanda soziala "
+"konpontzeko asmoa, interesaturik egon litekeen pertsona multzoa erakartzeko "
+"gaitasuna, argi eta garbi ustea proiekturen taldea gaitasuna esperientzia "
+"daukala proiektua ondo porturatzeko. Beraz ez ahaztu alde oien inguruan "
+"informatzea."
 
 msgid "Título del proyecto"
 msgstr "Proiektuaren izenburua"
 
-msgid "Escribe un nombre para titular el proyecto. Cuanto más breve mejor, para hacerlo más descriptivo puedes ampliarlo en el siguiente apartado."
-msgstr "Idatz ezazu proiektuari buruzko titularra. Ahalik eta laburren hobe. Azalpen gehiago emateko, hurrengo arloan egin ahal duzu."
+msgid ""
+"Escribe un nombre para titular el proyecto. Cuanto más breve mejor, para "
+"hacerlo más descriptivo puedes ampliarlo en el siguiente apartado."
+msgstr ""
+"Idatz ezazu proiektuari buruzko titularra. Ahalik eta laburren hobe. Azalpen "
+"gehiago emateko, hurrengo arloan egin ahal duzu."
 
 msgid "Frase de resumen"
 msgstr "Laburpen esaldia"
 
-msgid "Define con una frase un subtítulo que acabe de explicar en qué consistirá la iniciativa, que permita hacerse una idea mínima de para qué sirve o en qué consiste. Aparecerá junto al título del proyecto."
-msgstr "Zehaztu ezazu azpititulu bat: esaldi batean ekintza zertan datza, zertarako balio duen idea susmatzeko. Proiektuaren izenburuaren alboan agertuko da."
+msgid ""
+"Define con una frase un subtítulo que acabe de explicar en qué consistirá la "
+"iniciativa, que permita hacerse una idea mínima de para qué sirve o en qué "
+"consiste. Aparecerá junto al título del proyecto."
+msgstr ""
+"Zehaztu ezazu azpititulu bat: esaldi batean ekintza zertan datza, zertarako "
+"balio duen idea susmatzeko. Proiektuaren izenburuaren alboan agertuko da."
 
 msgid "Breve descripción "
 msgstr "Deskribapen laburra"
 
-msgid "Describe el proyecto con un mínimo de 80 palabras (con menos marcará error). Explícalo de modo que sea fácil de entender para cualquier persona. Intenta darle un enfoque atractivo y social, resumiendo sus puntos fuertes, qué lo hace único, innovador o especial."
-msgstr "Deskribatu proiektua gutxienez 80 hitz erabiliz (gutxiagorekin errorea agertuko da). Azaldu ezazu edonork ulertzeko moduan. Saia zaitez alde soziala azpimarratzen eta era erakargarrian azaltzen, bere alde indartsuak laburbilduz, zerk egiten duen paregabe, berritzaile edo berezia."
+msgid ""
+"Describe el proyecto con un mínimo de 80 palabras (con menos marcará error). "
+"Explícalo de modo que sea fácil de entender para cualquier persona. Intenta "
+"darle un enfoque atractivo y social, resumiendo sus puntos fuertes, qué lo hace "
+"único, innovador o especial."
+msgstr ""
+"Deskribatu proiektua gutxienez 80 hitz erabiliz (gutxiagorekin errorea agertuko "
+"da). Azaldu ezazu edonork ulertzeko moduan. Saia zaitez alde soziala "
+"azpimarratzen eta era erakargarrian azaltzen, bere alde indartsuak laburbilduz, "
+"zerk egiten duen paregabe, berritzaile edo berezia."
 
 msgid "Características básicas"
 msgstr "Oinarriko ezaugarriak"
 
-msgid "Describe brevemente el proyecto de modo conceptual, técnico o práctico. Por ejemplo detallando sus características de funcionamiento, o en qué partes consistirá. Piensa en cómo será una vez acabado y todo lo que la gente podrá hacer con él."
-msgstr "Proiektuaren arlo kontzeptuala, teknikoa edo praktikoa laburki deskribatu. Adibidez bere funtzionamenduaren berezitasunak zehaztuz, edo zenbat arlo izango dituen. Imajinatu behin proiektua bukatuta jendea berarekin zer egin ahal izango duen."
+msgid ""
+"Describe brevemente el proyecto de modo conceptual, técnico o práctico. Por "
+"ejemplo detallando sus características de funcionamiento, o en qué partes "
+"consistirá. Piensa en cómo será una vez acabado y todo lo que la gente "
+"podrá hacer con él."
+msgstr ""
+"Proiektuaren arlo kontzeptuala, teknikoa edo praktikoa laburki deskribatu. "
+"Adibidez bere funtzionamenduaren berezitasunak zehaztuz, edo zenbat arlo izango "
+"dituen. Imajinatu behin proiektua bukatuta jendea berarekin zer egin ahal izango "
+"duen."
 
 msgid "Motivación y a quién va dirigido el proyecto"
 msgstr "Zerk bultzatzen zaitu eta nori doakio proiektua"
 
-msgid "Explica qué motivos o circunstancias te han llevado a idear el proyecto, así como las comunidades o usuarios a las que va destinado. Te ayudará a conectar con personas movidas por ese mismo tipo de intereses, problemáticas o gustos."
-msgstr "Azaldu ezazu ze arrazoi eta baldintza eraman zaituzte proiektua bururatzera, baita zein komunitate eta erabiltzaile dituzun helburu. Honek gustu berdineko beste pertsonekin konektatzeko lagunduko dizu."
+msgid ""
+"Explica qué motivos o circunstancias te han llevado a idear el proyecto, así "
+"como las comunidades o usuarios a las que va destinado. Te ayudará a conectar "
+"con personas movidas por ese mismo tipo de intereses, problemáticas o gustos."
+msgstr ""
+"Azaldu ezazu ze arrazoi eta baldintza eraman zaituzte proiektua bururatzera, "
+"baita zein komunitate eta erabiltzaile dituzun helburu. Honek gustu berdineko "
+"beste pertsonekin konektatzeko lagunduko dizu."
 
 msgid "Vídeo adicional sobre motivación"
 msgstr "Gainerako bideo motibazioaren inguruan"
 
-msgid "Considera aquí la posibilidad de publicar y enlazar un vídeo (en Youtube o Vimeo) donde expliques brevemente a la cámara el porqué de tu proyecto. Se trata de algo que pueda complementar el vídeo principal, con una persona que transmita su necesidad u originalidad, del modo más directo posible. Si te da corte hablar a la cámara, también puede ser alguna persona que conoces y sigue el proyecto o la idea y pueda hacer esta aportación como "fan". La empatía y necesidad de ver a alguien al otro lado del proyecto es muy importante para determinado tipo de cofinanciadores. "
-msgstr "Pentsa ezazu hemen bideo bat argitaratu eta lotzeko aukera (Youtube-n edo Vimeo-n), non kamara aurrean zure proiektuaren zergatia azaltzen duzula. Bideo honen arrazoia bideo nagusia osatzea da, azaltzen duenak era zuzenagoena hartzen du, proiektuaren beharrezkotasuna eta originaltasuna azaltzeko. Kamara aurrean hitz egitea lotsa ematen badizu, posiblea da proiektua edo ideia jarraitzen duen ezagutzen duzun beste pertsona bat "fan" bezala ekarpen hau egitea. Enpatia eta proiektuaren beste aldean norbait dagoela ikustea oso garrantzitsua da alde bereko finantzadun batzuentzat."
-
-msgid "Enviar"
-msgstr "Bidali"
+msgid ""
+"Considera aquí la posibilidad de publicar y enlazar un vídeo (en Youtube o "
+"Vimeo) donde expliques brevemente a la cámara el porqué de tu proyecto. Se "
+"trata de algo que pueda complementar el vídeo principal, con una persona que "
+"transmita su necesidad u originalidad, del modo más directo posible. Si te da "
+"corte hablar a la cámara, también puede ser alguna persona que conoces y sigue "
+"el proyecto o la idea y pueda hacer esta aportación como \"fan\". La empatía y "
+"necesidad de ver a alguien al otro lado del proyecto es muy importante para "
+"determinado tipo de cofinanciadores. "
+msgstr ""
+"Pentsa ezazu hemen bideo bat argitaratu eta lotzeko aukera (Youtube-n edo Vimeo-"
+"n), non kamara aurrean zure proiektuaren zergatia azaltzen duzula. Bideo honen "
+"arrazoia bideo nagusia osatzea da, azaltzen duenak era zuzenagoena hartzen du, "
+"proiektuaren beharrezkotasuna eta originaltasuna azaltzeko. Kamara aurrean hitz "
+"egitea lotsa ematen badizu, posiblea da proiektua edo ideia jarraitzen duen "
+"ezagutzen duzun beste pertsona bat \"fan\" bezala ekarpen hau egitea. Enpatia "
+"eta proiektuaren beste aldean norbait dagoela ikustea oso garrantzitsua da alde "
+"bereko finantzadun batzuentzat."
 
 msgid "Objetivos de la campaña de crowdfunding"
 msgstr "Crowdfunding-eko kanpainaren helburuak"
 
-msgid "Enumera las metas principales del proyecto, a corto y largo plazo, en todos los aspectos que consideres importante destacar. Se trata de otra oportunidad para contactar y conseguir el apoyo de gente que simpatice con esos objetivos."
-msgstr "Banan-banan, zeure iritziz, aipatu proiektuaren helburu nagusiak, bai epe laburrean eta baita epe luzean ere. Hau beste aukera bat da jendearekin kontaktatzeko eta bere babesa jasotzeko, helburu hauekin ados badago."
+msgid ""
+"Enumera las metas principales del proyecto, a corto y largo plazo, en todos los "
+"aspectos que consideres importante destacar. Se trata de otra oportunidad para "
+"contactar y conseguir el apoyo de gente que simpatice con esos objetivos."
+msgstr ""
+"Banan-banan, zeure iritziz, aipatu proiektuaren helburu nagusiak, bai epe "
+"laburrean eta baita epe luzean ere. Hau beste aukera bat da jendearekin "
+"kontaktatzeko eta bere babesa jasotzeko, helburu hauekin ados badago."
 
 msgid "Experiencia previa y equipo"
 msgstr "Aurretiko esperientzia eta taldea"
 
-msgid "Resume tu trayectoria o la del grupo impulsor del proyecto. ¿Qué experiencia tiene relacionada con la propuesta? ¿Con qué equipo de personas, recursos y/o infraestructuras cuenta? "
-msgstr "Laburtu ezazu zure ibilbidea edo proiektuaren talde bultzatzailearena. Zer nolako esperientzia dauka proposamenarekin erlazionatuta?, zer pertsona talde, baliabide edota azpiegiturak ditu?"
+msgid ""
+"Resume tu trayectoria o la del grupo impulsor del proyecto. ¿Qué experiencia "
+"tiene relacionada con la propuesta? ¿Con qué equipo de personas, recursos y/o "
+"infraestructuras cuenta? "
+msgstr ""
+"Laburtu ezazu zure ibilbidea edo proiektuaren talde bultzatzailearena. Zer "
+"nolako esperientzia dauka proposamenarekin erlazionatuta?, zer pertsona talde, "
+"baliabide edota azpiegiturak ditu?"
 
 msgid "Palabras clave del proyecto"
 msgstr "Proiektuaren hitz gakoak"
 
-msgid "A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han escrito otros usuarios. Estas categorías ayudan a vincular tu proyecto con personas afines."
-msgstr "Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen dute."
+msgid ""
+"A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han "
+"escrito otros usuarios. Estas categorías ayudan a vincular tu proyecto con "
+"personas afines."
+msgstr ""
+"Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak "
+"proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen "
+"dute."
 
 msgid "Vídeo de presentación"
 msgstr "Aurkezpena bideoa"
 
-msgid "Copia y pega la dirección URL de un vídeo de presentación del proyecto, publicado previamente en Youtube o Vimeo. Esta parte es fundamental para atraer la atención de potenciales cofinanciadores y colaboradores, y cuanto más original sea mejor. Te recomendamos que tenga una duración de entre 2 y 4 minutos. "
-msgstr "Aurretik bai Youtube-n edo Vimeo-n argitaraturik dagoen proiektuaren aurkezpen bideo baten URL helbidea, kopiatu eta hemen itsatsi. Alde hau oinarrizkoa da ahaleko alde bereko finantzazioa eta babesleen arreta deitzeko. Zenbat eta originalagoa, hobe. 2-4 minutuko iraupena izatea gomendatzen dizugu."
+msgid ""
+"Copia y pega la dirección URL de un vídeo de presentación del proyecto, "
+"publicado previamente en Youtube o Vimeo. Esta parte es fundamental para atraer "
+"la atención de potenciales cofinanciadores y colaboradores, y cuanto más "
+"original sea mejor. Te recomendamos que tenga una duración de entre 2 y 4 "
+"minutos. "
+msgstr ""
+"Aurretik bai Youtube-n edo Vimeo-n argitaraturik dagoen proiektuaren aurkezpen "
+"bideo baten URL helbidea, kopiatu eta hemen itsatsi. Alde hau oinarrizkoa da "
+"ahaleko alde bereko finantzazioa eta babesleen arreta deitzeko. Zenbat eta "
+"originalagoa, hobe. 2-4 minutuko iraupena izatea gomendatzen dizugu."
 
-msgid "Enviar"
-msgstr "Bidali"
+msgid ""
+"<strong>En este apartado debes introducir los datos para la información "
+"pública de tu perfil de usuario. </strong><br><br>Tanto si quieres presentar un "
+"proyecto como incorporarte como cofinanciador/a, para formar parte de la "
+"comunidad de Goteo te recomendamos que pongas atención en tu texto de "
+"presentación, que añadas links relevantes sobre lo que haces y subas una "
+"imagen de perfil con la que te identifiques."
+msgstr ""
+"<strong>Arlo honetan zure erabiltzaile soslaiko alde publikorako datuak sartuko "
+"dituzu. </strong><br><br>Proiektu bat aurkeztu nahi baduzu, edota alde bereko "
+"finantzakide bezala parte hartu nahi baduzu, Goteo-ko komunitatean parte "
+"hartzeko arreta handiz zure aurkezpen testua idaztea gomendatzen dizugu, baita "
+"esteka interesgarriak zuri eta egiten duzunari buruz ipintzea eta parekotzat "
+"daukazun irudi bat igotzea."
 
-msgid "<strong>En este apartado debes introducir los datos para la información pública de tu perfil de usuario. </strong><br><br>Tanto si quieres presentar un proyecto como incorporarte como cofinanciador/a, para formar parte de la comunidad de Goteo te recomendamos que pongas atención en tu texto de presentación, que añadas links relevantes sobre lo que haces y subas una imagen de perfil con la que te identifiques."
-msgstr "<strong>Arlo honetan zure erabiltzaile soslaiko alde publikorako datuak sartuko dituzu. </strong><br><br>Proiektu bat aurkeztu nahi baduzu, edota alde bereko finantzakide bezala parte hartu nahi baduzu, Goteo-ko komunitatean parte hartzeko arreta handiz zure aurkezpen testua idaztea gomendatzen dizugu, baita esteka interesgarriak zuri eta egiten duzunari buruz ipintzea eta parekotzat daukazun irudi bat igotzea."
+#, fuzzy
+msgid ""
+"Intenta que el título sea lo más descriptivo posible. Recuerda que puedes a�"
+"�adir más recompensas a continuación."
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Saiatu zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu sari gehiago "
+"gehitu ditzakezula jarraian.\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Saia zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu jarraian sari "
+"gehiago gehitu ahal izango dituzula.\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Saiatu zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu sari gehiago "
+"gehitu ditzakezula jarraian.\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Saia zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu jarraian sari "
+"gehiago gehitu ahal izango dituzula."
 
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Cuéntanos algo sobre ti"
-msgstr "Kontaiguzu zeozer zuri buruz"
-
-msgid "Como red social, Goteo pretende ayudar a difundir y financiar proyectos interesantes entre el máximo de gente posible. Para eso es importante la información que puedas compartir sobre tus habilidades o experiencia (profesional, académica, aficiones, etc).\r\n"
-msgstr "Sare soziala bezala, Goteo-k proiektu interesgarriak zabaldu eta finantzatu nahi du, ahalik eta jende multzo handiaren artean. Horretarako garrantzitsua da  zure gaitasunei eta esperientziari buruzko informazioa (profesionala, akademikoa, zaletasunak, etabar) ipintzea."
-
-msgid "Temas que te interesan"
-msgstr "Zure intereseko gaiak"
-
-msgid "A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han escrito otros usuarios. Estas categorías ayudan a vincular tu perfil con otras personas y con proyectos concretos."
-msgstr "Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen dute."
-
-msgid "Qué puedes aportar a Goteo"
-msgstr "Zertan lagundu ahal duzun Goteo-n"
-
-msgid "Explica brevemente tus habilidades o los ámbitos en que podrías ayudar a un proyecto (traduciendo, difundiendo, testeando, programando, enseñando, etc)."
-msgstr "Azaldu laburki zure gaitasunak edo zein arloetan lagundu ahal izango zenukeen (itzultzen, zabaltzen, frogatzen, programatzen, irakasten, etabar)."
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Retorno"
-msgstr "Itzulera"
-
-msgid "Intenta que el título sea lo más descriptivo posible. Recuerda que puedes añadir más recompensas a continuación."
-msgstr "Saiatu zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu sari gehiago gehitu ditzakezula jarraian."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente el tipo de retorno colectivo que ofrecerá o permitirá el proyecto."
+msgid ""
+"Explica brevemente el tipo de retorno colectivo que ofrecerá o permitirá el "
+"proyecto."
 msgstr "Azaldu laburki proiektuak baimendu edo eskainiko duen talde itzulera."
-
-msgid "Aceptar"
-msgstr "Onartu"
 
 msgid "Recompensa"
 msgstr "Saria"
 
-msgid "Intenta que el título sea lo más descriptivo posible. Recuerda que puedes añadir más recompensas a continuación."
-msgstr "Saia zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu jarraian sari gehiago gehitu ahal izango dituzula."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente en qué consistirá la recompensa para quienes cofinancien con este importe el proyecto."
-msgstr "Azaldu ezazu laburki zertan datza jasoko duten saria, proiektua diru kopuru honekin alde berean finantzatuko dutenentzat."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "<strong>En este apartado puedes especificar qué otras ayudas, aparte de financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc)."
-msgstr "<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak (materiala, garraioa, hardware-a, etabar)."
-
-msgid "Guardar"
-msgstr "Gorde"
+msgid ""
+"Explica brevemente en qué consistirá la recompensa para quienes cofinancien "
+"con este importe el proyecto."
+msgstr ""
+"Azaldu ezazu laburki zertan datza jasoko duten saria, proiektua diru kopuru "
+"honekin alde berean finantzatuko dutenentzat."
 
 msgid "Retornos colectivos"
 msgstr "Talde itzulerak"
 
-msgid "Define el tipo de retorno o retornos del proyecto a los que se podrá acceder abiertamente, y la licencia que los debe regular. Si tienes dudas sobre qué opción escoger o lo que se adaptaría mejor a tu caso, <a href="http://www.goteo.org/contact" target="new">contáctanos</a> y te asesoraremos en este punto."
-msgstr "Proiektuaren zein itzulera motatara atzitu ahal izango den zehaztu, baita berauen lizentzia. Zalantzan bazaude zein izango litzateke zure kasurako aukerarik egokiena, <a href="http://www.goteo.org/contact" target="new">jar zaitez kontaktuan</a> gurekin eta atal honekin lagunduko zaitugu."
+msgid ""
+"Define el tipo de retorno o retornos del proyecto a los que se podrá acceder "
+"abiertamente, y la licencia que los debe regular. Si tienes dudas sobre qué "
+"opción escoger o lo que se adaptaría mejor a tu caso, <a href=\"http://www."
+"goteo.org/contact\" target=\"new\">contáctanos</a> y te asesoraremos en este "
+"punto."
+msgstr ""
+"Proiektuaren zein itzulera motatara atzitu ahal izango den zehaztu, baita "
+"berauen lizentzia. Zalantzan bazaude zein izango litzateke zure kasurako "
+"aukerarik egokiena, <a href=\"http://www.goteo.org/contact\" target=\"new\">jar "
+"zaitez kontaktuan</a> gurekin eta atal honekin lagunduko zaitugu."
 
 msgid "Recompensas individuales"
 msgstr "Banakako sariak"
 
-msgid "Aquí debes especificar la recompensa para quien apoye el proyecto, vinculada a una cantidad de dinero concreta. Elige bien lo que ofreces, intenta que sean productos/servicios atractivos o ingeniosos pero que no generen gastos extra de producción. Si no hay más remedio que tener esos gastos extra, calcula lo que cuesta producir esa recompensa (tiempo, materiales, envíos, etc) y oferta un número limitado. Piensa que tendrás que cumplir con todos esos compromisos al final de la producción del proyecto. "
-msgstr "Hemen proiektua babesten duenarentzat saria aipatu behar duzu, diru kopuruarekin erlazionatuta. Ondo aukera ezazu eskaintzen duzuna. Saia zaitez produktu/zerbitzu erakargarri eta sortzaileak izatea, baina ez daitezela produkzio gastu estra izatea. Ez badago erremediorik eta gastu oiek badaude, kalkula itzazu zenbat balio duen sari hori sortzea (denbora, materialak, bidalketak, etabar) eta eskaini ale mugatua. Pentsa ezazu, konpromiso guzti oiek bete behar izango dituzula proiektua produkzioaren amaieran."
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Resumen"
-msgstr "Laburpena"
-
-msgid "Título descriptivo sobre la colaboración necesaria."
-msgstr "Behar den elkarlaneko tituloa"
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente en qué consiste la ayuda que necesita el proyecto, para facilitar que la gente la reconozca y se anime a colaborar. \r\n"
-msgstr "Laburki azaldu zertan datza proiektuak behar duen laguntza, jendea igarri eta laguntzen animatu dezala."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "<strong>En este apartado puedes especificar qué otras ayudas, aparte de financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc)."
-msgstr "<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak (materiala, garraioa, hardware-a, etabar)."
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "En Goteo los proyectos pueden recibir otro tipo de ayudas además de aportaciones monetarias. Hay gente que a lo mejor no puede ayudar económicamente pero sí con su talento, tiempo, energía, etc."
-msgstr "Goteon proiektuak bestelako laguntza mota jaso dezakete, diruaz gain. Badago jendea ekonomikoki agian ezin duela babestu, baina bai bere gaitasunarekin, denborarekin, energiarekin, etabar."
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Publicado"
-msgstr "Argitaratua"
-
-msgid "Borrador"
-msgstr "Zirriborroa"
-
-msgid "No se ha publicado ninguna entrada "
-msgstr "Ez da sarrerarik argitaratu"
-
-msgid "Vista previa"
-msgstr "Aurrebista"
-
-msgid "<b>Es muy importante que los proyectos mantengan informados a sus cofinanciadores y el resto de personas potencialmente interesadas sobre cómo avanza su campaña. Desde este apartado puedes publicar mensajes de actualización sobre el proyecto, como una especie de blog público.</b>\r\n\r\nEn Goteo además, una vez se han logrado los fondos mínimos, para la segunda ronda de cofinanciación es crítico explicar regularmente cómo ha arrancado la producción, avances, problemas, etc que permitan la mayor transparencia posible y saber cómo evoluciona el inicio del proyecto, para así tratar de generar más interés y comunidad en torno al mismo."
-msgstr "<b>Oso garrantzitsua da proiektuak beraien finantzakideak, eta interesaturik egon ahal diren beste pertsonak, informatuta izatea bere kanpaina zelan mugitzen den aurrera. Arlo honetatik proiektuari aurrera pausuei buruzko mezuak idatz dezakezu, blog publikoa antzera.</b> Goteo-n gainera, behin gutxiengo diru kopurua lortu eta gero, 2. finantzaketa txanda hasten denean, garrantzia handia du maiz azaltzeak zelan hasi den produkzio zatia, eman diren aurrera pausuak, egon diren arazoak, etabar. Horrela prozesua ahalik eta garden ikusiko da eta jendea proiektuaren hasieraren jakinaren gainean egongo da, eta interesa eta komunitatea piztuko da honen inguruan."
-
-msgid "Guardar"
-msgstr "Gorde"
-
-msgid "tooltip-updates-title"
-msgstr "tooltip-updates-title"
-
-msgid "tooltip-updates-text"
-msgstr "tooltip-updates-text"
-
-msgid "tooltip-updates-media"
-msgstr "tooltip-updates-media"
-
-msgid "Enviar"
-msgstr "Bidali"
-
-msgid "Leyenda"
-msgstr "Legenda"
-
-msgid "Ver todos"
-msgstr "Guztiak ikusi"
+msgid ""
+"Aquí debes especificar la recompensa para quien apoye el proyecto, vinculada a "
+"una cantidad de dinero concreta. Elige bien lo que ofreces, intenta que sean "
+"productos/servicios atractivos o ingeniosos pero que no generen gastos extra de "
+"producción. Si no hay más remedio que tener esos gastos extra, calcula lo que "
+"cuesta producir esa recompensa (tiempo, materiales, envíos, etc) y oferta un "
+"número limitado. Piensa que tendrás que cumplir con todos esos compromisos al "
+"final de la producción del proyecto. "
+msgstr ""
+"Hemen proiektua babesten duenarentzat saria aipatu behar duzu, diru kopuruarekin "
+"erlazionatuta. Ondo aukera ezazu eskaintzen duzuna. Saia zaitez produktu/"
+"zerbitzu erakargarri eta sortzaileak izatea, baina ez daitezela produkzio gastu "
+"estra izatea. Ez badago erremediorik eta gastu oiek badaude, kalkula itzazu "
+"zenbat balio duen sari hori sortzea (denbora, materialak, bidalketak, etabar) "
+"eta eskaini ale mugatua. Pentsa ezazu, konpromiso guzti oiek bete behar izango "
+"dituzula proiektua produkzioaren amaieran."
 
 msgid "Resultado de búsqueda"
 msgstr "Bilaketaren emaitza"
@@ -1762,14 +1657,19 @@ msgstr "GUZTIAK"
 msgid "Por retorno:"
 msgstr "Itzuleragatik:"
 
-msgid "TODOS"
-msgstr "GUZTIAK"
-
 msgid "Buscar"
 msgstr "Bilatu"
 
-msgid "Goteo es una plataforma digital para la financiación colectiva, colaboración y distribución de recursos para el desarrollo de proyectos sociales, culturales, educativos, tecnológicos... que contribuyan al fortalecimiento del procomún, el código abierto y/o el conocimiento libre."
-msgstr "Goteo taldean finantzatzu, taldean landu, eta baliabideak banandu proiektu sozialak, kulturalak, hezigarriak, teknologikoak,... garatzeko plataforma digitala da. Hauen bitartez herri ondarea, kode irekia edo/eta ezagutza librea indartzen delarik."
+msgid ""
+"Goteo es una plataforma digital para la financiación colectiva, colaboración y "
+"distribución de recursos para el desarrollo de proyectos sociales, culturales, "
+"educativos, tecnológicos... que contribuyan al fortalecimiento del procomún, "
+"el código abierto y/o el conocimiento libre."
+msgstr ""
+"Goteo taldean finantzatzu, taldean landu, eta baliabideak banandu proiektu "
+"sozialak, kulturalak, hezigarriak, teknologikoak,... garatzeko plataforma "
+"digitala da. Hauen bitartez herri ondarea, kode irekia edo/eta ezagutza librea "
+"indartzen delarik."
 
 msgid "Descubre proyectos"
 msgstr "Ezagutu proiektuak"
@@ -1786,47 +1686,20 @@ msgstr "http://twitter.com/goteofunding"
 msgid "Una iniciativa de:"
 msgstr "Honen ekimenari esker:"
 
-msgid "Subir"
-msgstr "Igo"
-
 msgid "Preguntas frecuentes"
 msgstr "Ohiko galderak"
 
-msgid "Preguntas frecuentes"
-msgstr "Ohiko galderak"
-
-msgid "¿No has podido resolver tu duda?\r\n Envía un mensaje con tu pregunta."
-msgstr "Zure zalantza ezin izan duzu argitu? Bidali ezazu mezu bat zure galderarekin."
+msgid ""
+"¿No has podido resolver tu duda?\r\n"
+" Envía un mensaje con tu pregunta."
+msgstr ""
+"Zure zalantza ezin izan duzu argitu? Bidali ezazu mezu bat zure galderarekin."
 
 msgid "Preguntar"
 msgstr "Galdetu"
 
-msgid "Categorías"
-msgstr "Kategoriak"
-
-msgid "Proyectos"
-msgstr "Proiektuak"
-
 msgid "Destacados"
 msgstr "Nabarmenak"
-
-msgid "Más populares"
-msgstr "Ezagunenak"
-
-msgid "A punto de ser archivado"
-msgstr "Artxibatzeko zorian"
-
-msgid "Publicados recientemente"
-msgstr "Orain dela gutxi argitaraturik"
-
-msgid "Exitosos"
-msgstr "Arrakastatsuak"
-
-msgid "Archivados"
-msgstr "Artxibatuak"
-
-msgid "Crea un proyecto"
-msgstr "Proiektu bat sortu"
 
 msgid "Recursos"
 msgstr "Baliabideak"
@@ -1861,35 +1734,14 @@ msgstr "Tailerrak"
 msgid "Síguenos"
 msgstr "Jarraiguzu"
 
-msgid "http://twitter.com/goteofunding"
-msgstr "http://twitter.com/goteofunding"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
-
-msgid "Facebook"
-msgstr "Facebook"
-
 msgid "http://identi.ca/goteofunding"
 msgstr "http://identi.ca/goteofunding"
-
-msgid "Identi.ca"
-msgstr "Identi.ca"
 
 msgid "https://plus.google.com/b/116559557256583965659/"
 msgstr "https://plus.google.com/b/116559557256583965659/"
 
-msgid "Google+"
-msgstr "Google+"
-
 msgid "RSS/BLOG"
 msgstr "RSS/BLOG"
-
-msgid "Sobre Goteo"
-msgstr "Goteo-ri buruz"
 
 msgid "Accede"
 msgstr "Sartu"
@@ -1909,15 +1761,6 @@ msgstr "Erabiltzeko baldintzak"
 msgid "Política de privacidad"
 msgstr "Pribatutasun politika"
 
-msgid "Una iniciativa de:"
-msgstr "Honen ekimenari esker:"
-
-msgid "Subir"
-msgstr "Igo"
-
-msgid "Glosario"
-msgstr "Glosarioa"
-
 msgid "Principios para una economía abierta"
 msgstr "Ekonomia irekirako oinarriak"
 
@@ -1930,9 +1773,6 @@ msgstr "Talde itzulera"
 msgid "días"
 msgstr "egunak"
 
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
 msgid "Noticias:"
 msgstr "Berriak:"
 
@@ -1942,38 +1782,11 @@ msgstr "Menua"
 msgid "Inicio"
 msgstr "Hasiera"
 
-msgid "Descubre proyectos"
-msgstr "Ezagutu proiektuak"
-
-msgid "Crea un proyecto"
-msgstr "Proiektu bat sortu"
-
-msgid "Buscar"
-msgstr "Bilatu"
-
-msgid "Comunidad"
-msgstr "Komunitatea"
-
 msgid "Actividad"
 msgstr "Ekintza"
 
 msgid "Compartiendo"
 msgstr "Partekatzen"
-
-msgid "Comunidad"
-msgstr "Komunitatea"
-
-msgid "Mi panel"
-msgstr "Nire panela"
-
-msgid "Mi actividad"
-msgstr "Nire ekintza"
-
-msgid "Mi perfil"
-msgstr "Nire soslaia"
-
-msgid "Mis proyectos"
-msgstr "Nire proiektuak"
 
 msgid "Panel traductor"
 msgstr "Itzultzailearen panela"
@@ -1987,59 +1800,17 @@ msgstr "Admin panela"
 msgid "Cerrar sesión"
 msgstr "Saioa itxi"
 
-msgid "Accede"
-msgstr "Sartu"
-
-msgid "http://twitter.com/goteofunding"
-msgstr "http://twitter.com/goteofunding"
-
 msgid "Síguenos en Twitter"
 msgstr "Jarraituiguzu Twitter-en"
-
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
 
 msgid "Goteo en Facebook"
 msgstr "Goteo Facebook-en"
 
-msgid "RSS/BLOG"
-msgstr "RSS/BLOG"
-
 msgid "Goteo.org"
 msgstr "Goteo.org"
 
-msgid "Sobre Goteo"
-msgstr "Goteo-ri buruz"
-
-msgid "Blog"
-msgstr "Blog"
-
-msgid "FAQ"
-msgstr "FAQ"
-
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
-
 msgid "En nuestro blog"
 msgstr "Berriak"
-
-msgid "Leer más"
-msgstr "Gehiago irakurri"
-
-msgid "Destacados"
-msgstr "Nabarmenak"
-
-msgid "Leer más"
-msgstr "Gehiago irakurri"
-
-msgid "Últimas entradas"
-msgstr "Azkenengo sarrerak"
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Quitar"
-msgstr "Kendu"
 
 msgid "Imprescindible"
 msgstr "Nahitaezkoa"
@@ -2053,47 +1824,68 @@ msgstr "Minimo"
 msgid "Óptimo"
 msgstr "Hobezina"
 
-msgid "Coste"
-msgstr "Balioa"
-
 msgid "Introduce un título lo más descriptivo posible de este coste."
 msgstr "Gastu honetarako izenburua ahalik eta esanguratsuen idatzi ezazu."
 
 msgid "Tipo"
 msgstr "Mota"
 
-msgid "Aquí debes especificar el tipo de coste: vinculado a una tarea (algo que requiere la habilidad o conocimientos de alguien), la obtención de material (consumibles, materias primas) o bien infraestructura (espacios, equipos, mobiliario)."
-msgstr "Hemen balio mota zehaztu behar duzu: ekintza bateri lotuta (pertsona baten gaitasuna edo ezagutza behar duen edozer), materialak jaso (konsumibleak, lehengaiak) edota azpiegitura (guneak, tresneria, altzariak)."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente en qué consiste este coste."
-msgstr "Laburki azaldu zertan datza gastu hau."
+msgid ""
+"Aquí debes especificar el tipo de coste: vinculado a una tarea (algo que "
+"requiere la habilidad o conocimientos de alguien), la obtención de material "
+"(consumibles, materias primas) o bien infraestructura (espacios, equipos, "
+"mobiliario)."
+msgstr ""
+"Hemen balio mota zehaztu behar duzu: ekintza bateri lotuta (pertsona baten "
+"gaitasuna edo ezagutza behar duen edozer), materialak jaso (konsumibleak, "
+"lehengaiak) edota azpiegitura (guneak, tresneria, altzariak)."
 
 msgid "Valor"
 msgstr "Balioa"
 
-msgid "Especifica el importe en euros de lo que consideras que implica este coste. No utilices puntos para las cifras de miles ok?"
-msgstr "Zure iritzian, gastu honen zenbatekoa (eurotan) zehaztu. Ez erabili punttua milakako zenbakiak idazteko ados?"
+msgid ""
+"Especifica el importe en euros de lo que consideras que implica este coste. No "
+"utilices puntos para las cifras de miles ok?"
+msgstr ""
+"Zure iritzian, gastu honen zenbatekoa (eurotan) zehaztu. Ez erabili punttua "
+"milakako zenbakiak idazteko ados?"
 
 msgid "Este coste es"
 msgstr "Gastu hau da"
 
-msgid "Imprescindible"
-msgstr "Nahitaezkoa"
-
-msgid "Adicional"
-msgstr "Gehigarria"
-
-msgid "Este punto es muy importante: en cada coste que introduzcas tienes que marcar si es imprescindible o bien adicional. Todos los costes marcados como imprescindibles se sumarán dando el valor del importe de financiación mínimo para el proyecto. La suma de los costes adicionales, en cambio, se podrá obtener durante la segunda ronda de financiación, después de haber obtenido los fondos imprescindibles."
-msgstr "Arlo hau oso garrantzitsua da:  sartuko duzun gastu bakoitzean ukaezina edo aukerakoa den zehaztu behar duzu. Ukaezinezko gastu guztiak gehituko dira, proiektuaren finantzazio minimoa emaitza emanez. Aukerako gastuen gehiketa aldiz, finantzazioaren bigarren txandan agertu da, ukaezineko finantzazioa lortu ostean."
+msgid ""
+"Este punto es muy importante: en cada coste que introduzcas tienes que marcar si "
+"es imprescindible o bien adicional. Todos los costes marcados como "
+"imprescindibles se sumarán dando el valor del importe de financiación mínimo "
+"para el proyecto. La suma de los costes adicionales, en cambio, se "
+"podrá obtener durante la segunda ronda de financiación, después de haber "
+"obtenido los fondos imprescindibles."
+msgstr ""
+"Arlo hau oso garrantzitsua da:  sartuko duzun gastu bakoitzean ukaezina edo "
+"aukerakoa den zehaztu behar duzu. Ukaezinezko gastu guztiak gehituko dira, "
+"proiektuaren finantzazio minimoa emaitza emanez. Aukerako gastuen gehiketa "
+"aldiz, finantzazioaren bigarren txandan agertu da, ukaezineko finantzazioa lortu "
+"ostean."
 
 msgid "Fechas"
 msgstr "Datak"
 
-msgid "Indica entre qué fechas calculas que se va a llevar a cabo esa tarea o cubrir ese coste. Planifícalo empezando no antes de dos meses a partir de ahora, pues hay que considerar el plazo para revisar la propuesta, publicarla si es seleccionada y los 40 días de la primera financiación. No incluyas en este calendario la agenda de lo desarrollado anteriormente aunque es bueno que lo expliques en la descripción del proyecto. En la agenda sólo nos interesan las fases que quedan por hacer y buscan ser cofinanciadas."
-msgstr "Gastu hori bete edo lan hori bukatuko den data bitartea zehaztu. Planifikatu ezazu, gaurtik hasita hasierako data bi hilabete baino gehiago izan dadin, zeren proposamena ikusteko epea ere behar da, eta baita proposamena publikatzeko aukeratua izaten bada, eta lehenengo finantzazio txandaren 40 egunak. Egutegi honetan ez jarri aurretik garatutakoaren agenda, ona da baina proiektuaren deskribapenean hori idaztea. Agendan bakarrik interesatzen zaigu bukagabe dauden zatiak eta aldi berean finantzatuak nahi izatea direnak."
+msgid ""
+"Indica entre qué fechas calculas que se va a llevar a cabo esa tarea o cubrir "
+"ese coste. Planifícalo empezando no antes de dos meses a partir de ahora, pues "
+"hay que considerar el plazo para revisar la propuesta, publicarla si es "
+"seleccionada y los 40 días de la primera financiación. No incluyas en este "
+"calendario la agenda de lo desarrollado anteriormente aunque es bueno que lo "
+"expliques en la descripción del proyecto. En la agenda sólo nos interesan las "
+"fases que quedan por hacer y buscan ser cofinanciadas."
+msgstr ""
+"Gastu hori bete edo lan hori bukatuko den data bitartea zehaztu. Planifikatu "
+"ezazu, gaurtik hasita hasierako data bi hilabete baino gehiago izan dadin, zeren "
+"proposamena ikusteko epea ere behar da, eta baita proposamena publikatzeko "
+"aukeratua izaten bada, eta lehenengo finantzazio txandaren 40 egunak. Egutegi "
+"honetan ez jarri aurretik garatutakoaren agenda, ona da baina proiektuaren "
+"deskribapenean hori idaztea. Agendan bakarrik interesatzen zaigu bukagabe dauden "
+"zatiak eta aldi berean finantzatuak nahi izatea direnak."
 
 msgid "Desde"
 msgstr "-etik"
@@ -2101,215 +1893,197 @@ msgstr "-etik"
 msgid "Hasta"
 msgstr "Arte"
 
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
-
 msgid "Aspectos económicos"
 msgstr "Alde ekonomikoa"
 
-msgid "<strong>En esta sección debes elaborar un pequeño presupuesto basado en los costes que calcules va a tener la realización del proyecto.</strong><br><br>\r\nDebes especificar según tareas, infraestructura o materiales. Intenta ser realista en los costes y explicar brevemente por qué necesitas cubrir cada uno de ellos. Ten en cuenta que por norma general, al menos un 80% del proyecto deberá ser realizado directamente por la persona o equipo que promueve el proyecto, y no subcontratado a terceros.<br><br>\r\n<strong>Muy importante</strong>: En Goteo diferenciamos entre costes imprescindibles y costes adicionales. Los primeros deben lograrse en su totalidad para poder obtener la financiación, mientras que los segundo se solicitan y obtienen directamente en una campaña posterior, una vez está en marcha el proyecto, para poder poder cubrir costes de optimización del mismo (difusión, diseño, alcance, más unidades, etc). Estos costes adicionales no pueden superar la mitad de los costes totales del proyecto."
-msgstr "<strong>Arlo honetan aurrekontu txiki bat prestatu behar duzu, non proiektuaren zure usteko gastuak ipintzen dituzun.</strong><br /><br />Lanak, azpiegiturak edo materialak zehaztuz egin behar duzu. Saiatu zaitez gastuetan errealista izaten, eta laburki azaldu zergatik bete behar duzun gastu bakoitza. Kontutan izan, orokorrean, proiektuaren zatirik handiena proiektua bultzatzen duzuenok landu behar duzuela, eta ez dela beste hirugarren pertsona bat kontratatuko. Kalkulatzerakoan, zenbatu ere Goteo-ko zerbitzu prestakuntza eta transakzioaren komisioak: 9%a gutxi gorabehera (<a href="http://www.goteo.org/faq/sponsor#q98" target="new">info + gure FAQetan</a>).<br /><br /> <strong>Oso garrantzitsua</strong>: Goteo-n funtsezko eta ez funtsezko gastuak bereizten ditugu. Funtsezkoak guztiz bete behar dira finantzaketa lortzeko, eta ez funtsezkoak aldiz eskatu egiten dira bigarren txanda batean, behin proiektua martxan dagoela, eta honen hobekuntza lortzeko (proiektua zabaltzeko, diseinua, irismena, ale gehiago, etabar). Ez funtsezko gastu hauek ezin dute proiektuaren gastu guztien erdia baino gehiago izan."
-
-msgid "Desglose de costes"
-msgstr "Gastuen banakapena"
-
-msgid "Cuanto más precisión en el desglose mejor valorará Goteo la información general del proyecto. "
-msgstr "Zenbat eta hobeago banakepena zehaztu, Goteo-k proiektuaren informazio orokorra orduan eta hobeago baloratuko du"
-
-msgid "Añadir"
-msgstr "Gehitu"
+msgid ""
+"<strong>En esta sección debes elaborar un pequeño presupuesto basado en los "
+"costes que calcules va a tener la realización del proyecto.</strong><br><br>\r\n"
+"Debes especificar según tareas, infraestructura o materiales. Intenta ser "
+"realista en los costes y explicar brevemente por qué necesitas cubrir cada uno "
+"de ellos. Ten en cuenta que por norma general, al menos un 80% del proyecto "
+"deberá ser realizado directamente por la persona o equipo que promueve el "
+"proyecto, y no subcontratado a terceros.<br><br>\r\n"
+"<strong>Muy importante</strong>: En Goteo diferenciamos entre costes "
+"imprescindibles y costes adicionales. Los primeros deben lograrse en su "
+"totalidad para poder obtener la financiación, mientras que los segundo se "
+"solicitan y obtienen directamente en una campaña posterior, una vez está en "
+"marcha el proyecto, para poder poder cubrir costes de optimización del mismo "
+"(difusión, diseño, alcance, más unidades, etc). Estos costes adicionales no "
+"pueden superar la mitad de los costes totales del proyecto."
+msgstr ""
+"<strong>Arlo honetan aurrekontu txiki bat prestatu behar duzu, non proiektuaren "
+"zure usteko gastuak ipintzen dituzun.</strong><br /><br />Lanak, azpiegiturak "
+"edo materialak zehaztuz egin behar duzu. Saiatu zaitez gastuetan errealista "
+"izaten, eta laburki azaldu zergatik bete behar duzun gastu bakoitza. Kontutan "
+"izan, orokorrean, proiektuaren zatirik handiena proiektua bultzatzen duzuenok "
+"landu behar duzuela, eta ez dela beste hirugarren pertsona bat kontratatuko. "
+"Kalkulatzerakoan, zenbatu ere Goteo-ko zerbitzu prestakuntza eta transakzioaren "
+"komisioak: 9%a gutxi gorabehera (<a href=\"http://www.goteo.org/faq/"
+"sponsor#q98\" target=\"new\">info + gure FAQetan</a>).<br /><br /> <strong>Oso "
+"garrantzitsua</strong>: Goteo-n funtsezko eta ez funtsezko gastuak bereizten "
+"ditugu. Funtsezkoak guztiz bete behar dira finantzaketa lortzeko, eta ez "
+"funtsezkoak aldiz eskatu egiten dira bigarren txanda batean, behin proiektua "
+"martxan dagoela, eta honen hobekuntza lortzeko (proiektua zabaltzeko, diseinua, "
+"irismena, ale gehiago, etabar). Ez funtsezko gastu hauek ezin dute proiektuaren "
+"gastu guztien erdia baino gehiago izan."
 
 msgid "Visualización de costes"
 msgstr "Gastuen bistaratzea"
 
-msgid "Este gráfico muestra la suma de costes imprescindibles (mínimos para realizar el proyecto) y la suma de costes secundarios (importe óptimo) para las dos rondas de financiación. La primera ronda es de 40 días, para conseguir el importe mínimo imprescindible. Sólo si se consigue ese volumen de financiación se puede optar a la segunda ronda, de 40 días más, para llegar al presupuesto óptimo. A diferencia de la primera, en la segunda ronda se obtiene todo lo recaudado (aunque no se haya llegado al mínimo). "
-msgstr "Grafiko honek funtsezko gastuak azaltzen ditu (minimoak proiektua aurrera eramateko) eta baita ez funtsezko diren gastuak ere (zenbateko hobezina), finantzazioaren bi txandetan kontutan izateko. Lehenengo txanda 40 egun irauten du, eta funtsezko dirua lortzen saiatzen da. Finantzazio hori lortzen baldin bada, orduan 2. txanda egiteko aukera dago. 40 egun gehiago zenbateko hobezinera heltzeko. Bigarren txanda, lehenengoan ez bezala, jasotako finantzazio guztia jasotzen da (nahiz eta minimoa ez izatea). "
+msgid ""
+"Este gráfico muestra la suma de costes imprescindibles (mínimos para realizar "
+"el proyecto) y la suma de costes secundarios (importe óptimo) para las dos "
+"rondas de financiación. La primera ronda es de 40 días, para conseguir el "
+"importe mínimo imprescindible. Sólo si se consigue ese volumen de financiación "
+"se puede optar a la segunda ronda, de 40 días más, para llegar al presupuesto "
+"óptimo. A diferencia de la primera, en la segunda ronda se obtiene todo lo "
+"recaudado (aunque no se haya llegado al mínimo). "
+msgstr ""
+"Grafiko honek funtsezko gastuak azaltzen ditu (minimoak proiektua aurrera "
+"eramateko) eta baita ez funtsezko diren gastuak ere (zenbateko hobezina), "
+"finantzazioaren bi txandetan kontutan izateko. Lehenengo txanda 40 egun irauten "
+"du, eta funtsezko dirua lortzen saiatzen da. Finantzazio hori lortzen baldin "
+"bada, orduan 2. txanda egiteko aukera dago. 40 egun gehiago zenbateko hobezinera "
+"heltzeko. Bigarren txanda, lehenengoan ez bezala, jasotako finantzazio guztia "
+"jasotzen da (nahiz eta minimoa ez izatea). "
 
 msgid "Otros recursos"
 msgstr "Bestelako baliabideak"
 
-msgid "Indica aquí si cuentas con recursos adicionales, aparte de los que solicitas, para llevar a cabo el proyecto: fuentes de financiación, recursos propios o bien ya has hecho acopio de materiales. Puede suponer un aliciente para los potenciales cofinanciadores del proyecto."
-msgstr "Zehaztu hemen baliabide gehiago badituzu proiektua aurrera eramateko, eskatzen dituzun baliabideak alde batera utzita: finantzazio-iturriak, berezko baliabideak edota materiala jada jaso duzula. Interesa piztu dezake proiektua aldi berean finantzatuko duten pertsonetan."
+msgid ""
+"Indica aquí si cuentas con recursos adicionales, aparte de los que solicitas, "
+"para llevar a cabo el proyecto: fuentes de financiación, recursos propios o "
+"bien ya has hecho acopio de materiales. Puede suponer un aliciente para los "
+"potenciales cofinanciadores del proyecto."
+msgstr ""
+"Zehaztu hemen baliabide gehiago badituzu proiektua aurrera eramateko, eskatzen "
+"dituzun baliabideak alde batera utzita: finantzazio-iturriak, berezko "
+"baliabideak edota materiala jada jaso duzula. Interesa piztu dezake proiektua "
+"aldi berean finantzatuko duten pertsonetan."
 
-msgid "Visualización de cómo queda la agenda de producción de tu proyecto. Recuerda que sólo debes señalar las nuevas tareas a realizar, no las que ya se hayan efectuado."
-msgstr "Zure proiektuaren produkzio agenda zelan geratzen den bistaratzea. Gogoratu bakarrik lan berriak markatu behar dituzula, ez aldiz bukatuta daudenak."
+msgid ""
+"Visualización de cómo queda la agenda de producción de tu proyecto. Recuerda "
+"que sólo debes señalar las nuevas tareas a realizar, no las que ya se hayan "
+"efectuado."
+msgstr ""
+"Zure proiektuaren produkzio agenda zelan geratzen den bistaratzea. Gogoratu "
+"bakarrik lan berriak markatu behar dituzula, ez aldiz bukatuta daudenak."
 
 msgid "Errores"
 msgstr "Erroreak"
 
 msgid "Siguiente"
 msgstr "Hurrengoa"
-
-msgid "Vista previa"
-msgstr "Aurrebista"
-
-msgid "Vista previa"
-msgstr "Aurrebista"
 
 msgid "Descripción del proyecto"
 msgstr "Proiektuaren deskribapena"
 
-msgid "<strong>Éste es el apartado donde explicar con detalle los aspectos conceptuales del proyecto. </strong><br><br>Es lo primero con lo que cualquier usuario de la red se encontrará, así que cuida la redacción y evita las faltas de ortografía. Verás que hay campos obligatorios como incluir un vídeo o subir imágenes. Esto es así porque los consideramos imprescindibles para empezar con éxito una campaña de recaudación de fondos mediante Goteo.<br><br>\r\nTen en cuenta que lo más valorado en Goteo es: la información o conocimiento libre de interés general que tu proyecto aportará a la comunidad,  la originalidad, aspirar a resolver una demanda social,  el potencial para atraer a una comunidad amplia de personas interesadas, dejar claro que el equipo promotor posee las capacidades y experiencia para poder llevarlo a buen puerto. Así que no pierdas de vista informar sobre esos aspectos."
-msgstr "<strong>Arlo honetan proiektuaren alde kontzeptualak azalduko dira. </strong><br /><br />Hauxe izango da sareko erabiltzaileak aurkituko duten lehenengo gauza, beraz zaindu testua eta akats ortografikoak albo batean utzi. Derrigorreko kanpoak dagoela ikusiko duzu, adibidez, bideo sartu edo irudiak igo. Hauxe horrela da ukaezintzat ikusten ditugulako, Goteo bitartez, dirua jasotzeko kanpaina arrakastatsua hasi nahi bada.<br /><br />Kontutan izan Goteo-n baloratuena hauxe dela: zure proiektua komunitateari emango dion informazioa edo interes orokorreko ezagutza librea, originaltasuna, demanda soziala konpontzeko asmoa, interesaturik egon litekeen pertsona multzoa erakartzeko gaitasuna, argi eta garbi ustea proiekturen taldea gaitasuna esperientzia daukala proiektua ondo porturatzeko. Beraz ez ahaztu alde oien inguruan informatzea."
-
-msgid "Título del proyecto"
-msgstr "Proiektuaren izenburua"
-
-msgid "Escribe un nombre para titular el proyecto. Cuanto más breve mejor, para hacerlo más descriptivo puedes ampliarlo en el siguiente apartado."
-msgstr "Idatz ezazu proiektuari buruzko titularra. Ahalik eta laburren hobe. Azalpen gehiago emateko, hurrengo arloan egin ahal duzu."
-
-msgid "Frase de resumen"
-msgstr "Laburpen esaldia"
-
-msgid "Define con una frase un subtítulo que acabe de explicar en qué consistirá la iniciativa, que permita hacerse una idea mínima de para qué sirve o en qué consiste. Aparecerá junto al título del proyecto."
-msgstr "Zehaztu ezazu azpititulu bat: esaldi batean ekintza zertan datza, zertarako balio duen idea susmatzeko. Proiektuaren izenburuaren alboan agertuko da."
-
 msgid "Imágenes del proyecto"
 msgstr "Proiektuaren irudiak"
 
-msgid "Pueden ser esquemas, pantallazos, fotografías, ilustraciones, storyboards, etc. (su licencia de autoría debe ser compatible con la que selecciones en el apartado 5). Te recomendamos que sean diversas y de buena resolución. Puedes subir tantas como quieras!"
-msgstr "Posiblea da eskemak, pantaila argazkiak, irudiak, storyboard-ak, etabar izatea (egilearen lizentzia bateragarri izan behar da 5) arloan aukeratzen duzunarekin. Baliabide anitz eta bereizmen handikoak izatea gomendatzen dizugu. Nahi beste igo ditzakezu!"
-
-msgid "Subir imagen"
-msgstr "Irudia igo"
-
-msgid "Pueden ser esquemas, pantallazos, fotografías, ilustraciones, storyboards, etc. (su licencia de autoría debe ser compatible con la que selecciones en el apartado 5). Te recomendamos que sean diversas y de buena resolución. Puedes subir tantas como quieras!"
-msgstr "Posiblea da eskemak, pantaila argazkiak, irudiak, storyboard-ak, etabar izatea (egilearen lizentzia bateragarri izan behar da 5) arloan aukeratzen duzunarekin. Baliabide anitz eta bereizmen handikoak izatea gomendatzen dizugu. Nahi beste igo ditzakezu!"
-
-msgid "Imágenes actuales"
-msgstr "Oraingo irudiak"
-
-msgid "Breve descripción "
-msgstr "Deskribapen laburra"
-
-msgid "Describe el proyecto con un mínimo de 80 palabras (con menos marcará error). Explícalo de modo que sea fácil de entender para cualquier persona. Intenta darle un enfoque atractivo y social, resumiendo sus puntos fuertes, qué lo hace único, innovador o especial."
-msgstr "Deskribatu proiektua gutxienez 80 hitz erabiliz (gutxiagorekin errorea agertuko da). Azaldu ezazu edonork ulertzeko moduan. Saia zaitez alde soziala azpimarratzen eta era erakargarrian azaltzen, bere alde indartsuak laburbilduz, zerk egiten duen paregabe, berritzaile edo berezia."
-
-msgid "Características básicas"
-msgstr "Oinarriko ezaugarriak"
-
-msgid "Describe brevemente el proyecto de modo conceptual, técnico o práctico. Por ejemplo detallando sus características de funcionamiento, o en qué partes consistirá. Piensa en cómo será una vez acabado y todo lo que la gente podrá hacer con él."
-msgstr "Proiektuaren arlo kontzeptuala, teknikoa edo praktikoa laburki deskribatu. Adibidez bere funtzionamenduaren berezitasunak zehaztuz, edo zenbat arlo izango dituen. Imajinatu behin proiektua bukatuta jendea berarekin zer egin ahal izango duen."
-
-msgid "Motivación y a quién va dirigido el proyecto"
-msgstr "Zerk bultzatzen zaitu eta nori doakio proiektua"
-
-msgid "Explica qué motivos o circunstancias te han llevado a idear el proyecto, así como las comunidades o usuarios a las que va destinado. Te ayudará a conectar con personas movidas por ese mismo tipo de intereses, problemáticas o gustos."
-msgstr "Azaldu ezazu ze arrazoi eta baldintza eraman zaituzte proiektua bururatzera, baita zein komunitate eta erabiltzaile dituzun helburu. Honek gustu berdineko beste pertsonekin konektatzeko lagunduko dizu."
-
-msgid "Vídeo adicional sobre motivación"
-msgstr "Gainerako bideo motibazioaren inguruan"
-
-msgid "Considera aquí la posibilidad de publicar y enlazar un vídeo (en Youtube o Vimeo) donde expliques brevemente a la cámara el porqué de tu proyecto. Se trata de algo que pueda complementar el vídeo principal, con una persona que transmita su necesidad u originalidad, del modo más directo posible. Si te da corte hablar a la cámara, también puede ser alguna persona que conoces y sigue el proyecto o la idea y pueda hacer esta aportación como "fan". La empatía y necesidad de ver a alguien al otro lado del proyecto es muy importante para determinado tipo de cofinanciadores. "
-msgstr "Pentsa ezazu hemen bideo bat argitaratu eta lotzeko aukera (Youtube-n edo Vimeo-n), non kamara aurrean zure proiektuaren zergatia azaltzen duzula. Bideo honen arrazoia bideo nagusia osatzea da, azaltzen duenak era zuzenagoena hartzen du, proiektuaren beharrezkotasuna eta originaltasuna azaltzeko. Kamara aurrean hitz egitea lotsa ematen badizu, posiblea da proiektua edo ideia jarraitzen duen ezagutzen duzun beste pertsona bat "fan" bezala ekarpen hau egitea. Enpatia eta proiektuaren beste aldean norbait dagoela ikustea oso garrantzitsua da alde bereko finantzadun batzuentzat."
-
-msgid "Enviar"
-msgstr "Bidali"
+msgid ""
+"Pueden ser esquemas, pantallazos, fotografías, ilustraciones, storyboards, etc. "
+"(su licencia de autoría debe ser compatible con la que selecciones en el "
+"apartado 5). Te recomendamos que sean diversas y de buena resolución. Puedes "
+"subir tantas como quieras!"
+msgstr ""
+"Posiblea da eskemak, pantaila argazkiak, irudiak, storyboard-ak, etabar izatea "
+"(egilearen lizentzia bateragarri izan behar da 5) arloan aukeratzen duzunarekin. "
+"Baliabide anitz eta bereizmen handikoak izatea gomendatzen dizugu. Nahi beste "
+"igo ditzakezu!"
 
 msgid "Cargar con Universal Subtitles"
 msgstr "Universal Subtitles bitartez azaldu"
 
-msgid "Marca la casilla en caso de que hayas subtitulado a otros idiomas el vídeo mediante Universal Subtitles: http://www.universalsubtitles.org/"
-msgstr "Markatu ezazu laukia bideo beste hizkuntzetan itzuli baduzu Universal Subtitles-ekin: http://www.universalsubtitles.org/"
+msgid ""
+"Marca la casilla en caso de que hayas subtitulado a otros idiomas el vídeo "
+"mediante Universal Subtitles: http://www.universalsubtitles.org/"
+msgstr ""
+"Markatu ezazu laukia bideo beste hizkuntzetan itzuli baduzu Universal Subtitles-"
+"ekin: http://www.universalsubtitles.org/"
 
-msgid "Objetivos de la campaña de crowdfunding"
-msgstr "Crowdfunding-eko kanpainaren helburuak"
-
-msgid "Enumera las metas principales del proyecto, a corto y largo plazo, en todos los aspectos que consideres importante destacar. Se trata de otra oportunidad para contactar y conseguir el apoyo de gente que simpatice con esos objetivos."
-msgstr "Banan-banan, zeure iritziz, aipatu proiektuaren helburu nagusiak, bai epe laburrean eta baita epe luzean ere. Hau beste aukera bat da jendearekin kontaktatzeko eta bere babesa jasotzeko, helburu hauekin ados badago."
-
-msgid "Experiencia previa y equipo"
-msgstr "Aurretiko esperientzia eta taldea"
-
-msgid "Resume tu trayectoria o la del grupo impulsor del proyecto. ¿Qué experiencia tiene relacionada con la propuesta? ¿Con qué equipo de personas, recursos y/o infraestructuras cuenta? "
-msgstr "Laburtu ezazu zure ibilbidea edo proiektuaren talde bultzatzailearena. Zer nolako esperientzia dauka proposamenarekin erlazionatuta?, zer pertsona talde, baliabide edota azpiegiturak ditu?"
-
-msgid "Categorías"
-msgstr "Kategoriak"
-
-msgid "Selecciona tantas categorías como creas necesario para describir el proyecto, basándote en todo lo que has descrito arriba. Mediante estas palabras clave lo podremos hacer llegar a diferentes usuarios de Goteo."
-msgstr "Proiektua deskribatzeko aukera ezazu nahi beste kategoria, goi partean azaldu kontutan hartuz. Hitz gako hauen bitartez Goteo-ko hainbat erabiltzaileei eraman ahal izango dugu."
-
-msgid "Palabras clave del proyecto"
-msgstr "Proiektuaren hitz gakoak"
-
-msgid "A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han escrito otros usuarios. Estas categorías ayudan a vincular tu proyecto con personas afines."
-msgstr "Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen dute."
-
-msgid "Vídeo de presentación"
-msgstr "Aurkezpena bideoa"
-
-msgid "Copia y pega la dirección URL de un vídeo de presentación del proyecto, publicado previamente en Youtube o Vimeo. Esta parte es fundamental para atraer la atención de potenciales cofinanciadores y colaboradores, y cuanto más original sea mejor. Te recomendamos que tenga una duración de entre 2 y 4 minutos. "
-msgstr "Aurretik bai Youtube-n edo Vimeo-n argitaraturik dagoen proiektuaren aurkezpen bideo baten URL helbidea, kopiatu eta hemen itsatsi. Alde hau oinarrizkoa da ahaleko alde bereko finantzazioa eta babesleen arreta deitzeko. Zenbat eta originalagoa, hobe. 2-4 minutuko iraupena izatea gomendatzen dizugu."
-
-msgid "Enviar"
-msgstr "Bidali"
-
-msgid "Cargar con Universal Subtitles"
-msgstr "Universal Subtitles bitartez azaldu"
-
-msgid "Marca la casilla en caso de que hayas subtitulado a otros idiomas el vídeo mediante Universal Subtitles: http://www.universalsubtitles.org/"
-msgstr "Markatu ezazu laukia bideo beste hizkuntzetan itzuli baduzu Universal Subtitles-ekin: http://www.universalsubtitles.org/"
+msgid ""
+"Selecciona tantas categorías como creas necesario para describir el proyecto, "
+"basándote en todo lo que has descrito arriba. Mediante estas palabras clave lo "
+"podremos hacer llegar a diferentes usuarios de Goteo."
+msgstr ""
+"Proiektua deskribatzeko aukera ezazu nahi beste kategoria, goi partean azaldu "
+"kontutan hartuz. Hitz gako hauen bitartez Goteo-ko hainbat erabiltzaileei eraman "
+"ahal izango dugu."
 
 msgid "Estado actual"
 msgstr "Oraingo egoera"
 
-msgid "Indica en qué fase se encuentra el proyecto actualmente respecto a su proceso de creación o ejecución."
-msgstr "Azaldu proiektuak zein zatian dago gaur egun, hasiera zatiarekin edo betetze zatiarekin kontutan hartuz."
+msgid ""
+"Indica en qué fase se encuentra el proyecto actualmente respecto a su proceso "
+"de creación o ejecución."
+msgstr ""
+"Azaldu proiektuak zein zatian dago gaur egun, hasiera zatiarekin edo betetze "
+"zatiarekin kontutan hartuz."
 
 msgid "Ubicación"
 msgstr "Kokapena"
 
-msgid "Indica el lugar donde se desarrollará el proyecto, en qué población o poblaciones se encuentra su impulsor o impulsores principales."
-msgstr "Zehaztu non garatuko den proiektua, zein herrian edo hirian kokatzen bere bultzatzaile nagusia(k)"
+msgid ""
+"Indica el lugar donde se desarrollará el proyecto, en qué población o "
+"poblaciones se encuentra su impulsor o impulsores principales."
+msgstr ""
+"Zehaztu non garatuko den proiektua, zein herrian edo hirian kokatzen bere "
+"bultzatzaile nagusia(k)"
 
 msgid "Alcance del proyecto"
 msgstr "Proiektuaren norainokoa"
 
-msgid "Indica el impacto geográfico que aspira a tener el proyecto (cada categoría incluye la anterior). "
-msgstr "Zehaztu proiektu honek ustez izan duen eragin geografikoa (kategori bakoitzak haurrekoa du barne)."
-
-msgid "Errores"
-msgstr "Erroreak"
-
-msgid "Siguiente"
-msgstr "Hurrengoa"
+msgid ""
+"Indica el impacto geográfico que aspira a tener el proyecto (cada categoría "
+"incluye la anterior). "
+msgstr ""
+"Zehaztu proiektu honek ustez izan duen eragin geografikoa (kategori bakoitzak "
+"haurrekoa du barne)."
 
 msgid "Corregir"
 msgstr "Zuzentu"
 
-msgid "Enviar"
-msgstr "Bidali"
-
-msgid "Enviar"
-msgstr "Bidali"
-
 msgid "Notas adicionales para el administrador"
 msgstr "Gainerako oharrak administratzailearentzat"
 
-msgid "¿Tienes dudas o comentarios para que las lea el administrador de Goteo? Éste es lugar para explicar alguna parte de lo que has escrito de la que no estás seguro,  para proponer mejoras, etc."
-msgstr "Zalantza edo galderarik Goteo-ko administratzaileak irakurri ditzan? Idatzi duzunaren inguruan galdetzeko edo proposamenak egiteko, hau da leku aproposa."
-
-msgid "Errores"
-msgstr "Erroreak"
+msgid ""
+"¿Tienes dudas o comentarios para que las lea el administrador de Goteo? Éste es "
+"lugar para explicar alguna parte de lo que has escrito de la que no estás "
+"seguro,  para proponer mejoras, etc."
+msgstr ""
+"Zalantza edo galderarik Goteo-ko administratzaileak irakurri ditzan? Idatzi "
+"duzunaren inguruan galdetzeko edo proposamenak egiteko, hau da leku aproposa."
 
 msgid "Previsualización de datos"
 msgstr "Datuak aurreikusi"
 
-msgid "<strong>Éste es un resumen de toda la información sobre el proyecto.</strong><br><br> Repasa los puntos de cada apartado para ver si puedes mejorar algo, o bien envía el proyecto para su valoración (mediante el botón "Enviar" de la parte de abajo) si ya están cumplimentados todos los campos obligatorios, para que así pueda ser valorado por el equipo y la comunidad de Goteo. Una vez lo envíes ya no se podrán introducir cambios. <br><br>Ten en cuenta que sólo podemos seleccionar unos cuantos proyectos al mes para garantizar la atención y la difusión de las propuestas que se hacen públicas. Próximamente recibirás un mensaje con toda la información, que te indicará los pasos a seguir y recomendaciones para que tu proyecto pueda alcanzar la meta propuesta. "
-msgstr "<strong>Proiektuaren informazio guztiaren laburpena da hau.</strong><br /><br /> Atal bakoitzeko berraztertu zer edo zer hobetzeko asmoarekin, edo proiektua bidali baloratua izan dadin (beheko partean dagoen "Bidali" botoia sakatuz) betebeharreko kanpo guztiak bete badituzu. Behin bidalita, ezin izango dituzu aldaketak egin.<br /><br />Kontutan izan bakarrik aukeratzen ditugula proiektu bakar batzuk hilero, bestela ezin izango genuke argitaratzen diren proiektuen zabalera kanpainak eta arreta bermatu. Jarraian mezu bat jasoko duzu informazio guztiarekin, hurrengo urratsak azalduz, zure proiektua jarritako helburua bete dezan."
+msgid ""
+"<strong>Éste es un resumen de toda la información sobre el proyecto.</"
+"strong><br><br> Repasa los puntos de cada apartado para ver si puedes mejorar "
+"algo, o bien envía el proyecto para su valoración (mediante el botón \"Enviar"
+"\" de la parte de abajo) si ya están cumplimentados todos los campos "
+"obligatorios, para que así pueda ser valorado por el equipo y la comunidad de "
+"Goteo. Una vez lo envíes ya no se podrán introducir cambios. <br><br>Ten en "
+"cuenta que sólo podemos seleccionar unos cuantos proyectos al mes para "
+"garantizar la atención y la difusión de las propuestas que se hacen públicas. "
+"Próximamente recibirás un mensaje con toda la información, que te "
+"indicará los pasos a seguir y recomendaciones para que tu proyecto pueda "
+"alcanzar la meta propuesta. "
+msgstr ""
+"<strong>Proiektuaren informazio guztiaren laburpena da hau.</strong><br /><br /> "
+"Atal bakoitzeko berraztertu zer edo zer hobetzeko asmoarekin, edo proiektua "
+"bidali baloratua izan dadin (beheko partean dagoen \"Bidali\" botoia sakatuz) "
+"betebeharreko kanpo guztiak bete badituzu. Behin bidalita, ezin izango dituzu "
+"aldaketak egin.<br /><br />Kontutan izan bakarrik aukeratzen ditugula proiektu "
+"bakar batzuk hilero, bestela ezin izango genuke argitaratzen diren proiektuen "
+"zabalera kanpainak eta arreta bermatu. Jarraian mezu bat jasoko duzu informazio "
+"guztiarekin, hurrengo urratsak azalduz, zure proiektua jarritako helburua bete "
+"dezan."
 
 msgid "Recompensa limitada"
 msgstr "Sari mugatua"
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Quitar"
-msgstr "Kendu"
 
 msgid "Ver detalles"
 msgstr "Xehetasunak ikusi"
@@ -2317,59 +2091,46 @@ msgstr "Xehetasunak ikusi"
 msgid "Especificar el tipo de retorno"
 msgstr "Itzulera mota zehaztu"
 
-msgid "Especifica brevemente en qué consistirá este otro tipo de retorno colectivo."
+msgid ""
+"Especifica brevemente en qué consistirá este otro tipo de retorno colectivo."
 msgstr "Azaldu ezazu laburki zertan datza talde itzulera desberdina mota hau."
 
 msgid "Opciones de licencia"
 msgstr "Lizentzia aukerak"
 
-msgid "Retorno"
-msgstr "Itzulera"
-
-msgid "Intenta que el título sea lo más descriptivo posible. Recuerda que puedes añadir más recompensas a continuación."
-msgstr "Saiatu zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu sari gehiago gehitu ditzakezula jarraian."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente el tipo de retorno colectivo que ofrecerá o permitirá el proyecto."
-msgstr "Azaldu laburki proiektuak baimendu edo eskainiko duen talde itzulera."
-
 msgid "Tipo de retorno"
 msgstr "Itzulera mota"
 
-msgid "Especifica el tipo de retorno: ARCHIVOS DIGITALES como música, vídeo, documentos de texto, etc. CÓDIGO FUENTE de software informático. DISEÑOS de  planos o patrones. MANUALES en forma de kits, business plans, “how tos” o recetas. SERVICIOS como talleres, cursos, asesorías, acceso a websites, bases de datos online. "
-msgstr "Itzulera mota zehaztu: FITXERO DIGITALAK: musika, bideoa, testu dokumentuak, etabar. Programa informatikoen ITURRI KODEA. Plano edo patroien DISEINUAK. GIDALIBURUAK: kit-eran, bussiness plans, how-to-ak edo errezetak. ZERBITZUAK: tailerrak, ikastaroak, aholkularitza saioak, webgune batzuetan sartzeko baimena, online datu baseak."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
+msgid ""
+"Especifica el tipo de retorno: ARCHIVOS DIGITALES como música, vídeo, "
+"documentos de texto, etc. CÓDIGO FUENTE de software informático. DISEÑOS de  "
+"planos o patrones. MANUALES en forma de kits, business plans, “how tos” o "
+"recetas. SERVICIOS como talleres, cursos, asesorías, acceso a websites, bases de "
+"datos online. "
+msgstr ""
+"Itzulera mota zehaztu: FITXERO DIGITALAK: musika, bideoa, testu dokumentuak, "
+"etabar. Programa informatikoen ITURRI KODEA. Plano edo patroien DISEINUAK. "
+"GIDALIBURUAK: kit-eran, bussiness plans, how-to-ak edo errezetak. ZERBITZUAK: "
+"tailerrak, ikastaroak, aholkularitza saioak, webgune batzuetan sartzeko baimena, "
+"online datu baseak."
 
 msgid "Especificar el tipo de recompensa"
 msgstr "Sari mota zehaztu"
 
-msgid "Especifica brevemente en qué consistirá este otro tipo de recompensa individual."
+msgid ""
+"Especifica brevemente en qué consistirá este otro tipo de recompensa "
+"individual."
 msgstr "Azaldu ezazu laburki zertan datza banakako-sari desberdina mota hau."
-
-msgid "Recompensa"
-msgstr "Saria"
-
-msgid "Intenta que el título sea lo más descriptivo posible. Recuerda que puedes añadir más recompensas a continuación."
-msgstr "Saia zaitez izenburua ahalik eta esanguratsuen izatea. Gogoratu jarraian sari gehiago gehitu ahal izango dituzula."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente en qué consistirá la recompensa para quienes cofinancien con este importe el proyecto."
-msgstr "Azaldu ezazu laburki zertan datza jasoko duten saria, proiektua diru kopuru honekin alde berean finantzatuko dutenentzat."
 
 msgid "Tipo de recompensa"
 msgstr "Sari mota"
 
-msgid "Selecciona el tipo de recompensa que el proyecto puede ofrecer a la gente que aporta esta cantidad."
-msgstr "Aukera ezazu proiektuak eskaini dezakeen sari mota, diru kopuru hori jartzen duten pertsonei."
+msgid ""
+"Selecciona el tipo de recompensa que el proyecto puede ofrecer a la gente que "
+"aporta esta cantidad."
+msgstr ""
+"Aukera ezazu proiektuak eskaini dezakeen sari mota, diru kopuru hori jartzen "
+"duten pertsonei."
 
 msgid "Importe financiado"
 msgstr "Finantzatutako zenbatekoa"
@@ -2380,164 +2141,115 @@ msgstr "Sari hau jasotzeko diru kopuru minimoa."
 msgid "Unidades"
 msgstr "Neurri-unitateak"
 
-msgid "Cantidad limitada de ítems que se pueden ofrecer individualizadamente a cambio de ese importe. Calcula que la suma total de todas las recompensas individuales del proyecto se acerquen al presupuesto mínimo de financiación que has establecido. También la posibilidad de incorporar las recompensas previas a medida que suba el importe, puedes empezar diciendo "Todo lo anterior más..."  "
-msgstr "Diru horren truke eskaini ahal diren aleak. Kalkula ezazu sari banako guztien gehiketa, ipini duzun finantzazio gutxiengo presupuestoari urbiltzeko. Aurre-sariak inkorporatzeko aukera diru kopurua igo ahala baita ere. "Aurreko guztia gehi..." esaten as zaitezke."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
+msgid ""
+"Cantidad limitada de ítems que se pueden ofrecer individualizadamente a cambio "
+"de ese importe. Calcula que la suma total de todas las recompensas individuales "
+"del proyecto se acerquen al presupuesto mínimo de financiación que has "
+"establecido. También la posibilidad de incorporar las recompensas previas a "
+"medida que suba el importe, puedes empezar diciendo \"Todo lo anterior más..."
+"\"  "
+msgstr ""
+"Diru horren truke eskaini ahal diren aleak. Kalkula ezazu sari banako guztien "
+"gehiketa, ipini duzun finantzazio gutxiengo presupuestoari urbiltzeko. Aurre-"
+"sariak inkorporatzeko aukera diru kopurua igo ahala baita ere. \"Aurreko guztia "
+"gehi...\" esaten as zaitezke."
 
 msgid "Retornos y recompensas"
 msgstr "Itzulerak eta sariak"
 
-msgid "<strong>En este apartado debes establecer qué ofrece el proyecto a cambio a sus cofinanciadores, y también sus retornos colectivos.</strong><br><br>\r\nAdemás de las recompensas individuales para cada importe de cofinanciación, aquí debes definir qué tipo de licencia asignar al proyecto, en función de su formato y/o del grado de abertura del mismo (o de alguna de sus partes). Esta parte es muy importante, ya que Goteo es una plataforma de crowdfunding para proyectos basados en la filosofía del código abierto y que fortalezcan el procomún.<br><br>\r\nEn caso de que además de una de las licencias aquí especificadas te interese adicionalmente registrar la propiedad intelectual de tu obra o idea, manteniendo su compatibilidad con los retornos colectivos, te recomendamos obtener una protección legal específica mediante el servicio <a href="http://www.safecreative.org/" target="new">Safe Creative</a>."
-msgstr "<strong>Arlo honetan proiektuaren talde itzulerak zehaztu behar dituzu, eta baita ere proiektuak finantzakideei eskaintzen dienak.</strong><br /><br />Diru kopuru bakoitzari dagokion banakako sariaz aparte, hemen proiektuari dagokion lizentzia ere aipatu behar duzu. Lizentzia aukeratzeko proiektuaren formatua kontutan izan behar duzu eta bere irekiera maila (osorik edo zatiren baten bat). Arlo hau oso garrantzitsua da: Goteo crowdfunding-eko plataforma bat da, non kode irekiko proiektuak eta Herri Ondarea indartzen dituzten proiektuak bultzatzen dira.<br /><br />Kasua bada, interesatzen zaizula hemen aipatutakoaren lizentziaz aparte, zure lana edo ideiaren jabetza intelektuala erregistratu nahi baduzu, talde itzuleraren bateragarritasuna mantenduz, babes legala jasotzea gomendatzen dizugu zerbitzu honen bitartez: <a href="http://www.safecreative.org/" target="new">Safe Creative</a>."
-
-msgid "Retornos colectivos"
-msgstr "Talde itzulerak"
-
-msgid "Define el tipo de retorno o retornos del proyecto a los que se podrá acceder abiertamente, y la licencia que los debe regular. Si tienes dudas sobre qué opción escoger o lo que se adaptaría mejor a tu caso, <a href="http://www.goteo.org/contact" target="new">contáctanos</a> y te asesoraremos en este punto."
-msgstr "Proiektuaren zein itzulera motatara atzitu ahal izango den zehaztu, baita berauen lizentzia. Zalantzan bazaude zein izango litzateke zure kasurako aukerarik egokiena, <a href="http://www.goteo.org/contact" target="new">jar zaitez kontaktuan</a> gurekin eta atal honekin lagunduko zaitugu."
-
-msgid "Añadir"
-msgstr "Gehitu"
-
-msgid "Recompensas individuales"
-msgstr "Banakako sariak"
-
-msgid "Aquí debes especificar la recompensa para quien apoye el proyecto, vinculada a una cantidad de dinero concreta. Elige bien lo que ofreces, intenta que sean productos/servicios atractivos o ingeniosos pero que no generen gastos extra de producción. Si no hay más remedio que tener esos gastos extra, calcula lo que cuesta producir esa recompensa (tiempo, materiales, envíos, etc) y oferta un número limitado. Piensa que tendrás que cumplir con todos esos compromisos al final de la producción del proyecto. "
-msgstr "Hemen proiektua babesten duenarentzat saria aipatu behar duzu, diru kopuruarekin erlazionatuta. Ondo aukera ezazu eskaintzen duzuna. Saia zaitez produktu/zerbitzu erakargarri eta sortzaileak izatea, baina ez daitezela produkzio gastu estra izatea. Ez badago erremediorik eta gastu oiek badaude, kalkula itzazu zenbat balio duen sari hori sortzea (denbora, materialak, bidalketak, etabar) eta eskaini ale mugatua. Pentsa ezazu, konpromiso guzti oiek bete behar izango dituzula proiektua produkzioaren amaieran."
-
-msgid "Añadir"
-msgstr "Gehitu"
-
-msgid "Errores"
-msgstr "Erroreak"
-
-msgid "Siguiente"
-msgstr "Hurrengoa"
-
-msgid "Estado del proyecto"
-msgstr "Proiektuaren egoera"
+msgid ""
+"<strong>En este apartado debes establecer qué ofrece el proyecto a cambio a sus "
+"cofinanciadores, y también sus retornos colectivos.</strong><br><br>\r\n"
+"Además de las recompensas individuales para cada importe de cofinanciación, "
+"aquí debes definir qué tipo de licencia asignar al proyecto, en función de su "
+"formato y/o del grado de abertura del mismo (o de alguna de sus partes). Esta "
+"parte es muy importante, ya que Goteo es una plataforma de crowdfunding para "
+"proyectos basados en la filosofía del código abierto y que fortalezcan el "
+"procomún.<br><br>\r\n"
+"En caso de que además de una de las licencias aquí especificadas te interese "
+"adicionalmente registrar la propiedad intelectual de tu obra o idea, manteniendo "
+"su compatibilidad con los retornos colectivos, te recomendamos obtener una "
+"protección legal específica mediante el servicio <a href=\"http://www."
+"safecreative.org/\" target=\"new\">Safe Creative</a>."
+msgstr ""
+"<strong>Arlo honetan proiektuaren talde itzulerak zehaztu behar dituzu, eta "
+"baita ere proiektuak finantzakideei eskaintzen dienak.</strong><br /><br />Diru "
+"kopuru bakoitzari dagokion banakako sariaz aparte, hemen proiektuari dagokion "
+"lizentzia ere aipatu behar duzu. Lizentzia aukeratzeko proiektuaren formatua "
+"kontutan izan behar duzu eta bere irekiera maila (osorik edo zatiren baten bat). "
+"Arlo hau oso garrantzitsua da: Goteo crowdfunding-eko plataforma bat da, non "
+"kode irekiko proiektuak eta Herri Ondarea indartzen dituzten proiektuak "
+"bultzatzen dira.<br /><br />Kasua bada, interesatzen zaizula hemen "
+"aipatutakoaren lizentziaz aparte, zure lana edo ideiaren jabetza intelektuala "
+"erregistratu nahi baduzu, talde itzuleraren bateragarritasuna mantenduz, babes "
+"legala jasotzea gomendatzen dizugu zerbitzu honen bitartez: <a href=\"http://www."
+"safecreative.org/\" target=\"new\">Safe Creative</a>."
 
 msgid "Evaluación de datos"
 msgstr "Datu ebaluazioa"
 
-msgid "Este gráfico explica de un modo visual el nivel de datos que has introducido junto con una evaluación básica que hace el sistema. Para poder enviar el proyecto tienes que superar el 80%. Los criterios que hacen subir este "termómetro"  tienen que ver con la información relevante que facilitas, los media, imágenes y links que introduces, si eliges una licencia más abierta que otra, la coherencia de tu presupuesto respecto a las tareas a desarrollar, etc. No pierdas de vista los consejos de la columna derecha, que guían durante todo el proceso."
-msgstr "Grafiko honek ikuste-eran azaltzen du sartu duzun datu kopurua, sistemak egiten duen oinarriko ebaluazio batekin batera. Proiektua bidaltzeko 80%a baino gehiago gainditu behar duzu. "Termometro" hau igoarazten duten irizpideak nabarmenak diren ala ez, emandako informazioarekin zerikusia daukate, media-rekin, sartzen dituzun irudi eta estekekin, lizentzia irekiak aukeratzen badituzu, zure aurrekontuaren koherentzia eginbeharreko lanekin konparatuz, etabar. Ez galdu eskubiko zutabean dauden aholkuak, prozesu osoaren zehar gidatzen dute eta."
+msgid ""
+"Este gráfico explica de un modo visual el nivel de datos que has introducido "
+"junto con una evaluación básica que hace el sistema. Para poder enviar el "
+"proyecto tienes que superar el 80%. Los criterios que hacen subir este "
+"\"termómetro\"  tienen que ver con la información relevante que facilitas, los "
+"media, imágenes y links que introduces, si eliges una licencia más abierta que "
+"otra, la coherencia de tu presupuesto respecto a las tareas a desarrollar, etc. "
+"No pierdas de vista los consejos de la columna derecha, que guían durante todo "
+"el proceso."
+msgstr ""
+"Grafiko honek ikuste-eran azaltzen du sartu duzun datu kopurua, sistemak egiten "
+"duen oinarriko ebaluazio batekin batera. Proiektua bidaltzeko 80%a baino gehiago "
+"gainditu behar duzu. \"Termometro\" hau igoarazten duten irizpideak nabarmenak "
+"diren ala ez, emandako informazioarekin zerikusia daukate, media-rekin, sartzen "
+"dituzun irudi eta estekekin, lizentzia irekiak aukeratzen badituzu, zure "
+"aurrekontuaren koherentzia eginbeharreko lanekin konparatuz, etabar. Ez galdu "
+"eskubiko zutabean dauden aholkuak, prozesu osoaren zehar gidatzen dute eta."
 
 msgid "Ir a"
 msgstr "-ra joan"
 
-msgid "Perfil"
-msgstr "Soslaia"
-
-msgid "Perfil"
-msgstr "Soslaia"
-
-msgid "Promotor/a"
-msgstr "Bultzataile"
-
-msgid "Promotor/a"
-msgstr "Bultzataile"
-
 msgid "Proyecto nuevo"
 msgstr "Proiektu berria"
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Costes"
-msgstr "Balioa"
-
-msgid "Costes"
-msgstr "Balioa"
-
-msgid "Retorno"
-msgstr "Itzulera"
-
-msgid "Retorno"
-msgstr "Itzulera"
-
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "Previsualización"
-msgstr "Aurreikusi"
-
-msgid "Previsualización"
-msgstr "Aurreikusi"
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Quitar"
-msgstr "Kendu"
-
-msgid "Resumen"
-msgstr "Laburpena"
-
-msgid "Título descriptivo sobre la colaboración necesaria."
-msgstr "Behar den elkarlaneko tituloa"
-
-msgid "Tipo de ayuda"
-msgstr "Laguntza mota"
-
-msgid "Selecciona si el proyecto necesita ayuda en tareas concretas  o bien préstamos (de material, infraestructura, etc).  "
-msgstr "Aukera ezazu, proiektuak ekintza konkretuetan laguntza behar badu, edo maileguak behar badu (materialak, azpiegiturak, etabar)."
-
-msgid "Descripción"
-msgstr "Deskribapena"
-
-msgid "Explica brevemente en qué consiste la ayuda que necesita el proyecto, para facilitar que la gente la reconozca y se anime a colaborar. \r\n"
-msgstr "Laburki azaldu zertan datza proiektuak behar duen laguntza, jendea igarri eta laguntzen animatu dezala."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
 
 msgid "Solicitud de colaboraciones"
 msgstr "Elkarlanen eskaera"
 
-msgid "<strong>En este apartado puedes especificar qué otras ayudas, aparte de financiación, se necesitan para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc)."
-msgstr "<strong>Arlo honetan zelako laguntza mota behar den, finantzaketa aparte, proiektua gauzatzeko.</strong><br /><br />Lanak beste pertsona batzuek egin ditzakete (itzulketak, kudeaketa, zabalketa, etabar), edo mailegu zehatzak (materiala, garraioa, hardware-a, etabar)."
-
-msgid "Colaboraciones"
-msgstr "Elkarlanak"
-
-msgid "En Goteo los proyectos pueden recibir otro tipo de ayudas además de aportaciones monetarias. Hay gente que a lo mejor no puede ayudar económicamente pero sí con su talento, tiempo, energía, etc."
-msgstr "Goteon proiektuak bestelako laguntza mota jaso dezakete, diruaz gain. Badago jendea ekonomikoki agian ezin duela babestu, baina bai bere gaitasunarekin, denborarekin, energiarekin, etabar."
-
-msgid "Añadir"
-msgstr "Gehitu"
-
-msgid "Errores"
-msgstr "Erroreak"
-
-msgid "Siguiente"
-msgstr "Hurrengoa"
-
 msgid "Datos del promotor/a"
 msgstr "Bultzatzailearen datuak"
 
-msgid "<strong>A partir de este paso sólo debes cumplimentar los datos si quieres que tu proyecto sea cofinanciado y apoyado mediante Goteo. </strong><br><br>La información de este apartado es necesaria para contactarte si obtienes la financiación requerida, y que así se pueda efectuar el ingreso. En el caso de entidades, se recomienda que quien represente a la organización pueda luego acreditarlo formalmente (por ejemplo a través de los estatutos o de un certificado del secretario con el visto bueno del presidente, en el caso de asociaciones)."
-msgstr "<strong>Hemendik aurrera datu hauek bakarrik bete behar dituzu, zure proiektua alde berean finantzatua eta Goteo bitartez babestua izan nahi baduzu.</strong><br /><br />Arlo honetako informazioa beharrezkoa da zurekin harremanetan jartzeko, behar duzun finantzazioa lortzen baduzu. Horrela diru sarrera jaso ahal duzu. Erakundeen kasuetan aholkua da, erakundea ordezkatzen duen pertsona gero ofizialki bere burua egiaztatu ahal izatea (adibidez estatutuen bitartez edo lehendakariak onetsitako idazkari ziurtagiri baten bitartez, elkarteen kasuetan)."
+msgid ""
+"<strong>A partir de este paso sólo debes cumplimentar los datos si quieres que "
+"tu proyecto sea cofinanciado y apoyado mediante Goteo. </strong><br><br>La "
+"información de este apartado es necesaria para contactarte si obtienes la "
+"financiación requerida, y que así se pueda efectuar el ingreso. En el caso de "
+"entidades, se recomienda que quien represente a la organización pueda luego "
+"acreditarlo formalmente (por ejemplo a través de los estatutos o de un "
+"certificado del secretario con el visto bueno del presidente, en el caso de "
+"asociaciones)."
+msgstr ""
+"<strong>Hemendik aurrera datu hauek bakarrik bete behar dituzu, zure proiektua "
+"alde berean finantzatua eta Goteo bitartez babestua izan nahi baduzu.</"
+"strong><br /><br />Arlo honetako informazioa beharrezkoa da zurekin harremanetan "
+"jartzeko, behar duzun finantzazioa lortzen baduzu. Horrela diru sarrera jaso "
+"ahal duzu. Erakundeen kasuetan aholkua da, erakundea ordezkatzen duen pertsona "
+"gero ofizialki bere burua egiaztatu ahal izatea (adibidez estatutuen bitartez "
+"edo lehendakariak onetsitako idazkari ziurtagiri baten bitartez, elkarteen "
+"kasuetan)."
 
 msgid "Promotor/a del proyecto"
 msgstr "Proiektuaren bultzatzailea"
 
-msgid "Selecciona "Persona física" en el caso de que tú seas el/la promotor/a del proyecto y te representes a ti mismo/a. Si el promotor es un grupo es necesario para elegir la segunda opción que tenga un CIF propio, en ese caso elige "Persona jurídica". "
-msgstr "Aukeratu "Pertsona fisikoa" proiektuaren bultzatzaile izan ezkero eta zeure burua ordezkatu ezkero. Bultzatzailea pertsona taldea bada, beharrezkoa da IFK zenbakia duen bigarren aukera aukeratzea, kasu honetan aukerazazu "Pertsona juridikoa"."
+msgid ""
+"Selecciona \"Persona física\" en el caso de que tú seas el/la promotor/a del "
+"proyecto y te representes a ti mismo/a. Si el promotor es un grupo es necesario "
+"para elegir la segunda opción que tenga un CIF propio, en ese caso elige "
+"\"Persona jurídica\". "
+msgstr ""
+"Aukeratu \"Pertsona fisikoa\" proiektuaren bultzatzaile izan ezkero eta zeure "
+"burua ordezkatu ezkero. Bultzatzailea pertsona taldea bada, beharrezkoa da IFK "
+"zenbakia duen bigarren aukera aukeratzea, kasu honetan aukerazazu \"Pertsona "
+"juridikoa\"."
 
 msgid "Persona física"
 msgstr "Pertsona fisikoa"
@@ -2560,71 +2272,50 @@ msgstr "Idatz ezazu erakundearen IFK zenbakia (letra + zenbakia)."
 msgid "Cargo en la organización"
 msgstr "Erakundean daukazun kargua"
 
-msgid "Escribe el cargo con el que representas a la organización (secretario/a, presidente/a, vocal...). "
-msgstr "Idatz ezazu ordezkatzen duzun erakundearen kargua (idazkaria, lehendakaria, batzordekide...)."
+msgid ""
+"Escribe el cargo con el que representas a la organización (secretario/a, "
+"presidente/a, vocal...). "
+msgstr ""
+"Idatz ezazu ordezkatzen duzun erakundearen kargua (idazkaria, lehendakaria, "
+"batzordekide...)."
 
 msgid "Datos del/la responsable del proyecto"
 msgstr "Proiektua erantzulearen datuak"
 
-msgid "Ya sea como persona física o bien jurídica, es necesario que alguien figure como promotor/a del proyecto, y también para la interlocución con el equipo de Goteo. No tiene que coincidir necesariamente con el perfil de usuario del apartado anterior."
-msgstr "Bai pertsona fisiko edo juridiko bezala, beharrezkoa da norbaitek proiektuaren bultzatzaile bezala agertzea, Goteo-ko taldearekin mintzaide papera betetzeko. Ez da derrigorrez aurreko urratseko soslaiarekin egokitu behar."
-
-msgid "Nombre y apellidos"
-msgstr "Izen abizenak"
-
-msgid "Deben ser tu nombre y apellidos reales. Ten en cuenta que figurarás como responsable del proyecto."
-msgstr "Zure benetako izen abizenak izan behar dira. Kontuan hartu proiektuaren erantzulez agertuko zarela."
-
-msgid "Número de NIF / NIE / VAT"
-msgstr "IFZ / AIZ / VAT zenbakia "
-
-msgid "Tu número de NIF o NIE con cifras y letra."
-msgstr "Zure NAN zenbakia, zenbakiak eta letrarekin."
-
-msgid "Teléfono"
-msgstr "Telefono zenbakia"
-
-msgid "Número de teléfono móvil o fijo, con su prefijo de marcado."
-msgstr "Telefono mugikorra edo finkoaren zenbakia, aurrezenbakiarekin."
+msgid ""
+"Ya sea como persona física o bien jurídica, es necesario que alguien figure como "
+"promotor/a del proyecto, y también para la interlocución con el equipo de "
+"Goteo. No tiene que coincidir necesariamente con el perfil de usuario del "
+"apartado anterior."
+msgstr ""
+"Bai pertsona fisiko edo juridiko bezala, beharrezkoa da norbaitek proiektuaren "
+"bultzatzaile bezala agertzea, Goteo-ko taldearekin mintzaide papera betetzeko. "
+"Ez da derrigorrez aurreko urratseko soslaiarekin egokitu behar."
 
 msgid "Email vinculado al proyecto"
 msgstr "Proiektuari lotutako emaila"
 
-msgid "Dirección de correo electrónica principal asociada al proyecto. Aquí recibirás las notificaciones y mensajes del equipo de Goteo en relación al proyecto propuesto."
-msgstr "Proiektuari lotutako posta elektroniko helbide nagusia. Hemen jakinarazpenak jasoko dituzu eta baita Goteo-ko taldearen mezuak, proposatutako proiektuaren inguruan."
+msgid ""
+"Dirección de correo electrónica principal asociada al proyecto. Aquí "
+"recibirás las notificaciones y mensajes del equipo de Goteo en relación al "
+"proyecto propuesto."
+msgstr ""
+"Proiektuari lotutako posta elektroniko helbide nagusia. Hemen jakinarazpenak "
+"jasoko dituzu eta baita Goteo-ko taldearen mezuak, proposatutako proiektuaren "
+"inguruan."
 
 msgid "Fecha de nacimiento"
 msgstr "Jaiotze eguna"
 
-msgid "Indica la fecha de tu nacimiento. No se hará pública en ningún caso, nos interesa por temas estadísticos."
-msgstr "Aukeratu zure jaiotze data. Datu hau ez da inolaz ere argitara aterako, interesa estatistikoagatik eskatzen dizugu bakarrik."
+msgid ""
+"Indica la fecha de tu nacimiento. No se hará pública en ningún caso, nos "
+"interesa por temas estadísticos."
+msgstr ""
+"Aukeratu zure jaiotze data. Datu hau ez da inolaz ere argitara aterako, interesa "
+"estatistikoagatik eskatzen dizugu bakarrik."
 
 msgid "Domicilio fiscal"
 msgstr "Zerga-egoitza"
-
-msgid "Dirección fiscal de la persona u organización (según proceda)."
-msgstr "Pertsona edota erakundearen zerga-egoitza (pertsona ala erakundea zaren)"
-
-msgid "Dirección"
-msgstr "Helbidea"
-
-msgid "Dirección fiscal de la persona u organización (según proceda)."
-msgstr "Pertsona edota erakundearen zerga-egoitza (pertsona ala erakundea zaren)"
-
-msgid "Código postal"
-msgstr "Posta kodea"
-
-msgid "Dirección fiscal de la persona u organización (según proceda)."
-msgstr "Pertsona edota erakundearen zerga-egoitza (pertsona ala erakundea zaren)"
-
-msgid "Localidad"
-msgstr "Hiria/herria"
-
-msgid "Dirección fiscal de la persona u organización (según proceda)."
-msgstr "Pertsona edota erakundearen zerga-egoitza (pertsona ala erakundea zaren)"
-
-msgid "País"
-msgstr "Herria"
 
 msgid "Dirección fiscal de la persona u organización (según proceda)."
 msgstr "Pertsona edota erakundearen zerga-egoitza (pertsona ala erakundea zaren)"
@@ -2641,173 +2332,8 @@ msgstr "Berdin"
 msgid "Diferente"
 msgstr "Desberdina"
 
-msgid "Dirección"
-msgstr "Helbidea"
-
-msgid "Indica en caso necesario una dirección postal detallada."
-msgstr "Beharrezkoa bada, zehaztu helbidea"
-
-msgid "Código postal"
-msgstr "Posta kodea"
-
-msgid "Indica en caso necesario una dirección postal detallada."
-msgstr "Beharrezkoa bada, zehaztu helbidea"
-
-msgid "Localidad"
-msgstr "Hiria/herria"
-
-msgid "Indica en caso necesario una dirección postal detallada."
-msgstr "Beharrezkoa bada, zehaztu helbidea"
-
-msgid "País"
-msgstr "Herria"
-
-msgid "Indica en caso necesario una dirección postal detallada."
-msgstr "Beharrezkoa bada, zehaztu helbidea"
-
-msgid "Errores"
-msgstr "Erroreak"
-
-msgid "Siguiente"
-msgstr "Hurrengoa"
-
-msgid "Quitar"
-msgstr "Kendu"
-
-msgid "URL"
-msgstr "URL"
-
-msgid "Indica las direcciones URL de páginas personales o de otro tipo vinculadas a ti."
-msgstr "Zehaztu web orri pertsonalen edo beste motatako URL helbideak, zurekin zerikusia dituztenak."
-
-msgid "Aceptar"
-msgstr "Onartu"
-
-msgid "Quitar"
-msgstr "Kendu"
-
 msgid "Datos de perfil"
 msgstr "Soslaiko datuak"
-
-msgid "<strong>En este apartado debes introducir los datos para la información pública de tu perfil de usuario. </strong><br><br>Tanto si quieres presentar un proyecto como incorporarte como cofinanciador/a, para formar parte de la comunidad de Goteo te recomendamos que pongas atención en tu texto de presentación, que añadas links relevantes sobre lo que haces y subas una imagen de perfil con la que te identifiques."
-msgstr "<strong>Arlo honetan zure erabiltzaile soslaiko alde publikorako datuak sartuko dituzu. </strong><br><br>Proiektu bat aurkeztu nahi baduzu, edota alde bereko finantzakide bezala parte hartu nahi baduzu, Goteo-ko komunitatean parte hartzeko arreta handiz zure aurkezpen testua idaztea gomendatzen dizugu, baita esteka interesgarriak zuri eta egiten duzunari buruz ipintzea eta parekotzat daukazun irudi bat igotzea."
-
-msgid "Nombre de usuario/a"
-msgstr "Erabiltzaile izena"
-
-msgid "Tu nombre o nickname dentro de Goteo. Lo puedes cambiar siempre que quieras (ojo: no es lo mismo que el login de acceso, que ya no se puede modificar)."
-msgstr "Zure izena edo nickname Goteo barruan. Nahi duzun beste aldatu dezakezu (adi: hau ez da login izenaren bezala. Hori ezin da aldatu jada)."
-
-msgid "Lugar de residencia habitual"
-msgstr "Bizilekua"
-
-msgid "Este dato es importante para poderte vincular con un grupo local de Goteo."
-msgstr "Datu hau garrantzitsua da Goteo-ko bertoko talde batekin zu lotu ahal izateko."
-
-msgid "Imagen de perfil"
-msgstr "Soslaiko irudia"
-
-msgid "No es obligatorio que pongas una fotografía en tu perfil, pero ayuda a que los demás usuarios te identifiquen."
-msgstr "Ez da derrigorrekoa irudia zure soslaian jartzea, baina gainerako erabiltzaileak zu ezagutzeko laguntzen du."
-
-msgid "Subir imagen"
-msgstr "Irudia igo"
-
-msgid "No es obligatorio que pongas una fotografía en tu perfil, pero ayuda a que los demás usuarios te identifiquen."
-msgstr "Ez da derrigorrekoa irudia zure soslaian jartzea, baina gainerako erabiltzaileak zu ezagutzeko laguntzen du."
-
-msgid "Cuéntanos algo sobre ti"
-msgstr "Kontaiguzu zeozer zuri buruz"
-
-msgid "Como red social, Goteo pretende ayudar a difundir y financiar proyectos interesantes entre el máximo de gente posible. Para eso es importante la información que puedas compartir sobre tus habilidades o experiencia (profesional, académica, aficiones, etc).\r\n"
-msgstr "Sare soziala bezala, Goteo-k proiektu interesgarriak zabaldu eta finantzatu nahi du, ahalik eta jende multzo handiaren artean. Horretarako garrantzitsua da  zure gaitasunei eta esperientziari buruzko informazioa (profesionala, akademikoa, zaletasunak, etabar) ipintzea."
-
-msgid "Qué tipo de proyecto te motiva más"
-msgstr "Zer nola proiektu mota motibatzen zaitu gehien"
-
-msgid "Indica el tipo de proyectos que pueden conectar con tus intereses para cofinanciarlos y/o aportar con otros recursos, conocimientos o habilidades. Estas categorías son transversales, puedes seleccionar más de una."
-msgstr "Zehaztu zein proiektu dira zure interesekoak aldi berean finantzatzeko edota baliabideak jartzeko, ezagutza edo gaitasunak. Kategoria hauek zeharkakoak dira, bat baino gehiago aukeratu dezakezu."
-
-msgid "Temas que te interesan"
-msgstr "Zure intereseko gaiak"
-
-msgid "A medida que introduzcas texto el sistema te sugerirá palabras clave que ya han escrito otros usuarios. Estas categorías ayudan a vincular tu perfil con otras personas y con proyectos concretos."
-msgstr "Testua sartu ahala sistema beste erabiltzaileak sartu dituzten hitz gakoak proposatuko dizkizu. Kategoria hauek zure proiektua kideekin lotzeko laguntzen dute."
-
-msgid "Qué puedes aportar a Goteo"
-msgstr "Zertan lagundu ahal duzun Goteo-n"
-
-msgid "Explica brevemente tus habilidades o los ámbitos en que podrías ayudar a un proyecto (traduciendo, difundiendo, testeando, programando, enseñando, etc)."
-msgstr "Azaldu laburki zure gaitasunak edo zein arloetan lagundu ahal izango zenukeen (itzultzen, zabaltzen, frogatzen, programatzen, irakasten, etabar)."
-
-msgid "Mis páginas web"
-msgstr "Nire web orriak"
-
-msgid "Indica las direcciones URL de páginas personales o de otro tipo vinculadas a ti."
-msgstr "Zehaztu web orri pertsonalen edo beste motatako URL helbideak, zurekin zerikusia dituztenak."
-
-msgid "Añadir"
-msgstr "Gehitu"
-
-msgid "Perfiles sociales"
-msgstr "Soslai sozialak"
-
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan entre amigos y familiares."
-msgstr "Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak lagunen eta familiakoen artean zabaltzea."
-
-msgid "http://www.facebook.com/"
-msgstr "http://www.facebook.com/"
-
-msgid "Google+"
-msgstr "Google+"
-
-msgid "La red social de Google+ es muy nueva pero también puedes indicar tu usuario si ya la usas :)"
-msgstr "Google+ sare soziala nahiko berria da baina zure erabiltzaile izena ipini ahal duzu erabiltzen baduzu :)"
-
-msgid "https://plus.google.com/"
-msgstr "https://plus.google.com/"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo de manera ágil y viral."
-msgstr "Posiblea da sare sozial honen bitartez, Goteo-ko proiektuak modu arinean eta birus-eran zabaltzea."
-
-msgid "http://twitter.com/#!/"
-msgstr "http://twitter.com/#!/"
-
-msgid "Identi.ca"
-msgstr "Identi.ca"
-
-msgid "Este canal puede ayudar a que difundas proyectos de Goteo entre la comunidad afín al software libre."
-msgstr "Kanal honen bitartez posiblea da Goteo-ko proiektuak zabaltzea Software Librearen inguruko komunitateetan."
-
-msgid "http://identi.ca/"
-msgstr "http://identi.ca/"
-
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
-msgid "Esta red social puede ayudar a que difundas proyectos de Goteo que te interesan entre contactos profesionales."
-msgstr "Posiblea da sare sozial honen bitartez, zure gustuko Goteo-ko proiektuak laneko kontaktuen artean zabaltzea."
-
-msgid "http://es.linkedin.com/in/"
-msgstr "http://es.linkedin.com/in/"
-
-msgid "Errores"
-msgstr "Erroreak"
-
-msgid "Siguiente"
-msgstr "Hurrengoa"
-
-msgid "Editar"
-msgstr "Editatu"
-
-msgid "Quitar"
-msgstr "Kendu"
 
 msgid "El formulario de proyecto se va grabando segun pases por cada campo"
 msgstr "Proiektuaren formularioa gorde egiten da, kanpo baikotzatik pasatu ahala"
@@ -2821,20 +2347,8 @@ msgstr ". txanda"
 msgid "Obtenido"
 msgstr "Jasotakoa"
 
-msgid "Óptimo"
-msgstr "Hobezina"
-
-msgid "Mínimo"
-msgstr "Minimo"
-
-msgid "Obtenido"
-msgstr "Jasotakoa"
-
 msgid "Quedan"
 msgstr "Falta dira"
-
-msgid "días"
-msgstr "egunak"
 
 msgid "Cofinanciadores"
 msgstr "Finantzakideak"
@@ -2845,29 +2359,11 @@ msgstr "Proiektua"
 msgid "Necesidades"
 msgstr "Beharrizanak"
 
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
-msgid "Mensajes"
-msgstr "Mezuak"
-
-msgid "Novedades"
-msgstr "Berriak"
-
-msgid "Por:"
-msgstr "Biderrez:"
-
-msgid "Categorías"
-msgstr "Kategoriak"
-
 msgid "Necesidades no monetarias"
 msgstr "Dirua ez diren beharrak"
 
 msgid "Se busca"
 msgstr "Bila"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
 
 msgid "Colabora"
 msgstr "Babestu"
@@ -2881,14 +2377,13 @@ msgstr "Zenbatekoa"
 msgid "Introduce la cantidad con la que apoyarás al proyecto"
 msgstr "Sar ezazu proiektua babesteko jarriko duzun kopurua"
 
-msgid "Puedes renunciar a recibir recompensas por tu aportación, o seleccionar las que igualen o estén por debajo del importe que hayas introducido."
-msgstr "Uko egin ahal duzu ez baduzu nahi saririk jaso zure jartzearen truke, edo beste sari bat aukeratu dezakezu, sari hori zure jartzearekin konparatuz maila berdinean edo beherago baldin badago."
-
-msgid "Recompensas individuales"
-msgstr "Banakako sariak"
-
-msgid "Renuncio a una recompensa individual, solo quiero ayudar al proyecto"
-msgstr "Norbanako sari bateri uko egin diozu, proiektua lagundu besterik ez duzu nahi"
+msgid ""
+"Puedes renunciar a recibir recompensas por tu aportación, o seleccionar las que "
+"igualen o estén por debajo del importe que hayas introducido."
+msgstr ""
+"Uko egin ahal duzu ez baduzu nahi saririk jaso zure jartzearen truke, edo beste "
+"sari bat aukeratu dezakezu, sari hori zure jartzearekin konparatuz maila "
+"berdinean edo beherago baldin badago."
 
 msgid "Ya no se puede elegir"
 msgstr "Ezin da aukeratu dagoeneko"
@@ -2923,32 +2418,22 @@ msgstr "Aukeratu ezazu ordainketa mota"
 msgid "Con los retornos colectivos ganamos tod@s"
 msgstr "Talde itzulerekin guztiok irabazten dugu"
 
-msgid "Retorno colectivo"
-msgstr "Talde itzulera"
-
 msgid "Licencia"
 msgstr "Lizentzia"
-
-msgid "Dónde quieres recibir la recompensa (sólo en caso de envíos postales)"
-msgstr "Non jaso nahi duzu saria (postontzira bidali behar bada bakarrik)"
 
 msgid "Introduce los datos fiscales para el donativo"
 msgstr "Sar itzazu datu fiskalak dohaina egiteko"
 
-msgid "Tienes que indicar el importe"
-msgstr "Zenbatekoa ipini behar duzu"
-
-msgid "Renuncias pero no has puesto tu NIF para desgravar el donativo, ¿es correcto?"
-msgstr "Uko egiten duzu, baina ez duzu IFZ jarri zure dohaina desgrabatzeko, ondo da?"
+msgid ""
+"Renuncias pero no has puesto tu NIF para desgravar el donativo, ¿es correcto?"
+msgstr ""
+"Uko egiten duzu, baina ez duzu IFZ jarri zure dohaina desgrabatzeko, ondo da?"
 
 msgid "No has marcado ninguna recompensa, ¿es correcto?"
 msgstr "Ez duzu saririk adierazi, ondo da?"
 
 msgid "¿Deseas renunciar a la recompensa y desgravar tu donativo?"
 msgstr "Zure dohaina desgrabatzeari eta sariari uko egin nahi diezu?"
-
-msgid "Introduce los datos fiscales para el donativo"
-msgstr "Sar itzazu datu fiskalak dohaina egiteko"
 
 msgid "Has elegido las siguientes recompensas:"
 msgstr "Honako sari hauek aukeratu dituzu:"
@@ -2965,12 +2450,6 @@ msgstr "Kaixo"
 msgid "Estás a un paso de ser cofinanciador/a de este proyecto"
 msgstr "Proiektu honen finantziakide bihurtzeko zorian zaude"
 
-msgid "Hola"
-msgstr "Kaixo"
-
-msgid "Elige el modo de pago"
-msgstr "Aukeratu ezazu ordainketa mota"
-
 msgid "Gracias"
 msgstr "Eskerrik asko"
 
@@ -2986,20 +2465,11 @@ msgstr "Akatsa egon da, mesedez saiatu zaitez berriro"
 msgid "Ya han aportado"
 msgstr "Jada eman dute"
 
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
 msgid "Escribe aquí tu respuesta"
 msgstr "Idatz ezazu hemen zure erantzuna"
 
 msgid "Escribe tu mensaje"
 msgstr "Idatz ezazu zure mezua"
-
-msgid "Previsualizar"
-msgstr "Aurreikusi"
-
-msgid "Enviar"
-msgstr "Bidali"
 
 msgid "busca:"
 msgstr "bila ezazu: "
@@ -3007,44 +2477,8 @@ msgstr "bila ezazu: "
 msgid "Responder"
 msgstr "Erantzun"
 
-msgid "Borrar"
-msgstr "Ezabatu"
-
-msgid "Borrar"
-msgstr "Ezabatu"
-
-msgid "Cofinanciación"
-msgstr "Kofinantzaketa"
-
-msgid "Mínimo"
-msgstr "Minimo"
-
-msgid "Óptimo"
-msgstr "Hobezina"
-
 msgid "Total"
 msgstr "Guztira"
-
-msgid "Imprescindible"
-msgstr "Nahitaezkoa"
-
-msgid "Adicional"
-msgstr "Gehigarria"
-
-msgid "Se busca"
-msgstr "Bila"
-
-msgid "Colabora"
-msgstr "Babestu"
-
-msgid "En marcha!"
-msgstr "Abian!"
-
-msgid "Mínimo conseguido"
-msgstr "Gutxienekoa lortuta"
-
-msgid "En marcha!"
-msgstr "Abian!"
 
 msgid "En marcha!"
 msgstr "Abian!"
@@ -3061,71 +2495,14 @@ msgstr "Ondo!"
 msgid "Archivado..."
 msgstr "Artxibatuta..."
 
-msgid "Por:"
-msgstr "Biderrez:"
-
-msgid "Retorno"
-msgstr "Itzulera"
-
-msgid "Editar"
-msgstr "Editatu"
-
 msgid "Ver proyecto"
 msgstr "Proiektua ikusi"
 
 msgid "Cofinancia este proyecto"
 msgstr "Alde berara finantza ezazu proiektu hau"
 
-msgid "Blog"
-msgstr "Blog"
-
-msgid "Ver proyecto"
-msgstr "Proiektua ikusi"
-
 msgid "Qué ofrece a cambio"
 msgstr "Zer ematen du trukean"
-
-msgid "Retorno colectivo"
-msgstr "Talde itzulera"
-
-msgid "Licencia"
-msgstr "Lizentzia"
-
-msgid "Recompensas individuales"
-msgstr "Banakako sariak"
-
-msgid "Aportando"
-msgstr "Jartzen"
-
-msgid "Recompensa limitada"
-msgstr "Sari mugatua"
-
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
-msgid "Qué ofrece a cambio"
-msgstr "Zer ematen du trukean"
-
-msgid "Retorno colectivo"
-msgstr "Talde itzulera"
-
-msgid "Licencia"
-msgstr "Lizentzia"
-
-msgid "Recompensas individuales"
-msgstr "Banakako sariak"
-
-msgid "Aportando"
-msgstr "Jartzen"
-
-msgid "Recompensa limitada"
-msgstr "Sari mugatua"
-
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
 
 msgid "Agenda de trabajo"
 msgstr "Lan agenda"
@@ -3133,137 +2510,34 @@ msgstr "Lan agenda"
 msgid "meses"
 msgstr "hilak"
 
-msgid "días"
-msgstr "egunak"
-
 msgid "semanas"
 msgstr "asteak"
 
 msgid "Envía un mensaje al impulsor/a del proyecto"
 msgstr "Bidali esaiozu mezua proiektuaren bultzatzaileari"
 
-msgid "Previsualizar"
-msgstr "Aurreikusi"
-
-msgid "Enviar"
-msgstr "Bidali"
-
 msgid "Comparte este proyecto"
 msgstr "Proiektu hau konpartitu"
 
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Facebook"
-msgstr "Facebook"
-
 msgid "Difunde este proyecto"
 msgstr "Zabaldu proiektu hau"
 
 msgid "Widget del proyecto"
 msgstr "Proiektuaren widget-a"
-
-msgid "publica el widget del proyecto"
-msgstr "proiektuaren widget-a argitaratzen du"
 
 msgid "Copia y pega el código en tu web o blog y ayuda a difundir este proyecto"
-msgstr "Kopiatu eta itsatsi kode hau zure webgunean edo blogean eta lagundu ezazu proiektu hau zabaltzen"
-
-msgid "Difunde este proyecto"
-msgstr "Zabaldu proiektu hau"
-
-msgid "Difunde este proyecto"
-msgstr "Zabaldu proiektu hau"
-
-msgid "Widget del proyecto"
-msgstr "Proiektuaren widget-a"
-
-msgid "Código Embed"
-msgstr "Embed kodea"
+msgstr ""
+"Kopiatu eta itsatsi kode hau zure webgunean edo blogean eta lagundu ezazu "
+"proiektu hau zabaltzen"
 
 msgid "Deja saber a tu red que"
 msgstr "Zure sarean jakinarazi zeren "
 
-msgid "Comparte este proyecto"
-msgstr "Proiektu hau konpartitu"
-
-msgid "Código Embed"
-msgstr "Embed kodea"
-
-msgid "Breve descripción "
-msgstr "Deskribapen laburra"
-
-msgid "Características básicas"
-msgstr "Oinarriko ezaugarriak"
-
-msgid "Motivación y a quién va dirigido el proyecto"
-msgstr "Zerk bultzatzen zaitu eta nori doakio proiektua"
-
-msgid "Objetivos de la campaña de crowdfunding"
-msgstr "Crowdfunding-eko kanpainaren helburuak"
-
-msgid "Experiencia previa y equipo"
-msgstr "Aurretiko esperientzia eta taldea"
-
 msgid "Necesidades económicas"
 msgstr "Diru beharrak"
 
-msgid "En marcha!"
-msgstr "Abian!"
-
-msgid "Mínimo conseguido"
-msgstr "Gutxienekoa lortuta"
-
-msgid "En marcha!"
-msgstr "Abian!"
-
-msgid "Mínimo conseguido"
-msgstr "Gutxienekoa lortuta"
-
-msgid "Financiado!"
-msgstr "Aldi berean finantzatuta!"
-
-msgid "Exitoso!"
-msgstr "Ondo!"
-
-msgid "Archivado..."
-msgstr "Artxibatuta..."
-
-msgid "Cofinancia este proyecto"
-msgstr "Alde berara finantza ezazu proiektu hau"
-
-msgid "Blog"
-msgstr "Blog"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
 msgid "Total de aportaciones"
 msgstr "Jasotako kopurua"
-
-msgid "Compartir en:"
-msgstr "Konpartitu hemen:"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Comentarios"
-msgstr "Iruzkinak"
-
-msgid "Sin comentarios"
-msgstr "Ez dago iruzkinik"
-
-msgid "No se ha publicado ninguna entrada "
-msgstr "Ez da sarrerarik argitaratu"
 
 msgid "Mi caudal en goteo"
 msgstr "Nik emandakoa Goteo-n"
@@ -3271,19 +2545,21 @@ msgstr "Nik emandakoa Goteo-n"
 msgid "Nuevo usuario"
 msgstr "Erabiltzaile berria"
 
-msgid "Bienvenido/a a Goteo! Comprueba tu nombre de usuario y email para finalizar el proceso. En caso de que no se haya podido importar el email o lo cambies por otro, recibirás un correo electrónico con un link de activación para comprovar su validez."
-msgstr "Ongietorri Goteo-ra! Ikusi zure erabiltzaile izena eta emaila prozesua bukatzeko. Emaila inportatu ezean edo aldatzen baduzu, beste posta elektroniko bat jasoko duzu aktibatzeko esteka batekin."
-
-msgid "Nombre de acceso"
-msgstr "Sartzeko izena"
-
-msgid "Email"
-msgstr "Email"
+msgid ""
+"Bienvenido/a a Goteo! Comprueba tu nombre de usuario y email para finalizar el "
+"proceso. En caso de que no se haya podido importar el email o lo cambies por "
+"otro, recibirás un correo electrónico con un link de activación para "
+"comprovar su validez."
+msgstr ""
+"Ongietorri Goteo-ra! Ikusi zure erabiltzaile izena eta emaila prozesua "
+"bukatzeko. Emaila inportatu ezean edo aldatzen baduzu, beste posta elektroniko "
+"bat jasoko duzu aktibatzeko esteka batekin."
 
 msgid "Registrar"
 msgstr "Izena eman"
 
-msgid "También van a importarse estos datos, puedes cambiarlos una vez autentificado:"
+msgid ""
+"También van a importarse estos datos, puedes cambiarlos una vez autentificado:"
 msgstr "Datu hauek be inportatuko dira. Sartzen zarenean aldatu ditzakezu:"
 
 msgid "Vincular usuario existente"
@@ -3301,15 +2577,6 @@ msgstr "-(r)en soslaia"
 msgid "Mis cofinanciadores"
 msgstr "Nire finantzakideak"
 
-msgid "Cofinanciadores"
-msgstr "Finantzakideak"
-
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
-
-msgid "Cancelar la cuenta"
-msgstr "Kontua ezeztatu"
-
 msgid "Email de la cuenta"
 msgstr "Kontuaren emaila"
 
@@ -3319,29 +2586,19 @@ msgstr "Utziguzu mezua"
 msgid "Dar de baja"
 msgstr "Harpidetza utzi"
 
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
-
-msgid "Otro servidor Open ID"
-msgstr "Beste Open ID serbidore bat"
-
 msgid "Otro servidor Open ID"
 msgstr "Beste Open ID serbidore bat"
 
 msgid "Usuario registrado"
 msgstr "Erabiltzaileak izena eman du"
 
-msgid "Nombre de acceso"
-msgstr "Sartzeko izena"
-
-msgid "Contraseña"
-msgstr "Pasahitza"
-
-msgid "Entrar"
-msgstr "Sartu"
-
+#, fuzzy
 msgid "Recuperar contraseña"
-msgstr "Pasahitza berreskuratu"
+msgstr ""
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Pasahitza berreskuratu\n"
+"#-#-#-#-#  0catalog.po  #-#-#-#-#\n"
+"Bete ezazu eskatutakoen kanpo bat gutxienez zure pasahitza berreskuratzeko"
 
 msgid "Accede con un solo click"
 msgstr "Clik bat eginez sartu"
@@ -3364,32 +2621,14 @@ msgstr "myOpenID bitartez sartu"
 msgid "Accede con LinkedIn"
 msgstr "LinkedIn bitartez sartu"
 
-msgid "Otro servidor Open ID"
-msgstr "Beste Open ID serbidore bat"
-
 msgid "Ir"
 msgstr "Joan"
 
 msgid "Mostrar más opciones de acceso"
 msgstr "Sartzeko aukera gehiago azaldu"
 
-msgid "Nuevo usuario"
-msgstr "Erabiltzaile berria"
-
-msgid "Nombre de acceso"
-msgstr "Sartzeko izena"
-
 msgid "Nombre público"
 msgstr "Izen publikoa"
-
-msgid "Email"
-msgstr "Email"
-
-msgid "Confirmar email"
-msgstr "Emaila baieztatu"
-
-msgid "Contraseña"
-msgstr "Pasahitza"
 
 msgid "Mínimo 6 carácteres"
 msgstr "6 karakter gutxienez"
@@ -3397,62 +2636,11 @@ msgstr "6 karakter gutxienez"
 msgid "Confirmar contraseña"
 msgstr "Pasahitza baieztatu "
 
-msgid "Registrar"
-msgstr "Izena eman"
-
-msgid "Perfil de "
-msgstr "-(r)en soslaia"
-
 msgid "Envia un mensaje al usuario"
 msgstr "Bidali ezazu mezua erabiltzaileari"
 
-msgid "Previsualizar"
-msgstr "Aurreikusi"
-
-msgid "Enviar"
-msgstr "Bidali"
-
-msgid "Perfil de "
-msgstr "-(r)en soslaia"
-
-msgid "http://www.facebook.com/pages/Goteo/268491113192109"
-msgstr "http://www.facebook.com/pages/Goteo/268491113192109"
-
-msgid "Recuperar contraseña"
-msgstr "Bete ezazu eskatutakoen kanpo bat gutxienez zure pasahitza berreskuratzeko"
-
-msgid "Nombre de acceso"
-msgstr "Sartzeko izena"
-
-msgid "Email de la cuenta"
-msgstr "Kontuaren emaila"
-
 msgid "Recuperar"
 msgstr "Berreskuratu"
-
-msgid "Perfil de "
-msgstr "-(r)en soslaia"
-
-msgid "Compartiendo intereses"
-msgstr "Interesa berdinak konpartitzen "
-
-msgid "proyectos"
-msgstr "proiektuak"
-
-msgid "Aportando"
-msgstr "Jartzen"
-
-msgid "Ver perfil"
-msgstr "Soslaia ikusi"
-
-msgid "Enviar mensaje"
-msgstr "Mezua bidali"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
-msgid "Ver todos"
-msgstr "Guztiak ikusi"
 
 msgid "Sobre mí"
 msgstr "Niri buruz"
@@ -3469,50 +2657,11 @@ msgstr "Nire web orriak"
 msgid "Mi ubicación"
 msgstr "Nire kokapena"
 
-msgid "Enviar mensaje"
-msgstr "Mezua bidali"
-
-msgid "Mis cofinanciadores"
-msgstr "Nire finantzakideak"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
-msgid "Compartiendo intereses"
-msgstr "Interesa berdinak konpartitzen "
-
-msgid "proyectos"
-msgstr "proiektuak"
-
-msgid "Aportando"
-msgstr "Jartzen"
-
-msgid "Ver más"
-msgstr "Gehiago ikusi"
-
 msgid "Social"
 msgstr "Soziala"
 
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Google+"
-msgstr "Google+"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "Identi.ca"
-msgstr "Identi.ca"
-
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
 msgid "Cofinancia"
 msgstr "Finantzakidea da"
-
-msgid "proyectos"
-msgstr "proiektuak"
 
 msgid "Posición"
 msgstr "Posizioa"
@@ -3525,22 +2674,3 @@ msgstr "Data"
 
 msgid "Usuario"
 msgstr "Erabiltzailea"
-
-msgid "Mi ubicación"
-msgstr "Nire kokapena"
-
-msgid "Mis webs"
-msgstr "Nire web orriak"
-
-msgid "Enviar mensaje"
-msgstr "Mezua bidali"
-
-msgid "Enviar mensaje"
-msgstr "Mezua bidali"
-
-msgid "Ver perfil"
-msgstr "Soslaia ikusi"
-
-msgid "Mi caudal en goteo"
-msgstr "Nik emandakoa Goteo-n"
-

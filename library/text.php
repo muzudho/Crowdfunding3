@@ -344,7 +344,6 @@ namespace Goteo\Library {
                 'community'  => static::_('Sección comunidad'),
                 'general'  => static::_('Propósito general'),
                 'blog'  => static::_('Blog/Actualizaciones'),
-                'faq'  => static::_('Pagina de FAQ'),
                 'contact'  => static::_('Pagina de contacto'),
                 'widget'  => static::_('Banderolos'),
                 'invest'  => static::_('Pagina de aportar a un proyecto'),
