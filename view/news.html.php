@@ -19,7 +19,6 @@
  */
 
  use Goteo\Library\Text,
-    Goteo\Model\Blog\Post,
     Goteo\Core\View;
 
 $bodyClass = 'news';
@@ -28,16 +27,6 @@ $read_more = Text::get('regular-read_more');
 
 // noticias
 $news = $this['news'];
-
-// últimas entradas del blog goteo
-$list = array();
-
-$title = Text::get('blog-side-last_posts');
-$items = Post::getAll(1, 7);
-// enlace a la entrada
-foreach ($items as $item) {
-    $list[] = '<a href="/blog/'.$item->id.'"> '.Text::recorta($item->title, 100).'</a>';
-}
 
 // paginacion
 require_once 'library/pagination/pagination.php';
@@ -67,16 +56,6 @@ include 'view/header.html.php';
             <?php   $pagedResults->setLayout(new DoubleBarLayout());
                     echo $pagedResults->fetchPagedNavigation(); ?>
         </ul>
-    </div>
-    <div id="news-sidebar">
-        <div class="widget news-sidebar-module">
-            <h3 class="supertitle"><?php echo $title; ?></h3>
-            <ul id="news-side-posts">
-                <?php foreach ($list as $item) : ?>
-                <li><?php echo $item; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
     </div>
 </div>
 <?php

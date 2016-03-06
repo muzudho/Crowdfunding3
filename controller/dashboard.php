@@ -189,7 +189,6 @@ namespace Goteo\Controller {
         /*
          * Seccion, Mis proyectos
          * Opciones:
-         *      'actualizaciones' blog del proyecto (ahora son como mensajes),
          *      'editar colaboraciones' para modificar los mensajes de colaboraciones (no puede editar el proyecto y ya estan publicados)
          *      'widgets' ofrece el código para poner su proyecto en otras páginas (vertical y horizontal)
          *      'licencia' el acuerdo entre goteo y el usuario, licencia cc-by-nc-nd, enlace al pdf
@@ -212,9 +211,6 @@ namespace Goteo\Controller {
 
             // verificación de proyectos y proyecto de trabajo
             list($project, $projects) = Dashboard\Projects::verifyProject($user, $action);
-
-            // teniendo proyecto de trabajo, comprobar si el proyecto esta en estado de tener blog
-            if ($option == 'updates') $blog = Dashboard\Projects::verifyBlog($project);
 
             // sacaexcel de cofinanciadores
             if ($option == 'rewards' && $action == 'table') {
@@ -255,32 +251,9 @@ namespace Goteo\Controller {
                         if ($action == 'save') $project = Dashboard\Projects::process_supports($project, $errors);
                         break;
 
-                    case 'updates':
-                        // verificación: si no llega blog correcto no lo procesamos
-                        if (empty($_POST['blog']) || $_POST['blog'] != $blog->id) throw new Redirection('/dashboard/projects/summary');
-                        if ($action === 'edit' || $action === 'add'){
-                            $jump_switch = true;
-                        }
-
-                        list($action, $id) = Dashboard\Projects::process_updates($action, $project, $errors);
-                        if (($action === 'list') && ((bool)$_POST['publish']) && $jump_switch){
-                            $jump_switch = true;
-                        } else {
-                            $jump_switch = false;
-                        }
-
-                        break;
                 }
             }
 
-            // SubControlador para add, edit, delete y list  
-            // devuelve $post en las acciones add y edit y $posts en delete y list
-            // maneja por referencia $action, $posts y $errors
-            if ($option == 'updates') {
-                list($post, $posts) = Dashboard\Projects::prepare_updates($action, $id, $blog->id);
-            }
-
-            
             // view data basico para esta seccion
             $viewData = array(
                 'menu' => self::menu(),
@@ -347,20 +320,6 @@ namespace Goteo\Controller {
                     $project->supports = Model\Project\Support::getAll($project->id);
                     break;
 
-                // publicar actualizaciones
-                case 'updates':
-                    $viewData['blog'] = $blog;
-                    $viewData['posts'] = $posts;
-                    $viewData['post'] = $post;
-                    if ($jump_switch){
-                        $_url = explode('/',$_SERVER['REQUEST_URI']);
-                        $_postid = $_url[ max(array_keys($_url)) ];
-                        if (!is_numeric($_postid)){
-                            $_postid = "";
-                        }
-                        throw new Redirection("/project/{$project->id}/updates/{$_postid}");
-                    }
-                    break;
             }
 
             $viewData['project'] = $project;
@@ -450,7 +409,6 @@ namespace Goteo\Controller {
 //// Control de traduccion de proyecto
                     if ($option == 'updates') {
                         // sus novedades
-                        $blog = Model\Blog::get($project->id);
                         if ($action != 'edit') {
                             $action = 'list';
                         }
@@ -545,22 +503,6 @@ namespace Goteo\Controller {
                                 }
                                 break;
 
-                            case 'updates':
-                                if (empty($_POST['blog']) || empty($_POST['id'])) {
-                                    break;
-                                }
-
-                                $post = Model\Blog\Post::get($_POST['id']);
-
-                                $post->title_lang = $_POST['title'];
-                                $post->text_lang = $_POST['text'];
-                                $post->media_lang = $_POST['media'];
-                                $post->legend_lang = $_POST['legend'];
-                                $post->lang = $_SESSION['translate_lang'];
-                                $post->saveLang($errors);
-
-                                $action = 'edit';
-                                break;
                         }
                     }
 
@@ -604,21 +546,6 @@ namespace Goteo\Controller {
                             }
                             break;
 
-                        // publicar actualizaciones
-                        case 'updates':
-                            $viewData['blog'] = $blog;
-
-                            if ($action == 'edit') {
-                                $post = Model\Blog\Post::get($id, $_SESSION['translate_lang']);
-                                $viewData['post'] = $post;
-                            } else {
-                                $posts = array();
-                                foreach ($blog->posts as $post) {
-                                    $posts[] = Model\Blog\Post::get($post->id, $_SESSION['translate_lang']);
-                                }
-                                $viewData['posts'] = $posts;
-                            }
-                            break;
                     }
 
                     $viewData['project'] = $project;

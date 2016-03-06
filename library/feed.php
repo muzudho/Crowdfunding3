@@ -21,7 +21,6 @@
 namespace Goteo\Library {
 
 	use Goteo\Core\Model,
-        Goteo\Model\Blog\Post,
         Goteo\Library\Text;
 
 	/*
@@ -84,7 +83,6 @@ namespace Goteo\Library {
                 'user' => 'blue',
                 'project' => 'light-blue',
                 'call' => 'light-blue',
-                'blog' => 'grey',
                 'news' => 'grey',
                 'money' => 'violet',
                 'drop' => 'violet',
@@ -103,10 +101,8 @@ namespace Goteo\Library {
                 'project' => '/project/',
                 'call' => '/call/',
                 'drop' => SITE_URL,
-                'blog' => '/blog/',
                 'news' => '/news/',
                 'relevant' => '',
-                'comment' => '/blog/',
                 'update-comment' => '/project/',
                 'message' => '/project/',
                 'system' => '/admin/',

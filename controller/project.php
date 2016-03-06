@@ -488,15 +488,6 @@ namespace Goteo\Controller {
                         'show' => $show
                     );
 
-                // sus entradas de novedades
-                $blog = Model\Blog::get($project->id);
-                // si está en modo preview, ponemos  todas las entradas, incluso las no publicadas
-                if (isset($_GET['preview']) && $_GET['preview'] == $_SESSION['user']->id) {
-                    $blog->posts = Model\Blog\Post::getAll($blog->id, null, false);
-                }
-
-                $viewData['blog'] = $blog;
-                        
                 // tenemos que tocar esto un poquito para motrar las necesitades no economicas
                 if ($show == 'needs-non') {
                     $viewData['show'] = 'needs';

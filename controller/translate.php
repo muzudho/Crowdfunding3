@@ -110,20 +110,6 @@ namespace Goteo\Controller {
                                         'lang' => $_POST['lang']
                                     ), $errors)) {
 
-                            // Evento Feed
-                            /*
-                            $log = new Feed();
-                            $log->populate('texto traducido (traductor)', '/translate/texts',
-                                \vsprintf('El traductor %s ha %s el texto %s al %s', array(
-                                    Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                    Feed::item('relevant', 'Traducido'),
-                                    Feed::item('blog', $id),
-                                    Feed::item('relevant', Lang::get($_POST['lang'])->name)
-                            )));
-                            $log->doAdmin('admin');
-                            unset($log);
-                            */
-                            
                             Message::Info('Texto <strong>'.$id.'</strong> traducido correctamente al <strong>'.Lang::get($_POST['lang'])->name.'</strong>');
 
                             throw new Redirection("/translate/texts/$filter&page=".$_GET['page']);
@@ -135,7 +121,6 @@ namespace Goteo\Controller {
                                 \vsprintf('Al traductor %s  le ha %s el texto %s al %s', array(
                                     Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                                     Feed::item('relevant', 'Fallado al traducir'),
-                                    Feed::item('blog', $id),
                                     Feed::item('relevant', Lang::get($_POST['lang'])->name)
                             )));
                             $log->doAdmin('admin');
@@ -287,8 +272,6 @@ namespace Goteo\Controller {
                                 \vsprintf('Al traductor %s le ha %s la página %s del nodo %s al %s', array(
                                 Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                                 Feed::item('relevant', 'Fallado al traducir'),
-                                Feed::item('blog', $id),
-                                Feed::item('blog', $_POST['node']),
                                 Feed::item('relevant', Lang::get($_POST['lang'])->name)
                             )));
                             $log->doAdmin('admin');
@@ -337,21 +320,6 @@ namespace Goteo\Controller {
 
                         if (Content::save($_POST, $errors)) {
 
-                            // Evento Feed
-                            /*
-                            $log = new Feed();
-                            $log->populate('contenido traducido (traductor)', '/translate/'.$table,
-                                \vsprintf('El traductor %s ha %s el contenido del registro %s de la tabla %s al %s', array(
-                                Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                Feed::item('relevant', 'Traducido'),
-                                Feed::item('blog', $id),
-                                Feed::item('blog', $table),
-                                Feed::item('relevant', Lang::get($_SESSION['translate_lang'])->name)
-                            )));
-                            $log->doAdmin('admin');
-                            unset($log);
-                            */
-
                             Message::Info('Contenido del registro <strong>'.$id.'</strong> de la tabla <strong>'.$table.'</strong> traducido correctamente al <strong>'.Lang::get($_POST['lang'])->name.'</strong>');
 
                             if (isset($_SESSION['translate_node'])) {
@@ -367,8 +335,6 @@ namespace Goteo\Controller {
                                 \vsprintf('El traductor %s le ha %s el contenido del registro %s de la tabla %s al %s', array(
                                 Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                                 Feed::item('relevant', 'Fallado al traducir'),
-                                Feed::item('blog', $id),
-                                Feed::item('blog', $table),
                                 Feed::item('relevant', Lang::get($_SESSION['translate_lang'])->name)
                             )));
                             $log->doAdmin('admin');
@@ -438,13 +404,6 @@ namespace Goteo\Controller {
                                 'edit' => array('label' => Text::_('Traduciendo Banner'), 'item' => true)
                             )
                         ),
-                        'post' => array(
-                            'label' => Text::_('Blog'),
-                            'actions' => array(
-                                'list' => array('label' => Text::_('Listando'), 'item' => false),
-                                'edit' => array('label' => Text::_('Traduciendo Entrada'), 'item' => true)
-                            )
-                        ),
                         'texts' => array(
                             'label' => Text::_('Textos interficie'),
                             'actions' => array(
@@ -478,13 +437,6 @@ namespace Goteo\Controller {
                             'actions' => array(
                                 'list' => array('label' => Text::_('Listando'), 'item' => false),
                                 'edit' => array('label' => Text::_('Traduciendo Tipo'), 'item' => true)
-                            )
-                        ),
-                        'tag' => array(
-                            'label' => Text::_('Tags de blog'),
-                            'actions' => array(
-                                'list' => array('label' => Text::_('Listando'), 'item' => false),
-                                'edit' => array('label' => Text::_('Traduciendo Tag'), 'item' => true)
                             )
                         ),
                         'criteria' => array(
@@ -565,13 +517,6 @@ namespace Goteo\Controller {
                             'actions' => array(
                                 'list' => array('label' => Text::_('Listando'), 'item' => false),
                                 'edit' => array('label' => Text::_('Traduciendo banner'), 'item' => true)
-                            )
-                        ),
-                        'post' => array(
-                            'label' => Text::_('Blog'),
-                            'actions' => array(
-                                'list' => array('label' => Text::_('Listando'), 'item' => false),
-                                'edit' => array('label' => Text::_('Traduciendo entrada'), 'item' => true)
                             )
                         ),
                         'page' => array(

@@ -20,8 +20,7 @@
 
 use Goteo\Core\View,
     Goteo\Model\Image,
-    Goteo\Library\Text,
-    Goteo\Model\Blog\Post;
+    Goteo\Library\Text;
 
 //@NODESYS
 
@@ -109,14 +108,7 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
     <?php elseif (isset($ogmeta) && $blog_post): ?>
-        <? $_blog = Post::get($this['post'], LANG);
-        $blog_post = $this['blog'];
-        $blog_key = key($this['blog']->posts);
-        if($_blog->image):
-            ?>
-            <meta property="og:image" content="<?php echo $_blog->image->getLink(500, 285) ?>" />
-            <?
-        else:
+        <? 
             if (is_array($ogmeta['image'])) :
                 foreach ($ogmeta['image'] as $ogimg) : ?>
                     <meta property="og:image" content="<?php echo $ogimg ?>" />
@@ -127,12 +119,9 @@ $blog_post = strpos($ogmeta['url'], '/updates');
                 <meta property="og:image" content="<?php echo $ogmeta['image'] ?>" />
                 <?php
             endif;
-        endif;
         ?>
-        <meta property="og:title" content="<?php echo htmlspecialchars($blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
-        <meta property="og:description" content="<?php echo htmlspecialchars(strip_tags(mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'), ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url'], ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<? if(defined('OAUTH_FACEBOOK_ID')){echo OAUTH_FACEBOOK_ID;} ?>" />

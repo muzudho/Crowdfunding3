@@ -81,18 +81,6 @@ namespace Goteo\Controller {
                         'translate' => array('label' => Text::_('Traduciendo Banner'), 'item' => true)
                     )
                 ),
-                'blog' => array(
-                    'label' => Text::_('Blog'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Nueva Entrada'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Entrada'), 'item' => true),
-                        'translate' => array('label' => Text::_('Traduciendo Entrada'), 'item' => true),
-                        'reorder' => array('label' => Text::_('Ordenando las entradas en Portada'), 'item' => false),
-                        'footer' => array('label' => Text::_('Ordenando las entradas en el Footer'), 'item' => false)
-                    ),
-                    'filters' => array('show' => 'owned', 'blog' => '')
-                ),
                 'categories' => array(
                     'label' => Text::_('Category'),
                     'actions' => array(
@@ -262,15 +250,6 @@ namespace Goteo\Controller {
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
                         'add' => array('label' => Text::_('Nuevo Patrocinador'), 'item' => false),
                         'edit' => array('label' => Text::_('Editando Patrocinador'), 'item' => true)
-                    )
-                ),
-                'tags' => array(
-                    'label' => Text::_('Tags de blog'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Nuevo Tag'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Tag'), 'item' => true),
-                        'translate' => array('label' => Text::_('Traduciendo Tag'), 'item' => true)
                     )
                 ),
                 'templates' => array(
@@ -569,7 +548,6 @@ namespace Goteo\Controller {
                             'label' => $labels['contents'],
                             'options' => array(
                                 'pages' => $options['pages'], // páginas institucionales del nodo
-                                'blog' => $options['blog'], // entradas del blog
                                 'banners' => $options['banners']    // banners del nodo
                             )
                         ),
@@ -596,7 +574,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'home' => $options['home'], // elementos en portada
                                 'promote' => $options['promote'], // seleccion de proyectos destacados
-                                'blog' => $options['blog'], // entradas de blog (en la gestion de blog)
                                 'sponsors' => $options['sponsors'], // patrocinadores del nodo
                                 'recent' => $options['recent'] // feed admin
                             )
@@ -609,7 +586,6 @@ namespace Goteo\Controller {
                         'contents' => array(
                             'label' => $labels['texts'],
                             'options' => array(
-                                'blog' => $options['blog'],
                                 'texts' => $options['texts'],
                                 'pages' => $options['pages'],
                                 'categories' => $options['categories'],
@@ -653,7 +629,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'news' => $options['news'],
                                 'banners' => $options['banners'],
-                                'blog' => $options['blog'],
                                 'promote' => $options['promote'],
                                 'footer' => $options['footer'],
                                 'recent' => $options['recent'],

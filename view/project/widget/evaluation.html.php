@@ -19,8 +19,7 @@
  */
 
 use Goteo\Library\Text,
-    Goteo\Core\View,
-    Goteo\Model\Blog\Post;
+    Goteo\Core\View;
 
 $project = $this['project'];
 $evaluation = $this['evaluation'];

@@ -24,14 +24,12 @@ use Goteo\Core\View,
     Goteo\Model\Project\Support,
     Goteo\Model\Project\Category,
     Goteo\Model\Project\Skill,
-    Goteo\Model\Blog,
     Goteo\Library\Text;
 
 $project = $this['project'];
 $show    = $this['show'];
 $step    = $this['step'];
 $post    = $this['post'];
-$blog    = $this['blog'];
 $thread    = $this['thread'];
 
 $evaluation = \Goteo\Library\Evaluation::get($project->id);
@@ -53,11 +51,7 @@ if (!empty($project->messages)) {
 } else {
     $messages = '';
 }
-if (!empty($blog->posts)) {
-    $updates = ' (' . count($blog->posts) . ')';
-} else {
-    $updates = '';
-}
+$updates = '';
 if (!empty($evaluation->content)){
     $ev_label = '評価';
 } else {
@@ -255,11 +249,6 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 				    case 'rewards':
                         echo
                             new View('view/project/widget/rewards-summary.html.php', array('project' => $project));
-                        break;
-                    
-                    case 'updates':
-                        echo
-                            new View('view/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
                         break;
                     
                     case 'evaluation':

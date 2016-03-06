@@ -3215,3 +3215,2962 @@
 		※削除
 
 ────────────────────────────────────────────────────────────
+2016-03-05 08:15
+
+	解説
+		FAQ の機能の削除。
+
+/controller/faq.php
+	○
+		※ファイル削除。
+
+/controller/admin/faq.php
+	○
+		※ファイル削除。
+
+/view/faq.html.php
+	○
+		※ファイル削除。
+
+/db/goteo.sql 280-310
+	×
+		-- --------------------------------------------------------
+
+		--
+		-- Estructura de tabla para la tabla `faq`
+		--
+
+		CREATE TABLE `faq` (
+		  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+		  `node` varchar(50) NOT NULL,
+		  `section` varchar(50) NOT NULL DEFAULT 'node',
+		  `title` tinytext,
+		  `description` text,
+		  `order` tinyint(4) NOT NULL DEFAULT '1',
+		  PRIMARY KEY (`id`),
+		  UNIQUE KEY `id` (`id`)
+		) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Preguntas frecuentes';
+
+		-- --------------------------------------------------------
+
+		--
+		-- Estructura de tabla para la tabla `faq_lang`
+		--
+
+		CREATE TABLE `faq_lang` (
+		  `id` bigint(20) unsigned NOT NULL,
+		  `lang` varchar(2) NOT NULL,
+		  `title` tinytext,
+		  `description` text,
+		  UNIQUE KEY `id_lang` (`id`,`lang`)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+	○
+		※削除。
+
+//	実行
+//		DROP TABLE `faq`;
+//		DROP TABLE `faq_lang`;
+
+/db/purpose.sql 255-260
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-ask-question', '¿No has podido resolver tu duda?\r\n Envía un mensaje con tu pregunta.', NULL, 'faq');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-investors-section-header', 'Para cofinanciador@s', NULL, 'faq');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-main-section-header', 'Sobre nosotros', NULL, 'faq');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-nodes-section-header', 'Sobre nodos locales', NULL, 'faq');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-project-section-header', 'Sobre los proyectos', NULL, 'faq');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('faq-sponsor-section-header', 'Para impulsor@s', NULL, 'faq');
+
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `purpose` WHERE `text`='faq-ask-question';
+//		DELETE FROM `purpose` WHERE `text`='faq-investors-section-header';
+//		DELETE FROM `purpose` WHERE `text`='faq-main-section-header';
+//		DELETE FROM `purpose` WHERE `text`='faq-nodes-section-header';
+//		DELETE FROM `purpose` WHERE `text`='faq-project-section-header';
+//		DELETE FROM `purpose` WHERE `text`='faq-sponsor-section-header';
+
+/db/text(グーグル翻訳化).sql 219-224
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-ask-question', 'ja', 'これはあなたの質問を解決しませんでしたか？私達にメッセージを送信します。' );
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-investors-section-header', 'ja', '共同金融について' );
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-main-section-header', 'ja', 'アプローチ' );
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-nodes-section-header', 'ja', 'ローカル・ノードについて' );
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-project-section-header', 'ja', 'プロジェクトについて' );
+		INSERT INTO text (id, lang, text) VALUES ( 'faq-sponsor-section-header', 'ja', 'プロモーターについて' );
+
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-ask-question' and`lang`='pl';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-investors-section-header' and`lang`='pl';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-main-section-header' and`lang`='pl';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-nodes-section-header' and`lang`='pl';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-project-section-header' and`lang`='pl';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='faq-sponsor-section-header' and`lang`='pl';
+
+
+/db/text(グーグル翻訳化).sql 692
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'regular-header-faq', 'ja', 'よくある質問' );
+	○
+		※削除。
+
+/db/text(グーグル翻訳化).sql 679
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'regular-faq', 'ja', 'よくある質問' );
+	○
+		※削除。
+/db/text(グーグル翻訳化).sql 311
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'guide-project-costs', 'ja', '"<strong>このセクションでは、プロジェクトの見積費用に基づいて、短い事業計画を記入する必要があります。</strong><br><br>あなたは、タスク、インフラストラクチャー、または材料によって番号を打破する必要があります。コストについて現実的であることを試してみて、あなたが各1を必要とする理由を簡単に説明します。原則として、プロジェクトの大部分は、プロジェクトを推進し、第三者に委託されていない個人またはチームによって行われなければならないことを、覚えておいてください。計算のために、心の中でも約9％になるサービスのサイト名を提供するため、トランザクションのための手数料を、（持っています<a href=""/faq/sponsor#q98"" target=""new"">+私たちのよくある質問での情報</a>). <br><br><strong>非常に重要な</strong>：サイト名では、我々は必要と補足コスト区別します。後者は第二のキャンペーンの一環として得ることができるが、前者は完全に、資金を得るためにカバーしなければならない、プロジェクトが進行中である一度最適化コスト（プロモーション、デザイン、アウトリーチ、追加の単位など）をカバーするために、これらの補足的な費用は、プロジェクトの総費用の半分以上にすることはできません。"' );
+	○
+		INSERT INTO text (id, lang, text) VALUES ( 'guide-project-costs', 'ja', '"<strong>このセクションでは、プロジェクトの見積費用に基づいて、短い事業計画を記入する必要があります。</strong><br><br>あなたは、タスク、インフラストラクチャー、または材料によって番号を打破する必要があります。コストについて現実的であることを試してみて、あなたが各1を必要とする理由を簡単に説明します。原則として、プロジェクトの大部分は、プロジェクトを推進し、第三者に委託されていない個人またはチームによって行われなければならないことを、覚えておいてください。計算のために、心の中でも約9％になるサービスのサイト名を提供するため、トランザクションのための手数料を. <br><br><strong>非常に重要な</strong>：サイト名では、我々は必要と補足コスト区別します。後者は第二のキャンペーンの一環として得ることができるが、前者は完全に、資金を得るためにカバーしなければならない、プロジェクトが進行中である一度最適化コスト（プロモーション、デザイン、アウトリーチ、追加の単位など）をカバーするために、これらの補足的な費用は、プロジェクトの総費用の半分以上にすることはできません。"' );
+
+/db/texts.sql 2088-2134
+	×
+		('faq-ask-question', 'ca', 'No has pogut resoldre el teu dubte? Envia un missatge amb la teva pregunta'),
+		('faq-ask-question', 'en', 'Didn''t this solve your question? Send us a message.'),
+		('faq-ask-question', 'eu', 'Zure zalantza ezin izan duzu argitu? Bidali ezazu mezu bat zure galderarekin.'),
+		('faq-ask-question', 'fr', 'Si vous n''avez pas trouvé la réponse que vous cherchez, envoyez un message.'),
+		('faq-ask-question', 'gl', '¿Non puideches solventar a túa dúbida? Envía unha mensaxe coa túa pregunta.'),
+		('faq-ask-question', 'it', 'Didn''t this solve your question? Send us a message.'),
+		('faq-ask-question', 'nl', 'Heeft dit je vraag niet beantwoordt? Stuur ons een bericht.'),
+		('faq-ask-question', 'pl', 'Didn''t this solve your question? Send us a message.'),
+		('faq-investors-section-header', 'ca', 'Per a cofinançadors/es'),
+		('faq-investors-section-header', 'en', 'For co-financiers'),
+		('faq-investors-section-header', 'eu', 'Finantzakideentzat'),
+		('faq-investors-section-header', 'fr', 'Cofinanceurs'),
+		('faq-investors-section-header', 'gl', 'Para cofinanceir@s'),
+		('faq-investors-section-header', 'it', 'For co-financiers'),
+		('faq-investors-section-header', 'nl', 'Voor co-financiers'),
+		('faq-investors-section-header', 'pl', 'For co-financiers'),
+		('faq-main-section-header', 'ca', 'Una aproximació'),
+		('faq-main-section-header', 'en', 'An approach'),
+		('faq-main-section-header', 'eu', 'Buruz'),
+		('faq-main-section-header', 'fr', 'à propos'),
+		('faq-main-section-header', 'gl', 'Sobre Goteo'),
+		('faq-main-section-header', 'it', 'An approach to Goteo'),
+		('faq-main-section-header', 'nl', 'Een benadering'),
+		('faq-main-section-header', 'pl', 'An approach to Goteo'),
+		('faq-nodes-section-header', 'ca', 'Sobre nodes locals'),
+		('faq-nodes-section-header', 'en', 'About local nodes'),
+		('faq-nodes-section-header', 'eu', 'Bertoko nodoei buruz'),
+		('faq-nodes-section-header', 'fr', 'Les noeuds locaux'),
+		('faq-nodes-section-header', 'gl', 'Sobre nodos locais'),
+		('faq-nodes-section-header', 'it', 'About local nodes'),
+		('faq-nodes-section-header', 'nl', 'Over locale nodes'),
+		('faq-nodes-section-header', 'pl', 'About local nodes'),
+		('faq-project-section-header', 'ca', 'Sobre els projectes'),
+		('faq-project-section-header', 'en', 'About the projects'),
+		('faq-project-section-header', 'eu', 'Proiektuei buruz'),
+		('faq-project-section-header', 'fr', 'A propos des projets'),
+		('faq-project-section-header', 'gl', 'Sobre os proxectos'),
+		('faq-project-section-header', 'it', 'About the projects'),
+		('faq-project-section-header', 'nl', 'Over de projecten'),
+		('faq-project-section-header', 'pl', 'About the projects'),
+		('faq-sponsor-section-header', 'ca', 'Per a impulsors/es'),
+		('faq-sponsor-section-header', 'en', 'For promoters'),
+		('faq-sponsor-section-header', 'eu', 'Bultzatzaileentzat'),
+		('faq-sponsor-section-header', 'gl', 'Para impulsor@s'),
+		('faq-sponsor-section-header', 'it', 'For promoters'),
+		('faq-sponsor-section-header', 'nl', 'Voor promotoren'),
+		('faq-sponsor-section-header', 'pl', 'For promoters'),
+	○
+		※削除。
+
+/db/texts.sql 4989-4997
+	×
+		('regular-header-faq', 'ca', 'FAQ'),
+		('regular-header-faq', 'el', 'FAQ'),
+		('regular-header-faq', 'en', 'FAQ'),
+		('regular-header-faq', 'eu', 'FAQ'),
+		('regular-header-faq', 'fr', 'FAQ'),
+		('regular-header-faq', 'gl', 'FAQ'),
+		('regular-header-faq', 'it', 'FAQ'),
+		('regular-header-faq', 'nl', 'FAQ'),
+		('regular-header-faq', 'pl', 'FAQ'),
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='el';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='regular-header-faq' and`lang`='pl';
+
+
+/db/texts.sql 4865-4873
+	×
+('regular-faq', 'ca', 'Preguntes freqüents '),
+('regular-faq', 'el', 'Frequently asked questions'),
+('regular-faq', 'en', 'Frequently asked questions'),
+('regular-faq', 'eu', 'Ohiko galderak'),
+('regular-faq', 'fr', 'Questions fréquentes'),
+('regular-faq', 'gl', 'Preguntas usuais'),
+('regular-faq', 'it', 'Frequently asked questions'),
+('regular-faq', 'nl', 'Veel gestelde vragen'),
+('regular-faq', 'pl', 'Frequently asked questions'),
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='ca';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='el';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='en';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='eu';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='fr';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='gl';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='it';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='ja';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='nl';
+//		DELETE FROM `text` WHERE `id`='regular-faq' and`lang`='pl';
+
+/db/texts.sql 2754-2756
+	×
+	('guide-project-costs', 'ca', '<b>En aquesta secció has d''elaborar un petit pressupost basat en els costos que calculis tindrà la realització del projecte.</b><br>\r\n<br>\r\nHas d''especificar segons tasques, infraestructura o materials. Intenta ser realista en els costos i explicar breument per a què necessites cobrir cadascun d''ells. Tingues en compte que per norma general, la major part del projecte haurà de ser realitzat directament per la persona o equip que promou el projecte, i no subcontractat a tercers. Al càlcul també has de tenir en compte les comissions de prestació de serveis de SiteName i de transacció, que sumen al voltant d''un 9% (<a href="/faq/sponsor#q98" target="new">+ info a les nostres FAQ)</a>.<br><br>\r\n<b>Molt important</b>: A SiteName diferenciem entre costos imprescindibles i costos addicionals. Els primers han d''aconseguir-se íntegrament per poder obtenir el finançament, mentre que els segon se sol·liciten i obtenen directament en una campanya posterior, una vegada està en marxa el projecte, per poder poder cobrir costos d''optimització del mateix (difusió, disseny, abast, més unitats, etc). Aquests costos addicionals no poden superar la meitat dels costos totals del projecte.'),
+	('guide-project-costs', 'en', '<strong>In this section, you should fill out a short business plan based on the estimated costs for your project.</strong><br><br>You should break down the numbers by tasks, infrastructure, or materials. Try to be realistic about the costs and briefly explain why you need each one. Keep in mind, that as a general rule, most part of the project will have to be undertaken by the person or team that is promoting the project, and not subcontracted to third parties. For the calculation, have also in mind the commissions for SiteName''s provision of services and for transaction, which add up to around 9% (<a href="/faq/sponsor#q98" target="new">+ info in our FAQ</a>). <br><br><strong>Very important</strong>: On SiteName, we differentiate among necessary and supplemental costs. The former must be totally covered in order to obtain funding, while the latter can be obtained as part of a second campaign, once the project is underway, in order to cover optimization costs (promotion, design, outreach, additional units, etc.) These supplemental costs can not be more than one half of the total cost of the project.'),
+	('guide-project-costs', 'eu', '<strong>Arlo honetan aurrekontu txiki bat prestatu behar duzu, non proiektuaren zure usteko gastuak ipintzen dituzun.</strong><br /><br />Lanak, azpiegiturak edo materialak zehaztuz egin behar duzu. Saiatu zaitez gastuetan errealista izaten, eta laburki azaldu zergatik bete behar duzun gastu bakoitza. Kontutan izan, orokorrean, proiektuaren zatirik handiena proiektua bultzatzen duzuenok landu behar duzuela, eta ez dela beste hirugarren pertsona bat kontratatuko. Kalkulatzerakoan, zenbatu ere SiteName-ko zerbitzu prestakuntza eta transakzioaren komisioak: 9%a gutxi gorabehera (<a href="/faq/sponsor#q98" target="new">info + gure FAQetan</a>).<br /><br /> <strong>Oso garrantzitsua</strong>: SiteName-n funtsezko eta ez funtsezko gastuak bereizten ditugu. Funtsezkoak guztiz bete behar dira finantzaketa lortzeko, eta ez funtsezkoak aldiz eskatu egiten dira bigarren txanda batean, behin proiektua martxan dagoela, eta honen hobekuntza lortzeko (proiektua zabaltzeko, diseinua, irismena, ale gehiago, etabar). Ez funtsezko gastu hauek ezin dute proiektuaren gastu guztien erdia baino gehiago izan.'),
+	○
+	('guide-project-costs', 'ca', '<b>En aquesta secció has d''elaborar un petit pressupost basat en els costos que calculis tindrà la realització del projecte.</b><br>\r\n<br>\r\nHas d''especificar segons tasques, infraestructura o materials. Intenta ser realista en els costos i explicar breument per a què necessites cobrir cadascun d''ells. Tingues en compte que per norma general, la major part del projecte haurà de ser realitzat directament per la persona o equip que promou el projecte, i no subcontractat a tercers. Al càlcul també has de tenir en compte les comissions de prestació de serveis de SiteName i de transacció, que sumen al voltant d''un 9%.<br><br>\r\n<b>Molt important</b>: A SiteName diferenciem entre costos imprescindibles i costos addicionals. Els primers han d''aconseguir-se íntegrament per poder obtenir el finançament, mentre que els segon se sol·liciten i obtenen directament en una campanya posterior, una vegada està en marxa el projecte, per poder poder cobrir costos d''optimització del mateix (difusió, disseny, abast, més unitats, etc). Aquests costos addicionals no poden superar la meitat dels costos totals del projecte.'),
+	('guide-project-costs', 'en', '<strong>In this section, you should fill out a short business plan based on the estimated costs for your project.</strong><br><br>You should break down the numbers by tasks, infrastructure, or materials. Try to be realistic about the costs and briefly explain why you need each one. Keep in mind, that as a general rule, most part of the project will have to be undertaken by the person or team that is promoting the project, and not subcontracted to third parties. For the calculation, have also in mind the commissions for SiteName''s provision of services and for transaction, which add up to around 9%. <br><br><strong>Very important</strong>: On SiteName, we differentiate among necessary and supplemental costs. The former must be totally covered in order to obtain funding, while the latter can be obtained as part of a second campaign, once the project is underway, in order to cover optimization costs (promotion, design, outreach, additional units, etc.) These supplemental costs can not be more than one half of the total cost of the project.'),
+	('guide-project-costs', 'eu', '<strong>Arlo honetan aurrekontu txiki bat prestatu behar duzu, non proiektuaren zure usteko gastuak ipintzen dituzun.</strong><br /><br />Lanak, azpiegiturak edo materialak zehaztuz egin behar duzu. Saiatu zaitez gastuetan errealista izaten, eta laburki azaldu zergatik bete behar duzun gastu bakoitza. Kontutan izan, orokorrean, proiektuaren zatirik handiena proiektua bultzatzen duzuenok landu behar duzuela, eta ez dela beste hirugarren pertsona bat kontratatuko. Kalkulatzerakoan, zenbatu ere SiteName-ko zerbitzu prestakuntza eta transakzioaren komisioak: 9%a gutxi gorabehera.<br /><br /> <strong>Oso garrantzitsua</strong>: SiteName-n funtsezko eta ez funtsezko gastuak bereizten ditugu. Funtsezkoak guztiz bete behar dira finantzaketa lortzeko, eta ez funtsezkoak aldiz eskatu egiten dira bigarren txanda batean, behin proiektua martxan dagoela, eta honen hobekuntza lortzeko (proiektua zabaltzeko, diseinua, irismena, ale gehiago, etabar). Ez funtsezko gastu hauek ezin dute proiektuaren gastu guztien erdia baino gehiago izan.'),
+
+/db/templates.sql 8
+	×
+		REPLACE INTO `template` VALUES(8, 'Confirmacion de proyecto enviado', 'general', 'Mensaje al usuario cuando envia un proyecto a revisión desde el preview del formulario', 'El proyecto %PROJECTNAME% ha pasado a fase de valoración', '<p>Hola <span class="message-highlight-red">%USERNAME%</span>,</p>\r\n<p>Hemos recibido la petición de revisar el proyecto <span class="message-highlight-blue">%PROJECTNAME%</span> para valorar su publicación y promoción mediante SiteName.</p>\r\n<p>En breve alguien del equipo se pondrá en contacto contigo al respecto.</p>\r\n<p>Puedes encontrar más información sobre el proceso de revisión de proyectos en nuestras FAQ: <span class="message-highlight-blue"><a href="http://www.example.com/faq#q88">http://www.example.com/faq#q88</a></span></p>\r\n<p>Muchas gracias!</p>\r\n');
+	○
+		REPLACE INTO `template` VALUES(8, 'Confirmacion de proyecto enviado', 'general', 'Mensaje al usuario cuando envia un proyecto a revisión desde el preview del formulario', 'El proyecto %PROJECTNAME% ha pasado a fase de valoración', '<p>Hola <span class="message-highlight-red">%USERNAME%</span>,</p>\r\n<p>Hemos recibido la petición de revisar el proyecto <span class="message-highlight-blue">%PROJECTNAME%</span> para valorar su publicación y promoción mediante SiteName.</p>\r\n<p>En breve alguien del equipo se pondrá en contacto contigo al respecto.</p>\r\n<p>Puedes encontrar más información sobre el proceso de revisión de proyectos en nuestras </p>\r\n<p>Muchas gracias!</p>\r\n');
+
+/db/purpose.sql 702
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-header-faq', 'FAQ', NULL, 'general');
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `purpose` WHERE `text`='regular-header-faq';
+
+/db/purpose.sql 689
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-faq', 'Preguntas frecuentes', NULL, 'general');
+	○
+		※削除。
+
+	実行
+//		DELETE FROM `purpose` WHERE `text`='regular-faq';
+
+/db/purpose.sql 404
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('invest-paypal_disabled', '\r\nEste proyecto tiene desactivada la opción de pago a través de PayPal. <a href="/faq/investors#q2">Más info</a>', 1, 'invest');
+	○
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('invest-paypal_disabled', '\r\nEste proyecto tiene desactivada la opción de pago a través de PayPal.', 1, 'invest');
+
+/db/purpose.sql 349
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('guide-project-costs', '<strong>En esta sección debes elaborar un pequeño presupuesto basado en los costes que calcules va a tener la realización del proyecto.</strong><br><br>\r\nDebes especificar según tareas, infraestructura o materiales. Intenta ser realista en los costes y explicar brevemente por qué necesitas cubrir cada uno de ellos. Ten en cuenta que por norma general, la mayor parte del proyecto deberá ser realizado directamente por la persona o equipo que promueve el proyecto, y no subcontratado a terceros. En el cálculo también debes tener en cuenta las comisiones de prestación de servicios de SiteName y de transacción, que suman en torno a un 9% (<a href="/faq/sponsor#q98" target="new">+ info en nuestras FAQ</a>).<br><br>\r\n<strong>Muy importante</strong>: En SiteName diferenciamos entre costes imprescindibles y costes adicionales. Los primeros deben lograrse en su totalidad para poder obtener la financiación, mientras que los segundo se solicitan y obtienen directamente en una campaña posterior, una vez está en marcha el proyecto, para poder poder cubrir costes de optimización del mismo (difusión, diseño, alcance, más unidades, etc). Estos costes adicionales no pueden superar la mitad de los costes totales del proyecto.', NULL, 'general');
+	○
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('guide-project-costs', '<strong>En esta sección debes elaborar un pequeño presupuesto basado en los costes que calcules va a tener la realización del proyecto.</strong><br><br>\r\nDebes especificar según tareas, infraestructura o materiales. Intenta ser realista en los costes y explicar brevemente por qué necesitas cubrir cada uno de ellos. Ten en cuenta que por norma general, la mayor parte del proyecto deberá ser realizado directamente por la persona o equipo que promueve el proyecto, y no subcontratado a terceros. En el cálculo también debes tener en cuenta las comisiones de prestación de servicios de SiteName y de transacción, que suman en torno a un 9%.<br><br>\r\n<strong>Muy importante</strong>: En SiteName diferenciamos entre costes imprescindibles y costes adicionales. Los primeros deben lograrse en su totalidad para poder obtener la financiación, mientras que los segundo se solicitan y obtienen directamente en una campaña posterior, una vez está en marcha el proyecto, para poder poder cubrir costes de optimización del mismo (difusión, diseño, alcance, más unidades, etc). Estos costes adicionales no pueden superar la mitad de los costes totales del proyecto.', NULL, 'general');
+
+/db/pages.sql
+	×
+		※★長文につき省略。「faq」について書かれている箇所を削除。
+
+/db/acl.sql 26
+	×
+		REPLACE INTO `acl` VALUES(25, '*', '*', '*', '/faq/*', 1, '2011-05-18 20:49:01');
+	○
+		※削除。
+
+/model/faq.php
+	○
+		※ファイル削除。
+
+/view/admin/faq
+	○
+		※フォルダーごと削除。
+
+/view/admin/index.html.php 56-57
+	×
+                                //$hide_list = array('blog', 'texts', 'tags', 'translates', 'worth', 'news', 'banners', 'faq');
+                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && $oCode != 'faq' && !empty($option['label'])):
+	○
+                                //$hide_list = array('blog', 'texts', 'tags', 'translates', 'worth', 'news', 'banners');
+                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
+
+/library/text.php 347
+	×
+                'faq'  => static::_('Pagina de FAQ'),
+	○
+		※削除。
+
+/library/content.php 86-89
+	×
+                'faq' => array (
+                    'title' => Text::_('Título'),
+                    'description' => Text::_('Descripción')
+                ),
+	○
+		※削除。
+
+/library/content.php 42
+	×
+                'faq'       => Text::_('Faq'),
+	○
+		※削除。
+
+/controller/ws.php 40-47
+	×
+        public function get_faq_order($section) {
+            $next = Model\Faq::next($section);
+
+            header ('HTTP/1.1 200 Ok');
+            echo $next;
+            die;
+        }
+	○
+		※削除。
+
+/controller/translate.php 455-461
+	×
+                        'faq' => array(
+                            'label' => Text::_('FAQs'),
+                            'actions' => array(
+                                'list' => array('label' => Text::_('Listando'), 'item' => false),
+                                'edit' => array('label' => Text::_('Traduciendo Pregunta'), 'item' => true)
+                            )
+                        ),
+	○
+		※削除。
+
+/controller/admin.php 625
+	×
+                                'faq' => $options['faq'],
+	○
+		※削除。
+
+/controller/admin.php 127-136
+	×
+                'faq' => array(
+                    'label' => Text::_('Admin faq'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'add' => array('label' => Text::_('Nueva Pregunta'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Pregunta'), 'item' => true),
+                        'translate' => array('label' => Text::_('Traduciendo Pregunta'), 'item' => true)
+                    ),
+                    'filters' => array('section' => 'node')
+                ),
+	○
+		※削除。
+
+/controller/admin.php 45
+	×
+                    'faq',
+	○
+		※削除。
+
+/controller/about.php 41
+	×
+            if ($id == 'faq' || $id == 'contact') {
+	○
+            if ($id == 'contact') {
+
+/locale/en.po
+	実行
+		（１）poedit で開いて保存ボタンを押す。
+		（２）３行エラーが出てくる。それぞれ末尾に余計な改行が入っているので消す。
+		（３）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（４）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（５）保存ボタンを押して閉じる。
+
+/locale/ca/LC_MESSAGES/ca.po
+	実行
+		（１）poedit で開いて保存ボタンを押す。
+		（２）５行エラーが出てくる。それぞれ末尾に余計な改行が入っているので消す。
+		（３）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（４）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（５）保存ボタンを押して閉じる。
+
+/locale/en_GB/LC_MESSAGES/messages.po
+	実行
+		（１）保存ボタンを押して閉じる。
+		（２）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（３）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（４）保存ボタンを押して閉じる。
+
+/locale/eu/LC_MESSAGES/eu.po
+	実行
+		（１）poedit で開いて保存ボタンを押す。
+		（２）３行エラーが出てくる。それぞれ末尾に余計な改行が入っているので消す。
+		（３）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（４）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（５）保存ボタンを押して閉じる。
+
+/locale/ja_JP/LC_MESSAGES/messages.po
+	実行
+		（１）ツールバーの[更新する]ボタンをクリック。
+		（２）保存ボタンを押して閉じる。
+
+/locale/nl_NL/LC_MESSAGES/messages.po
+	実行
+		（１）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（２）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（３）保存ボタンを押して閉じる。
+
+/locale/pt_BR/LC_MESSAGES/messages.po
+		（１）[カタログ(A)] - [設定…(P)] から [ソースの検索パス] と移動し
+				[パス]の[+]ボタンを押して[フォルダーを追加…]をクリック。
+				トップフォルダー（サイト全体を入れているフォルダー）を選択して
+				[フォルダーの選択]をクリック。[OK]ボタンを押してダイアログボックスを閉じる。
+		（２）ツールバーの[更新する]ボタンをクリック。
+				カタログの変更は[保存]をクリック。
+		（３）保存ボタンを押して閉じる。
+
+/view/css/csstidyonline.results.css 12739-12854
+	×
+		/*----------------------------------------------------------------------
+		 faq.css
+		----------------------------------------------------------------------*/
+		#faq-content
+		{
+			float:left;
+			margin:0 20px 0 0;
+			width:620px;
+		}
+
+		#faq-content h2
+		{
+			background:#FFF url(/view/css/arrowH2-section.gif) no-repeat scroll -5px -2px;
+			border-bottom:2px solid #e7e7e7;
+			font:bold 16px Helvetica, Arial, Geneva, sans-serif;
+			height:30px;
+			margin:0;
+			padding:15px 0 0 20px;
+		}
+
+		#faq-content h3
+		{
+			font:bold 16px Helvetica, Arial, Geneva, sans-serif;
+			margin:5px 0 20px;
+		}
+
+		#faq-content h4
+		{
+			margin:5px 0 0;
+		}
+
+		#faq-content ol
+		{
+			margin-left:20px;
+			padding-left:0;
+		}
+
+		#faq-content ol li
+		{
+			margin:0 0 20px;
+		}
+
+		#faq-content p
+		{
+			margin:5px 0;
+		}
+
+		#faq-sidebar
+		{
+			float:right;
+			width:300px;
+		}
+
+		div.widget.faq-content-module,div.widget.faq-sidebar-module
+		{
+			background-color:#FFF;
+			line-height:16px;
+			margin:0 0 20px;
+		}
+
+		div.widget.faq-content-module ol li a.up
+		{
+			margin-bottom:0!important;
+			margin-left:-15px!important;
+		}
+
+		div.widget.faq-sidebar-module .supertitle
+		{
+			border-bottom:1px solid #58595b;
+			font:normal 14px Helvetica, Arial, Geneva, sans-serif;
+			margin:0 0 1em;
+			padding:0 2px .4em;
+		}
+
+		div.widget.faq-sidebar-module .supertitle.ask
+		{
+			border-bottom-color:#25a345;
+			margin-bottom:12px;
+		}
+
+		div.widget.faq-sidebar-module ol
+		{
+			margin-left:20px;
+			padding-left:0;
+		}
+
+		div.widget.faq-sidebar-module ol li
+		{
+			margin:0 0 5px;
+		}
+
+		div.widget.faq-sidebar-module ol li a
+		{
+			text-decoration:none;
+		}
+
+		div.widget.faq-sidebar-module ol li a:hover
+		{
+			text-decoration:underline;
+		}
+
+		div.widget.faq-sidebar-module p.ask-content
+		{
+			border-bottom:1px solid #25a345;
+			margin:8px 0 0;
+			padding:0 0 12px 24px;
+		}
+
+		div.widget.faq-sidebar-module a.btn-ask
+		{
+			font-size:16px;
+			font-weight:700;
+			margin:12px 0 0!important;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 10455-10537
+	×
+		/*----------------------------------------------------------------------
+		  faq.css
+		----------------------------------------------------------------------*/
+		#faq-content {
+		    width:620px;
+		    margin: 0 20px 0 0;
+		    float:left;
+		}
+		#faq-content h2 {
+		    padding: 15px 0 0 20px;
+		    background: white url('arrowH2-section.gif') no-repeat scroll -5px -2px;
+		    font: bold 16px Helvetica, Arial, Geneva, sans-serif;
+		    border-bottom: 2px solid #e7e7e7;
+		    height: 30px;
+		    margin: 0;
+		}
+		#faq-content h3 {
+		    font: bold 16px Helvetica, Arial, Geneva, sans-serif;
+		    margin: 5px 0 20px;
+		}
+		#faq-content h4 {
+		    margin: 5px 0 0 0;
+		}
+		#faq-content ol{
+		    margin-left:20px;
+		    padding-left:0px;
+		}
+		#faq-content ol li{
+		    margin: 0 0 20px 0;
+		}
+		#faq-content p{
+		    margin: 5px 0;
+		}
+		#faq-sidebar {
+		    width:300px;
+		    float:right;
+		}
+		div.widget.faq-content-module,
+		div.widget.faq-sidebar-module {
+		    background-color: white;
+		    line-height: 16px;
+		    margin: 0 0 20px;
+		}
+		div.widget.faq-content-module ol li a.up{
+		    margin-left: -15px !important;
+		    margin-bottom: 0 !important;
+		}
+		div.widget.faq-sidebar-module .supertitle {
+		    border-bottom: 1px solid #58595b;
+		    font: normal 14px Helvetica, Arial, Geneva, sans-serif;
+		    padding: 0 2px 0.4em;
+		    margin: 0 0 1em;
+		}
+		div.widget.faq-sidebar-module .supertitle.ask {
+		    border-bottom-color: #25a345;
+		    margin-bottom: 12px;
+		}
+		div.widget.faq-sidebar-module ol {
+		    margin-left: 20px;
+		    padding-left:0px;
+		}
+		div.widget.faq-sidebar-module ol li {
+		    margin:0 0 5px 0;
+		}
+		div.widget.faq-sidebar-module ol li a {
+		    text-decoration:none;
+		}
+		div.widget.faq-sidebar-module ol li a:hover {
+		    text-decoration:underline;
+		}
+		div.widget.faq-sidebar-module p.ask-content{
+		    padding: 0 0 12px 24px;
+		    margin: 8px 0 0 0;
+		    border-bottom: 1px solid #25a345;
+		}
+
+		div.widget.faq-sidebar-module a.btn-ask{
+		    margin: 12px 0 0 0 !important;
+		    font-weight: bold;
+		    font-size: 16px;
+		}
+
+	○
+		※削除。
+
+────────────────────────────────────────────────────────────
+2016-03-06 21:56
+
+	解説
+		ブログ機能を削除方針。
+
+/controller/blog.php
+	○
+		※ファイル削除。
+
+/controller/admin/blog.php
+	○
+		※ファイル削除。
+
+/model/blog.php
+	○
+		※ファイル削除。
+
+/model/blog
+	○
+		※フォルダーごと削除。
+
+/view/admin/blog
+	○
+		※フォルダーごと削除。
+
+/view/blog
+	○
+		※フォルダーごと削除。
+
+/view/css/csstidyonline.results.css 12739-13199
+	×
+		/*----------------------------------------------------------------------
+		 blog.css
+		----------------------------------------------------------------------*/
+		#blog-content
+		{
+			float:left;
+			margin:0 20px 0 0;
+			width:620px;
+		}
+
+		#blog-sidebar
+		{
+			float:right;
+			width:300px;
+		}
+
+		div.widget.blog-content-module,div.widget.blog-sidebar-module,#blog-content .post
+		{
+			background-color:#FFF;
+			line-height:18px;
+			margin:0 0 20px;
+		}
+
+		div.widget.blog-content-module h4,#blog-content .post h4
+		{
+			margin:2px 0;
+		}
+
+		div.widget.blog-content-module h4 a,#blog-content .post h4 a
+		{
+			color:#535353;
+			font:normal 20px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+			margin:0 0 5px;
+			text-decoration:none;
+			text-transform:none;
+		}
+
+		div.widget.blog-content-module h4 a:hover,#blog-content .post h4 a:hover
+		{
+			color:#20B3B2;
+		}
+
+		div.widget.blog-content-module .date,#blog-content .post .date
+		{
+			color:#808285;
+			display:block;
+			font-size:12px;
+			margin:10px 0 0;
+		}
+
+		div.widget.blog-content-module .categories,#blog-content .post .categories
+		{
+			display:block;
+			margin:0 0 8px;
+		}
+
+		div.widget.blog-content-module .categories a,#blog-content .post .categories a
+		{
+			color:#808285;
+			font-size:12px;
+			text-decoration:none;
+		}
+
+		div.widget.blog-content-module .categories a:hover,#blog-content .post .categories a:hover
+		{
+			color:#20B3B2;
+		}
+
+		div.widget.blog-content-module blockquote,#blog-content .post blockquote
+		{
+			border-bottom:1px solid #CABCBF;
+			color:#58595B;
+			font-size:12px;
+			line-height:18px;
+			margin:8px 0 16px;
+			padding:0 0 8px;
+		}
+
+		div.widget.blog-content-module .embed,#blog-content .post .embed
+		{
+			height:285px;
+			margin:18px 18px 10px 0;
+			width:500px;
+		}
+
+		div.widget.blog-content-module .embed-legend,#blog-content .post .embed-legend
+		{
+			border-left:2px solid silver;
+			color:#9B9B9D;
+			font-size:.9em;
+			font-style:oblique;
+			margin-bottom:18px;
+			margin-left:0;
+			padding-left:10px;
+			width:495px;
+		}
+
+		div.post-gallery
+		{
+			margin-bottom:30px;
+		}
+
+		div.post-gallery-container
+		{
+			display:none;
+			height:300px;
+			width:580px;
+		}
+
+		div.post-gallery-container .gallery-image
+		{
+			display:block;
+			height:300px;
+			text-align:left;
+			width:580px;
+		}
+
+		div.gallery-image img
+		{
+			margin:8px 18px 8px 0;
+		}
+
+		div.post-gallery ul.slderpag
+		{
+			float:left;
+			height:auto;
+			list-style:none;
+			margin:8px 0 0;
+			padding:0;
+		}
+
+		div.post-gallery ul.slderpag li
+		{
+			cursor:pointer;
+			display:block;
+			float:left;
+			margin:0 4px 5px;
+			overflow:hidden;
+		}
+
+		div.post-gallery ul.slderpag li a
+		{
+			background-color:#cdcdce;
+			color:#cdcdce;
+			display:block;
+			height:12px;
+			margin-top:2px;
+			width:12px;
+		}
+
+		div.post-gallery ul.slderpag li a:hover
+		{
+			background-color:#20b3b2;
+			color:#20b3b2;
+		}
+
+		div.post-gallery ul.slderpag li.current a
+		{
+			background-color:#808184!important;
+			color:#808184!important;
+		}
+
+		div.post-gallery a.next,div.post-gallery a.prev,#blog-content .post div.post-gallery a.prev
+		{
+			cursor:pointer;
+			float:left;
+			height:16px;
+			line-height:2000px;
+			margin:8px 0 0;
+			overflow:hidden;
+			width:16px;
+		}
+
+		div.post-gallery a.prev
+		{
+			background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 0;
+		}
+
+		div.post-gallery a.prev:hover
+		{
+			background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -32px;
+		}
+
+		div.post-gallery a.next
+		{
+			background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -16px;
+		}
+
+		div.post-gallery a.next:hover
+		{
+			background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -48px;
+		}
+
+		div.widget.blog-content-module .comments-num,#blog-content .post .comments-num
+		{
+			background:transparent url(/view/css/ico-blogcomment.png) scroll no-repeat 0 0;
+			float:left;
+			height:24px;
+			line-height:24px;
+			margin:0;
+			padding:0 0 0 26px;
+		}
+
+		div.widget.blog-content-module .comments-num a,#blog-content .post .comments-num a
+		{
+			color:#00ad4e;
+			text-decoration:none;
+		}
+
+		div.post-comments div.message
+		{
+			background:#e7e7e7 url(/view/css/message/beak/1.png) no-repeat left top;
+			margin-left:60px;
+			overflow:visible;
+			padding:.5em 1em .5em 1.5em;
+			position:relative;
+		}
+
+		div.post-comments div.owner
+		{
+			background:#e9f4ea url(/view/css/message/beak/2.png) no-repeat left top!important;
+		}
+
+		div.post-comments div.message + div.message
+		{
+			margin-top:20px;
+		}
+
+		div.post-comments div.message .avatar
+		{
+			display:block;
+			height:50px;
+			left:-60px;
+			position:absolute;
+			top:0;
+			width:50px;
+		}
+
+		div.post-comments div.message .user
+		{
+			float:left;
+			font-size:14px;
+			font-weight:700;
+			margin:0 0 1em;
+			text-transform:none;
+		}
+
+		div.post-comments div.message h3.user a
+		{
+			text-decoration:none;
+		}
+
+		div.post-comments div.message h3.user a:hover
+		{
+			color:#20B3B2;
+		}
+
+		div.post-comments div.message .date
+		{
+			color:gray;
+			float:right;
+			font-size:12px;
+		}
+
+		div.post-comments div.message blockquote
+		{
+			clear:both;
+			margin:0;
+			padding:0;
+		}
+
+		div.widget.blog-content-module ul.share-goteo,#blog-content .post ul.share-goteo
+		{
+			float:right;
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li,#blog-content .post ul.share-goteo li
+		{
+			display:inline;
+			float:left;
+			margin:0 0 0 10px;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.twitter a,div.widget.blog-content-module ul.share-goteo li.facebook a,div.widget.blog-content-module ul.share-goteo li.rss a,#blog-content .post ul.share-goteo li.twitter a,#blog-content .post ul.share-goteo li.facebook a,#blog-content .post ul.share-goteo li.rss a
+		{
+			float:left;
+			font-size:12px;
+			height:20px;
+			line-height:20px;
+			padding:0 0 0 25px;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.sharetext,#blog-content .post ul.share-goteo li.sharetext
+		{
+			color:#808285;
+			float:left;
+			font-size:12px;
+			height:20px;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.twitter a,#blog-content .post ul.share-goteo li.twitter a
+		{
+			background:transparent url(/view/css/twitter.png) scroll no-repeat 0 0;
+			color:#13c2ec;
+			text-decoration:none;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.twitter a:hover,#blog-content .post ul.share-goteo li.twitter a:hover
+		{
+			background:transparent url(/view/css/twitter.png) scroll no-repeat 0 0;
+			color:#808285;
+			opacity:0.6;
+			text-decoration:none;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.facebook a,#blog-content .post ul.share-goteo li.facebook a
+		{
+			background:transparent url(/view/css/facebook.png) scroll no-repeat 0 0;
+			color:#4a6393;
+			text-decoration:none;
+		}
+
+		div.widget.blog-content-module ul.share-goteo li.facebook a:hover,#blog-content .post ul.share-goteo li.facebook a:hover
+		{
+			background:transparent url(/view/css/facebook.png) scroll no-repeat 0 0;
+			color:#808285;
+			opacity:0.6;
+			text-decoration:none;
+		}
+
+		#blog-content div.widget.blog-comment
+		{
+			margin:20px 0 0;
+		}
+
+		#blog-content div.widget.blog-comment h5
+		{
+			margin:0 0 5px;
+		}
+
+		#blog-content div.widget.blog-comment textarea
+		{
+			background-color:#DCEEDF;
+			border:1px solid #2EAB58;
+			clear:right;
+			display:block;
+			float:right;
+			height:50px;
+			margin:-1px;
+			padding:.3em 0;
+			resize:none;
+			width:525px;
+		}
+
+		#blog-content div.widget.blog-comment button
+		{
+			float:right;
+			font-weight:700;
+			margin:35px 0 0;
+			padding:5px 20px;
+		}
+
+		#blog-content div.widget.blog-comment a.preview
+		{
+			color:#2EAB58;
+			font-weight:700;
+			left:52px;
+			position:relative;
+			text-decoration:none;
+			text-transform:uppercase;
+			top:10px;
+		}
+
+		div.widget.blog-sidebar-module h3.title
+		{
+			border-bottom:1px solid #20b3b2;
+			color:#000;
+			font:normal 15px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+			margin:0 0 1em;
+			padding:0 2px .2em;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-posts
+		{
+			margin:0 0 25px 16px;
+			padding:0;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-posts li
+		{
+			list-style-position:outside;
+			margin:0 0 10px;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-posts li a
+		{
+			color:#58595B;
+			font-size:12px;
+			text-decoration:none;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-posts li a:hover
+		{
+			text-decoration:underline;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-tags,div.widget.blog-sidebar-module ul#blog-side-comments
+		{
+			list-style:none;
+			margin:0 10px 25px 0;
+			padding:0;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-tags li
+		{
+			margin:0 0 5px;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-tags li a
+		{
+			color:#20B3B2;
+			text-decoration:none;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-tags li a:hover
+		{
+			text-decoration:underline;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-comments li .date
+		{
+			color:#cabcbf;
+			margin:10px 0;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-comments li
+		{
+			margin:0 0 20px;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment
+		{
+			display:block;
+			margin:6px 0 0 -9px;
+			padding:4px 8px;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment:hover
+		{
+			background:#F3F3F3;
+		}
+
+		div.widget.blog-sidebar-module ul#blog-side-comments li p
+		{
+			margin:0;
+		}
+
+	○
+		※削除。
+
+/view/css/csstidyonline.results.css 392-404
+	×
+		div.widget.blog-comment{position:relative;}
+		div.widget.blog-comment button.green{float:right;
+			margin-top: 25px;
+			margin-bottom: 5px;
+		}
+		div.widget.blog-comment div#bocadillo{
+		    background:url('/view/css/bocadillo.jpg') no-repeat;
+		    position:absolute;
+		    width: 50px;
+		    height: 50px;
+			margin-top: 8px;
+		}
+
+	○
+		※削除。
+
+/view/css/csstidyonline.results.css 8313-8337
+	×
+		.project-updates div.widget.blog-comment input.green
+		{
+			float:right;
+			font-weight:700;
+			margin:35px 0 0;
+			padding:5px 20px;
+		}
+
+		.project-updates div.widget.blog-comment a.preview
+		{
+			color:#2EAB58;
+			font-style:normal;
+			font-weight:400;
+			left:52px;
+			position:relative;
+			text-decoration:none;
+			text-transform:uppercase;
+			top:-42px;
+		}
+
+		.project-updates div.widget.blog-comment form
+		{
+			overflow:hidden;
+		}
+
+	○
+		※削除。
+
+/view/css/csstidyonline.results.css 8273-8302
+	×
+		.project-updates div.widget.blog-comment
+		{
+			margin:20px 0 0;
+		}
+
+		.project-updates div.widget.blog-comment h5
+		{
+			margin:0 0 5px;
+		}
+
+		.project-updates div.widget.blog-comment textarea
+		{
+			background-color:#DCEEDF;
+			border:1px solid #2EAB58;
+			clear:right;
+			display:block;
+			float:left;
+			height:50px;
+			margin:10px -1px -1px 52px;
+			padding:.3em 0;
+			resize:none;
+			width:525px;
+		}
+
+		.project-updates div.widget.blog-comment input.button
+		{
+			float:right;
+			margin:20px 0 0;
+		}
+
+	○
+		※削除。
+
+/view/css/csstidyonline.results.css 8211-8220
+	×
+		.project-updates .post .comments-num
+		{
+			background:transparent url(/view/css/ico-blogcomment.png) scroll no-repeat 0 0;
+			float:left;
+			height:24px;
+			line-height:24px;
+			margin:0;
+			padding:0 0 0 26px;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 10455-10849
+	×
+		/*----------------------------------------------------------------------
+		  blog.css
+		----------------------------------------------------------------------*/
+		#blog-content {
+		    width:620px;
+		    margin: 0 20px 0 0;
+		    float:left;
+		}
+		#blog-sidebar {
+		    width:300px;
+		    float:right;
+		}
+		div.widget.blog-content-module,
+		div.widget.blog-sidebar-module,
+		#blog-content .post{
+		    background-color: white;
+		    line-height: 18px;
+		    margin: 0 0 20px;
+		}
+		div.widget.blog-content-module h4,
+		#blog-content .post h4 {
+		    margin: 2px 0;
+		}
+		div.widget.blog-content-module h4 a,
+		#blog-content .post h4 a {
+		    font: normal 20px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+		    margin: 0 0 5px 0;
+		    text-transform:none;
+		    color:#535353;
+		    text-decoration:none;
+		}
+		div.widget.blog-content-module h4 a:hover,
+		#blog-content .post h4 a:hover {
+		    color:#20B3B2;
+		}
+		div.widget.blog-content-module .date,
+		#blog-content .post  .date{
+		    display:block;
+		    color: #808285;
+		    margin: 10px 0 0;
+		    font-size: 12px;
+		}
+		div.widget.blog-content-module .categories,
+		#blog-content .post .categories{
+		    display:block;
+		    margin: 0 0 8px;
+		}
+		div.widget.blog-content-module .categories a,
+		#blog-content .post .categories a {
+		    color:#808285;
+		    text-decoration: none;
+		    font-size: 12px;
+		}
+		div.widget.blog-content-module .categories a:hover,
+		#blog-content .post .categories a:hover {
+		    color:#20B3B2
+		}
+		div.widget.blog-content-module  blockquote,
+		#blog-content .post blockquote{
+		    color: #58595B;
+		    padding: 0 0 8px;
+		    border-bottom: 1px solid #CABCBF;
+		    margin: 8px 0 16px;
+		    font-size: 12px;
+		    line-height: 18px;
+		}
+		div.widget.blog-content-module  .embed,
+		#blog-content .post .embed{
+		    width: 500px;
+		    height: 285px;
+		    margin: 18px 18px 10px 0;
+		}
+
+		div.widget.blog-content-module  .embed-legend,
+		#blog-content .post .embed-legend{
+		    border-left: 2px solid silver;
+		    color: #9B9B9D;
+		    font-size: 0.9em;
+		    margin-left: 0;
+		    width: 495px;
+		    padding-left: 10px;
+		    margin-bottom: 18px;
+		    font-style:oblique
+		}
+		/* Estilos galeria */
+		div.post-gallery{
+		    margin-bottom:30px;
+		}
+		div.post-gallery-container{
+		    width:580px;
+		    height:300px;
+		    display:none;
+		}
+
+		body.project-show div.widget.project-summary .gallery-image{
+		    text-align:center;
+		    width:312px;
+		    max-width: 312px;
+		    max-height: 240px;
+		    display:block;
+		    margin: 0 auto 20px;
+		}
+
+		div.gallery-image img {
+		    display: block;
+		    width: auto;
+		    width: 100%;
+		    max-height: auto;
+		    margin: 0 auto;
+		}
+
+		div.post-gallery  ul.slderpag {
+		    margin: 8px 0 0 0;
+		    list-style:none;
+		    padding:0px;
+		    float:left;
+		    height:auto;
+		}
+
+		div.post-gallery  ul.slderpag li{
+		    cursor:pointer;
+		    display: block;
+		    float: left;
+		    overflow: hidden;
+		    margin: 0 4px 5px 4px;
+		}
+
+		div.post-gallery  ul.slderpag li a{
+		    width: 12px;
+		    height: 12px;
+		    margin-top: 2px;
+		    background-color: #cdcdce;
+		    color: #cdcdce;
+		    display:block;
+		}
+
+		div.post-gallery  ul.slderpag li a:hover{
+		    background-color: #20b3b2;
+		    color: #20b3b2;
+		}
+
+		div.post-gallery  ul.slderpag li.current a{
+		    background-color: #808184 !important;
+		    color: #808184 !important;
+		}
+
+		div.post-gallery  a.next,
+		div.post-gallery  a.prev,
+		#blog-content .post div.post-gallery  a.prev{
+		    width: 16px;
+		    height: 16px;
+		    line-height: 2000px;
+		    overflow: hidden;
+		    float:left;
+		    margin: 8px 0 0 0;
+		    cursor:pointer;
+		}
+
+		div.post-gallery  a.prev{
+		    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
+		}
+
+		div.post-gallery  a.prev:hover {
+		    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
+		}
+
+		div.post-gallery  a.next{
+		    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
+		}
+
+		div.post-gallery  a.next:hover{
+		    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
+		}
+		/* Fin galeria */
+		div.widget.blog-content-module .comments-num,
+		#blog-content .post .comments-num{
+		    float:left;
+		    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat  0 0;
+		    padding: 0 0 0 26px;
+		    height:24px;
+		    margin: 0;
+		    line-height: 24px;
+		}
+		div.widget.blog-content-module .comments-num a,
+		#blog-content .post .comments-num a {
+		    color:#00ad4e;
+		    text-decoration:none;
+		}
+		/** Comments like messages **/
+		div.post-comments div.message {
+		    background: #e7e7e7 url('/view/css/message/beak/1.png') no-repeat left top;
+		    margin-left: 60px;
+		    padding: .5em 1em .5em 1.5em;
+		    overflow: visible;
+		    position: relative;
+		}
+
+		div.post-comments div.owner {
+		    background: #e9f4ea url('/view/css/message/beak/2.png') no-repeat left top !important;
+		}
+
+		div.post-comments div.message + div.message {
+		    margin-top: 20px;
+		}
+
+		div.post-comments div.message .avatar {
+		    position: absolute;
+		    left: -60px;
+		    top: 0;
+		    display: block;
+		    width: 50px;
+		    height: 50px;
+		}
+
+		div.post-comments div.message .user {
+		    text-transform: none;
+		    font-size: 14px;
+		    font-weight: bold;
+		    margin: 0 0 1em;
+		    float: left;
+		}
+
+		div.post-comments div.message h3.user a{text-decoration:none;}
+		div.post-comments div.message h3.user a:hover{color:#20B3B2;}
+
+		div.post-comments div.message .date {
+		    float: right;
+		    color: #808080;
+		    font-size: 12px;
+		}
+
+		div.post-comments div.message blockquote {
+		    margin: 0;
+		    padding: 0;
+		    clear: both;
+		}
+		/** end Comments like messages**/
+		/** share goteo **/
+		div.widget.blog-content-module ul.share-goteo,
+		#blog-content .post ul.share-goteo {
+		    margin: 0;
+		    padding:0;
+		    list-style:none;
+		    float:right;
+		}
+		div.widget.blog-content-module ul.share-goteo li,
+		#blog-content .post ul.share-goteo li{
+		    display:inline;
+		    float:left;
+		    margin: 0 0 0 10px;
+		}
+		div.widget.blog-content-module ul.share-goteo li.twitter a,
+		div.widget.blog-content-module ul.share-goteo li.facebook a,
+		div.widget.blog-content-module ul.share-goteo li.rss a,
+		#blog-content .post  ul.share-goteo li.twitter a,
+		#blog-content .post  ul.share-goteo li.facebook a,
+		#blog-content .post  ul.share-goteo li.rss a{
+		    height:20px;
+		    float:left;
+		    padding: 0 0 0 25px;
+		    font-size: 12px;
+		    line-height: 20px;
+		}
+		div.widget.blog-content-module ul.share-goteo li.sharetext,
+		#blog-content .post ul.share-goteo li.sharetext{
+		    height:20px;
+		    float:left;
+		    color: #808285;
+		    font-size: 12px;
+		}
+		div.widget.blog-content-module ul.share-goteo li.twitter a,
+		#blog-content .post ul.share-goteo li.twitter a{
+		    background: transparent url('twitter.png') scroll no-repeat  0 0;
+		    color:#13c2ec;
+		    text-decoration:none;
+		}
+		div.widget.blog-content-module ul.share-goteo li.twitter a:hover,
+		#blog-content .post ul.share-goteo li.twitter a:hover{
+		    background: transparent url('twitter.png') scroll no-repeat  0 0;
+		    opacity:0.6;
+		    color:#808285;
+		    text-decoration:none;
+		}
+		div.widget.blog-content-module ul.share-goteo li.facebook a,
+		#blog-content .post ul.share-goteo li.facebook a{
+		    background: transparent url('facebook.png') scroll no-repeat  0 0;
+		    color:#4a6393;
+		    text-decoration:none;
+		}
+		div.widget.blog-content-module ul.share-goteo li.facebook a:hover,
+		#blog-content .post ul.share-goteo li.facebook a:hover{
+		    background: transparent url('facebook.png') scroll no-repeat  0 0;
+		    color:#808285;
+		    opacity:0.6;
+		    text-decoration:none;
+		}
+
+		/* send Comment */
+		#blog-content div.widget.blog-comment {
+		    margin: 20px 0 0 0;
+		}
+		#blog-content div.widget.blog-comment h5 {
+		    margin: 0 0 5px 0;
+		}
+		#blog-content div.widget.blog-comment textarea {
+		    background-color: #DCEEDF;
+		    border: 1px solid #2EAB58;
+		    clear: right;
+		    display: block;
+		    float: right;
+		    height: 50px;
+		    margin: -1px;
+		    padding: 0.3em 0;
+		    resize: none;
+		    width: 525px;
+		}
+
+		#blog-content div.widget.blog-comment button {
+		    margin: 20px 0 0 0;
+		    float:right;
+		    font-weight: bold;
+		    margin-top: 35px;
+		    padding: 5px 20px;
+		}
+
+		#blog-content div.widget.blog-comment a.preview{
+		    color: #2EAB58;
+		    font-weight: bold;
+		    left: 52px;
+		    position: relative;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    top: 10px;
+		}
+
+		/* Sidebar styles */
+		div.widget.blog-sidebar-module h3.title {
+		    border-bottom: 1px solid #20b3b2;
+		    color: #000000;
+		    font: normal 15px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+		    margin: 0 0 1em;
+		    padding: 0 2px 0.2em;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-posts{
+		    margin: 0 0 25px 16px;
+		    padding: 0;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-posts li{
+		    margin:0 0 10px 0;
+		    list-style-position: outside;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-posts li a{
+		    text-decoration:none;
+		    color: #58595B;
+		    font-size: 12px;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-posts li a:hover{
+		    text-decoration:underline;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-tags,
+		div.widget.blog-sidebar-module ul#blog-side-comments{
+		    margin: 0 10px 25px 0;
+		    padding: 0;
+		    list-style:none;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-tags li{
+		    margin:0 0 5px 0;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-tags li a{
+		    text-decoration:none;
+		    color:#20B3B2;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-tags li a:hover{
+		    text-decoration:underline;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-comments li .date{
+		    color:#cabcbf;
+		    margin: 10px 0;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-comments li{
+		    margin:0 0 20px 0;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment{
+		    margin:6px 0 0 -9px;
+		    display:block;
+		    padding:4px 8px;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment:hover{
+		    background:#F3F3F3;
+		}
+		div.widget.blog-sidebar-module ul#blog-side-comments li p{
+		    margin: 0;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7647-7660
+	×
+		body.project-show div#main .project-updates div.widget.blog-comment a.preview{
+		    color: #2EAB58;
+		    font-weight: normal;
+		    left: 60px;
+		    position: absolute;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    top: 194px;
+		    font-style: normal;
+		    display: block;
+		    width: 60px;
+		    font-size: 12px;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7609-7636
+	×
+		body.project-show div#main .project-updates div.widget.blog-comment div#bocadillo {
+		    background: url('/view/css/bocadillo.jpg') no-repeat;
+		    float: left;
+		    width: 50px;
+		    height: 50px;
+		    margin: 10px 0 0 10px;
+		}
+
+		body.project-show div#main .project-updates div.widget.blog-comment textarea {
+		    clear: right;
+		    display: block;
+		    float: right;
+		    width: 250px;
+		    height: 50px;
+		    margin: 10px 10px 20px 0;
+		    padding: 0.3em 0;
+		    resize: none;
+		    background-color: #DCEEDF;
+		    border: 1px solid #2EAB58;
+		}
+
+		body.project-show div#main .project-updates div.widget.blog-comment button.green {
+		    float: right;
+		    margin: 0 10px 10px 10px;
+		    text-align: center;
+		    display: block;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7594-7600
+	×
+		body.project-show div#main .project-updates div.widget.blog-comment {
+		    padding: 10px 0;
+		    margin: 0;
+		    overflow: hidden;
+		    border-bottom: 1px dashed #c0c0c0;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7567-7578
+	×
+		body.project-show .project-updates .post .comments-num {
+		    float: none;
+		    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat 10px 0;
+		    background-color: #fff;
+		    padding: 0 0 0 40px;
+		    height: 40px;
+		    width: auto;
+		    margin: 0;
+		    line-height: 24px;
+		    color: both;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7453-7486
+	×
+		/* escribe tu comentario */
+		.project-updates div.widget.blog-comment textarea {
+		    background-color: #DCEEDF;
+		    border: 1px solid #2EAB58;
+		    clear: right;
+		    display: block;
+		    float: right;
+		    height: 50px;
+		    margin: 10px -1px -1px;
+		    padding: 0.3em 0;
+		    resize: none;
+		    width: 525px;
+		}
+
+		.project-updates div.widget.blog-comment input.green {
+		    margin: 20px 0 0 0;
+		    float:right;
+		    font-weight: bold;
+		    margin-top: 35px;
+		    padding: 5px 20px;
+		}
+
+		.project-updates div.widget.blog-comment a.preview{
+		    color: #2EAB58;
+		    font-weight: normal;
+		    left: 52px;
+		    position: relative;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    top: 10px;
+		    font-style: normal;
+		}
+		/* end send comment */
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7434-7448
+	×
+		.project-updates div.widget.blog-comment {
+		    margin: 20px 0 0 0;
+		}
+		.project-updates div.widget.blog-comment h5 {
+		    margin: 0 0 5px 0;
+		}
+		.project-updates div.widget.blog-comment textarea {
+		    display:block;
+		    width:530px;
+		}
+		.project-updates div.widget.blog-comment input.button {
+		    margin: 20px 0 0 0;
+		    float:right;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 7339-7346
+	×
+		.project-updates .post .comments-num{
+		    float:left;
+		    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat  0 0;
+		    padding: 0 0 0 26px;
+		    height:24px;
+		    margin: 0;
+		    line-height: 24px;
+		}
+
+	○
+		※削除。
+
+/view/m/css/cssmarge_mobile.css 390-400
+	×
+		/* = caja de comentarios
+		*************************/
+		div.widget.blog-comment{position:relative;}
+		div.widget.blog-comment button.green{float:right;
+		    margin-top: 25px;
+		    margin-bottom: 5px;
+		}
+		div.widget.blog-comment div#bocadillo{background:url('/view/css/bocadillo.jpg') no-repeat;position:absolute;width: 50px;	height: 50px;
+		    margin-top: 8px;
+		}
+
+	○
+		※削除。
+
+/controller/admin.php 656
+	×
+                                'blog' => $options['blog'],
+	○
+		※削除。
+
+/controller/admin.php 612
+	×
+                                'blog' => $options['blog'],
+	○
+		※削除。
+
+/controller/admin.php 599
+	×
+                                'blog' => $options['blog'], // entradas de blog (en la gestion de blog)
+	○
+		※削除。
+
+/controller/admin.php 572
+	×
+                                'blog' => $options['blog'], // entradas del blog
+	○
+		※削除。
+
+/controller/admin.php 267-275
+	×
+                'tags' => array(
+                    'label' => Text::_('Tags de blog'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'add' => array('label' => Text::_('Nuevo Tag'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Tag'), 'item' => true),
+                        'translate' => array('label' => Text::_('Traduciendo Tag'), 'item' => true)
+                    )
+                ),
+	○
+		※削除。
+
+/controller/admin.php 84-95
+	×
+                'blog' => array(
+                    'label' => Text::_('Blog'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'add' => array('label' => Text::_('Nueva Entrada'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Entrada'), 'item' => true),
+                        'translate' => array('label' => Text::_('Traduciendo Entrada'), 'item' => true),
+                        'reorder' => array('label' => Text::_('Ordenando las entradas en Portada'), 'item' => false),
+                        'footer' => array('label' => Text::_('Ordenando las entradas en el Footer'), 'item' => false)
+                    ),
+                    'filters' => array('show' => 'owned', 'blog' => '')
+                ),
+	○
+		※削除。
+
+/controller/dashboard.php 607-621
+	×
+                        // publicar actualizaciones
+                        case 'updates':
+                            $viewData['blog'] = $blog;
+
+                            if ($action == 'edit') {
+                                $post = Model\Blog\Post::get($id, $_SESSION['translate_lang']);
+                                $viewData['post'] = $post;
+                            } else {
+                                $posts = array();
+                                foreach ($blog->posts as $post) {
+                                    $posts[] = Model\Blog\Post::get($post->id, $_SESSION['translate_lang']);
+                                }
+                                $viewData['posts'] = $posts;
+                            }
+                            break;
+	○
+		※削除。
+
+/controller/dashboard.php 548-563
+	×
+                            case 'updates':
+                                if (empty($_POST['blog']) || empty($_POST['id'])) {
+                                    break;
+                                }
+
+                                $post = Model\Blog\Post::get($_POST['id']);
+
+                                $post->title_lang = $_POST['title'];
+                                $post->text_lang = $_POST['text'];
+                                $post->media_lang = $_POST['media'];
+                                $post->legend_lang = $_POST['legend'];
+                                $post->lang = $_SESSION['translate_lang'];
+                                $post->saveLang($errors);
+
+                                $action = 'edit';
+                                break;
+	○
+		※削除。
+
+/controller/dashboard.php 453
+	×
+                        $blog = Model\Blog::get($project->id);
+	○
+		※削除。
+
+/controller/dashboard.php 350-363
+	×
+                // publicar actualizaciones
+                case 'updates':
+                    $viewData['blog'] = $blog;
+                    $viewData['posts'] = $posts;
+                    $viewData['post'] = $post;
+                    if ($jump_switch){
+                        $_url = explode('/',$_SERVER['REQUEST_URI']);
+                        $_postid = $_url[ max(array_keys($_url)) ];
+                        if (!is_numeric($_postid)){
+                            $_postid = "";
+                        }
+                        throw new Redirection("/project/{$project->id}/updates/{$_postid}");
+                    }
+                    break;
+	○
+		※削除。
+
+/controller/dashboard.php 276-283
+	×
+            // SubControlador para add, edit, delete y list  
+            // devuelve $post en las acciones add y edit y $posts en delete y list
+            // maneja por referencia $action, $posts y $errors
+            if ($option == 'updates') {
+                list($post, $posts) = Dashboard\Projects::prepare_updates($action, $id, $blog->id);
+            }
+	○
+		※削除。
+
+/controller/dashboard.php 258-272
+	×
+                    case 'updates':
+                        // verificación: si no llega blog correcto no lo procesamos
+                        if (empty($_POST['blog']) || $_POST['blog'] != $blog->id) throw new Redirection('/dashboard/projects/summary');
+                        if ($action === 'edit' || $action === 'add'){
+                            $jump_switch = true;
+                        }
+
+                        list($action, $id) = Dashboard\Projects::process_updates($action, $project, $errors);
+                        if (($action === 'list') && ((bool)$_POST['publish']) && $jump_switch){
+                            $jump_switch = true;
+                        } else {
+                            $jump_switch = false;
+                        }
+
+                        break;
+	○
+		※削除。
+
+/controller/dashboard.php 216-218
+	×
+            // teniendo proyecto de trabajo, comprobar si el proyecto esta en estado de tener blog
+            if ($option == 'updates') $blog = Dashboard\Projects::verifyBlog($project);
+	○
+		※削除。
+
+/controller/dashboard.php 192
+	×
+         *      'actualizaciones' blog del proyecto (ahora son como mensajes),
+	○
+		※削除。
+
+/controller/index.php 53-58
+	×
+            // entradas de blog
+            if (isset($order['posts'])) {
+                // entradas en portada
+                $posts     = Post::getAll();
+            }
+	○
+		※削除。
+
+/controller/message.php 329-424
+	×
+        /*
+         * Metodo para publicar un comentario en un post
+         */
+        public function post ($post, $project = null) {
+
+			if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['message'])) {
+                $comment = new Model\Blog\Post\Comment(array(
+                    'user' => $_SESSION['user']->id,
+                    'post' => $post,
+                    'date' => date('Y-m-d H:i:s'),
+                    'text' => $_POST['message']
+                ));
+
+                if ($comment->save($errors)) {
+                    // a ver los datos del post
+                    $postData = Model\Blog\Post::get($post);
+
+                    // Evento Feed
+                    $log = new Feed();
+                    if (!empty($project)) {
+                        $projectData = Model\Project::getMini($project);
+                        $log->setTarget($projectData->id);
+                        $log_html = \vsprintf('%s ha escrito un %s en la entrada "%s" en las %s del proyecto %s', array(
+                            Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                            Feed::item('message', 'Comentario'),
+                            Feed::item('update-comment', $postData->title, $projectData->id.'/updates/'.$postData->id.'#comment'.$comment->id),
+                            Feed::item('update-comment', 'Novedades', $projectData->id.'/updates/'),
+                            Feed::item('project', $projectData->name, $projectData->id)
+                        ));
+                    } else {
+                        $log->setTarget('goteo', 'blog');
+                        $log_html = \vsprintf('%s ha escrito un %s en la entrada "%s" del blog de %s', array(
+                            Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                            Feed::item('message', 'Comentario'),
+                            Feed::item('blog', $postData->title, $postData->id.'#comment'.$comment->id),
+                            Feed::item('blog', 'Goteo', '/')
+                        ));
+                    }
+                    $log->populate('usuario escribe comentario en blog/novedades', '/admin/projects', $log_html);
+                    $log->doAdmin('user');
+
+                    // Evento público
+                    if (!empty($project)) {
+                        $projectData = Model\Project::getMini($project);
+                        $log_html = Text::html('feed-updates-comment',
+                                            Feed::item('update-comment', $postData->title, $projectData->id.'/updates/'.$postData->id.'#comment'.$comment->id),
+                                            Feed::item('update-comment', 'Novedades', $projectData->id.'/updates/'),
+                                            Feed::item('project', $projectData->name, $projectData->id)
+                                            );
+                    } else {
+                        $log_html = Text::html('feed-blog-comment',
+                                            Feed::item('blog', $postData->title, $postData->id.'#comment'.$comment->id),
+                                            Feed::item('blog', 'Goteo', '/')
+                                            );
+                    }
+                    $log->populate($_SESSION['user']->name, '/user/profile/'.$_SESSION['user']->id, $log_html, $_SESSION['user']->avatar->id);
+                    $log->doPublic('community');
+                    unset($log);
+
+                    //Notificación al autor del proyecto
+                    // Obtenemos la plantilla para asunto y contenido
+                    $template = Template::get(31);
+
+                    // Sustituimos los datos
+                    $subject = str_replace('%PROJECTNAME%', $projectData->name, $template->title);
+
+                    $response_url = SITE_URL . '/user/profile/' . $_SESSION['user']->id . '/message';
+                    $project_url = SITE_URL . '/project/' . $projectData->id . '/updates/'.$postData->id.'#comment'.$comment->id;
+
+                    $search  = array('%MESSAGE%', '%OWNERNAME%', '%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%RESPONSEURL%');
+                    $replace = array($_POST['message'], $projectData->user->name, $_SESSION['user']->name, $projectData->name, $project_url, $response_url);
+                    $content = \str_replace($search, $replace, $template->text);
+
+                    $mailHandler = new Mail();
+
+                    $mailHandler->to = $projectData->user->email;
+                    $mailHandler->toName = $projectData->user->name;
+                    $mailHandler->subject = $subject;
+                    $mailHandler->content = $content;
+                    $mailHandler->html = true;
+                    $mailHandler->template = $template->id;
+                    $mailHandler->send($errors);
+
+                    unset($mailHandler);
+
+                } else {
+                    // error
+                }
+			}
+
+            if (!empty($project)) {
+                throw new Redirection("/project/{$project}/updates/{$post}#comment".$comment->id, Redirection::TEMPORARY);
+            } else {
+                throw new Redirection("/blog/{$post}#comment".$comment->id, Redirection::TEMPORARY);
+            }
+        }
+
+	○
+		※削除。
+
+/controller/project.php 491-499
+	×
+                // sus entradas de novedades
+                $blog = Model\Blog::get($project->id);
+                // si está en modo preview, ponemos  todas las entradas, incluso las no publicadas
+                if (isset($_GET['preview']) && $_GET['preview'] == $_SESSION['user']->id) {
+                    $blog->posts = Model\Blog\Post::getAll($blog->id, null, false);
+                }
+
+                $viewData['blog'] = $blog;
+
+	○
+		※削除。
+
+/controller/rss.php 30-56
+	×
+            // sacamos su blog
+            $blog = Model\Blog::get(\GOTEO_NODE, 'node');
+
+            $tags = Model\Blog\Post\Tag::getAll();
+
+            /*
+            echo '<pre>'.print_r($tags, 1).'</pre>';
+            echo '<pre>'.print_r($blog->posts, 1).'</pre>';
+            die;
+             * 
+             */
+
+            // al ser xml no usaremos vista
+            // usaremos FeedWriter
+
+            // configuracion
+            $config = array(
+                'title' => 'Goteo Rss',
+                'description' => 'Blog Goteo.org rss',
+                'link' => SITE_URL,
+                'indent' => 6
+            );
+
+            $data = array(
+                'tags' => $tags,
+                'posts' => $blog->posts
+            );
+	○
+            // configuracion
+            $config = array(
+                'title' => 'Goteo Rss',
+                'description' => '旧ブログ Goteo.org rss',
+                'link' => SITE_URL,
+                'indent' => 6
+            );
+
+            $data = array();
+
+/controller/translate.php 570-576
+	×
+                        'post' => array(
+                            'label' => Text::_('Blog'),
+                            'actions' => array(
+                                'list' => array('label' => Text::_('Listando'), 'item' => false),
+                                'edit' => array('label' => Text::_('Traduciendo entrada'), 'item' => true)
+                            )
+                        ),
+	○
+		※削除
+
+/controller/translate.php 483-489
+	×
+                        'tag' => array(
+                            'label' => Text::_('Tags de blog'),
+                            'actions' => array(
+                                'list' => array('label' => Text::_('Listando'), 'item' => false),
+                                'edit' => array('label' => Text::_('Traduciendo Tag'), 'item' => true)
+                            )
+                        ),
+	○
+		※削除
+
+/controller/translate.php 441-447
+	×
+                        'post' => array(
+                            'label' => Text::_('Blog'),
+                            'actions' => array(
+                                'list' => array('label' => Text::_('Listando'), 'item' => false),
+                                'edit' => array('label' => Text::_('Traduciendo Entrada'), 'item' => true)
+                            )
+                        ),
+	○
+		※削除
+
+/controller/translate.php 370-371
+	×
+                                Feed::item('blog', $id),
+                                Feed::item('blog', $table),
+	○
+		※削除
+
+/controller/translate.php 340-354
+	×
+                            // Evento Feed
+                            /*
+                            $log = new Feed();
+                            $log->populate('contenido traducido (traductor)', '/translate/'.$table,
+                                \vsprintf('El traductor %s ha %s el contenido del registro %s de la tabla %s al %s', array(
+                                Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                                Feed::item('relevant', 'Traducido'),
+                                Feed::item('blog', $id),
+                                Feed::item('blog', $table),
+                                Feed::item('relevant', Lang::get($_SESSION['translate_lang'])->name)
+                            )));
+                            $log->doAdmin('admin');
+                            unset($log);
+                            */
+	○
+		※削除
+
+/controller/translate.php 290-291
+	×
+                                Feed::item('blog', $id),
+                                Feed::item('blog', $_POST['node']),
+	○
+		※削除
+
+/controller/translate.php 138
+	×
+                                    Feed::item('blog', $id),
+	○
+		※削除
+
+/controller/translate.php 113-126
+	×
+                            // Evento Feed
+                            /*
+                            $log = new Feed();
+                            $log->populate('texto traducido (traductor)', '/translate/texts',
+                                \vsprintf('El traductor %s ha %s el texto %s al %s', array(
+                                    Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                                    Feed::item('relevant', 'Traducido'),
+                                    Feed::item('blog', $id),
+                                    Feed::item('relevant', Lang::get($_POST['lang'])->name)
+                            )));
+                            $log->doAdmin('admin');
+                            unset($log);
+                            */
+	○
+		※削除
+
+/controller/admin.php 188-189
+	×
+                                Feed::item('relevant', 'Quitado'),
+                                Feed::item('blog', $tempData->title)
+	○
+                                Feed::item('relevant', 'Quitado')
+
+/controller/admin/tags.php
+	○
+		※ファイル削除。
+
+/controller/cron/daily.php 235-290
+	×
+                // Avisos periodicos 
+                // si lleva más de 15 días: si no se han publicado novedades en la última semana 
+                // Ojo! que si no a enviado ninguna no lanza este sino la de cada 6 días
+                if (!$avisado && $project->days > 15) {
+                    if ($debug) echo "ya lleva una quincena de campaña, verificamos novedades<br />";
+                    
+                    // veamos si ya le avisamos hace una semana
+                    // Si ya se mandó esta plantilla (al llegar a los 20 por primera vez) no se envía de nuevo
+                    $now_local = \Goteo\Core\Model::localNow();
+                    $sql = "
+                        SELECT
+                            id,
+                            DATE_FORMAT(
+                                from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
+                                , '%j'
+                            ) as days
+                        FROM mail
+                        WHERE mail.email = :email
+                        AND mail.template = 23
+                        ORDER BY mail.date DESC
+                        LIMIT 1";
+                    $query = Model\Project::query($sql, array(':email' => $project->user->email));
+                    $lastsend = $query->fetchObject();
+                    if (!$lastsend->id || $lastsend->days > 7) {
+                        // veamos cuanto hace de la última novedad
+                        $sql = "
+                            SELECT
+                                DATE_FORMAT(
+                                    from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
+                                    , '%j'
+                                ) as days
+                            FROM post
+                            INNER JOIN blog
+                                ON  post.blog = blog.id
+                                AND blog.type = 'project'
+                                AND blog.owner = :project
+                            WHERE post.publish = 1
+                            ORDER BY post.date DESC
+                            LIMIT 1";
+                        $query = Model\Project::query($sql, array(':project' => $project->id));
+                        $lastUpdate = $query->fetchColumn(0);
+                        if ($lastUpdate > 7) {
+                            if ($debug) echo "Ultima novedad es de hace más de una semana<br />";
+                            Send::toOwner('no_updates', $project);
+                        } elseif (is_numeric($lastUpdate)) {
+                            if ($debug) echo "Publicó novedad hace menos de una semana<br />";
+                        } else {
+                            if ($debug) echo "No se ha publicado nada, recibirá el de cada 6 días<br />";
+                        }
+                    } else {
+                        if ($debug) echo "Se le avisó por novedades hace menos de una semana<br />";
+                    }
+                    
+                    
+                }
+                
+	○
+		※削除。
+
+/controller/cron/daily.php 104-110
+	×
+                        if (Model\Blog::hasUpdates($project->id)) {
+                            if ($debug) echo "Ya ha publicado novedades<br />";
+                        } else {
+                            if ($debug) echo "Envío aviso de que no ha publicado novedades<br />";
+                            Send::toOwner('any_update', $project);
+                            $avisado = true;
+                        }
+	○
+		※削除。
+
+/view/news.html.php 21-40
+	×
+		 use Goteo\Library\Text,
+		    Goteo\Model\Blog\Post,
+		    Goteo\Core\View;
+
+		$bodyClass = 'news';
+
+		$read_more = Text::get('regular-read_more');
+
+		// noticias
+		$news = $this['news'];
+
+		// últimas entradas del blog goteo
+		$list = array();
+
+		$title = Text::get('blog-side-last_posts');
+		$items = Post::getAll(1, 7);
+		// enlace a la entrada
+		foreach ($items as $item) {
+		    $list[] = '<a href="/blog/'.$item->id.'"> '.Text::recorta($item->title, 100).'</a>';
+		}
+
+	○
+		 use Goteo\Library\Text,
+		    Goteo\Core\View;
+
+		$bodyClass = 'news';
+
+		$read_more = Text::get('regular-read_more');
+
+		// noticias
+		$news = $this['news'];
+
+/view/news.html.php 60-69
+	×
+	    <div id="news-sidebar">
+	        <div class="widget news-sidebar-module">
+	            <h3 class="supertitle"><?php echo $title; ?></h3>
+	            <ul id="news-side-posts">
+	                <?php foreach ($list as $item) : ?>
+	                <li><?php echo $item; ?></li>
+	                <?php endforeach; ?>
+	            </ul>
+	        </div>
+	    </div>
+	○
+		※削除。
+
+/model/post.php
+	○
+		※ファイル削除。
+
+/view/translate/contents/list.html.php 96-98
+	×
+                <?php if ($table == 'post') : ?>
+                <td><a href="/blog/<?php echo $item->id; ?>?preview=<?php echo $_SESSION['user']->id ?>" target="_blank">[Ver]</a></td>
+                <?php endif; ?>
+	○
+		※削除。
+
+/view/project/view.html.php 260-264
+	×
+                    case 'updates':
+                        echo
+                            new View('view/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
+                        break;
+                    
+	○
+		※削除。
+
+/view/m/project/view.html.php 192
+	×
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
+                            new View('view/m/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
+	○
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
+
+/view/project/widget/updates.html.php
+	○
+		※ファイル削除。
+
+/model/home.php 73
+	×
+                     'posts' => '/admin/blog',
+	○
+		※削除。
+
+/model/home.php 43
+	×
+                     'posts' => Text::_('Entradas de blog'),
+	○
+		※削除。
+
+/model/image.php 358-385
+	×
+        /*
+         *  画像をblog幅に合わせて出力 - 2015.11.30
+         */
+        public function getLinkEx(){
+            $imgpath = $this->dir_originals . $this->name;
+
+            $info = getimagesize($imgpath);
+
+            // default width
+            $new_width = 580;
+
+            // 初期値
+            $n_w = 500;
+            $n_h = 285;
+
+            $ratio = 0;
+
+            if ($info[0] > $new_width){
+                $ratio = $new_width / $info[0];
+                $n_w = $new_width;
+                $n_h = round($ratio * $info[1]);
+            } else {
+                $n_w = $info[0];
+                $n_h = $info[1];
+            }
+            return $this->getLink($n_w, $n_h);
+        }
+	○
+		※削除。
+
+/model/project.php 1702
+	×
+                            self::query("UPDATE blog SET owner = :newid WHERE owner = :id AND type='project'", array(':newid'=>$newid, ':id'=>$this->id));
+	○
+		※削除。
+
+/controller/dashboard/projects.php 496-600
+	×
+        /**
+         * Graba un registro de novedad con lo recibido por POST
+         * 
+         * @param array  $action (add o edit) y $id del post
+         * @param object $project Instancia de proyecto de trabajo
+         * @param array $errors (por referncia)
+         * @return array $action por si se queda editando o sale a la lista y $id por si es un add y se queda editando
+         */
+        public static function process_updates ($action, $project, &$errors = array()) {
+            
+
+            $editing = false;
+
+            if (!empty($_POST['id'])) {
+                $post = Model\Blog\Post::get($_POST['id']);
+            } else {
+                $post = new Model\Blog\Post();
+            }
+            // campos que actualizamos
+            $fields = array(
+                'id',
+                'blog',
+                'title',
+                'text',
+                'image',
+                'media',
+                'legend',
+                'date',
+                'publish',
+                'allow'
+            );
+
+            foreach ($fields as $field) {
+                $post->$field = $_POST[$field];
+            }
+
+            // tratar la imagen y ponerla en la propiedad image
+            if (!empty($_FILES['image_upload']['name'])) {
+                $post->image = $_FILES['image_upload'];
+                $editing = true;
+            }
+
+            // tratar las imagenes que quitan
+            foreach ($post->gallery as $key => $image) {
+                if (!empty($_POST["gallery-{$image->id}-remove"])) {
+                    $image->remove('post');
+                    unset($post->gallery[$key]);
+                    if ($post->image == $image->id) {
+                        $post->image = '';
+                    }
+                    $editing = true;
+                }
+            }
+
+            if (!empty($post->media)) {
+                $post->media = new Model\Project\Media($post->media);
+            }
+
+            // el blog de proyecto no tiene tags?Â¿?
+            // $post->tags = $_POST['tags'];
+            /// este es el único save que se lanza desde un metodo process_
+            if ($post->save($errors)) {
+                $id = $post->id;
+                if ($action == 'edit') {
+                    Message::Info(Text::get('dashboard-project-updates-saved'));
+                } else {
+                    Message::Info(Text::get('dashboard-project-updates-inserted'));
+                }
+                $action = $editing ? 'edit' : 'list';
+
+                // si ha marcado publish, grabamos evento de nueva novedad en proyecto
+                if ((bool) $post->publish) {
+                    // Evento Feed
+                    $log = new Feed();
+                    $log->setTarget($project->id);
+                    $log->populate('usuario publica una novedad en su proyecto (dashboard)', '/project/' . $project->id . '/updates/' . $post->id, 
+                            \vsprintf('%s ha publicado un nuevo post en %s sobre el proyecto %s, con el título "%s"', array(
+                                Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                                Feed::item('blog', Text::get('project-menu-updates')),
+                                Feed::item('project', $project->name, $project->id),
+                                Feed::item('update', $post->title, $project->id . '/updates/' . $post->id)
+                            )));
+                    $log->unique = true;
+                    $log->doAdmin('user');
+
+                    // evento público
+                    $log->populate($post->title, '/project/' . $project->id . '/updates/' . $post->id, Text::html('feed-new_update', Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id), Feed::item('blog', Text::get('project-menu-updates')), Feed::item('project', $project->name, $project->id)
+                            ), $post->gallery[0]->id);
+                    $log->doPublic('projects');
+
+                    // si no ha encontrado otro, lanzamos la notificación a cofinanciadores
+                    if (!$log->unique_issue) {
+                        \Goteo\Controller\Cron\Send::toInvestors('update', $project, $post);
+                    }
+
+                    unset($log);
+                }
+            } else {
+                $errors[] = Text::get('dashboard-project-updates-fail');
+            }
+
+            return array($action, $id);
+            
+        }
+        
+	○
+		※削除。
+
+/controller/dashboard/projects.php 147-212
+	×
+        /**
+         * Gestiona las acciones de gestión de updates
+         * 
+         * @param type $action (por referencia)
+         * @param type $id del post a gestionar
+         * @param type $blog id del blog del proyecto
+         * @param type $errors (por referencia)
+         * @return instancia de Post para las acciones add y edit , array de Posts para las acciones delete y list
+         */
+        public static function prepare_updates (&$action, $id, $blog) {
+            // segun la accion
+            switch ($action) {
+                case 'none' :
+                    $posts = array();
+                    break;
+                case 'add':
+                    $post = new Model\Blog\Post(
+                                    array(
+                                        'blog' => $blog,
+                                        'date' => date('Y-m-d'),
+                                        'publish' => false,
+                                        'allow' => true
+                                    )
+                    );
+                    return array($post, null);
+                    
+                    break;
+                case 'edit':
+                    if (empty($id)) {
+                        Message::Error(Text::get('dashboard-project-updates-nopost'));
+                        $action = 'list';
+                        break;
+                    } else {
+                        $post = Model\Blog\Post::get($id);
+
+                        if (!$post instanceof Model\Blog\Post) {
+                            Message::Error(Text::get('dashboard-project-updates-postcorrupt'));
+                            $action = 'list';
+                            break;
+                        }
+                        return array($post, null);
+                    }
+
+                    break;
+                case 'delete':
+                    $post = Model\Blog\Post::get($id);
+                    if ($post->delete($id)) {
+                        Message::Info(Text::get('dashboard-project-updates-deleted'));
+                    } else {
+                        Message::Error(Text::get('dashboard-project-updates-delete_fail'));
+                    }
+                    $posts = Model\Blog\Post::getAll($blog, null, false);
+                    $action = 'list';
+                    return array(null, $posts);
+
+                    break;
+                default:
+                    $posts = Model\Blog\Post::getAll($blog, null, false);
+                    $action = 'list';
+                    return array(null, $posts);
+
+                    break;
+            }
+        }
+        
+	○
+		※削除。
+
+/controller/dashboard/projects.php 102-146
+	×
+        /**
+         * Verifica que todo está correcto para publicar novedades
+         * 
+         * @param type $project Instancia de proyecto de trabajo
+         * @return \Goteo\Controller\Dashboard\Blog
+         * @throws Redirection a Mis Proyectos si hay algo mal
+         */
+        public static function verifyBlog($project) {
+            
+            $errors = array();
+            
+            // tenemos proyecto de trabajo, comprobar si el proyecto esta en estado de tener blog
+            if ($project->status < 3 || $project->status == 6) {
+                Message::Error(Text::get('dashboard-project-blog-wrongstatus'));
+                throw new Redirection('/dashboard/projects/summary');
+            }
+            
+            // si no tiene registro de blog se lo creamos
+            $blog = Model\Blog::get($project->id);
+            if (!$blog instanceof Model\Blog) {
+                $blog = new Model\Blog(
+                                array(
+                                    'id' => '',
+                                    'type' => 'project',
+                                    'owner' => $project->id,
+                                    'active' => true,
+                                    'project' => $project->id,
+                                    'posts' => array()
+                                )
+                );
+                if (!$blog->save($errors)) {
+                    Message::Error(Text::get('dashboard-project-blog-fail'));
+                    Message::Error(implode('<br />', $errors));
+                    throw new Redirection('/dashboard/projects/summary');
+                }
+            } elseif (!$blog->active) {
+                Message::Error(Text::get('dashboard-project-blog-inactive'));
+                throw new Redirection('/dashboard/projects/summary');
+            }
+
+            return $blog;
+        }
+
+	○
+		※削除。
+
+/view/prologue.html.php 135
+	×
+        <meta property="og:description" content="<?php echo htmlspecialchars(strip_tags(mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'), ENT_QUOTES, 'UTF-8'); ?>" />
+	○
+		※削除。
+
+/view/prologue.html.php 132
+	×
+        <meta property="og:title" content="<?php echo htmlspecialchars($blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+	○
+		※削除。
+
+/view/prologue.html.php 130
+	×
+        endif;
+	○
+		※削除。
+
+/view/prologue.html.php 112-119
+	×
+        <? $_blog = Post::get($this['post'], LANG);
+        $blog_post = $this['blog'];
+        $blog_key = key($this['blog']->posts);
+        if($_blog->image):
+            ?>
+            <meta property="og:image" content="<?php echo $_blog->image->getLink(500, 285) ?>" />
+            <?
+        else:
+
+	○
+        <? 
+
+/view/prologue.html.php 23-24
+	×
+	    Goteo\Library\Text,
+	    Goteo\Model\Blog\Post;
+	×
+	    Goteo\Library\Text;
+
+/library/feed.php 24
+	×
+        Goteo\Model\Blog\Post,
+	○
+		※削除。
+
+/view/dashboard/projects/updates.html.php
+	○
+		※ファイル削除。
+
+/view/dashboard/translates/updates.html.php
+	○
+		※ファイル削除。
+
+/view/m/dashboard/projects/updates.html.php
+	○
+		※ファイル削除。
+
+/view/m/dashboard/translates/updates.html.php
+	○
+		※ファイル削除。
+
+/view/m/project/widget/updates.html.php
+	○
+		※ファイル削除。
+
+/view/project/widget/evaluation.html.php 22-23
+	×
+	    Goteo\Core\View,
+	    Goteo\Model\Blog\Post;
+	○
+    	Goteo\Core\View;
+
+/view/project/widget/project.html.php 150-173
+	×
+	    <?php
+	    /*
+	     * quitamos los botones
+	     *
+	    if ($this['dashboard'] === true) : // si estamos en el dashboard no hay (apoyar y el ver se abre en una ventana nueva) ?>
+	    <div class="buttons">
+	        <?php if ($this['own'] === true) : // si es propio puede ir a editarlo ?>
+	        <a class="button red suportit" href="<?php echo SITE_URL ?>/project/edit/<?php echo $project->id ?>"><?php echo Text::get('regular-edit'); ?></a>
+	        <?php endif; ?>
+	        <a class="button view" href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>" target="_blank"><?php echo Text::get('regular-view_project'); ?></a>
+	    </div>
+	    <?php else : // normal ?>
+	    <div class="buttons">
+	        <?php if ($project->status == 3) : // si esta en campa�a se puede aportar ?>
+	        <a class="button violet supportit" href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>/invest"<?php echo $blank; ?>><?php echo Text::get('regular-invest_it'); ?></a>
+	        <?php else : ?>
+	        <a class="button view" href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>/updates"<?php echo $blank; ?>><?php echo Text::get('regular-see_blog'); ?></a>
+	        <?php endif; ?>
+	        <a class="button view" href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><?php echo Text::get('regular-view_project'); ?></a>
+	    </div>
+	    <?php endif;
+	     *
+	     */
+	    ?>
+
+	○
+		※削除。
+
+/view/m/project/view.html.php 55-59
+	×
+		if (!empty($blog->posts)) {
+		    $updates = ' (' . count($blog->posts) . ')';
+		} else {
+		    $updates = '';
+		}
+
+	○
+		※削除。
+
+/view/m/project/view.html.php 34
+	×
+		$blog    = $this['blog'];
+	○
+		※削除。
+
+/view/m/project/view.html.php 27
+	×
+	    Goteo\Model\Blog,
+	○
+		※削除。
+
+/view/project/widget/support.html.php 61-65
+	×
+            <?/*php if ($project->status == 3) : // boton apoyar solo si esta en campaña ?>
+            <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
+            <?php else : ?>
+            <a class="button view" href="/project/<?php echo $project->id ?>/updates"><?php echo Text::get('regular-see_blog'); ?></a>
+            <?php endif; */?>
+
+	○
+		※削除。
+
+/view/project/view.html.php 56-60
+	×
+		if (!empty($blog->posts)) {
+		    $updates = ' (' . count($blog->posts) . ')';
+		} else {
+		    $updates = '';
+		}
+	○
+	    $updates = '';
+
+/view/project/view.html.php 34
+	×
+		$blog    = $this['blog'];
+	○
+		※削除
+
+/view/project/view.html.php 27
+	×
+	    Goteo\Model\Blog,
+	○
+		※削除
+
+/view/m/project/widget/support.html.php 62
+	×
+            <?php /* else : ?>
+            <a class="button view" href="/project/<?php echo $project->id ?>/updates"><?php echo Text::get('regular-see_blog'); ?></a>
+            <?php */ endif; ?>
+	○
+            <?php endif; ?>
+
+/view/m/home/posts.html.php 57-58
+	×
+
+                <div class="read_more"><a href="<?php echo ($post->owner_type == 'project') ? '/project/'.$post->owner_id.'/updates/'.$post->id : '/blog/'.$post->id; ?>"><?php echo Text::get('regular-read_more') ?></a></div>
+
+	○
+		※削除。
+
+/view/m/home/posts.html.php 51-52
+	×
+                <h3><?php if ($post->owner_type == 'project') { echo '<a href="/project/'.$post->owner_id.'/updates/'.$post->id.'">'.Text::get('project-menu-home').' '.$post->owner_name.'</a>: ' . $post->title; } 
+                else { echo '<a href="/blog/'.$post->id.'">'.$post->title.'</a>'; } ?></h3>
+	○
+                <h3><?php if ($post->owner_type == 'project') { echo '<a href="/project/'.$post->owner_id.'/updates/'.$post->id.'">'.Text::get('project-menu-home').' '.$post->owner_name.'</a>: ' . $post->title; } ?></h3>
+
+/view/home/posts.html.php 57-58
+	×
+
+                <div class="read_more"><a href="<?php echo ($post->owner_type == 'project') ? '/project/'.$post->owner_id.'/updates/'.$post->id : '/blog/'.$post->id; ?>"><?php echo Text::get('regular-read_more') ?></a></div>
+	○
+		※削除。
+
+/view/home/posts.html.php 51-52
+	×
+                <h3><?php if ($post->owner_type == 'project') { echo '<a href="/project/'.$post->owner_id.'/updates/'.$post->id.'">'.Text::get('project-menu-home').' '.$post->owner_name.'</a>: ' . $post->title; } 
+                else { echo '<a href="/blog/'.$post->id.'">'.$post->title.'</a>'; } ?></h3>
+	○
+                <h3><?php if ($post->owner_type == 'project') { echo '<a href="/project/'.$post->owner_id.'/updates/'.$post->id.'">'.Text::get('project-menu-home').' '.$post->owner_name.'</a>: ' . $post->title; } ?></h3>
+
+/view/admin/index.html.php 56-57
+	×
+                                //$hide_list = array('blog', 'texts', 'tags', 'translates', 'worth', 'news', 'banners');
+                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
+	○
+                                if ($oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
+
+/library/text.php 346
+	×
+                'blog'  => static::_('Blog/Actualizaciones'),
+	○
+		※削除。
+
+/library/content.php 42
+	×
+                'post'      => Text::_('Blog'),
+	○
+		※削除。
+
+/library/feed.php 108
+	×
+                'comment' => '/blog/',
+	○
+		※削除。
+
+/library/feed.php 105
+	×
+                'blog' => '/blog/',
+	○
+		※削除。
+
+/library/feed.php 86
+	×
+                'blog' => 'grey',
+	○
+		※削除。
+
+────────────────────────────────────────────────────────────
+

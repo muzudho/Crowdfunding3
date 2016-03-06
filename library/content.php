@@ -39,7 +39,6 @@ namespace Goteo\Library {
                 'license'   => Text::_('Licencias'),
                 'category'  => Text::_('Categorías'),
                 'news'      => Text::_('Noticias'),
-                'post'      => Text::_('Blog'),
                 'banner'    => Text::_('Banners'),
                 'tag'       => Text::_('Tags'),
                 'criteria'  => Text::_('Criterios de evaluación'),

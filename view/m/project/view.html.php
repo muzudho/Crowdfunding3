@@ -24,14 +24,12 @@ use Goteo\Core\View,
     Goteo\Model\Project\Support,
     Goteo\Model\Project\Category,
     Goteo\Model\Project\Skill,
-    Goteo\Model\Blog,
     Goteo\Library\Text;
 
 $project = $this['project'];
 $show    = $this['show'];
 $step    = $this['step'];
 $post    = $this['post'];
-$blog    = $this['blog'];
 $thread    = $this['thread'];
 
 $user    = $_SESSION['user'];
@@ -51,11 +49,6 @@ if (!empty($project->messages)) {
     $messages = ' (' . $project->num_messages . ')';
 } else {
     $messages = '';
-}
-if (!empty($blog->posts)) {
-    $updates = ' (' . count($blog->posts) . ')';
-} else {
-    $updates = '';
 }
 
 
@@ -188,8 +181,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                     
                     case 'updates':
                         echo
-                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
-                            new View('view/m/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
                         break;
                     
                     case 'home':

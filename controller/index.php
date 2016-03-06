@@ -50,12 +50,6 @@ namespace Goteo\Controller {
                 unset($order['feed']);
             }
             
-            // entradas de blog
-            if (isset($order['posts'])) {
-                // entradas en portada
-                $posts     = Post::getAll();
-            }
-
             // Proyectos destacados
             if (isset($order['promotes'])) {
                 $promotes  = Promote::getAll(true);

@@ -387,17 +387,6 @@ ul.navi li.next.active a {
 }
 /** fin navi box&arrows**/
 
-/* = caja de comentarios
-*************************/
-div.widget.blog-comment{position:relative;}
-div.widget.blog-comment button.green{float:right;
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-div.widget.blog-comment div#bocadillo{background:url('/view/css/bocadillo.jpg') no-repeat;position:absolute;width: 50px;	height: 50px;
-    margin-top: 8px;
-}
-
 /* = enlace para volver arriba
 *******************************/
 a.up{display:inline-block;padding-left:15px;margin-left:18px; background:url('/view/css/arrow-up3.png') no-repeat left; line-height: 20px;
@@ -7336,14 +7325,6 @@ div.widget.project-updates > div {
 .project-updates .widget.post .gallery-image img{
     margin: 0 18px;
 }
-.project-updates .post .comments-num{
-    float:left;
-    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat  0 0;
-    padding: 0 0 0 26px;
-    height:24px;
-    margin: 0;
-    line-height: 24px;
-}
 .project-updates .post .comments-num a {
     color:#00ad4e;
     text-decoration:none;
@@ -7431,58 +7412,10 @@ div.post-comments div.message blockquote {
     color:#4a6393;
     text-decoration:none;
 }
-.project-updates div.widget.blog-comment {
-    margin: 20px 0 0 0;
-}
-.project-updates div.widget.blog-comment h5 {
-    margin: 0 0 5px 0;
-}
-.project-updates div.widget.blog-comment textarea {
-    display:block;
-    width:530px;
-}
-.project-updates div.widget.blog-comment input.button {
-    margin: 20px 0 0 0;
-    float:right;
-}
 
 .project-updates ul#pagination {
     margin: 0 0 10px 0 !important;
 }
-
-/* escribe tu comentario */
-.project-updates div.widget.blog-comment textarea {
-    background-color: #DCEEDF;
-    border: 1px solid #2EAB58;
-    clear: right;
-    display: block;
-    float: right;
-    height: 50px;
-    margin: 10px -1px -1px;
-    padding: 0.3em 0;
-    resize: none;
-    width: 525px;
-}
-
-.project-updates div.widget.blog-comment input.green {
-    margin: 20px 0 0 0;
-    float:right;
-    font-weight: bold;
-    margin-top: 35px;
-    padding: 5px 20px;
-}
-
-.project-updates div.widget.blog-comment a.preview{
-    color: #2EAB58;
-    font-weight: normal;
-    left: 52px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    top: 10px;
-    font-style: normal;
-}
-/* end send comment */
 
 body.project-show .project-updates {
     margin: 0 auto;
@@ -7564,18 +7497,6 @@ body.project-show .project-updates .post ul.share-goteo li.sharetext {
     display: none;
 }
 
-body.project-show .project-updates .post .comments-num {
-    float: none;
-    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat 10px 0;
-    background-color: #fff;
-    padding: 0 0 0 40px;
-    height: 40px;
-    width: auto;
-    margin: 0;
-    line-height: 24px;
-    color: both;
-}
-
 body.project-show .project-updates .post .comments-num a {
     color: #00ad4e;
     font-size: 12px;
@@ -7591,47 +7512,12 @@ body.project-show div#main .project-updates div.widget.post-comments {
     margin: 0;
 }
 
-body.project-show div#main .project-updates div.widget.blog-comment {
-    padding: 10px 0;
-    margin: 0;
-    overflow: hidden;
-    border-bottom: 1px dashed #c0c0c0;
-}
-
 body.project-show div#main .project-updates h3.title {
     margin: 0;
     padding: 8px 0 8px 20px;
     background-color: #666666;
     color: #f5f5f5;
     font-weight: normal;
-}
-
-body.project-show div#main .project-updates div.widget.blog-comment div#bocadillo {
-    background: url('/view/css/bocadillo.jpg') no-repeat;
-    float: left;
-    width: 50px;
-    height: 50px;
-    margin: 10px 0 0 10px;
-}
-
-body.project-show div#main .project-updates div.widget.blog-comment textarea {
-    clear: right;
-    display: block;
-    float: right;
-    width: 250px;
-    height: 50px;
-    margin: 10px 10px 20px 0;
-    padding: 0.3em 0;
-    resize: none;
-    background-color: #DCEEDF;
-    border: 1px solid #2EAB58;
-}
-
-body.project-show div#main .project-updates div.widget.blog-comment button.green {
-    float: right;
-    margin: 0 10px 10px 10px;
-    text-align: center;
-    display: block;
 }
 
 body.project-show div#main{
@@ -7642,20 +7528,6 @@ body.project-show div#main div.side {
     clear: both;
     margin: 20px 0 0 0;
     background-color: #e7e7e7;
-}
-
-body.project-show div#main .project-updates div.widget.blog-comment a.preview{
-    color: #2EAB58;
-    font-weight: normal;
-    left: 60px;
-    position: absolute;
-    text-decoration: none;
-    text-transform: uppercase;
-    top: 194px;
-    font-style: normal;
-    display: block;
-    width: 60px;
-    font-size: 12px;
 }
 
 body.project-show .project-updates #social_bookmark {
@@ -10449,401 +10321,6 @@ div.widget.glossary-sidebar-module ul li a {
 }
 div.widget.glossary-sidebar-module ul li a:hover {
     text-decoration:underline;
-}
-
-
-/*----------------------------------------------------------------------
-  blog.css
-----------------------------------------------------------------------*/
-#blog-content {
-    width:620px;
-    margin: 0 20px 0 0;
-    float:left;
-}
-#blog-sidebar {
-    width:300px;
-    float:right;
-}
-div.widget.blog-content-module,
-div.widget.blog-sidebar-module,
-#blog-content .post{
-    background-color: white;
-    line-height: 18px;
-    margin: 0 0 20px;
-}
-div.widget.blog-content-module h4,
-#blog-content .post h4 {
-    margin: 2px 0;
-}
-div.widget.blog-content-module h4 a,
-#blog-content .post h4 a {
-    font: normal 20px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-    margin: 0 0 5px 0;
-    text-transform:none;
-    color:#535353;
-    text-decoration:none;
-}
-div.widget.blog-content-module h4 a:hover,
-#blog-content .post h4 a:hover {
-    color:#20B3B2;
-}
-div.widget.blog-content-module .date,
-#blog-content .post  .date{
-    display:block;
-    color: #808285;
-    margin: 10px 0 0;
-    font-size: 12px;
-}
-div.widget.blog-content-module .categories,
-#blog-content .post .categories{
-    display:block;
-    margin: 0 0 8px;
-}
-div.widget.blog-content-module .categories a,
-#blog-content .post .categories a {
-    color:#808285;
-    text-decoration: none;
-    font-size: 12px;
-}
-div.widget.blog-content-module .categories a:hover,
-#blog-content .post .categories a:hover {
-    color:#20B3B2
-}
-div.widget.blog-content-module  blockquote,
-#blog-content .post blockquote{
-    color: #58595B;
-    padding: 0 0 8px;
-    border-bottom: 1px solid #CABCBF;
-    margin: 8px 0 16px;
-    font-size: 12px;
-    line-height: 18px;
-}
-div.widget.blog-content-module  .embed,
-#blog-content .post .embed{
-    width: 500px;
-    height: 285px;
-    margin: 18px 18px 10px 0;
-}
-
-div.widget.blog-content-module  .embed-legend,
-#blog-content .post .embed-legend{
-    border-left: 2px solid silver;
-    color: #9B9B9D;
-    font-size: 0.9em;
-    margin-left: 0;
-    width: 495px;
-    padding-left: 10px;
-    margin-bottom: 18px;
-    font-style:oblique
-}
-/* Estilos galeria */
-div.post-gallery{
-    margin-bottom:30px;
-}
-div.post-gallery-container{
-    width:580px;
-    height:300px;
-    display:none;
-}
-
-body.project-show div.widget.project-summary .gallery-image{
-    text-align:center;
-    width:312px;
-    max-width: 312px;
-    max-height: 240px;
-    display:block;
-    margin: 0 auto 20px;
-}
-
-div.gallery-image img {
-    display: block;
-    width: auto;
-    width: 100%;
-    max-height: auto;
-    margin: 0 auto;
-}
-
-div.post-gallery  ul.slderpag {
-    margin: 8px 0 0 0;
-    list-style:none;
-    padding:0px;
-    float:left;
-    height:auto;
-}
-
-div.post-gallery  ul.slderpag li{
-    cursor:pointer;
-    display: block;
-    float: left;
-    overflow: hidden;
-    margin: 0 4px 5px 4px;
-}
-
-div.post-gallery  ul.slderpag li a{
-    width: 12px;
-    height: 12px;
-    margin-top: 2px;
-    background-color: #cdcdce;
-    color: #cdcdce;
-    display:block;
-}
-
-div.post-gallery  ul.slderpag li a:hover{
-    background-color: #20b3b2;
-    color: #20b3b2;
-}
-
-div.post-gallery  ul.slderpag li.current a{
-    background-color: #808184 !important;
-    color: #808184 !important;
-}
-
-div.post-gallery  a.next,
-div.post-gallery  a.prev,
-#blog-content .post div.post-gallery  a.prev{
-    width: 16px;
-    height: 16px;
-    line-height: 2000px;
-    overflow: hidden;
-    float:left;
-    margin: 8px 0 0 0;
-    cursor:pointer;
-}
-
-div.post-gallery  a.prev{
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
-}
-
-div.post-gallery  a.prev:hover {
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
-}
-
-div.post-gallery  a.next{
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
-}
-
-div.post-gallery  a.next:hover{
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
-}
-/* Fin galeria */
-div.widget.blog-content-module .comments-num,
-#blog-content .post .comments-num{
-    float:left;
-    background: transparent url('/view/css/ico-blogcomment.png') scroll no-repeat  0 0;
-    padding: 0 0 0 26px;
-    height:24px;
-    margin: 0;
-    line-height: 24px;
-}
-div.widget.blog-content-module .comments-num a,
-#blog-content .post .comments-num a {
-    color:#00ad4e;
-    text-decoration:none;
-}
-/** Comments like messages **/
-div.post-comments div.message {
-    background: #e7e7e7 url('/view/css/message/beak/1.png') no-repeat left top;
-    margin-left: 60px;
-    padding: .5em 1em .5em 1.5em;
-    overflow: visible;
-    position: relative;
-}
-
-div.post-comments div.owner {
-    background: #e9f4ea url('/view/css/message/beak/2.png') no-repeat left top !important;
-}
-
-div.post-comments div.message + div.message {
-    margin-top: 20px;
-}
-
-div.post-comments div.message .avatar {
-    position: absolute;
-    left: -60px;
-    top: 0;
-    display: block;
-    width: 50px;
-    height: 50px;
-}
-
-div.post-comments div.message .user {
-    text-transform: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0 0 1em;
-    float: left;
-}
-
-div.post-comments div.message h3.user a{text-decoration:none;}
-div.post-comments div.message h3.user a:hover{color:#20B3B2;}
-
-div.post-comments div.message .date {
-    float: right;
-    color: #808080;
-    font-size: 12px;
-}
-
-div.post-comments div.message blockquote {
-    margin: 0;
-    padding: 0;
-    clear: both;
-}
-/** end Comments like messages**/
-/** share goteo **/
-div.widget.blog-content-module ul.share-goteo,
-#blog-content .post ul.share-goteo {
-    margin: 0;
-    padding:0;
-    list-style:none;
-    float:right;
-}
-div.widget.blog-content-module ul.share-goteo li,
-#blog-content .post ul.share-goteo li{
-    display:inline;
-    float:left;
-    margin: 0 0 0 10px;
-}
-div.widget.blog-content-module ul.share-goteo li.twitter a,
-div.widget.blog-content-module ul.share-goteo li.facebook a,
-div.widget.blog-content-module ul.share-goteo li.rss a,
-#blog-content .post  ul.share-goteo li.twitter a,
-#blog-content .post  ul.share-goteo li.facebook a,
-#blog-content .post  ul.share-goteo li.rss a{
-    height:20px;
-    float:left;
-    padding: 0 0 0 25px;
-    font-size: 12px;
-    line-height: 20px;
-}
-div.widget.blog-content-module ul.share-goteo li.sharetext,
-#blog-content .post ul.share-goteo li.sharetext{
-    height:20px;
-    float:left;
-    color: #808285;
-    font-size: 12px;
-}
-div.widget.blog-content-module ul.share-goteo li.twitter a,
-#blog-content .post ul.share-goteo li.twitter a{
-    background: transparent url('twitter.png') scroll no-repeat  0 0;
-    color:#13c2ec;
-    text-decoration:none;
-}
-div.widget.blog-content-module ul.share-goteo li.twitter a:hover,
-#blog-content .post ul.share-goteo li.twitter a:hover{
-    background: transparent url('twitter.png') scroll no-repeat  0 0;
-    opacity:0.6;
-    color:#808285;
-    text-decoration:none;
-}
-div.widget.blog-content-module ul.share-goteo li.facebook a,
-#blog-content .post ul.share-goteo li.facebook a{
-    background: transparent url('facebook.png') scroll no-repeat  0 0;
-    color:#4a6393;
-    text-decoration:none;
-}
-div.widget.blog-content-module ul.share-goteo li.facebook a:hover,
-#blog-content .post ul.share-goteo li.facebook a:hover{
-    background: transparent url('facebook.png') scroll no-repeat  0 0;
-    color:#808285;
-    opacity:0.6;
-    text-decoration:none;
-}
-
-/* send Comment */
-#blog-content div.widget.blog-comment {
-    margin: 20px 0 0 0;
-}
-#blog-content div.widget.blog-comment h5 {
-    margin: 0 0 5px 0;
-}
-#blog-content div.widget.blog-comment textarea {
-    background-color: #DCEEDF;
-    border: 1px solid #2EAB58;
-    clear: right;
-    display: block;
-    float: right;
-    height: 50px;
-    margin: -1px;
-    padding: 0.3em 0;
-    resize: none;
-    width: 525px;
-}
-
-#blog-content div.widget.blog-comment button {
-    margin: 20px 0 0 0;
-    float:right;
-    font-weight: bold;
-    margin-top: 35px;
-    padding: 5px 20px;
-}
-
-#blog-content div.widget.blog-comment a.preview{
-    color: #2EAB58;
-    font-weight: bold;
-    left: 52px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    top: 10px;
-}
-
-/* Sidebar styles */
-div.widget.blog-sidebar-module h3.title {
-    border-bottom: 1px solid #20b3b2;
-    color: #000000;
-    font: normal 15px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-    margin: 0 0 1em;
-    padding: 0 2px 0.2em;
-}
-div.widget.blog-sidebar-module ul#blog-side-posts{
-    margin: 0 0 25px 16px;
-    padding: 0;
-}
-div.widget.blog-sidebar-module ul#blog-side-posts li{
-    margin:0 0 10px 0;
-    list-style-position: outside;
-}
-div.widget.blog-sidebar-module ul#blog-side-posts li a{
-    text-decoration:none;
-    color: #58595B;
-    font-size: 12px;
-}
-div.widget.blog-sidebar-module ul#blog-side-posts li a:hover{
-    text-decoration:underline;
-}
-div.widget.blog-sidebar-module ul#blog-side-tags,
-div.widget.blog-sidebar-module ul#blog-side-comments{
-    margin: 0 10px 25px 0;
-    padding: 0;
-    list-style:none;
-}
-div.widget.blog-sidebar-module ul#blog-side-tags li{
-    margin:0 0 5px 0;
-}
-div.widget.blog-sidebar-module ul#blog-side-tags li a{
-    text-decoration:none;
-    color:#20B3B2;
-}
-div.widget.blog-sidebar-module ul#blog-side-tags li a:hover{
-    text-decoration:underline;
-}
-div.widget.blog-sidebar-module ul#blog-side-comments li .date{
-    color:#cabcbf;
-    margin: 10px 0;
-}
-div.widget.blog-sidebar-module ul#blog-side-comments li{
-    margin:0 0 20px 0;
-}
-div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment{
-    margin:6px 0 0 -9px;
-    display:block;
-    padding:4px 8px;
-}
-div.widget.blog-sidebar-module ul#blog-side-comments li div div.high-comment:hover{
-    background:#F3F3F3;
-}
-div.widget.blog-sidebar-module ul#blog-side-comments li p{
-    margin: 0;
 }
 
 

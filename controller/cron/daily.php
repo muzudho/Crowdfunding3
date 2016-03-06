@@ -101,13 +101,6 @@ namespace Goteo\Controller\Cron {
                     case 30: 
                     case 36: 
                         // si ya hay novedades, nada
-                        if (Model\Blog::hasUpdates($project->id)) {
-                            if ($debug) echo "Ya ha publicado novedades<br />";
-                        } else {
-                            if ($debug) echo "Envío aviso de que no ha publicado novedades<br />";
-                            Send::toOwner('any_update', $project);
-                            $avisado = true;
-                        }
                         break;
                     
                     // comprobación periódica pero solo un envío
@@ -230,62 +223,6 @@ namespace Goteo\Controller\Cron {
                             if ($debug) echo "Ha llegado al mínimo o lleva menos de 70%<br />";
                         }
                         break;
-                }
-                
-                // Avisos periodicos 
-                // si lleva más de 15 días: si no se han publicado novedades en la última semana 
-                // Ojo! que si no a enviado ninguna no lanza este sino la de cada 6 días
-                if (!$avisado && $project->days > 15) {
-                    if ($debug) echo "ya lleva una quincena de campaña, verificamos novedades<br />";
-                    
-                    // veamos si ya le avisamos hace una semana
-                    // Si ya se mandó esta plantilla (al llegar a los 20 por primera vez) no se envía de nuevo
-                    $now_local = \Goteo\Core\Model::localNow();
-                    $sql = "
-                        SELECT
-                            id,
-                            DATE_FORMAT(
-                                from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
-                                , '%j'
-                            ) as days
-                        FROM mail
-                        WHERE mail.email = :email
-                        AND mail.template = 23
-                        ORDER BY mail.date DESC
-                        LIMIT 1";
-                    $query = Model\Project::query($sql, array(':email' => $project->user->email));
-                    $lastsend = $query->fetchObject();
-                    if (!$lastsend->id || $lastsend->days > 7) {
-                        // veamos cuanto hace de la última novedad
-                        $sql = "
-                            SELECT
-                                DATE_FORMAT(
-                                    from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
-                                    , '%j'
-                                ) as days
-                            FROM post
-                            INNER JOIN blog
-                                ON  post.blog = blog.id
-                                AND blog.type = 'project'
-                                AND blog.owner = :project
-                            WHERE post.publish = 1
-                            ORDER BY post.date DESC
-                            LIMIT 1";
-                        $query = Model\Project::query($sql, array(':project' => $project->id));
-                        $lastUpdate = $query->fetchColumn(0);
-                        if ($lastUpdate > 7) {
-                            if ($debug) echo "Ultima novedad es de hace más de una semana<br />";
-                            Send::toOwner('no_updates', $project);
-                        } elseif (is_numeric($lastUpdate)) {
-                            if ($debug) echo "Publicó novedad hace menos de una semana<br />";
-                        } else {
-                            if ($debug) echo "No se ha publicado nada, recibirá el de cada 6 días<br />";
-                        }
-                    } else {
-                        if ($debug) echo "Se le avisó por novedades hace menos de una semana<br />";
-                    }
-                    
-                    
                 }
                 
                 if ($debug) echo "<hr />";

@@ -355,34 +355,6 @@ die("test");
             }
         }
 
-        /*
-         *  画像をblog幅に合わせて出力 - 2015.11.30
-         */
-        public function getLinkEx(){
-            $imgpath = $this->dir_originals . $this->name;
-
-            $info = getimagesize($imgpath);
-
-            // default width
-            $new_width = 580;
-
-            // 初期値
-            $n_w = 500;
-            $n_h = 285;
-
-            $ratio = 0;
-
-            if ($info[0] > $new_width){
-                $ratio = $new_width / $info[0];
-                $n_w = $new_width;
-                $n_h = round($ratio * $info[1]);
-            } else {
-                $n_w = $info[0];
-                $n_h = $info[1];
-            }
-            return $this->getLink($n_w, $n_h);
-        }
-
 		/**
 		 * Para montar la url de una imagen (porque las url con parametros no se cachean bien)
 		 *  - Si el thumb está creado, montamos la url de /data/cache

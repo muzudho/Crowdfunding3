@@ -27,33 +27,15 @@ namespace Goteo\Controller {
         
         public function index () {
             
-            // sacamos su blog
-            $blog = Model\Blog::get(\GOTEO_NODE, 'node');
-
-            $tags = Model\Blog\Post\Tag::getAll();
-
-            /*
-            echo '<pre>'.print_r($tags, 1).'</pre>';
-            echo '<pre>'.print_r($blog->posts, 1).'</pre>';
-            die;
-             * 
-             */
-
-            // al ser xml no usaremos vista
-            // usaremos FeedWriter
-
             // configuracion
             $config = array(
                 'title' => 'Goteo Rss',
-                'description' => 'Blog Goteo.org rss',
+                'description' => '旧ブログ Goteo.org rss',
                 'link' => SITE_URL,
                 'indent' => 6
             );
 
-            $data = array(
-                'tags' => $tags,
-                'posts' => $blog->posts
-            );
+            $data = array();
 
             \header("Content-Type: application/rss+xml");
             echo Library\Rss::get($config, $data, $_GET['format']);

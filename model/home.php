@@ -40,7 +40,6 @@ namespace Goteo\Model {
 
         static public function _items() {
             return array(
-                     'posts' => Text::_('Entradas de blog'),
                      'promotes' => Text::_('Proyectos destacados'),
 //callsys                     'drops' => Text::_('Capital Riego'),
                      'feed' => Text::_('Actividad reciente')
@@ -70,7 +69,6 @@ namespace Goteo\Model {
                      'promotes' => '/admin/promote',
 //callsys                     'drops' => '/admin/calls',
 //callsys                     'calls' => '/admin/campaigns',
-                     'posts' => '/admin/blog',
                      'sponsors' => '/admin/sponsors'
                  );
         }
