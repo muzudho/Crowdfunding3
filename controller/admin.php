@@ -206,14 +206,6 @@ namespace Goteo\Controller {
                     ),
                     'filters' => array('user' => '', 'template' => '', 'node' => '', 'date_from' => '', 'date_until' => '')
                 ),
-                'sponsors' => array(
-                    'label' => Text::_('Apoyos institucionales'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Nuevo Patrocinador'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Patrocinador'), 'item' => true)
-                    )
-                ),
                 'templates' => array(
                     'label' => Text::_('Plantillas de email'),
                     'actions' => array(
@@ -534,7 +526,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'home' => $options['home'], // elementos en portada
                                 'promote' => $options['promote'], // seleccion de proyectos destacados
-                                'sponsors' => $options['sponsors'], // patrocinadores del nodo
                                 'recent' => $options['recent'] // feed admin
                             )
                         )
@@ -590,13 +581,6 @@ namespace Goteo\Controller {
                                 'footer' => $options['footer'],
                                 'recent' => $options['recent'],
                                 'home' => $options['home']
-                            )
-                        ),
-                        'sponsors' => array(
-                            'label' => $labels['services'],
-                            'options' => array(
-                                'sponsors' => $options['sponsors'],
-                                'tasks' => $options['tasks']  // gestión de tareas
                             )
                         )
                     );

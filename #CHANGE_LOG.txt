@@ -7576,4 +7576,474 @@
         更新して保存して終了。
 
 ────────────────────────────────────────────────────────────
+2016-03-08 01:41
+
+    解説
+        スポンサー（sponsors）機能削除。
+
+/controller/admin.php 594-601
+    ×
+                        ),
+                        'sponsors' => array(
+                            'label' => $labels['services'],
+                            'options' => array(
+                                'sponsors' => $options['sponsors'],
+                                'tasks' => $options['tasks']  // gestión de tareas
+                            )
+                        )
+    ○
+        ※削除。
+
+/controller/admin.php 537
+    ×
+                                'sponsors' => $options['sponsors'], // patrocinadores del nodo
+    ○
+        ※削除。
+
+/controller/admin.php 209-216
+    ×
+                'sponsors' => array(
+                    'label' => Text::_('Apoyos institucionales'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'add' => array('label' => Text::_('Nuevo Patrocinador'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Patrocinador'), 'item' => true)
+                    )
+                ),
+    ○
+        ※削除。
+
+/controller/admin/sponsors.php
+    ○
+        ※ファイル削除。
+
+/db/purpose.sql 289
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-sponsors', 'Apoyos institucionales', NULL, 'footer');
+    ○
+        ※削除。
+
+/db/purpose.sql 129
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-sponsors', 'Patrocinadores', NULL, 'dashboard');
+    ○
+        ※削除。
+
+/db/text(グーグル翻訳化).sql 253
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'footer-header-sponsors', 'ja', '制度的支援' );
+    ○
+        ※削除。
+
+/db/text(グーグル翻訳化).sql 132
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-sponsors', 'ja', 'スポンサー' );
+    ○
+        ※削除。
+
+/model/home.php 69-72
+    ×
+                             'promotes' => '/admin/promote',
+        //callsys                     'drops' => '/admin/calls',
+        //callsys                     'calls' => '/admin/campaigns',
+                             'sponsors' => '/admin/sponsors'
+    ○
+                     'promotes' => '/admin/promote'
+
+/db/texts.sql 1222-1226
+    ×
+        ('dashboard-menu-calls-sponsors', 'en', 'Sponsors'),
+        ('dashboard-menu-calls-sponsors', 'eu', 'Babesleak'),
+        ('dashboard-menu-calls-sponsors', 'fr', 'Sponsors'),
+        ('dashboard-menu-calls-sponsors', 'gl', 'Patrocinadores'),
+        ('dashboard-menu-calls-sponsors', 'nl', 'Sponsors'),
+    ○
+        ※削除。
+
+/db/texts.sql 2347-2352
+    ×
+        ('footer-header-sponsors', 'ca', 'Suports institucionals'),
+        ('footer-header-sponsors', 'de', 'Institutionelle Unterstützung'),
+        ('footer-header-sponsors', 'en', 'Institutional support'),
+        ('footer-header-sponsors', 'eu', 'Erakunde babesleak'),
+        ('footer-header-sponsors', 'fr', 'Soutien institutionnel'),
+        ('footer-header-sponsors', 'nl', 'Institutionele ondersteuning'),
+    ○
+        ※削除。
+
+/model/home.php 62-63
+    ×
+                     'sumcalls' => Text::_('Resumen convocatorias'),
+                     'sponsors' => Text::_('Patrocinadores')
+    ○
+                     'sumcalls' => Text::_('Resumen convocatorias')
+
+/view/css/csstidyonline.results.css 1312-1342
+    ×
+        div#slides_sponsor .slidersponsors-ctrl .next,div#slides_sponsor .slidersponsors-ctrl .prev
+        {
+            cursor:pointer;
+            float:left;
+            height:16px;
+            line-height:2000px;
+            margin:8px 0 0;
+            overflow:hidden;
+            width:16px;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .prev
+        {
+            background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 0;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .prev:hover
+        {
+            background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -32px;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .next
+        {
+            background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -16px;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .next:hover
+        {
+            background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -48px;
+        }
+    ○
+        ※削除。
+
+/view/css/csstidyonline.results.css 1406-1430
+    ×
+        div#footer div.sponsors div.slides_container
+        {
+            display:none;
+            float:left;
+            height:148px;
+            margin:10px 0 0;
+            width:165px;
+        }
+
+        div#footer div.sponsors
+        {
+            display:block;
+            height:148px;
+            margin:0;
+            min-width:0!important;
+            position:relative;
+            width:165px;
+        }
+
+        div#footer div.sponsors > .slides_control > .sponsor
+        {
+            height:148px;
+            margin:20px 10px 0;
+        }
+    ○
+        ※削除。
+
+/view/css/csstidyonline.results.css 1418-1423
+    ×
+        div#footer div.sponsors img#current
+        {
+            margin-left:13px;
+            margin-top:20px;
+        }
+    ○
+        ※削除。
+
+/view/css/csstidyonline.results.css 1530-1610
+    ×
+        .slidersponsors-ctrl
+        {
+            display:block;
+            list-style:none;
+            margin:0 auto;
+            max-width:940px;
+            padding:0;
+            position:absolute;
+            top:110px;
+        }
+
+        .slidersponsors-ctrl li
+        {
+            cursor:pointer;
+            display:block;
+            float:left;
+            margin-bottom:5px;
+            overflow:hidden;
+        }
+
+        .slidersponsors-ctrl li.navi > *
+        {
+            display:block;
+            height:100%;
+            line-height:2000px;
+            margin:0 3px;
+            text-indent:2000px;
+            width:100%;
+        }
+
+        .slidersponsors-ctrl li.navi a
+        {
+            background-color:#cdcdce;
+            color:#cdcdce;
+            height:10px;
+            margin-top:3px;
+            width:10px;
+        }
+
+        .slidersponsors-ctrl li.navi a:hover
+        {
+            background-color:#20b3b2;
+            color:#20b3b2;
+        }
+
+        .slidersponsors-ctrl li.navi a.active
+        {
+            background-color:#808184!important;
+            color:#808184!important;
+        }
+
+        .slidersponsors-ctrl li.prev,.slidersponsors-ctrl li.next
+        {
+            height:16px;
+            line-height:2000px!important;
+            overflow:hidden;
+            width:16px;
+        }
+
+        .slidersponsors-ctrl li.prev
+        {
+            background:url(small_arrowslider-sprt.png) scroll no-repeat 0 0;
+        }
+
+        .slidersponsors-ctrl li.prev:hover
+        {
+            background:url(small_arrowslider-sprt.png) scroll no-repeat 0 -32px;
+        }
+
+        .slidersponsors-ctrl li.next
+        {
+            background:url(small_arrowslider-sprt.png) scroll no-repeat 0 -16px;
+        }
+
+        .slidersponsors-ctrl li.next:hover
+        {
+            background:url(small_arrowslider-sprt.png) scroll no-repeat 0 -48px;
+        }
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1300-1312
+    ×
+        /*
+        div#footer div#social{
+            width:125px;
+        }
+        div#footer div#sponsors{
+            width:225px;
+        }
+        div#footer div#services{
+            width:115px;
+        }
+        */
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1347-1374
+    ×
+        div#slides_sponsor .slidersponsors-ctrl .next,
+        div#slides_sponsor .slidersponsors-ctrl .prev {
+            width: 16px;
+            height: 16px;
+            line-height: 2000px;
+            overflow: hidden;
+            float:left;
+            margin: 8px 0 0 0;
+            cursor:pointer;
+            /*    display: inline-block; */
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .prev {
+            background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .prev:hover {
+            background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .next{
+            background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
+        }
+
+        div#slides_sponsor .slidersponsors-ctrl .next:hover {
+            background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
+        }
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1428-1447
+    ×
+        /*particular de apoyo social*/
+        div#footer div.sponsors div.slides_container{
+            width:165px;
+            height:148px;
+            display:none;
+            float:left;
+            margin: 10px 0 0 0;
+        }
+        div#footer div.sponsors{
+            margin:0px;
+            width:165px;
+            height:148px;
+            display:block;
+        }
+
+        div#footer div.sponsors > .slides_control > .sponsor {
+            height: 148px;
+            margin: 20px 10px 0;
+        }
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1439-1444
+    ×
+        div#footer div.sponsors {
+            position: relative;
+            width: 165px;
+            min-width: 0 !important;
+        }
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1446-1452
+    ×
+        /*particular de sponsor*/
+        div#footer div.sponsors img#current{
+            margin-left:13px;
+            margin-top:20px;
+        }
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 1574-1644
+    ×
+        /* Sponsors */
+        .slidersponsors-ctrl {
+            max-width: 940px;
+            margin: 0 auto;
+            list-style:none;
+            padding:0px;
+            display: block;
+            position: absolute;
+            top: 110px;
+        }
+
+        .slidersponsors-ctrl li {
+            cursor:pointer;
+            display: block;
+            float: left;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .slidersponsors-ctrl li.navi > * {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-indent: 2000px;
+            line-height: 2000px;
+            margin: 0 3px;
+        }
+
+        .slidersponsors-ctrl li.navi a {
+            width: 10px;
+            height: 10px;
+            margin-top: 3px;
+            background-color: #cdcdce;
+            color: #cdcdce;
+        }
+
+        .slidersponsors-ctrl li.navi a:hover {
+            background-color: #20b3b2;
+            color: #20b3b2;
+        }
+
+        .slidersponsors-ctrl li.navi a.active {
+            background-color: #808184 !important;
+            color: #808184 !important;
+        }
+
+        .slidersponsors-ctrl li.prev,
+        .slidersponsors-ctrl li.next {
+            width: 16px;
+            height: 16px;
+            line-height: 2000px !important;
+            overflow: hidden;
+            /*    display: inline-block; */
+        }
+
+        .slidersponsors-ctrl li.prev {
+            background: url('small_arrowslider-sprt.png') scroll no-repeat 0 0;
+        }
+
+        .slidersponsors-ctrl li.prev:hover {
+            background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
+        }
+
+        .slidersponsors-ctrl li.next {
+            background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
+        }
+
+        .slidersponsors-ctrl li.next:hover {
+            background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
+        }
+
+    ○
+        ※削除。
+
+/view/m/footer.html.php 31
+    ×
+        $sponsors   = Sponsor::getList();
+    ○
+        ※削除。
+
+/locale/en.po
+    実行
+        更新して保存して終了。
+
+/locale/ca/LC_MESSAGES/ca.po
+    実行
+        更新して保存して終了。
+
+/locale/en_GB/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/eu/LC_MESSAGES/eu.po
+    実行
+        更新して保存して終了。
+
+/locale/fr/fr.po
+    実行
+        更新して保存して終了。
+
+/locale/ja_JP/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/nl_NL/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/pt_BR/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+
+
+
+
+────────────────────────────────────────────────────────────
 

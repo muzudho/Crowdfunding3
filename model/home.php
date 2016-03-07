@@ -59,17 +59,13 @@ namespace Goteo\Model {
                      'searcher' => Text::_('Selector proyectos'),
                      'categories' => Text::_('Categorias de proyectos'),
                      'summary' => Text::_('Resumen proyectos'),
-                     'sumcalls' => Text::_('Resumen convocatorias'),
-                     'sponsors' => Text::_('Patrocinadores')
+                     'sumcalls' => Text::_('Resumen convocatorias')
                  );
         }
 
         static public function _admins() {
             return array(
-                     'promotes' => '/admin/promote',
-//callsys                     'drops' => '/admin/calls',
-//callsys                     'calls' => '/admin/campaigns',
-                     'sponsors' => '/admin/sponsors'
+                     'promotes' => '/admin/promote'
                  );
         }
 

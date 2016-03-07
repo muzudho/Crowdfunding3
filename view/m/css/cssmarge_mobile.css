@@ -1297,19 +1297,6 @@ div#footer div.block{
 }
 
 
-/*
-div#footer div#social{
-	width:125px;
-}
-div#footer div#sponsors{
-	width:225px;
-}
-div#footer div#services{
-	width:115px;
-}
-*/
-
-
 /*hijos de div.block*/
 div#footer div.block h8{
     font-size:12px;
@@ -1355,34 +1342,6 @@ div#footer div.block ul.paginacion li a:hover {
 div#footer div.block ul.paginacion li.current a {
     background-color: #808184 !important;
     color: #808184 !important;
-}
-
-div#slides_sponsor .slidersponsors-ctrl .next,
-div#slides_sponsor .slidersponsors-ctrl .prev {
-    width: 16px;
-    height: 16px;
-    line-height: 2000px;
-    overflow: hidden;
-    float:left;
-    margin: 8px 0 0 0;
-    cursor:pointer;
-    /*	display: inline-block; */
-}
-
-div#slides_sponsor .slidersponsors-ctrl .prev {
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
-}
-
-div#slides_sponsor .slidersponsors-ctrl .prev:hover {
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
-}
-
-div#slides_sponsor .slidersponsors-ctrl .next{
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
-}
-
-div#slides_sponsor .slidersponsors-ctrl .next:hover {
-    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
 }
 
 div#footer div.block ul li{
@@ -1466,26 +1425,6 @@ div#footer div.social li.rss a {
 }
 
 
-/*particular de apoyo social*/
-div#footer div.sponsors div.slides_container{
-    width:165px;
-    height:148px;
-    display:none;
-    float:left;
-    margin: 10px 0 0 0;
-}
-div#footer div.sponsors{
-    margin:0px;
-    width:165px;
-    height:148px;
-    display:block;
-}
-
-div#footer div.sponsors > .slides_control > .sponsor {
-    height: 148px;
-    margin: 20px 10px 0;
-}
-
 /*particular de servicios*/
 div#footer div.services{
 
@@ -1497,23 +1436,10 @@ div#footer div.services ul li a{
 
 
 
-div#footer div.sponsors {
-    position: relative;
-    width: 165px;
-    min-width: 0 !important;
-}
-
 div#footer div.services {
     position: relative;
     width: 96px;
     min-width: 0 !important;
-}
-
-
-/*particular de sponsor*/
-div#footer div.sponsors img#current{
-    margin-left:13px;
-    margin-top:20px;
 }
 
 
@@ -1644,77 +1570,6 @@ to page top
 }
 
 
-
-/* Sponsors */
-.slidersponsors-ctrl {
-    max-width: 940px;
-    margin: 0 auto;
-    list-style:none;
-    padding:0px;
-    display: block;
-    position: absolute;
-    top: 110px;
-}
-
-.slidersponsors-ctrl li {
-    cursor:pointer;
-    display: block;
-    float: left;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-.slidersponsors-ctrl li.navi > * {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-indent: 2000px;
-    line-height: 2000px;
-    margin: 0 3px;
-}
-
-.slidersponsors-ctrl li.navi a {
-    width: 10px;
-    height: 10px;
-    margin-top: 3px;
-    background-color: #cdcdce;
-    color: #cdcdce;
-}
-
-.slidersponsors-ctrl li.navi a:hover {
-    background-color: #20b3b2;
-    color: #20b3b2;
-}
-
-.slidersponsors-ctrl li.navi a.active {
-    background-color: #808184 !important;
-    color: #808184 !important;
-}
-
-.slidersponsors-ctrl li.prev,
-.slidersponsors-ctrl li.next {
-    width: 16px;
-    height: 16px;
-    line-height: 2000px !important;
-    overflow: hidden;
-    /*	display: inline-block; */
-}
-
-.slidersponsors-ctrl li.prev {
-    background: url('small_arrowslider-sprt.png') scroll no-repeat 0 0;
-}
-
-.slidersponsors-ctrl li.prev:hover {
-    background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
-}
-
-.slidersponsors-ctrl li.next {
-    background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
-}
-
-.slidersponsors-ctrl li.next:hover {
-    background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
-}
 
 /*----------------------------------------------------------------------
   base.css

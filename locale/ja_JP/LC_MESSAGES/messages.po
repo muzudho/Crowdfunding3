@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 01:19+0900\n"
-"PO-Revision-Date: 2016-03-08 01:19+0900\n"
+"POT-Creation-Date: 2016-03-08 02:07+0900\n"
+"PO-Revision-Date: 2016-03-08 02:07+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -26,16 +26,16 @@ msgstr "支援を管理"
 #: controller/admin.php:130 controller/admin.php:140 controller/admin.php:149
 #: controller/admin.php:158 controller/admin.php:167 controller/admin.php:182
 #: controller/admin.php:191 controller/admin.php:197 controller/admin.php:212
-#: controller/admin.php:220 controller/admin.php:229 controller/admin.php:238
-#: controller/admin.php:247 controller/admin.php:259
-#: controller/translate.php:403 controller/translate.php:410
-#: controller/translate.php:417 controller/translate.php:424
-#: controller/translate.php:431 controller/translate.php:438
-#: controller/translate.php:445 controller/translate.php:452
-#: controller/translate.php:459 controller/translate.php:466
-#: controller/translate.php:478 controller/translate.php:485
-#: controller/translate.php:492 controller/translate.php:504
-#: controller/translate.php:511 controller/translate.php:518
+#: controller/admin.php:221 controller/admin.php:230 controller/admin.php:239
+#: controller/admin.php:251 controller/translate.php:403
+#: controller/translate.php:410 controller/translate.php:417
+#: controller/translate.php:424 controller/translate.php:431
+#: controller/translate.php:438 controller/translate.php:445
+#: controller/translate.php:452 controller/translate.php:459
+#: controller/translate.php:466 controller/translate.php:478
+#: controller/translate.php:485 controller/translate.php:492
+#: controller/translate.php:504 controller/translate.php:511
+#: controller/translate.php:518
 msgid "Listando"
 msgstr "リスト"
 
@@ -283,116 +283,104 @@ msgstr "メール送信履歴"
 msgid "Emails enviados"
 msgstr "送信済みメールアドレス"
 
-#: controller/admin.php:210
-msgid "Apoyos institucionales"
-msgstr "制度サポート"
-
-#: controller/admin.php:213
-msgid "Nuevo Patrocinador"
-msgstr "新しいスポンサー"
-
-#: controller/admin.php:214
-msgid "Editando Patrocinador"
-msgstr "スポンサーを編集する"
-
-#: controller/admin.php:218 controller/translate.php:450
+#: controller/admin.php:210 controller/translate.php:450
 msgid "Plantillas de email"
 msgstr "メールテンプレート"
 
-#: controller/admin.php:221
+#: controller/admin.php:213
 msgid "Editando Plantilla"
 msgstr "テンプレートを編集する"
 
-#: controller/admin.php:222 controller/translate.php:453
+#: controller/admin.php:214 controller/translate.php:453
 msgid "Traduciendo Plantilla"
 msgstr "テンプレートを翻訳する"
 
-#: controller/admin.php:227 controller/translate.php:408
+#: controller/admin.php:219 controller/translate.php:408
 msgid "Textos interficie"
 msgstr "テキスト"
 
-#: controller/admin.php:230
+#: controller/admin.php:222
 msgid "Editando Original"
 msgstr "オリジナルを編集する"
 
-#: controller/admin.php:231 controller/translate.php:411
+#: controller/admin.php:223 controller/translate.php:411
 msgid "Traduciendo Texto"
 msgstr "テキストを翻訳する"
 
-#: controller/admin.php:236
+#: controller/admin.php:228
 msgid "Traducciones de proyectos"
 msgstr "翻訳"
 
-#: controller/admin.php:239
+#: controller/admin.php:231
 msgid "Habilitando traducción"
 msgstr "翻訳を有効化"
 
-#: controller/admin.php:240
+#: controller/admin.php:232
 msgid "Asignando traducción"
 msgstr "翻訳を割当"
 
-#: controller/admin.php:245
+#: controller/admin.php:237
 msgid "Gestión de usuarios"
 msgstr "ユーザー管理"
 
-#: controller/admin.php:248
+#: controller/admin.php:240
 msgid "Creando Usuario"
 msgstr "ユーザー作成"
 
-#: controller/admin.php:249
+#: controller/admin.php:241
 msgid "Editando Usuario"
 msgstr "ユーザー編集"
 
-#: controller/admin.php:250
+#: controller/admin.php:242
 msgid "Gestionando Usuario"
 msgstr "ユーザー管理"
 
-#: controller/admin.php:251
+#: controller/admin.php:243
 msgid "Suplantando al Usuario"
 msgstr "成り済ましユーザー"
 
-#: controller/admin.php:252
+#: controller/admin.php:244
 msgid "Moviendo a otro Nodo el usuario "
 msgstr "ユーザーを別ノードに移動する"
 
-#: controller/admin.php:257
+#: controller/admin.php:249
 msgid "Niveles de meritocracia"
 msgstr "支援額ランク"
 
-#: controller/admin.php:260
+#: controller/admin.php:252
 msgid "Editando Nivel"
 msgstr "レベルを編集"
 
-#: controller/admin.php:304 view/admin/users/list.html.php:229
+#: controller/admin.php:296 view/admin/users/list.html.php:229
 msgid "Admin"
 msgstr "管理者"
 
-#: controller/admin.php:484
+#: controller/admin.php:476
 msgid "Contenidos"
 msgstr "コンテンツ"
 
-#: controller/admin.php:485 controller/admin/users.php:460 model/home.php:52
+#: controller/admin.php:477 controller/admin/users.php:460 model/home.php:52
 #: view/admin/index.html.php:72
 msgid "Proyectos"
 msgstr "プロジェクト"
 
-#: controller/admin.php:486 view/admin/index.html.php:73
+#: controller/admin.php:478 view/admin/index.html.php:73
 msgid "Usuarios"
 msgstr "ユーザー"
 
-#: controller/admin.php:487 controller/translate.php:473 library/text.php:329
+#: controller/admin.php:479 controller/translate.php:473 library/text.php:329
 msgid "Portada"
 msgstr "表紙"
 
-#: controller/admin.php:488
+#: controller/admin.php:480
 msgid "Textos y Traducciones"
 msgstr "コンテンツ/マスタ管理"
 
-#: controller/admin.php:489
+#: controller/admin.php:481
 msgid "Servicios"
 msgstr "サービス"
 
-#: controller/admin.php:490
+#: controller/admin.php:482
 msgid "Invest"
 msgstr "支援"
 
@@ -462,7 +450,6 @@ msgid "Ha fallado al marcar donativo"
 msgstr "通知失敗"
 
 #: controller/admin/categories.php:54 controller/admin/skills.php:37
-#: controller/admin/sponsors.php:54
 msgid "Añadir"
 msgstr "登録"
 
@@ -650,37 +637,6 @@ msgstr "スキル名"
 #: controller/admin/skills.php:159
 msgid "New skill"
 msgstr "新規追加"
-
-#: controller/admin/sponsors.php:70 controller/admin/sponsors.php:162
-#: controller/admin/sponsors.php:216
-msgid "Patrocinador"
-msgstr "スポンサー"
-
-#: controller/admin/sponsors.php:75 controller/admin/sponsors.php:167
-#: controller/admin/sponsors.php:217 library/content.php:112
-#: view/admin/projects/images.html.php:89
-msgid "Enlace"
-msgstr "Link"
-
-#: controller/admin/sponsors.php:81 controller/admin/sponsors.php:173
-msgid "Logo"
-msgstr "ロゴ"
-
-#: controller/admin/sponsors.php:86 controller/admin/sponsors.php:178
-#: controller/admin/sponsors.php:219 view/admin/banners/list.html.php:34
-#: view/admin/criteria/list.html.php:47 view/admin/home/list.html.php:57
-#: view/admin/home/list.html.php:115 view/admin/licenses/list.html.php:58
-#: view/admin/promote/list.html.php:35
-msgid "Posición"
-msgstr "順番"
-
-#: controller/admin/sponsors.php:212
-msgid "Nuevo patrocinador"
-msgstr "新しいスポンサー"
-
-#: controller/admin/sponsors.php:218
-msgid "Imagen"
-msgstr "画像"
 
 #: controller/admin/texts.php:39 view/admin/templates/list.html.php:35
 msgid "Todas las agrupaciones"
@@ -1149,6 +1105,10 @@ msgstr "メディアの説明文"
 msgid "Contenido"
 msgstr "内容"
 
+#: library/content.php:112 view/admin/projects/images.html.php:89
+msgid "Enlace"
+msgstr "Link"
+
 #: library/content.php:114
 msgid "Texto extenso"
 msgstr "追記"
@@ -1535,19 +1495,15 @@ msgstr "プロジェクト概要"
 msgid "Resumen convocatorias"
 msgstr "スポンサーの該上"
 
-#: model/home.php:63
-msgid "Patrocinadores"
-msgstr "スポンサー"
-
-#: model/home.php:140
+#: model/home.php:136
 msgid "Falta elemento"
 msgstr "要素がありません"
 
-#: model/home.php:143 model/promote.php:136
+#: model/home.php:139 model/promote.php:136
 msgid "Falta nodo"
 msgstr "ノードがありません"
 
-#: model/home.php:185 model/task.php:126 model/task.php:177 model/task.php:198
+#: model/home.php:181 model/task.php:126 model/task.php:177 model/task.php:198
 #: model/user.php:559
 msgid "HA FALLADO!!! "
 msgstr "失敗しました。"
@@ -2260,6 +2216,12 @@ msgstr "登録"
 #: view/admin/banners/list.html.php:25
 msgid "Nuevo banner"
 msgstr "新規バナー"
+
+#: view/admin/banners/list.html.php:34 view/admin/criteria/list.html.php:47
+#: view/admin/home/list.html.php:57 view/admin/home/list.html.php:115
+#: view/admin/licenses/list.html.php:58 view/admin/promote/list.html.php:35
+msgid "Posición"
+msgstr "順番"
 
 #: view/admin/banners/list.html.php:35
 msgid "Subir"
@@ -3479,6 +3441,30 @@ msgstr "お礼希望した支援者に送信"
 #: view/dashboard/projects/selector.html.php:36
 msgid "not yet creat project"
 msgstr "作成済みのプロジェクトはまだありません"
+
+#~ msgid "Apoyos institucionales"
+#~ msgstr "制度サポート"
+
+#~ msgid "Nuevo Patrocinador"
+#~ msgstr "新しいスポンサー"
+
+#~ msgid "Editando Patrocinador"
+#~ msgstr "スポンサーを編集する"
+
+#~ msgid "Patrocinador"
+#~ msgstr "スポンサー"
+
+#~ msgid "Logo"
+#~ msgstr "ロゴ"
+
+#~ msgid "Nuevo patrocinador"
+#~ msgstr "新しいスポンサー"
+
+#~ msgid "Imagen"
+#~ msgstr "画像"
+
+#~ msgid "Patrocinadores"
+#~ msgstr "スポンサー"
 
 #~ msgid "Boletín"
 #~ msgstr "ニュースレター"

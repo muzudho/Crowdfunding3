@@ -129,7 +129,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-assign_mode-off
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-assign_mode-on', 'ja', 'プロジェクトを選択するために移動します' );
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-preview', 'ja', '公開ページ' );
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-projects', 'ja', '割り当てられたプロジェクト' );
-INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-sponsors', 'ja', 'スポンサー' );
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-calls-summary', 'ja', '概要' );
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-main', 'ja', 'マイパネル' );
 INSERT INTO text (id, lang, text) VALUES ( 'dashboard-menu-profile', 'ja', '私のプロフィール' );
@@ -250,7 +249,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'footer-header-projects', 'ja', 'プ�
 INSERT INTO text (id, lang, text) VALUES ( 'footer-header-resources', 'ja', 'リソース' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-header-services', 'ja', 'サービス' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-header-social', 'ja', 'フォローする' );
-INSERT INTO text (id, lang, text) VALUES ( 'footer-header-sponsors', 'ja', '制度的支援' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-platoniq-iniciative', 'ja', 'イニシアチブの：' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-resources-press', 'ja', 'プレスキット' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-service-campaign', 'ja', 'キャンペーン' );

@@ -126,7 +126,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-men
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-assign_mode-on', 'Ir a seleccionar proyectos', NULL, 'call_dash');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-preview', 'Página pública', NULL, 'call_dash');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-projects', 'Proyectos asignados', NULL, 'call_dash');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-sponsors', 'Patrocinadores', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-calls-summary', 'Resumen', NULL, 'call_dash');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-main', 'Mi panel', NULL, 'menu');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('dashboard-menu-profile', 'Mi perfil', NULL, 'dashboard');
@@ -286,7 +285,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-resources', 'Recursos', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-services', 'Servicios', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-social', 'Síguenos', NULL, 'footer');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-sponsors', 'Apoyos institucionales', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-platoniq-iniciative', 'Una iniciativa de:', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-press', 'Prensa', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-source_code', 'Código fuente AGPL3', NULL, 'footer');
