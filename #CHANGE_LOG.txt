@@ -7173,23 +7173,23 @@
 ────────────────────────────────────────────────────────────
 2016-03-08 00:07
 
-	解説
-		コミュニケーション（mailing）機能の削除。
+    解説
+        コミュニケーション（mailing）機能の削除。
 
 /cron-sender.sh
-	○
-		※ファイル削除。
+    ○
+        ※ファイル削除。
 
 /cli-sender.php
-	○
-		※ファイル削除。
+    ○
+        ※ファイル削除。
 
 /cli-sendmail.php
-	○
-		※ファイル削除。
+    ○
+        ※ファイル削除。
 
 /controller/admin.php 147-156
-	×
+    ×
                 'mailing' => array(
                     'label' => Text::_('Comunicaciones'),
                     'actions' => array(
@@ -7200,138 +7200,138 @@
                     'filters' => array('project' => '', 'type' => '', 'status' => '-1', 'method' => '', 'interest' => '', 'role' => '', 'name' => '', 'donant' => '',
                     )
                 ),
-	○
-		※ファイル削除。
+    ○
+        ※ファイル削除。
 
 /controller/admin.php 590
-	×
+    ×
                                 'mailing' => $options['mailing'],
-	○
-		※削除。
+    ○
+        ※削除。
 
 /controller/admin.php 537
-	×
+    ×
                                 'mailing' => $options['mailing'], // comunicaciones del nodoc on sus usuarios / promotores
-	○
-		※削除。
+    ○
+        ※削除。
 
 /controller/admin/mailing.php
-	×
-		※ファイルを削除。
+    ×
+        ※ファイルを削除。
 
 /controller/dashboard/profile.php 227
-	×
+    ×
                 'mailing',
-	○
-		※削除。
+    ○
+        ※削除。
 
 /db/purpose.sql 940
-	×
-		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-mailing', 'Bloquear el envio de newsletter', NULL, 'dashboard');
-	○
-		※削除。
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-mailing', 'Bloquear el envio de newsletter', NULL, 'dashboard');
+    ○
+        ※削除。
 
 /db/text(グーグル翻訳化).sql 900
-	×
-		INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-mailing', 'ja', '無効にニュースレターの購読' );
-	○
-		※削除。
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-mailing', 'ja', '無効にニュースレターの購読' );
+    ○
+        ※削除。
 
 /db/texts.sql 6993-7001
-	×
-		('user-preferences-mailing', 'ca', 'Bloquejar l''enviament del newsletter'),
-		('user-preferences-mailing', 'el', 'Disable newsletter subscription'),
-		('user-preferences-mailing', 'en', 'Disable newsletter subscription'),
-		('user-preferences-mailing', 'eu', 'Newsletter-raren bidalketa blokeatu'),
-		('user-preferences-mailing', 'fr', 'Bloquer l''envoi de la newsletter'),
-		('user-preferences-mailing', 'gl', 'Bloquear o envio de newsletter'),
-		('user-preferences-mailing', 'it', 'Disable newsletter subscription'),
-		('user-preferences-mailing', 'nl', 'Zet nieuwsbrief uit'),
-		('user-preferences-mailing', 'pl', 'Disable newsletter subscription'),
-	○
-		※削除。
+    ×
+        ('user-preferences-mailing', 'ca', 'Bloquejar l''enviament del newsletter'),
+        ('user-preferences-mailing', 'el', 'Disable newsletter subscription'),
+        ('user-preferences-mailing', 'en', 'Disable newsletter subscription'),
+        ('user-preferences-mailing', 'eu', 'Newsletter-raren bidalketa blokeatu'),
+        ('user-preferences-mailing', 'fr', 'Bloquer l''envoi de la newsletter'),
+        ('user-preferences-mailing', 'gl', 'Bloquear o envio de newsletter'),
+        ('user-preferences-mailing', 'it', 'Disable newsletter subscription'),
+        ('user-preferences-mailing', 'nl', 'Zet nieuwsbrief uit'),
+        ('user-preferences-mailing', 'pl', 'Disable newsletter subscription'),
+    ○
+        ※削除。
 
 /view/admin/mailing/edit.html.php 65-114
-	×
-		<div class="widget">
-		    <p><?php echo Text::_("Vamos a comunicarnos con ") . $_SESSION['mailing']['filters_txt']; ?></p>
-		    <form action="/admin/mailing/send" method="post">
-		    <!--
-		    <dl>
-		        <dt><?php echo Text::_("Seleccionar plantilla:"); ?></dt>
-		        <dd>
-		            <select id="template" name="template" >
-		                <option value="0"><?php echo Text::_("Sin plantilla"); ?></option>
-		            <?php foreach ($templates as $templateId=>$templateName) : ?>
-		                <option value="<?php echo $templateId; ?>"><?php echo $templateName; ?></option>
-		            <?php endforeach; ?>
-		            </select>
-		            <input type="button" id="template_load" value="<?php echo Text::_("Cargar"); ?>" />
-		        </dd>
-		    </dl>-->
-		    <dl>
-		        <dt><?php echo Text::_("Asunto:"); ?></dt>
-		        <dd>
-		            <input id="mail_subject" name="subject" value="<?php echo $_SESSION['mailing']['subject']?>" style="width:500px;"/>
-		        </dd>
-		    </dl>
-		    <dl>
-		        <dt><?php echo Text::_("Contenido: (en c&oacute;digo html; los saltos de linea deben ser con &lt;br /&gt;)"); ?></dt>
-		        <dd>
-		            <textarea id="mail_content" name="content" cols="100" rows="10"></textarea>
-		        </dd>
-		    </dl>
-		    <dl>
-		        <dt><?php echo Text::_("Lista destinatarios:"); ?></dt>
-		        <dd>
-		            <ul>
-		                <?php foreach ($_SESSION['mailing']['receivers'] as $usrid=>$usr) : ?>
-		                <li>
-		                    <input type="checkbox"
-		                           name="receiver_<?php echo $usr->id; ?>"
-		                           id="receiver_<?php echo $usr->id; ?>"
-		                           value="1"
-		                           checked="checked" />
-		                    <label for="receiver_<?php echo $usr->id; ?>"><?php echo $usr->name.' ['.$usr->email.']'; if (!empty($usr->project)) echo Text::_("Proyecto") . ': <strong>'.$usr->project.'</strong>'; ?></label>
-		                </li>
-		                <?php endforeach; ?>
-		            </ul>
-		        </dd>
-		    </dl>
+    ×
+        <div class="widget">
+            <p><?php echo Text::_("Vamos a comunicarnos con ") . $_SESSION['mailing']['filters_txt']; ?></p>
+            <form action="/admin/mailing/send" method="post">
+            <!--
+            <dl>
+                <dt><?php echo Text::_("Seleccionar plantilla:"); ?></dt>
+                <dd>
+                    <select id="template" name="template" >
+                        <option value="0"><?php echo Text::_("Sin plantilla"); ?></option>
+                    <?php foreach ($templates as $templateId=>$templateName) : ?>
+                        <option value="<?php echo $templateId; ?>"><?php echo $templateName; ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                    <input type="button" id="template_load" value="<?php echo Text::_("Cargar"); ?>" />
+                </dd>
+            </dl>-->
+            <dl>
+                <dt><?php echo Text::_("Asunto:"); ?></dt>
+                <dd>
+                    <input id="mail_subject" name="subject" value="<?php echo $_SESSION['mailing']['subject']?>" style="width:500px;"/>
+                </dd>
+            </dl>
+            <dl>
+                <dt><?php echo Text::_("Contenido: (en c&oacute;digo html; los saltos de linea deben ser con &lt;br /&gt;)"); ?></dt>
+                <dd>
+                    <textarea id="mail_content" name="content" cols="100" rows="10"></textarea>
+                </dd>
+            </dl>
+            <dl>
+                <dt><?php echo Text::_("Lista destinatarios:"); ?></dt>
+                <dd>
+                    <ul>
+                        <?php foreach ($_SESSION['mailing']['receivers'] as $usrid=>$usr) : ?>
+                        <li>
+                            <input type="checkbox"
+                                   name="receiver_<?php echo $usr->id; ?>"
+                                   id="receiver_<?php echo $usr->id; ?>"
+                                   value="1"
+                                   checked="checked" />
+                            <label for="receiver_<?php echo $usr->id; ?>"><?php echo $usr->name.' ['.$usr->email.']'; if (!empty($usr->project)) echo Text::_("Proyecto") . ': <strong>'.$usr->project.'</strong>'; ?></label>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </dd>
+            </dl>
 
-		    <input type="submit" name="send" value="Enviar"  onclick="return confirm(<?php echo Text::_("Has revisado el contenido y comprobado los destinatarios?")?>);"/>
+            <input type="submit" name="send" value="Enviar"  onclick="return confirm(<?php echo Text::_("Has revisado el contenido y comprobado los destinatarios?")?>);"/>
 
-		    </form>
-		</div>
+            </form>
+        </div>
 
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/admin/mailing
-	○
-		※フォルダーごと削除。
+    ○
+        ※フォルダーごと削除。
 
 /view/admin/newsletter/list.html.php
-	×
+    ×
         <?php echo Text::_('Para contenido personalizado hay que usar la funcionalidad'); ?> <a href="/admin/mailing" ><?php echo Text::_('Comunicaciones'); ?></a>.</p>
-	○
+    ○
         <?php echo Text::_('Para contenido personalizado hay que usar la funcionalidad'); ?> .</p>
 
 /view/css/csstidyonline.results.css 4463-4470
-	×
-		body.admin div.admin-right.mailing form dd {
-		    margin-left: 0;
-		}
-		body.admin div.admin-right.mailing form #mail_content {
-		    width: 740px;
-		    padding: 4px;
-		}
+    ×
+        body.admin div.admin-right.mailing form dd {
+            margin-left: 0;
+        }
+        body.admin div.admin-right.mailing form #mail_content {
+            width: 740px;
+            padding: 4px;
+        }
 
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/dashboard/profile/preferences.html.php 78-87
-	×
+    ×
         ),
         'mailing' => array(
             'title'     => Text::get('user-preferences-mailing'),
@@ -7342,11 +7342,11 @@
             'errors'    => array(),
             'value'     => (int) $preferences->mailing
         )
-	○
+    ○
         )
 
 /view/m/dashboard/profile/preferences.html.php 78-87
-	×
+    ×
         ),
         'mailing' => array(
             'title'     => Text::get('user-preferences-mailing'),
@@ -7357,31 +7357,31 @@
             'errors'    => array(),
             'value'     => (int) $preferences->mailing
         )
-	○
+    ○
         )
 
 /locale/en_GB/LC_MESSAGES/messages.po
-	実行
-		更新して保存して終了。
+    実行
+        更新して保存して終了。
 
 /locale/en.po
-	実行
-		更新して保存して終了。
+    実行
+        更新して保存して終了。
 
 /locale/ja_JP/LC_MESSAGES/messages.po
-	実行
-		更新して保存して終了。
+    実行
+        更新して保存して終了。
 
 /locale/nl_NL/LC_MESSAGES/messages.po
-	実行
-		更新して保存して終了。
+    実行
+        更新して保存して終了。
 
 /locale/pt_BR/LC_MESSAGES/messages.po
-	実行
-		更新して保存して終了。
+    実行
+        更新して保存して終了。
 
 /model/user.php 1502-1524
-	×
+    ×
         /**
          * Metodo para saber si el usuario ha bloqueado este envio de mailing
          *
@@ -7405,15 +7405,175 @@
 
         }
 
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/admin/index.html.php 75-77
-	×
+    ×
                             <?/*<li><a href="/admin/texts"><?php echo Text::_("Textos"); ?></a></li>
                             <li><a href="/admin/tasks"><?php echo Text::_("Tareas"); ?></a></li>
                             <li><a href="/admin/newsletter"><?php echo Text::_("Mailings"); ?></a></li>*/?>
-	○
-		※削除。
+    ○
+        ※削除。
 
 ────────────────────────────────────────────────────────────
+2016-03-08 00:51
+
+    解説
+        ニュースレター（newsletter）機能を削除。
+
+/controller/admin.php 156-163
+    ×
+            'newsletter' => array(
+                'label' => Text::_('Boletín'),
+                'actions' => array(
+                    'list' => array('label' => Text::_('Estado del envío automático'), 'item' => false),
+                    'init' => array('label' => Text::_('Iniciando un nuevo boletín'), 'item' => false),
+                    'init' => array('label' => Text::_('Viendo listado completo'), 'item' => true)
+                )
+                ),
+    ○
+        ※削除。
+
+/controller/admin.php 34
+    ×
+        Goteo\Library\Newsletter,
+    ○
+        ※削除。
+
+/controller/admin.php 598
+    ×
+                                'newsletter' => $options['newsletter'],
+    ○
+        ※削除。
+
+/controller/admin/newsletter.php
+    ○
+        ※ファイルを削除。
+
+/controller/mail.php 46-50
+    ×
+                        if ($parts[1] == 'any') {
+                            return new View ('view/email/newsletter.html.php', array('content'=>$content, 'baja' => ''));
+                        } else {
+                            return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja, 'parts1' => $parts[1]));
+                        }
+    ○
+                        return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja, 'parts1' => $parts[1]));
+
+/db/acl.sql 73
+    ×
+        REPLACE INTO `acl` VALUES(74, '*', '*', '*', '/newsletter/*', 1, '2012-03-21 17:49:02');
+    ○
+        ※削除。
+
+/db/purpose.sql 496
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('newsletter-block', '¿No quieres recibir más boletines de SiteName? <br />Puedes bloquear el envío de próximos newsletter desde el menú ''Mi perfil > Preferencias'' de tu <a href="http://example.com/dashboard/profile/preferences">panel de usuario</a>.', NULL, 'mailer');
+    ○
+        ※削除。
+
+/db/text(グーグル翻訳化).sql 460
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'newsletter-block', 'ja', '"サイト名からのより多くのニュースをしたくないですか？<br />あなたは、「私のプロフィール>設定「HETメニューの次のニュースレターをブロックしたりすることができます<a href=""/dashboard/profile/preferences"">設定パネル</a>."' );
+    ○
+        ※削除。
+
+/db/texts.sql 3409-3411
+    ×
+        ('newsletter-block', 'en', 'Don''t want any more news from SiteName?<br />You can block the next newsletters in het menu ''My Profile > Preferences'' or <a href="/dashboard/profile/preferences">preferences panel</a>.'),
+        ('newsletter-block', 'eu', 'Ez duzu SiteName-ko bulten gehiagorik jaso nahi?<br />Newsletter bidalketak desaktibatu dezakezu ''Nire soslaia > Lehentasunak'' zure <a href="/dashboard/profile/preferences">erabiltzaile panelean</a>.'),
+        ('newsletter-block', 'nl', 'Wil je geen nieuws meer van SiteName ontvangen?<br />Je kunt de volgende nieuwsbrief blokkeren in het menu ''Mijn profiel > Voorkeuren'' of <a href="/dashboard/profile/preferences">voorkeuren menu</a>.'),
+    ○
+        ※削除。
+
+/view/email/newsletter.html.php
+    ○
+        ※ファイルを削除。
+
+/library/newsletter.php
+    ○
+        ※ファイルを削除。
+
+/library/mail.php
+    ×
+                // para plantilla boletin
+                if ($this->template == 33) {
+                    $viewData['baja'] = \SITE_URL . '/user/leave/?unsuscribe=newsletter&email=' . $this->to;
+                    return new View (GOTEO_PATH.'/view/email/newsletter.html.php', $viewData);
+                } else {
+                    return new View ('view/email/goteo.html.php', $viewData);
+                }
+    ○
+                return new View ('view/email/goteo.html.php', $viewData);
+
+/view/admin/newsletter
+    ○
+        ※フォルダーごと削除。
+
+/view/css/csstidyonline.results.css 4448-4457
+    ×
+        body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn
+        {
+            width:50px;
+        }
+
+        body.admin div.admin-right.newsletter div.widget.board > table th.title
+        {
+            width:290px;
+        }
+    ○
+        ※削除。
+
+/locale/en.po
+    実行
+        更新して保存して終了。
+
+/locale/ca/LC_MESSAGES/ca.po
+    実行
+        （１）カタログの設定から、
+            文字符号化法：UTF-8
+            ソースコードの文字符号化法：UTF-8
+            に変更。
+        （２）poedit で更新、保存。
+            ↓
+            データが消えた。
+
+/locale/en_GB/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/eu/LC_MESSAGES/eu.po
+    実行
+        （１）カタログの設定から、
+            文字符号化法：UTF-8
+            ソースコードの文字符号化法：UTF-8
+            に変更。
+        （２）poedit で更新、保存。
+            ↓
+            データが消えた。
+
+/locale/fr/fr.po
+    実行
+        （１）カタログの設定から、
+            文字符号化法：UTF-8
+            ソースコードの文字符号化法：UTF-8
+            に変更。
+        （２）poedit で更新、保存。
+            ↓
+            データが消えた。
+
+/locale/ja_JP/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/nl_NL/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/pt_BR/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+────────────────────────────────────────────────────────────
+

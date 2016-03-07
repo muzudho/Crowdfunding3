@@ -493,7 +493,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('mandatory-soc
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('mandatory-support-field-description', 'Es obligatorio poner alguna descripción', NULL, 'supports');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('mandatory-support-field-name', 'Es obligatorio ponerle un nombre a la colaboración', NULL, 'supports');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('message-cookies', 'Utilizamos cookies propias y de terceros para mejorar su experiencia y nuestros servicios, analizando la navegación en nuestro sitio web. Si continuas navegando, se considera que das tu consentimiento para su uso. Puede obtener más información en nuestra <a href="/legal/cookies">Política de Cookies</a>.', 1, 'bluead');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('newsletter-block', '¿No quieres recibir más boletines de SiteName? <br />Puedes bloquear el envío de próximos newsletter desde el menú ''Mi perfil > Preferencias'' de tu <a href="http://example.com/dashboard/profile/preferences">panel de usuario</a>.', NULL, 'mailer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('node-side-sumcalls-budget', 'Total (todas las campañas)', NULL, 'node_public');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('node-side-sumcalls-calls', 'Abierto', NULL, 'node_public');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('node-side-sumcalls-campaigns', 'Activo', NULL, 'node_public');

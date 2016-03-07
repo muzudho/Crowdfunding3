@@ -43,11 +43,7 @@ namespace Goteo\Controller {
                     if ($query = Model::query('SELECT html FROM mail WHERE email = ? AND id = ?', array($parts[1], $parts[2]))) {
                         $content = $query->fetchColumn();
                         $baja = SEC_URL . '/user/leave/?email=' . $parts[1];
-                        if ($parts[1] == 'any') {
-                            return new View ('view/email/newsletter.html.php', array('content'=>$content, 'baja' => ''));
-                        } else {
-                            return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja, 'parts1' => $parts[1]));
-                        }
+                        return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja, 'parts1' => $parts[1]));
                     }
                 }
             }

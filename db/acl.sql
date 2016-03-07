@@ -70,7 +70,6 @@ REPLACE INTO `acl` VALUES(70, '*', '*', '*', '/call/view/*', 0, '2011-09-16 13:4
 REPLACE INTO `acl` VALUES(71, '*', '*', '*', '/maintenance/*', 1, '2012-02-06 11:22:30');
 REPLACE INTO `acl` VALUES(72, '*', 'admin', '*', '/admin/*', 1, '2012-02-26 10:47:06');
 REPLACE INTO `acl` VALUES(73, '*', 'admin', '*', '/project/edit/*', 1, '2012-03-21 05:32:57');
-REPLACE INTO `acl` VALUES(74, '*', '*', '*', '/newsletter/*', 1, '2012-03-21 17:49:02');
 REPLACE INTO `acl` VALUES(75, '*', 'admin', '*', '/translate/select/*', 1, '2012-05-04 18:06:34');
 REPLACE INTO `acl` VALUES(76, '*', '*', 'translator', '/translate/node/*', 0, '2012-05-04 19:11:57');
 REPLACE INTO `acl` VALUES(77, '*', '*', 'root', '/system/*', 1, '2012-06-30 18:52:51');

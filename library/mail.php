@@ -240,13 +240,7 @@ namespace Goteo\Library {
 
                 ' . $viewData['sinoves'];
             } else {
-                // para plantilla boletin
-                if ($this->template == 33) {
-                    $viewData['baja'] = \SITE_URL . '/user/leave/?unsuscribe=newsletter&email=' . $this->to;
-                    return new View (GOTEO_PATH.'/view/email/newsletter.html.php', $viewData);
-                } else {
-                    return new View ('view/email/goteo.html.php', $viewData);
-                }
+                return new View ('view/email/goteo.html.php', $viewData);
             }
         }
 

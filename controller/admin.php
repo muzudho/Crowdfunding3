@@ -31,7 +31,6 @@ namespace Goteo\Controller {
         Goteo\Library\Mail,
         Goteo\Library\Template,
         Goteo\Library\Message,
-        Goteo\Library\Newsletter,
         Goteo\Library\Worth;
 
     class Admin extends \Goteo\Core\Controller {
@@ -153,14 +152,6 @@ namespace Goteo\Controller {
                         'translate' => array('label' => Text::_('Traduciendo Micronoticia'), 'item' => true)
                     )
             ),
-            'newsletter' => array(
-                'label' => Text::_('Boletín'),
-                'actions' => array(
-                    'list' => array('label' => Text::_('Estado del envío automático'), 'item' => false),
-                    'init' => array('label' => Text::_('Iniciando un nuevo boletín'), 'item' => false),
-                    'init' => array('label' => Text::_('Viendo listado completo'), 'item' => true)
-                )
-                ),
                 'pages' => array(
                     'label' => Text::_('Page'),
                     'actions' => array(
@@ -604,7 +595,6 @@ namespace Goteo\Controller {
                         'sponsors' => array(
                             'label' => $labels['services'],
                             'options' => array(
-                                'newsletter' => $options['newsletter'],
                                 'sponsors' => $options['sponsors'],
                                 'tasks' => $options['tasks']  // gestión de tareas
                             )

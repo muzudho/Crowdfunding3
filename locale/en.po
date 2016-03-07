@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-03-08 00:29+0900\n"
+"POT-Creation-Date: 2016-03-08 01:13+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -15,17 +15,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: controller/admin.php:60
+#: controller/admin.php:59
 msgid "Gestión de aportes"
 msgstr ""
 
-#: controller/admin.php:62 controller/admin.php:77 controller/admin.php:86
-#: controller/admin.php:96 controller/admin.php:106 controller/admin.php:122
-#: controller/admin.php:131 controller/admin.php:141 controller/admin.php:150
-#: controller/admin.php:167 controller/admin.php:176 controller/admin.php:191
-#: controller/admin.php:200 controller/admin.php:206 controller/admin.php:221
-#: controller/admin.php:229 controller/admin.php:238 controller/admin.php:247
-#: controller/admin.php:256 controller/admin.php:268 controller/translate.php:403
+#: controller/admin.php:61 controller/admin.php:76 controller/admin.php:85
+#: controller/admin.php:95 controller/admin.php:105 controller/admin.php:121
+#: controller/admin.php:130 controller/admin.php:140 controller/admin.php:149
+#: controller/admin.php:158 controller/admin.php:167 controller/admin.php:182
+#: controller/admin.php:191 controller/admin.php:197 controller/admin.php:212
+#: controller/admin.php:220 controller/admin.php:229 controller/admin.php:238
+#: controller/admin.php:247 controller/admin.php:259 controller/translate.php:403
 #: controller/translate.php:410 controller/translate.php:417
 #: controller/translate.php:424 controller/translate.php:431
 #: controller/translate.php:438 controller/translate.php:445
@@ -37,376 +37,360 @@ msgstr ""
 msgid "Listando"
 msgstr ""
 
-#: controller/admin.php:63 controller/admin.php:132
+#: controller/admin.php:62 controller/admin.php:131
 #: view/admin/invests/details.html.php:56
 msgid "Detalles del aporte"
 msgstr ""
 
-#: controller/admin.php:64
+#: controller/admin.php:63
 msgid "Cambiando el estado al aporte"
 msgstr ""
 
-#: controller/admin.php:65
+#: controller/admin.php:64
 msgid "Aporte manual"
 msgstr ""
 
-#: controller/admin.php:66
+#: controller/admin.php:65
 msgid "Reubicando el aporte"
 msgstr ""
 
-#: controller/admin.php:67
+#: controller/admin.php:66
 msgid "Ejecución del cargo"
 msgstr ""
 
-#: controller/admin.php:68
+#: controller/admin.php:67
 msgid "Cancelando aporte"
 msgstr ""
 
-#: controller/admin.php:69
+#: controller/admin.php:68
 msgid "Informe de proyecto"
 msgstr ""
 
-#: controller/admin.php:70
+#: controller/admin.php:69
 msgid "Viendo logs"
 msgstr ""
 
-#: controller/admin.php:75 controller/translate.php:401
+#: controller/admin.php:74 controller/translate.php:401
 #: controller/translate.php:509 library/content.php:42
 msgid "Banners"
 msgstr ""
 
-#: controller/admin.php:78
+#: controller/admin.php:77
 msgid "Nuevo Banner"
 msgstr ""
 
-#: controller/admin.php:79
+#: controller/admin.php:78
 msgid "Editando Banner"
 msgstr ""
 
-#: controller/admin.php:80 controller/translate.php:404
+#: controller/admin.php:79 controller/translate.php:404
 msgid "Traduciendo Banner"
 msgstr ""
 
-#: controller/admin.php:84
+#: controller/admin.php:83
 msgid "Category"
 msgstr ""
 
-#: controller/admin.php:87
+#: controller/admin.php:86
 msgid "Nueva Categoría"
 msgstr ""
 
-#: controller/admin.php:88
+#: controller/admin.php:87
 msgid "Editando Categoría"
 msgstr ""
 
-#: controller/admin.php:89 controller/translate.php:425
+#: controller/admin.php:88 controller/translate.php:425
 msgid "Traduciendo Categoría"
 msgstr ""
 
-#: controller/admin.php:90 controller/admin.php:100
+#: controller/admin.php:89 controller/admin.php:99
 msgid "Palabras clave"
 msgstr ""
 
-#: controller/admin.php:94
+#: controller/admin.php:93
 msgid "Skills"
 msgstr ""
 
-#: controller/admin.php:97
+#: controller/admin.php:96
 msgid "Nueva Skill"
 msgstr ""
 
-#: controller/admin.php:98
+#: controller/admin.php:97
 msgid "Editando Skill"
 msgstr ""
 
-#: controller/admin.php:99
+#: controller/admin.php:98
 msgid "Traduciendo Skill"
 msgstr ""
 
-#: controller/admin.php:104 controller/translate.php:443
+#: controller/admin.php:103 controller/translate.php:443
 msgid "Criterios de revisión"
 msgstr ""
 
-#: controller/admin.php:107
+#: controller/admin.php:106
 msgid "Nuevo Criterio"
 msgstr ""
 
-#: controller/admin.php:108
+#: controller/admin.php:107
 msgid "Editando Criterio"
 msgstr ""
 
-#: controller/admin.php:109 controller/translate.php:446
+#: controller/admin.php:108 controller/translate.php:446
 msgid "Traduciendo Criterio"
 msgstr ""
 
-#: controller/admin.php:114
+#: controller/admin.php:113
 msgid "Elementos en portada"
 msgstr ""
 
-#: controller/admin.php:116
+#: controller/admin.php:115
 msgid "Gestionando"
 msgstr ""
 
-#: controller/admin.php:120 controller/translate.php:436
+#: controller/admin.php:119 controller/translate.php:436
 msgid "Tipos de Retorno"
 msgstr ""
 
-#: controller/admin.php:123
+#: controller/admin.php:122
 msgid "Editando Tipo"
 msgstr ""
 
-#: controller/admin.php:124 controller/translate.php:439
+#: controller/admin.php:123 controller/translate.php:439
 msgid "Traduciendo Tipo"
 msgstr ""
 
-#: controller/admin.php:129 view/admin/accounts/viewer.html.php:48
+#: controller/admin.php:128 view/admin/accounts/viewer.html.php:48
 #: view/admin/index.html.php:74 view/admin/users/list.html.php:220
 msgid "Aportes"
 msgstr ""
 
-#: controller/admin.php:139 controller/translate.php:429 library/content.php:39
+#: controller/admin.php:138 controller/translate.php:429 library/content.php:39
 msgid "Licencias"
 msgstr ""
 
-#: controller/admin.php:142
+#: controller/admin.php:141
 msgid "Editando Licencia"
 msgstr ""
 
-#: controller/admin.php:143 controller/translate.php:432
+#: controller/admin.php:142 controller/translate.php:432
 msgid "Traduciendo Licencia"
 msgstr ""
 
-#: controller/admin.php:148 controller/translate.php:476
+#: controller/admin.php:147 controller/translate.php:476
 msgid "Micronoticias"
 msgstr ""
 
-#: controller/admin.php:151
+#: controller/admin.php:150
 msgid "Nueva Micronoticia"
 msgstr ""
 
-#: controller/admin.php:152
+#: controller/admin.php:151
 msgid "Editando Micronoticia"
 msgstr ""
 
-#: controller/admin.php:153 controller/translate.php:479
+#: controller/admin.php:152 controller/translate.php:479
 msgid "Traduciendo Micronoticia"
 msgstr ""
 
-#: controller/admin.php:157
-msgid "Boletín"
-msgstr ""
-
-#: controller/admin.php:159
-msgid "Estado del envío automático"
-msgstr ""
-
-#: controller/admin.php:160
-msgid "Iniciando un nuevo boletín"
-msgstr ""
-
-#: controller/admin.php:161
-msgid "Viendo listado completo"
-msgstr ""
-
-#: controller/admin.php:165
+#: controller/admin.php:156
 msgid "Page"
 msgstr ""
 
-#: controller/admin.php:168
+#: controller/admin.php:159
 msgid "Editando Página"
 msgstr ""
 
-#: controller/admin.php:169
+#: controller/admin.php:160
 msgid "Nueva Página"
 msgstr ""
 
-#: controller/admin.php:170
+#: controller/admin.php:161
 msgid "Traduciendo Página"
 msgstr ""
 
-#: controller/admin.php:174
+#: controller/admin.php:165
 msgid "Gestión de proyectos"
 msgstr ""
 
-#: controller/admin.php:177
+#: controller/admin.php:168
 msgid "Fechas del proyecto"
 msgstr ""
 
-#: controller/admin.php:178
+#: controller/admin.php:169
 msgid "Cuentas del proyecto"
 msgstr ""
 
-#: controller/admin.php:179
+#: controller/admin.php:170
 msgid "Imágenes del proyecto"
 msgstr ""
 
-#: controller/admin.php:180
+#: controller/admin.php:171
 msgid "Moviendo a otro Nodo el proyecto"
 msgstr ""
 
-#: controller/admin.php:181
+#: controller/admin.php:172
 msgid "Asignando a una Convocatoria el proyecto"
 msgstr ""
 
-#: controller/admin.php:182
+#: controller/admin.php:173
 msgid "Informe Financiero del proyecto"
 msgstr ""
 
-#: controller/admin.php:183
+#: controller/admin.php:174
 msgid "Cambiando Id de proyecto"
 msgstr ""
 
-#: controller/admin.php:184 view/admin/projects/list.html.php:198
+#: controller/admin.php:175 view/admin/projects/list.html.php:198
 msgid "Organizar imágenes"
 msgstr ""
 
-#: controller/admin.php:189 controller/translate.php:483 library/content.php:36
+#: controller/admin.php:180 controller/translate.php:483 library/content.php:36
 #: model/home.php:43
 msgid "Proyectos destacados"
 msgstr ""
 
-#: controller/admin.php:192
+#: controller/admin.php:183
 msgid "Nuevo Destacado"
 msgstr ""
 
-#: controller/admin.php:193
+#: controller/admin.php:184
 msgid "Editando Destacado"
 msgstr ""
 
-#: controller/admin.php:194 controller/translate.php:486
+#: controller/admin.php:185 controller/translate.php:486
 msgid "Traduciendo Destacado"
 msgstr ""
 
-#: controller/admin.php:198 model/home.php:45
+#: controller/admin.php:189 model/home.php:45
 msgid "Actividad reciente"
 msgstr "Recent activity"
 
-#: controller/admin.php:204
+#: controller/admin.php:195
 msgid "Remuneration"
 msgstr ""
 
-#: controller/admin.php:207
+#: controller/admin.php:198
 msgid "Gestionando recompensa"
 msgstr ""
 
-#: controller/admin.php:212 view/admin/users/manage.html.php:113
+#: controller/admin.php:203 view/admin/users/manage.html.php:113
 msgid "Historial envíos"
 msgstr ""
 
-#: controller/admin.php:214
+#: controller/admin.php:205
 msgid "Emails enviados"
 msgstr ""
 
-#: controller/admin.php:219
+#: controller/admin.php:210
 msgid "Apoyos institucionales"
 msgstr "Institutional support"
 
-#: controller/admin.php:222
+#: controller/admin.php:213
 msgid "Nuevo Patrocinador"
 msgstr ""
 
-#: controller/admin.php:223
+#: controller/admin.php:214
 msgid "Editando Patrocinador"
 msgstr ""
 
-#: controller/admin.php:227 controller/translate.php:450
+#: controller/admin.php:218 controller/translate.php:450
 msgid "Plantillas de email"
 msgstr ""
 
-#: controller/admin.php:230
+#: controller/admin.php:221
 msgid "Editando Plantilla"
 msgstr ""
 
-#: controller/admin.php:231 controller/translate.php:453
+#: controller/admin.php:222 controller/translate.php:453
 msgid "Traduciendo Plantilla"
 msgstr ""
 
-#: controller/admin.php:236 controller/translate.php:408
+#: controller/admin.php:227 controller/translate.php:408
 msgid "Textos interficie"
 msgstr ""
 
-#: controller/admin.php:239
+#: controller/admin.php:230
 msgid "Editando Original"
 msgstr ""
 
-#: controller/admin.php:240 controller/translate.php:411
+#: controller/admin.php:231 controller/translate.php:411
 msgid "Traduciendo Texto"
 msgstr ""
 
-#: controller/admin.php:245
+#: controller/admin.php:236
 msgid "Traducciones de proyectos"
 msgstr ""
 
-#: controller/admin.php:248
+#: controller/admin.php:239
 msgid "Habilitando traducción"
 msgstr ""
 
-#: controller/admin.php:249
+#: controller/admin.php:240
 msgid "Asignando traducción"
 msgstr ""
 
-#: controller/admin.php:254
+#: controller/admin.php:245
 msgid "Gestión de usuarios"
 msgstr ""
 
-#: controller/admin.php:257
+#: controller/admin.php:248
 msgid "Creando Usuario"
 msgstr ""
 
-#: controller/admin.php:258
+#: controller/admin.php:249
 msgid "Editando Usuario"
 msgstr ""
 
-#: controller/admin.php:259
+#: controller/admin.php:250
 msgid "Gestionando Usuario"
 msgstr ""
 
-#: controller/admin.php:260
+#: controller/admin.php:251
 msgid "Suplantando al Usuario"
 msgstr ""
 
-#: controller/admin.php:261
+#: controller/admin.php:252
 msgid "Moviendo a otro Nodo el usuario "
 msgstr ""
 
-#: controller/admin.php:266
+#: controller/admin.php:257
 msgid "Niveles de meritocracia"
 msgstr ""
 
-#: controller/admin.php:269
+#: controller/admin.php:260
 msgid "Editando Nivel"
 msgstr ""
 
-#: controller/admin.php:313 view/admin/users/list.html.php:229
+#: controller/admin.php:304 view/admin/users/list.html.php:229
 msgid "Admin"
 msgstr ""
 
-#: controller/admin.php:493
+#: controller/admin.php:484
 msgid "Contenidos"
 msgstr ""
 
-#: controller/admin.php:494 controller/admin/users.php:460 model/home.php:52
+#: controller/admin.php:485 controller/admin/users.php:460 model/home.php:52
 #: view/admin/index.html.php:72
 msgid "Proyectos"
 msgstr "Projects"
 
-#: controller/admin.php:495 view/admin/index.html.php:73
+#: controller/admin.php:486 view/admin/index.html.php:73
 msgid "Usuarios"
 msgstr ""
 
-#: controller/admin.php:496 controller/translate.php:473 library/text.php:329
+#: controller/admin.php:487 controller/translate.php:473 library/text.php:329
 msgid "Portada"
 msgstr ""
 
-#: controller/admin.php:497
+#: controller/admin.php:488
 msgid "Textos y Traducciones"
 msgstr ""
 
-#: controller/admin.php:498
+#: controller/admin.php:489
 msgid "Servicios"
 msgstr "Services"
 
-#: controller/admin.php:499
+#: controller/admin.php:490
 msgid "Invest"
 msgstr ""
 
@@ -809,13 +793,11 @@ msgid ""
 "nodo %s"
 msgstr ""
 
-#: controller/admin/users.php:441 view/admin/newsletter/detail.html.php:42
-#: view/admin/newsletter/list.html.php:88
+#: controller/admin/users.php:441
 msgid "Activo"
 msgstr ""
 
-#: controller/admin/users.php:442 view/admin/newsletter/detail.html.php:43
-#: view/admin/newsletter/list.html.php:88 view/admin/users/list.html.php:224
+#: controller/admin/users.php:442 view/admin/users/list.html.php:224
 msgid "Inactivo"
 msgstr ""
 
@@ -1168,7 +1150,6 @@ msgstr ""
 #: library/feed.php:59 model/invest.php:109 view/admin/accounts/details.html.php:44
 #: view/admin/invests/add.html.php:32 view/admin/invests/details.html.php:36
 #: view/admin/invests/list.html.php:33 view/admin/invests/report.html.php:126
-#: view/admin/newsletter/detail.html.php:78 view/admin/newsletter/init.html.php:38
 #: view/admin/rewards/edit.html.php:18
 msgid "Usuario"
 msgstr "User"
@@ -1521,8 +1502,7 @@ msgid "Falta texto"
 msgstr ""
 
 #: model/invest.php:108 view/admin/accounts/list.html.php:91
-#: view/admin/invests/list.html.php:96 view/admin/newsletter/detail.html.php:50
-#: view/admin/newsletter/list.html.php:74 view/admin/sended/list.html.php:82
+#: view/admin/invests/list.html.php:96 view/admin/sended/list.html.php:82
 msgid "Fecha"
 msgstr "Date"
 
@@ -1531,7 +1511,7 @@ msgstr "Date"
 msgid "Recompensa"
 msgstr "Reward"
 
-#: model/invest.php:111 view/admin/newsletter/detail.html.php:54
+#: model/invest.php:111
 msgid "Pendientes"
 msgstr ""
 
@@ -2090,7 +2070,6 @@ msgid "Extra"
 msgstr ""
 
 #: view/admin/accounts/list.html.php:107 view/admin/invests/list.html.php:110
-#: view/admin/newsletter/list.html.php:85
 msgid "Detalles"
 msgstr ""
 
@@ -2312,27 +2291,27 @@ msgstr ""
 msgid "[Traducir]"
 msgstr ""
 
-#: view/admin/index.html.php:101
+#: view/admin/index.html.php:98
 msgid "Tareas pendientes"
 msgstr ""
 
-#: view/admin/index.html.php:106
+#: view/admin/index.html.php:103
 msgid "IR"
 msgstr ""
 
-#: view/admin/index.html.php:112
+#: view/admin/index.html.php:109
 msgid "No tienes tareas pendientes"
 msgstr ""
 
-#: view/admin/index.html.php:136 view/admin/recent/list.html.php:24
+#: view/admin/index.html.php:133 view/admin/recent/list.html.php:24
 msgid "actividad reciente"
 msgstr ""
 
-#: view/admin/index.html.php:137
+#: view/admin/index.html.php:134
 msgid "Ver Feeds por:"
 msgstr ""
 
-#: view/admin/index.html.php:156
+#: view/admin/index.html.php:153
 msgid "Ver más"
 msgstr ""
 
@@ -2601,111 +2580,6 @@ msgstr ""
 #: view/admin/licenses/list.html.php:54
 msgid "license name"
 msgstr ""
-
-#: view/admin/newsletter/detail.html.php:51
-msgid "Destinatarios"
-msgstr ""
-
-#: view/admin/newsletter/detail.html.php:52
-msgid "Enviados"
-msgstr ""
-
-#: view/admin/newsletter/detail.html.php:53
-msgid "Fallidos"
-msgstr ""
-
-#: view/admin/newsletter/detail.html.php:59 view/admin/newsletter/list.html.php:90
-msgid "Si no ves"
-msgstr ""
-
-#: view/admin/newsletter/detail.html.php:72
-msgid "Viendo el listado completo de los "
-msgstr ""
-
-#: view/admin/newsletter/detail.html.php:76 view/admin/newsletter/init.html.php:36
-#: view/admin/users/edit.html.php:40 view/admin/users/impersonate.html.php:38
-#: view/admin/users/list.html.php:194 view/admin/users/manage.html.php:43
-msgid "Email"
-msgstr "Email address"
-
-#: view/admin/newsletter/detail.html.php:77 view/admin/newsletter/init.html.php:37
-msgid "Alias"
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:30
-msgid "La newsletter está lista para enviar con "
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:30
-msgid "este contenido"
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:31
-msgid "Si todo está bien pulsar el botón para activar los envíos automáticos."
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:31
-msgid "Se comenzará a enviar automáticamente"
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:31
-msgid "ACTIVAR!"
-msgstr ""
-
-#: view/admin/newsletter/init.html.php:33
-msgid "Lista de destinatarios"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:27
-msgid "Boletin"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:28
-msgid "Testeo"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:38
-msgid ""
-"Seleccionar la plantilla. Se utilizará el contenido traducido, quizás quieras "
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:38
-msgid "revisarlas"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:39
-msgid "NOTA"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:39
-msgid ""
-"con este sistema no se pueden añadir variables en el contenido, se genera el "
-"mismo contenido para todos los destinatarios."
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:40
-msgid "Para contenido personalizado hay que usar la funcionalidad"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:42
-msgid "El envio se activará automáticamente, seguimos?"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:45
-msgid "Plantillas masivas"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:54
-msgid "Es una prueba (se envia a los destinatarios de pruebas)"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:62
-msgid "Iniciar"
-msgstr ""
-
-#: view/admin/newsletter/list.html.php:75
-msgid "Asunto"
-msgstr "Subject"
 
 #: view/admin/pages/edit.html.php:56
 msgid "Cabecera"
@@ -3276,6 +3150,11 @@ msgstr ""
 msgid "Nombre de usuario"
 msgstr ""
 
+#: view/admin/users/edit.html.php:40 view/admin/users/impersonate.html.php:38
+#: view/admin/users/list.html.php:194 view/admin/users/manage.html.php:43
+msgid "Email"
+msgstr "Email address"
+
 #: view/admin/users/edit.html.php:44 view/admin/users/impersonate.html.php:42
 #: view/admin/users/manage.html.php:51
 msgid "Authority of user"
@@ -3470,6 +3349,9 @@ msgstr ""
 #: view/dashboard/projects/selector.html.php:36
 msgid "not yet creat project"
 msgstr ""
+
+#~ msgid "Asunto"
+#~ msgstr "Subject"
 
 #~ msgid ""
 #~ "El usuario se ha registrado correctamente. A continuaciÃ³n recibirÃ¡s un "

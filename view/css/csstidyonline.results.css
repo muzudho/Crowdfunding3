@@ -4445,16 +4445,6 @@ body.admin div#main div.admin-right.promote > div.widget.board table td a {
     padding: 0;
 }
 
-body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn
-{
-	width:50px;
-}
-
-body.admin div.admin-right.newsletter div.widget.board > table th.title
-{
-	width:290px;
-}
-
 body.admin div.admin-right.projects div.widget p
 {
 	margin:0 0 8px;

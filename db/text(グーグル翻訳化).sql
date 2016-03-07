@@ -457,7 +457,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'mandatory-social_reward-field-descri
 INSERT INTO text (id, lang, text) VALUES ( 'mandatory-social_reward-field-icon', 'ja', 'あなたは利益の種類を選択する必要があります' );
 INSERT INTO text (id, lang, text) VALUES ( 'mandatory-social_reward-field-name', 'ja', 'あなたは利益を指定する必要があります' );
 INSERT INTO text (id, lang, text) VALUES ( 'mandatory-support-field-description', 'ja', '説明が必要です。' );
-INSERT INTO text (id, lang, text) VALUES ( 'newsletter-block', 'ja', '"サイト名からのより多くのニュースをしたくないですか？<br />あなたは、「私のプロフィール>設定「HETメニューの次のニュースレターをブロックしたりすることができます<a href=""/dashboard/profile/preferences"">設定パネル</a>."' );
 INSERT INTO text (id, lang, text) VALUES ( 'node-footer-about', 'ja', '"協調融資のためのネットワークと共通の利益に奉仕創造的なプロジェクトのコラボレーション<a href=""/project/create"">あなたが開いているDNAプロジェクトを持っていますか？</a>"' );
 INSERT INTO text (id, lang, text) VALUES ( 'node-footer-help-what', 'ja', 'クラウドファンディングとは何ですか？' );
 INSERT INTO text (id, lang, text) VALUES ( 'node-footer-help-why', 'ja', 'どのようにサイト名は違うのですか？' );
