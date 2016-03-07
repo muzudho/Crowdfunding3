@@ -70,7 +70,7 @@ namespace Goteo\Controller {
                         'report' => array('label' => Text::_('Informe de proyecto'), 'item' => true),
                         'viewer' => array('label' => Text::_('Viendo logs'), 'item' => false)
                     ),
-                    'filters' => array('id' => '', 'methods' => '', 'investStatus' => 'all', 'projects' => '', 'name' => '', 'calls' => '', 'review' => '', 'types' => '', 'date_from' => '', 'date_until' => '', 'issue' => 'all', 'procStatus' => 'all', 'amount' => '')
+                    'filters' => array('id' => '', 'methods' => '', 'investStatus' => 'all', 'projects' => '', 'name' => '', 'calls' => '', 'types' => '', 'date_from' => '', 'date_until' => '', 'issue' => 'all', 'procStatus' => 'all', 'amount' => '')
                 ),
                 'banners' => array(
                     'label' => Text::_('Banners'),
@@ -218,16 +218,6 @@ namespace Goteo\Controller {
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false)
                     )
-                ),
-                'reviews' => array(
-                    'label' => Text::_('Revisiones'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Iniciando briefing'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando briefing'), 'item' => true),
-                        'report' => array('label' => Text::_('Informe'), 'item' => true)
-                    ),
-                    'filters' => array('project' => '', 'status' => 'open', 'checker' => '')
                 ),
                 'rewards' => array(
                     'label' => Text::_('Remuneration'),
@@ -555,7 +545,6 @@ namespace Goteo\Controller {
                             'label' => $labels['projects'],
                             'options' => array(
                                 'projects' => $options['projects'], // proyectos del nodo
-                                'reviews' => $options['reviews'], // revisiones de proyectos del nodo
                                 'translates' => $options['translates'], // traducciones de proyectos del nodo
                                 'invests' => $options['invests'], // gestión de aportes avanzada
                             )
@@ -603,7 +592,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'projects' => $options['projects'],
                                 'accounts' => $options['accounts'],
-                                'reviews' => $options['reviews'],
                                 'translates' => $options['translates'],
                                 'rewards' => $options['rewards'],
                             )

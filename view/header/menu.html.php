@@ -68,9 +68,6 @@ use Goteo\Core\ACL,
                         <?php if (ACL::check('/translate')) : ?>
                             <li><a href="/translate"><span><?php echo Text::get('regular-translate_board'); ?></span></a></li>
                         <?php endif; ?>
-                        <?php if (ACL::check('/review')) : ?>
-                            <li><a href="/review"><span><?php echo Text::get('regular-review_board'); ?></span></a></li>
-                        <?php endif; ?>
                         <?php if (ACL::check('/admin')) : ?>
                             <li><a href="/admin"><span><?php echo Text::get('regular-admin_board'); ?></span></a></li>
                         <?php endif; ?>

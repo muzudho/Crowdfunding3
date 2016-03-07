@@ -35,34 +35,6 @@ foreach ($this['steps'] as $id => $data) {
     }
 }
 
-// boton de revisar que no sirve para mucho
-$buttons = array(
-    'review' => array(
-        'type'  => 'submit',
-        'name'  => $goto,
-        'label' => Text::get('form-self_review-button'),
-        'class' => 'retry'
-    )
-);
-
-// si es enviable ponemos el boton
-if ($project->finishable) {
-    $buttons['finish'] = array(
-        'type'  => 'submit',
-        'name'  => 'finish',
-        'label' => Text::get('form-send_review-button'),
-        'class' => 'confirm red'
-    );
-} else {
-    $buttons['nofinish'] = array(
-        'type'  => 'submit',
-        'name'  => 'nofinish',
-        'label' => Text::get('form-send_review-button'),
-        'class' => 'confirm disabled',
-        'disabled' => 'disabled'
-    );
-}
-
 // elementos generales de preview
 $elements      = array(
     'process_preview' => array (

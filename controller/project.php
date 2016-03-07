@@ -82,7 +82,6 @@ namespace Goteo\Controller {
                 && (isset($_SESSION['admin_node']) && $_SESSION['admin_node'] != \GOTEO_NODE) // es admin pero no es admin de central
                 && (isset($_SESSION['admin_node']) && $project->node != $_SESSION['admin_node']) // no es de su nodo
                 && !isset($_SESSION['user']->roles['superadmin']) // no es superadmin
-                && (isset($_SESSION['user']->roles['checker']) && !Model\User\Review::is_assigned($_SESSION['user']->id, $project->id)) // no lo tiene asignado
                 ) {
                 Message::Info(Text::_('No tienes permiso para editar este proyecto'));
                 throw new Redirection('/admin/projects');
@@ -476,8 +475,6 @@ namespace Goteo\Controller {
             elseif (ACL::check('/project/edit/todos'))  // es un admin
                 $grant = true;
             elseif (ACL::check('/project/view/todos'))  // es un usuario con permiso
-                $grant = true;
-            elseif (isset($_SESSION['user']->roles['checker']) && Model\User\Review::is_assigned($_SESSION['user']->id, $project->id)) // es un revisor y lo tiene asignado
                 $grant = true;
             // (Callsys)
 

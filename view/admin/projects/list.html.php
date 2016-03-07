@@ -183,7 +183,6 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                     <?/*<a href="<?php echo "/admin/projects/accounts/{$project->id}"; ?>">[<?php echo Text::_("Cuentas"); ?>]</a>*/?>
                     <?php if ($project->status < 4) : ?><a href="<?php echo "/admin/projects/rebase/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("Esto es MUY DELICADO, seguimos?"); ?>');">[<?php echo Text::_("Id"); ?>]</a><?php endif; ?>
                     &nbsp;|&nbsp;
-                    <?php if ($project->status < 2) : ?><a href="<?php echo "/admin/projects/review/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("El creador no podrá editarlo más, ok?"); ?>');">[<?php echo Text::_("A revisión"); ?>]</a><?php endif; ?>
                     <?php if ($project->status < 3 && $project->status > 0) : ?><a href="<?php echo "/admin/projects/publish/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("El proyecto va a comenzar los 40 dias de la primera ronda de campaña, ¿comenzamos?"); ?>');">[<?php echo Text::_("Publicar"); ?>]</a><?php endif; ?>
                     <?php if ($project->status != 1) : ?><a href="<?php echo "/admin/projects/enable/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("Mucho Ojo! si el proyecto esta en campaña, ¿Reabrimos la edicion?"); ?>');">[<?php echo Text::_("Reabrir edición"); ?>]</a><?php endif; ?>
                     <?php if ($project->status == 4) : ?><a href="<?php echo "/admin/projects/fulfill/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("El proyecto pasara a ser un caso de éxito, ok?"); ?>');">[<?php echo Text::_("Retorno Cumplido"); ?>]</a><?php endif; ?>
@@ -194,8 +193,6 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
             <tr>
                 <td colspan="5">
                     <?php echo Text::_("GESTIONAR"); ?>:&nbsp;
-                    <?php if ($project->status == 1) : ?><a href="<?php echo "/admin/reviews/add/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("Se va a iniciar revisión de un proyecto en estado Edición, ok?"); ?>');">[<?php echo Text::_("Iniciar revisión"); ?>]</a><?php endif; ?>
-                    <?php if ($project->status == 2) : ?><a href="<?php echo "/admin/reviews/?project=".urlencode($project->id); ?>">[<?php echo Text::_("Ir a la revisión"); ?>]</a><?php endif; ?>
                     <?php if ($project->translate) : ?><a href="<?php echo "/admin/translates/edit/{$project->id}"; ?>">[<?php echo Text::_("Ir a la traducción"); ?>]</a>
                     <?php else : ?><a href="<?php echo "/admin/translates/add/?project={$project->id}"; ?>">[<?php echo Text::_("Habilitar traducción"); ?>]</a><?php endif; ?>
                     <a href="/admin/projects/images/<?php echo $project->id; ?>">[<?php echo Text::_("Organizar imágenes"); ?>]</a>

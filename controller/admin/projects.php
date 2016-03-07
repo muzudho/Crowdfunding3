@@ -189,15 +189,6 @@ namespace Goteo\Controller\Admin {
                 $project = Model\Project::get($id);
             }
             switch ($action) {
-                case 'review':
-                    // pasar un proyecto a revision
-                    if ($project->ready($errors)) {
-                        $redir = '/admin/reviews/add/'.$project->id;
-                        $log_text = Text::_('El admin %s ha pasado el proyecto %s al estado <span class="red">Revision</span>');
-                    } else {
-                        $log_text = Text::_('Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="red">Revision</span>');
-                    }
-                    break;
                 case 'publish':
                     // poner un proyecto en campa�a
                     if ($project->publish($errors)) {

@@ -264,7 +264,6 @@ namespace Goteo\Model\User {
                 }
 			} catch(\PDOException $e) {
                 $errors[] = Text::_('No se ha podido marcar la traduccion ') . $this->type .':'. $this->item . Text::_(' del usuario ') . $this->user . Text::_(' como lista. ') . $e->getMessage();
-                //Text::get('review-set_ready-fail');
 			}
             
             return false;

@@ -68,7 +68,7 @@ namespace Goteo\Controller {
 
 
             // si es un salto a otro panel
-            if (in_array($option, array('admin', 'review', 'translate'))) {
+            if (in_array($option, array('admin', 'translate'))) {
                 if (ACL::check('/'.$option)) {
                     throw new Redirection('/'.$option, Redirection::TEMPORARY);
                 } else {
@@ -645,10 +645,6 @@ namespace Goteo\Controller {
             // si tiene permiso para ir al admin
             if (ACL::check('/admin')) 
                 $menu['activity']['options']['admin'] = Text::get('dashboard-menu-admin_board');
-
-            // si tiene permiso para ir a las revisiones
-            if (ACL::check('/review')) 
-                $menu['activity']['options']['review'] = Text::get('dashboard-menu-review_board');
 
             // si tiene permiso para ir a las traducciones
             if (ACL::check('/translate')) 

@@ -40,9 +40,6 @@ $filters = $this['filters'];
     'campaigns' => array (
         'label' => Text::_("Campaña"),
         'first' => Text::_("Todas las campañas")),
-    'review' => array (
-        'label' => Text::_("Para revisión"),
-        'first' => Text::_("Todos")),
 ); ?>
 <a href="/admin/accounts/viewer" class="button"><?php echo Text::_("Visor de logs"); ?></a>&nbsp;&nbsp;&nbsp;
 <div class="widget board">
