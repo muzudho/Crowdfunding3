@@ -51,7 +51,6 @@ if (!empty($project->messages)) {
 } else {
     $messages = '';
 }
-$updates = '';
 if (!empty($evaluation->content)){
     $ev_label = '評価';
 } else {
@@ -141,7 +140,6 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                                 'show' => $show,
                                 'supporters' => $supporters,
                                 'messages' => $messages,
-                                'updates' => $updates,
                                 'evaluation' => $ev_label
                             )
                     );

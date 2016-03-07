@@ -6599,3 +6599,122 @@
         }
 
 ────────────────────────────────────────────────────────────
+2016-03-07 22:20
+
+	解説
+		ニュース機能（updates）も削除。
+
+/view/project/view/menu.html.php 28
+	×
+	    'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
+	○
+		※削除。
+
+/view/project/view.html.php 144
+	×
+                                'updates' => $updates,
+	○
+		※削除。
+
+/view/project/view.html.php 54
+	×
+		$updates = '';
+	○
+		※削除。
+
+/view/m/project/view.html.php 31
+	×
+            'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
+	○
+		※削除。
+
+/view/m/project/view.html.php 182-186
+	×
+                    case 'updates':
+                        echo
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
+                        break;
+	○
+		※削除。
+
+/view/m/project/view.html.php 95-96
+	×
+                                'messages' => $messages,
+                                'updates' => $updates
+	○
+                                'messages' => $messages
+
+/view/m/home/posts.html.php
+	○
+		※ファイル削除。（ブログ関係？）
+
+/view/m/dashboard/profile/preferences.html.php 61-69
+	×
+        'updates' => array(
+            'title'     => Text::get('user-preferences-updates'),
+            'type'      => 'slider',
+            'options'   => $allow,
+            'class'     => 'currently cols_' . count($allow),
+//            'hint'      => Text::get('tooltip-preferences-updates'),
+            'errors'    => array(),
+            'value'     => (int) $preferences->updates
+        ),
+	○
+		※削除。
+
+/view/dashboard/profile/preferences.html.php 61-69
+	×
+        'updates' => array(
+            'title'     => Text::get('user-preferences-updates'),
+            'type'      => 'slider',
+            'options'   => $allow,
+            'class'     => 'currently cols_' . count($allow),
+            'hint'      => Text::get('tooltip-preferences-updates'),
+            'errors'    => array(),
+            'value'     => (int) $preferences->updates
+        ),
+	○
+		※削除。
+
+/library/wallfriends.php 259
+	×
+                $info .= '<a href="'.$URL.'/project/'.$this->project->id.'/updates"'.$target.'>'.Text::get('wof-follow').'</a>';
+	○
+		※削除。
+
+/controller/dashboard.php 621-644
+	×
+            // segun lo que este traduciendo
+/*            if ($_SESSION['translate_type'] == 'project') {
+                // si esta traduciendo un proyecto
+                $menu['translates'] = array(
+                    'label' => Text::get('dashboard-menu-translates'),
+                    'options' => array(
+                        'profile' => Text::get('step-1'),
+                        'overview' => Text::get('step-3'),
+                        'costs' => Text::get('step-4'),
+                        'rewards' => Text::get('step-5'),
+                        'supports' => Text::get('step-6'),
+                        'updates' => Text::get('project-menu-updates')
+                    )
+                );
+            } else {
+                // si está traduciendo su perfil
+                $menu['translates'] = array(
+                    'label' => Text::get('dashboard-menu-translates'),
+                    'options' => array(
+                        'profile' => Text::get('step-1')
+                    )
+                );
+            }*/
+	○
+		※削除。
+
+/controller/dashboard.php 611
+	×
+                        'updates' => Text::get('dashboard-menu-projects-updates'),
+	○
+		※削除。
+
+────────────────────────────────────────────────────────────
+

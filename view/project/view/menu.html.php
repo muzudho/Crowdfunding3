@@ -25,7 +25,6 @@ $menu = array(
 //    'supporters'  => Text::get('project-menu-supporters').' <span class="digits">'.$this['supporters'].'</span>',
     'supporters'  => Text::get('project-menu-supporters').' <span class="digits">'.'('.count($this['project']->investors).')'.'</span>',
     'messages'    => Text::get('project-menu-messages').' <span class="digits">'.$this['messages'].'</span>',
-    'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
     'evaluation'  => Text::get('project-menu-evaluation')
 );
 ?>

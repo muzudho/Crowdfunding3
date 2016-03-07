@@ -256,7 +256,6 @@ namespace Goteo\Library {
                 $info .= '<a href="'.$URL.'/project/'.$this->project->id.'/invest"'.$target.'>'.Text::get('wof-support').'</a>';
             } else {
                 $info .= '<p>'.Text::get('wof-join-comunity').'</p>';
-                $info .= '<a href="'.$URL.'/project/'.$this->project->id.'/updates"'.$target.'>'.Text::get('wof-follow').'</a>';
             }
 			$info .= '</div>';
 

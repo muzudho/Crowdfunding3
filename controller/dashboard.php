@@ -608,7 +608,6 @@ namespace Goteo\Controller {
                     'label' => Text::get('dashboard-menu-projects'),
                     'options' => array(
                         'summary' => Text::get('dashboard-menu-projects-summary'),
-                        'updates' => Text::get('dashboard-menu-projects-updates'),
                         'supports' => Text::get('dashboard-menu-projects-supports'),
                         'rewards' => Text::get('dashboard-menu-projects-rewards')//,
                         //'messegers' => Text::get('dashboard-menu-projects-messegers'),
@@ -617,30 +616,6 @@ namespace Goteo\Controller {
                     'permission' => $_permission
                 )
             );
-
-            // segun lo que este traduciendo
-/*            if ($_SESSION['translate_type'] == 'project') {
-                // si esta traduciendo un proyecto
-                $menu['translates'] = array(
-                    'label' => Text::get('dashboard-menu-translates'),
-                    'options' => array(
-                        'profile' => Text::get('step-1'),
-                        'overview' => Text::get('step-3'),
-                        'costs' => Text::get('step-4'),
-                        'rewards' => Text::get('step-5'),
-                        'supports' => Text::get('step-6'),
-                        'updates' => Text::get('project-menu-updates')
-                    )
-                );
-            } else {
-                // si está traduciendo su perfil
-                $menu['translates'] = array(
-                    'label' => Text::get('dashboard-menu-translates'),
-                    'options' => array(
-                        'profile' => Text::get('step-1')
-                    )
-                );
-            }*/
 
             // si tiene permiso para ir al admin
             if (ACL::check('/admin')) 

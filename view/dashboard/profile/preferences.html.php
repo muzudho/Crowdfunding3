@@ -58,15 +58,6 @@ echo new SuperForm(array(
     ),
     'elements'      => array(
 
-        'updates' => array(
-            'title'     => Text::get('user-preferences-updates'),
-            'type'      => 'slider',
-            'options'   => $allow,
-            'class'     => 'currently cols_' . count($allow),
-            'hint'      => Text::get('tooltip-preferences-updates'),
-            'errors'    => array(),
-            'value'     => (int) $preferences->updates
-        ),
         'threads' => array(
             'title'     => Text::get('user-preferences-threads'),
             'type'      => 'slider',
