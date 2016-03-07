@@ -74,9 +74,9 @@ namespace Goteo\Library\SuperForm {
                 }                                
                 
             }
-            
-            $this->children = SuperForm::getChildren($this->children, $this->level + 1);
-            
+
+            $this->children = SuperForm::getChildren($this->children, $this->level + 1);                
+
             $this->type = $this->getType();
             
             if (!isset($this->view)) {
