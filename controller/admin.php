@@ -144,16 +144,6 @@ namespace Goteo\Controller {
                     ),
                     'filters' => array('group' => '', 'icon' => '')
                 ),
-                'mailing' => array(
-                    'label' => Text::_('Comunicaciones'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Seleccionando destinatarios'), 'item' => false),
-                        'edit' => array('label' => Text::_('Escribiendo contenido'), 'item' => false),
-                        'send' => array('label' => Text::_('Comunicación enviada'), 'item' => false)
-                    ),
-                    'filters' => array('project' => '', 'type' => '', 'status' => '-1', 'method' => '', 'interest' => '', 'role' => '', 'name' => '', 'donant' => '',
-                    )
-                ),
                 'news' => array(
                     'label' => Text::_('Micronoticias'),
                     'actions' => array(
@@ -544,7 +534,6 @@ namespace Goteo\Controller {
                             'label' => $labels['users'],
                             'options' => array(
                                 'users' => $options['users'], // usuarios asociados al nodo
-                                'mailing' => $options['mailing'], // comunicaciones del nodoc on sus usuarios / promotores
                                 'sended' => $options['sended'], // historial de envios realizados por el nodo,
                                 'tasks' => $options['tasks']  // gestión de tareas
                             )
@@ -597,7 +586,6 @@ namespace Goteo\Controller {
                             'options' => array(
                                 'users' => $options['users'],
                                 'worth' => $options['worth'],
-                                'mailing' => $options['mailing'],
                                 'sended' => $options['sended'],
                                 'tasks' => $options['tasks']
                             )

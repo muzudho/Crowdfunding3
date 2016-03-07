@@ -75,15 +75,6 @@ echo new SuperForm(array(
 //            'hint'      => Text::get('tooltip-preferences-rounds'),
             'errors'    => array(),
             'value'     => (int) $preferences->rounds
-        ),
-        'mailing' => array(
-            'title'     => Text::get('user-preferences-mailing'),
-            'type'      => 'slider',
-            'options'   => $allow,
-            'class'     => 'currently cols_' . count($allow),
-//            'hint'      => Text::get('tooltip-preferences-mailing'),
-            'errors'    => array(),
-            'value'     => (int) $preferences->mailing
         )
 
     )

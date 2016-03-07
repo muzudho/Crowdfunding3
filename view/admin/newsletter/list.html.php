@@ -37,7 +37,7 @@ $template = Template::get($tpl);
 <div class="widget board">
     <p><?php echo Text::_('Seleccionar la plantilla. Se utilizará el contenido traducido, quizás quieras '); ?><a href="/admin/templates?group=massive" target="_blank"><?php echo Text::_('revisarlas'); ?></a></p>
     <p><strong><?php echo Text::_('NOTA'); ?>:</strong> <?php echo Text::_('con este sistema no se pueden añadir variables en el contenido, se genera el mismo contenido para todos los destinatarios.'); ?><br/>
-        <?php echo Text::_('Para contenido personalizado hay que usar la funcionalidad'); ?> <a href="/admin/mailing" ><?php echo Text::_('Comunicaciones'); ?></a>.</p>
+        <?php echo Text::_('Para contenido personalizado hay que usar la funcionalidad'); ?> .</p>
 
     <form action="/admin/newsletter/init" method="post" onsubmit="return confirm('<?php echo Text::_("El envio se activará automáticamente, seguimos?"); ?>');">
 

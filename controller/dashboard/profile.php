@@ -224,7 +224,6 @@ namespace Goteo\Controller\Dashboard {
                 'updates',
                 'threads',
                 'rounds',
-                'mailing',
                 //'email',
                 //'tips'
             );

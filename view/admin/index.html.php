@@ -72,9 +72,6 @@ include 'view/header.html.php';
                             <li><a href="/admin/projects"><?php echo Text::_("Proyectos"); ?></a></li>
                             <li><a href="/admin/users"><?php echo Text::_("Usuarios"); ?></a></li>
                             <li><a href="/admin/accounts"><?php echo Text::_("Aportes"); ?></a></li>
-                            <?/*<li><a href="/admin/texts"><?php echo Text::_("Textos"); ?></a></li>
-                            <li><a href="/admin/tasks"><?php echo Text::_("Tareas"); ?></a></li>
-                            <li><a href="/admin/newsletter"><?php echo Text::_("Mailings"); ?></a></li>*/?>
                         </ul>
                     </div>
                 <?php endif; ?>

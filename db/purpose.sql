@@ -937,7 +937,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-message-
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-password-changed', 'Has cambiado tu contraseña', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-personal-saved', 'Datos personales actualizados', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-prefer-saved', 'Tus preferencias de notificación se han guardado correctamente', NULL, 'dashboard');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-mailing', 'Bloquear el envio de newsletter', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-rounds', 'Bloquear notificaciones de progreso de los proyectos que apoyo', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-threads', 'Bloquear notificaciones de respuestas en los mensajes que yo inicio', NULL, 'dashboard');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('user-preferences-updates', 'Bloquear notificaciones de novedades sobre los proyectos que apoyo', NULL, 'dashboard');

@@ -4460,14 +4460,6 @@ body.admin div.admin-right.projects div.widget p
 	margin:0 0 8px;
 }
 
-body.admin div.admin-right.mailing form dd {
-    margin-left: 0;
-}
-body.admin div.admin-right.mailing form #mail_content {
-    width: 740px;
-    padding: 4px;
-}
-
 body.admin div.admin-right.projects .board a {
     padding-left: 20px;
 }

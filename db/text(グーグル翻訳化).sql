@@ -897,7 +897,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'user-message-send_personal-header', 
 INSERT INTO text (id, lang, text) VALUES ( 'user-password-changed', 'ja', 'あなたのパスワードを変更しました' );
 INSERT INTO text (id, lang, text) VALUES ( 'user-personal-saved', 'ja', '更新された個人情報' );
 INSERT INTO text (id, lang, text) VALUES ( 'user-prefer-saved', 'ja', 'ご通知設定が正しく保存されました' );
-INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-mailing', 'ja', '無効にニュースレターの購読' );
 INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-rounds', 'ja', '私はバックアップしていたプロジェクトからの進行状況の通知を無効にします' );
 INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-threads', 'ja', '私は開始メッセージに答え通知を無効にします' );
 INSERT INTO text (id, lang, text) VALUES ( 'user-preferences-updates', 'ja', '私はバックアップしていたプロジェクトから無効にニュースの通知' );
