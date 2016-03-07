@@ -185,8 +185,7 @@ namespace Goteo\Controller\Admin {
                         $log->populate('micronoticia quitada (admin)', '/admin/news',
                             \vsprintf('El admin %s ha %s la micronoticia "%s"', array(
                                 Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                Feed::item('relevant', 'Quitado'),
-                                Feed::item('blog', $tempData->title)
+                                Feed::item('relevant', 'Quitado')
                         )));
                         $log->doAdmin('admin');
                         unset($log);
