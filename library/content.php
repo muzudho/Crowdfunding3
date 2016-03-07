@@ -44,7 +44,6 @@ namespace Goteo\Library {
                 'criteria'  => Text::_('Criterios de evaluación'),
                 'worthcracy'=> Text::_('Meritocrácia'),
                 'template'  => Text::_('Plantillas emails automáticos'),
-                'glossary'  => Text::_('Glosario de términos'),
                 'info'      => Text::_('Ideas de about')
             );
         }
@@ -98,11 +97,6 @@ namespace Goteo\Library {
                 'template' => array (
                     'title' => Text::_('Título'),
                     'text' => Text::_('Contenido')
-                ),
-                'glossary' => array (
-                    'title' => Text::_('Título'),
-                    'text' => Text::_('Contenido'),
-                    'legend' => Text::_('Leyenda media')
                 ),
                 'info' => array (
                     'title' => Text::_('Título'),

@@ -6601,55 +6601,55 @@
 ────────────────────────────────────────────────────────────
 2016-03-07 22:20
 
-	解説
-		ニュース機能（updates）も削除。
+    解説
+        ニュース機能（updates）も削除。
 
 /view/project/view/menu.html.php 28
-	×
-	    'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
-	○
-		※削除。
+    ×
+        'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
+    ○
+        ※削除。
 
 /view/project/view.html.php 144
-	×
+    ×
                                 'updates' => $updates,
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/project/view.html.php 54
-	×
-		$updates = '';
-	○
-		※削除。
+    ×
+        $updates = '';
+    ○
+        ※削除。
 
 /view/m/project/view.html.php 31
-	×
+    ×
             'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>',
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/m/project/view.html.php 182-186
-	×
+    ×
                     case 'updates':
                         echo
                             new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
                         break;
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/m/project/view.html.php 95-96
-	×
+    ×
                                 'messages' => $messages,
                                 'updates' => $updates
-	○
+    ○
                                 'messages' => $messages
 
 /view/m/home/posts.html.php
-	○
-		※ファイル削除。（ブログ関係？）
+    ○
+        ※ファイル削除。（ブログ関係？）
 
 /view/m/dashboard/profile/preferences.html.php 61-69
-	×
+    ×
         'updates' => array(
             'title'     => Text::get('user-preferences-updates'),
             'type'      => 'slider',
@@ -6659,11 +6659,11 @@
             'errors'    => array(),
             'value'     => (int) $preferences->updates
         ),
-	○
-		※削除。
+    ○
+        ※削除。
 
 /view/dashboard/profile/preferences.html.php 61-69
-	×
+    ×
         'updates' => array(
             'title'     => Text::get('user-preferences-updates'),
             'type'      => 'slider',
@@ -6673,17 +6673,17 @@
             'errors'    => array(),
             'value'     => (int) $preferences->updates
         ),
-	○
-		※削除。
+    ○
+        ※削除。
 
 /library/wallfriends.php 259
-	×
+    ×
                 $info .= '<a href="'.$URL.'/project/'.$this->project->id.'/updates"'.$target.'>'.Text::get('wof-follow').'</a>';
-	○
-		※削除。
+    ○
+        ※削除。
 
 /controller/dashboard.php 621-644
-	×
+    ×
             // segun lo que este traduciendo
 /*            if ($_SESSION['translate_type'] == 'project') {
                 // si esta traduciendo un proyecto
@@ -6707,14 +6707,468 @@
                     )
                 );
             }*/
-	○
-		※削除。
+    ○
+        ※削除。
 
 /controller/dashboard.php 611
-	×
+    ×
                         'updates' => Text::get('dashboard-menu-projects-updates'),
-	○
-		※削除。
+    ○
+        ※削除。
+
+────────────────────────────────────────────────────────────
+2016-03-07 22:57
+
+    解説
+        用語集（glossary）は削除。
+
+/controller/admin.php 587
+    ×
+                                'glossary' => $options['glossary'],
+    ○
+        ※削除。
+
+/controller/admin.php 120-127
+    ×
+                'glossary' => array(
+                    'label' => Text::_('Glosario'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Término'), 'item' => true),
+                        'translate' => array('label' => Text::_('Traduciendo Término'), 'item' => true)
+                    )
+                ),
+    ○
+        ※削除。
+
+/controller/admin.php 50-51
+    ×
+                    'templates',
+                    'glossary'
+    ○
+                    'templates'
+
+/controller/glossary.php
+    ○
+        ※ファイル削除。
+
+/controller/translate.php 456-462
+    ×
+                        'glossary' => array(
+                            'label' => Text::_('Glosario'),
+                            'actions' => array(
+                                'list' => array('label' => Text::_('Listando'), 'item' => false),
+                                'edit' => array('label' => Text::_('Traduciendo Término'), 'item' => true)
+                            )
+                        ),
+    ○
+        ※ファイル削除。
+
+/controller/admin/glossary.php
+    ○
+        ※ファイル削除。
+
+/library/content.php 47
+    ×
+                'glossary'  => Text::_('Glosario de términos'),
+    ○
+        ※削除。
+
+/library/content.php 101-105
+    ×
+                'glossary' => array (
+                    'title' => Text::_('Título'),
+                    'text' => Text::_('Contenido'),
+                    'legend' => Text::_('Leyenda media')
+                ),
+    ○
+        ※削除。
+
+/model/glossary.php
+    ○
+        ※ファイル削除。
+
+/model/image.php 38
+    ×
+        public static $types = array('user','project', 'post', 'glossary', 'info');
+    ○
+        public static $types = array('user','project', 'post', 'info');
+
+/view/admin/glossary
+    ○
+        ※フォルダーごと削除。
+
+/view/glossary
+    ○
+        ※フォルダーごと削除。
+
+/db/goteo.sql 304-346
+    ×
+        -- --------------------------------------------------------
+
+        --
+        -- Estructura de tabla para la tabla `glossary`
+        --
+
+        CREATE TABLE `glossary` (
+          `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+          `title` tinytext,
+          `text` longtext COMMENT 'texto de la entrada',
+          `media` tinytext,
+          `legend` text,
+          PRIMARY KEY (`id`),
+          UNIQUE KEY `id` (`id`)
+        ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Entradas para el glosario';
+
+        -- --------------------------------------------------------
+
+        --
+        -- Estructura de tabla para la tabla `glossary_image`
+        --
+
+        CREATE TABLE `glossary_image` (
+          `glossary` bigint(20) NOT NULL,
+          `image` int(10) unsigned NOT NULL,
+          PRIMARY KEY (`glossary`,`image`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+        -- --------------------------------------------------------
+
+        --
+        -- Estructura de tabla para la tabla `glossary_lang`
+        --
+
+        CREATE TABLE `glossary_lang` (
+          `id` bigint(20) unsigned NOT NULL,
+          `lang` varchar(2) NOT NULL,
+          `title` tinytext,
+          `text` longtext,
+          `legend` text,
+          UNIQUE KEY `id_lang` (`id`,`lang`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+    ○
+        ※削除。
+
+/db/texts.sql 4980-4987
+    ×
+        ('regular-header-glossary', 'ca', 'Principis per a una economia oberta'),
+        ('regular-header-glossary', 'el', 'Glossary of terms used in SiteName'),
+        ('regular-header-glossary', 'en', 'Glossary of terms used in SiteName'),
+        ('regular-header-glossary', 'eu', 'Ekonomia irekirako oinarriak'),
+        ('regular-header-glossary', 'fr', 'Piliers pour une économie ouverte'),
+        ('regular-header-glossary', 'gl', 'Principios para unha economía aberta'),
+        ('regular-header-glossary', 'it', 'Glossary of terms used in SiteName'),
+        ('regular-header-glossary', 'pl', 'Glossary of terms used in SiteName'),
+    ○
+        ※削除。
+
+/db/texts.sql 2364-2368
+    ×
+        ('footer-resources-glossary', 'ca', 'Glossari '),
+        ('footer-resources-glossary', 'de', 'Glossar'),
+        ('footer-resources-glossary', 'en', 'Glossary'),
+        ('footer-resources-glossary', 'eu', 'Glosarioa'),
+        ('footer-resources-glossary', 'nl', 'Overzicht'),
+    ○
+        ※削除。
+
+/db/acl.sql 51
+    ×
+        REPLACE INTO `acl` VALUES(51, '*', '*', '*', '/glossary/*', 1, '2011-08-25 13:37:45');
+    ○
+        ※削除。
+
+/db/pages.sql
+    ○
+        ★長文なので省略。「マイクロファイナンスに関する用語集」（glossary） に関するリンクを削除。
+
+/db/purpose.sql 701
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-header-glossary', 'Principios para una economía abierta', NULL, 'general');
+    ○
+        ※削除。
+
+/db/purpose.sql 291
+    ×
+        INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-glossary', 'Glosario', NULL, 'footer');
+    ○
+        ※削除。
+
+/db/text(グーグル翻訳化).sql 691
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'regular-header-glossary', 'ja', '用語集はサイト名で使用されます' );
+    ○
+        ※削除。
+
+/db/text(グーグル翻訳化).sql 255
+    ×
+        INSERT INTO text (id, lang, text) VALUES ( 'footer-resources-glossary', 'ja', '用語集' );
+    ○
+        ※削除。
+
+/db/texts2(追加データ).sql
+    ○
+        ★長文なので省略。「マイクロファイナンスに関する用語集」（glossary） に関するリンクを削除。
+
+/view/css/csstidyonline.results.css 12532-12659
+    ×
+        /*----------------------------------------------------------------------
+         glossary.css
+        ----------------------------------------------------------------------*/
+        #glossary-content
+        {
+            float:left;
+            margin:0 20px 0 0;
+            width:620px;
+        }
+
+        #glossary-content h3.title
+        {
+            background:#FFF url(/view/css/arrowH2-section.gif) no-repeat scroll -5px -2px;
+            font-size:16px;
+            font-weight:700;
+            margin:0 0 20px;
+            padding:15px 0 10px 30px;
+        }
+
+        #glossary-content div.glossary-page
+        {
+            background-color:#FFF;
+            margin-bottom:20px;
+            margin-top:-20px;
+            padding:10px 0 1px;
+        }
+
+        #glossary-content h4.supertitle
+        {
+            border-bottom:1px solid #000;
+            font-size:16px;
+            font-weight:700;
+            margin:0 30px;
+            padding-bottom:5px;
+        }
+
+        #glossary-content h5.aqua
+        {
+            color:#20B3B2;
+            font-size:14px;
+            margin:10px 0;
+            text-transform:none!important;
+        }
+
+        #glossary-content .post
+        {
+            line-height:16px;
+            margin:0 30px;
+        }
+
+        #glossary-content .post p
+        {
+            margin-top:10px;
+        }
+
+        #glossary-content .post .embed
+        {
+            height:285px;
+            margin:10px 18px;
+            width:500px;
+        }
+
+        #glossary-content .post .embed-legend
+        {
+            border-left:2px solid #58595B;
+            color:#9B9B9D;
+            font-size:.9em;
+            font-style:oblique;
+            margin-bottom:10px;
+            margin-left:16px;
+            padding-left:10px;
+            width:495px;
+        }
+
+        #glossary-sidebar
+        {
+            float:right;
+            width:300px;
+        }
+
+        div.widget.glossary-content-module,div.widget.glossary-sidebar-module
+        {
+            background-color:#FFF;
+            line-height:18px;
+            margin:0 0 20px;
+        }
+
+        div.widget.glossary-content-module ol li a.up:hover
+        {
+            color:#20b3b2;
+        }
+
+        div.widget.glossary-sidebar-module .supertitle
+        {
+            border-bottom:1px solid #58595b;
+            font:bold 14px Helvetica, Arial, Geneva, sans-serif;
+            margin:0 0 3px;
+            padding:5px;
+        }
+
+        div.widget.glossary-sidebar-module .supertitle.active
+        {
+            background-color:#f3f3f3;
+        }
+
+        div.widget.glossary-sidebar-module ul
+        {
+            list-style:none;
+            margin-bottom:20px;
+            padding-left:0;
+        }
+
+        div.widget.glossary-sidebar-module ul li
+        {
+            margin:0 0 5px;
+        }
+
+        div.widget.glossary-sidebar-module ul li a
+        {
+            color:#20b3b2;
+            text-decoration:none;
+        }
+
+        div.widget.glossary-sidebar-module ul li a:hover
+        {
+            text-decoration:underline;
+        }
+
+    ○
+        ※削除。
+
+/view/m/css/cssmarge_mobile.css 10231-10326
+    ×
+        /*----------------------------------------------------------------------
+          glossary.css
+        ----------------------------------------------------------------------*/
+        #glossary-content {
+            width:620px;
+            margin: 0 20px 0 0;
+            float:left;
+        }
+        #glossary-content h3.title {
+            margin: 0 0 20px;
+            padding: 15px 0 10px 30px;
+            background: white url('arrowH2-section.gif') no-repeat scroll -5px -2px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #glossary-content div.glossary-page {
+            background-color: white;
+            margin-bottom: 20px;
+            margin-top: -20px;
+            padding: 10px 0 1px;
+        }
+        #glossary-content h4.supertitle {
+            font-size: 16px;
+            margin: 0 30px;
+            border-bottom: 1px solid black;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+        #glossary-content h5.aqua {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #20B3B2;
+            text-transform: none !important;
+        }
+        #glossary-content .post {
+            margin: 0 30px 0;
+            line-height: 16px;
+        }
+        #glossary-content .post p{
+            margin-top: 10px;
+        }
+        #glossary-content .post .embed{
+            width: 500px;
+            height: 285px;
+            margin: 10px 18px;
+        }
+        #glossary-content .post .embed-legend{
+            border-left: 2px solid #58595B;
+            color: #9B9B9D;
+            font-size: 0.9em;
+            margin-left: 16px;
+            width: 495px;
+            padding-left: 10px;
+            margin-bottom:10px;
+            font-style:oblique
+        }
+
+        #glossary-sidebar {
+            width:300px;
+            float:right;
+        }
+        div.widget.glossary-content-module,
+        div.widget.glossary-sidebar-module {
+            background-color: white;
+            line-height: 18px;
+            margin: 0 0 20px;
+        }
+        div.widget.glossary-content-module ol li a.up:hover{
+            color:#20b3b2;
+        }
+        div.widget.glossary-sidebar-module .supertitle {
+            border-bottom: 1px solid #58595b;
+            font: bold 14px Helvetica, Arial, Geneva, sans-serif;
+            margin: 0 0 3px;
+            padding: 5px;
+        }
+        div.widget.glossary-sidebar-module .supertitle.active {
+            background-color: #f3f3f3;
+        }
+        div.widget.glossary-sidebar-module ul {
+            padding-left:0px;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        div.widget.glossary-sidebar-module ul li {
+            margin:0 0 5px 0;
+        }
+        div.widget.glossary-sidebar-module ul li a {
+            color: #20b3b2;
+            text-decoration:none;
+        }
+        div.widget.glossary-sidebar-module ul li a:hover {
+            text-decoration:underline;
+        }
+
+    ○
+        ※削除。
+
+/local/en.po
+    実行
+        （１）カタログの設定から、
+            文字符号化法：UTF-8
+            ソースコードの文字符号化法：UTF-8
+            に変更。
+        （２）poedit で更新、保存。
+            ↓
+            エラーで翻訳文が全部消えた。
+
+/local/en_GB/LC_MESSAGES/messages.po
+    実行
+        poedit で更新、保存。
+
+/local/ja_JP/LC_MESSAGES/messages.po
+    実行
+        poedit で更新、保存。
+
+/local/nl_NL/LC_MESSAGES/messages.po
+    実行
+        poedit で更新、保存。
+
+/local/pt_BR/LC_MESSAGES/messages.po
+    実行
+        poedit で更新、保存。
 
 ────────────────────────────────────────────────────────────
 

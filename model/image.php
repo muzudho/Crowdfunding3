@@ -35,7 +35,7 @@ namespace Goteo\Model {
             $dir_originals,
             $dir_cache;
 
-        public static $types = array('user','project', 'post', 'glossary', 'info');
+        public static $types = array('user','project', 'post', 'info');
 
         /**
          * Constructor.

@@ -252,7 +252,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'footer-header-services', 'ja', 'サ�
 INSERT INTO text (id, lang, text) VALUES ( 'footer-header-social', 'ja', 'フォローする' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-header-sponsors', 'ja', '制度的支援' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-platoniq-iniciative', 'ja', 'イニシアチブの：' );
-INSERT INTO text (id, lang, text) VALUES ( 'footer-resources-glossary', 'ja', '用語集' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-resources-press', 'ja', 'プレスキット' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-service-campaign', 'ja', 'キャンペーン' );
 INSERT INTO text (id, lang, text) VALUES ( 'footer-service-consulting', 'ja', 'コンサルティング会社' );
@@ -688,7 +687,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'regular-gotit_mark', 'ja', '助成�
 INSERT INTO text (id, lang, text) VALUES ( 'regular-go_up', 'ja', 'アップロード' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-header-about', 'ja', 'サイト名について' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-header-blog', 'ja', 'ブログ' );
-INSERT INTO text (id, lang, text) VALUES ( 'regular-header-glossary', 'ja', '用語集はサイト名で使用されます' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-hello', 'ja', 'こんにちは' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-home', 'ja', '開始' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-identica', 'ja', 'Identi.ca' );

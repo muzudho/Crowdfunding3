@@ -453,13 +453,6 @@ namespace Goteo\Controller {
                                 'edit' => array('label' => Text::_('Traduciendo Plantilla'), 'item' => true)
                             )
                         ),
-                        'glossary' => array(
-                            'label' => Text::_('Glosario'),
-                            'actions' => array(
-                                'list' => array('label' => Text::_('Listando'), 'item' => false),
-                                'edit' => array('label' => Text::_('Traduciendo Término'), 'item' => true)
-                            )
-                        ),
                         'info' => array(
                             'label' => Text::_('Ideas about'),
                             'actions' => array(

@@ -288,7 +288,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-social', 'Síguenos', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-header-sponsors', 'Apoyos institucionales', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-platoniq-iniciative', 'Una iniciativa de:', NULL, 'footer');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-glossary', 'Glosario', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-press', 'Prensa', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-resources-source_code', 'Código fuente AGPL3', NULL, 'footer');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('footer-service-campaign', 'Campañas', NULL, 'footer');
@@ -698,7 +697,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-gotit
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-go_up', 'Subir', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-header-about', 'Sobre nosotros', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-header-blog', 'Blog', NULL, 'general');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-header-glossary', 'Principios para una economía abierta', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-hello', 'Hola', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-home', 'Inicio', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-identica', 'Identi.ca', NULL, 'general');

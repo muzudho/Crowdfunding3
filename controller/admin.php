@@ -47,8 +47,7 @@ namespace Goteo\Controller {
                     'icons',
                     'tags',
                     'criteria',
-                    'templates',
-                    'glossary'
+                    'templates'
                 )
             );
         }
@@ -117,14 +116,6 @@ namespace Goteo\Controller {
                     'list' => array('label' => Text::_('Gestionando'), 'item' => false)
                 )
             ),
-                'glossary' => array(
-                    'label' => Text::_('Glosario'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Término'), 'item' => true),
-                        'translate' => array('label' => Text::_('Traduciendo Término'), 'item' => true)
-                    )
-                ),
                 'icons' => array(
                     'label' => Text::_('Tipos de Retorno'),
                     'actions' => array(
@@ -584,7 +575,6 @@ namespace Goteo\Controller {
                                 'tags' => $options['tags'],
                                 'criteria' => $options['criteria'],
                                 'templates' => $options['templates'],
-                                'glossary' => $options['glossary'],
                             )
                         ),
                         'projects' => array(

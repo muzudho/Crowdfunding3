@@ -48,7 +48,6 @@ REPLACE INTO `acl` VALUES(47, '*', 'translator', '*', '/translate/*', 1, '2011-0
 REPLACE INTO `acl` VALUES(48, '*', '*', '*', '/legal/*', 1, '2011-08-05 11:08:11');
 REPLACE INTO `acl` VALUES(49, '*', '*', '*', '/rss/*', 1, '2011-08-14 16:31:17');
 REPLACE INTO `acl` VALUES(50, '*', 'superadmin', '*', '/impersonate/*', 1, '2011-08-20 07:40:29');
-REPLACE INTO `acl` VALUES(51, '*', '*', '*', '/glossary/*', 1, '2011-08-25 13:37:45');
 REPLACE INTO `acl` VALUES(52, '*', 'user', 'paypal', '/paypal/*', 1, '2011-09-04 22:58:15');
 REPLACE INTO `acl` VALUES(53, '*', 'user', 'paypal', '/cron/*', 1, '2011-09-04 22:58:15');
 REPLACE INTO `acl` VALUES(54, '*', '*', '*', '/press/*', 1, '2011-09-06 08:04:34');
