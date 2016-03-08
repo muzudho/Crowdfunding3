@@ -605,7 +605,7 @@ namespace Goteo\Model {
         }
 
         /**
-         * actualiza en la tabla los datos del proyecto
+         * プロジェクト・データ・テーブルの更新。（恐らく、自動更新等に利用）
          * @param array $project->errors para guardar los errores de datos del formulario, los errores de proceso se guardan en $project->errors['process']
          */
         public function save (&$errors = array()) {
@@ -621,7 +621,9 @@ namespace Goteo\Model {
                 $this->contract_nif = str_replace(array('_', '.', ' ', '-', ',', ')', '('), '', $this->contract_nif);
                 $this->entity_cif = str_replace(array('_', '.', ' ', '-', ',', ')', '('), '', $this->entity_cif);
 
-                // Image
+                //--------------------
+                // プロジェクトの画像（数字？）
+                //--------------------
                 if (is_array($this->image) && !empty($this->image['name'])) {
                     $image = new Image($this->image);
                     if ($image->save($errors)) {
@@ -632,50 +634,56 @@ namespace Goteo\Model {
                          * Guarda la relación NM en la tabla 'project_image'.
                          */
                         if(!empty($image->id)) {
-                            self::query("REPLACE project_image (project, image) VALUES (:project, :image)", array(':project' => $this->id, ':image' => $image->id));
+                            self::query(
+                                "REPLACE project_image (project, image) VALUES (:project, :image)",
+                                array(
+                                    ':project' => $this->id,
+                                    ':image'   => $image->id
+                                )
+                            );
                         }
                     }
                 }
 
                 $fields = array(
-                    'contract_name',
-                    'contract_nif',
-                    'contract_email',
-                    'contract_entity',
-                    'contract_birthdate',
-                    'entity_office',
-                    'entity_name',
-                    'entity_cif',
-                    'phone',
-                    'address',
-                    'zipcode',
-                    'location',
-                    'country',
-                    'secondary_address',
-                    'post_address',
-                    'post_zipcode',
-                    'post_location',
-                    'post_country',
-                    'name',
-                    'subtitle',
-                    'image',
-                    'description',
-                    'motivation',
-                    'video',
-                    'video_usubs',
-                    'about',
-                    'goal',
-                    'related',
-                    'reward',
-                    'keywords',
-                    'media',
-                    'media_usubs',
-                    'currently',
-                    'project_location',
-                    'scope',
-                    'resource',
-                    'comment',
-                    'evaluation'
+                    'contract_name',            // （２）プロモーター ／ プロジェクトリーダーに関する情報 ／ 姓と名
+                    'contract_nif',             // 未使用
+                    'contract_email',           // （２）プロモーター ／ プロジェクトリーダーに関する情報 ／ 電話
+                    'contract_entity',          // ※ 0?
+                    'contract_birthdate',       // （２）プロモーター ／ プロジェクトリーダーに関する情報 ／ 生年月日
+                    'entity_office',            // 未使用
+                    'entity_name',              // 未使用
+                    'entity_cif',               // 未使用
+                    'phone',                    // （２）プロモーター ／ プロジェクトリーダーに関する情報 ／ 電話
+                    'address',                  // （２）プロモーター ／ 法的住所 ／ 住所
+                    'zipcode',                  // （２）プロモーター ／ 法的住所 ／ 郵便番号
+                    'location',                 // （２）プロモーター ／ 法的住所 ／ （※郵便番号の下の欄）
+                    'country',                  // 未使用（「España」と入力される）
+                    'secondary_address',        // ※ 0?
+                    'post_address',             // 未使用
+                    'post_zipcode',             // 未使用
+                    'post_location',            // 未使用
+                    'post_country',             // 未使用
+                    'name',                     // （３）説明 ／ プロジェクトのタイトル
+                    'subtitle',                 // （３）説明 ／ 概要
+                    'image',                    // （３）説明 ／ プロジェクトからの画像
+                    'description',              // （３）説明 ／ 簡単な説明
+                    'motivation',               // （３）説明 ／ なぜこれが重要です
+                    'video',                    // （３）説明 ／ 動機に関するその他のビデオ
+                    'video_usubs',              // ※ 0？
+                    'about',                    // 未使用
+                    'goal',                     // （３）説明 ／ 試写 ／ クラウドファンディングキャンペーンの目標
+                    'related',                  // （３）説明 ／ 試写 ／ チームと経験
+                    'reward',                   // 未使用
+                    'keywords',                 // （３）説明 ／ プロジェクトのキーワード
+                    'media',                    // 未使用
+                    'media_usubs',              // ※ 0?
+                    'currently',                // 未使用
+                    'project_location',         // （３）説明 ／ ロケーション
+                    'scope',                    // 未使用
+                    'resource',                 // 未使用
+                    'comment',                  // 未使用
+                    'evaluation'                // （３）説明 ／ オーバービューフィールドエヴァリュエーション
                     );
 
                 $set = '';
@@ -690,6 +698,10 @@ namespace Goteo\Model {
                 // Solamente marcamos updated cuando se envia a revision desde el superform o el admin
 //				$set .= ", updated = :updated";
 //				$values[':updated'] = date('Y-m-d');
+
+                //--------------------
+                // プロジェクトのタイトル
+                //--------------------
 				$values[':id'] = $this->id;
 
 				$sql = "UPDATE project SET " . $set . " WHERE id = :id";
@@ -704,7 +716,9 @@ namespace Goteo\Model {
                 // quitar las que tiene y no vienen
                 // añadir las que vienen y no tiene
 
-                //categorias
+                //--------------------
+                // 多分、（３）説明 ／ カテゴリー
+                //--------------------
                 $tiene = Project\Category::get($this->id);
                 $viene = $this->categories;
                 $quita = array_diff_assoc($tiene, $viene);
@@ -726,7 +740,9 @@ namespace Goteo\Model {
                 if (!empty($quita) || !empty($guarda))
                     $this->categories = Project\Category::get($this->id);
 
-                //skills
+                //--------------------
+                // 多分、（６）コラボレーション ／ OVERVIEW-FIELD-SKILLS
+                //--------------------
                 $tiene = Project\Skill::get($this->id);
                 $viene = $this->skills;
                 $quita = array_diff_assoc($tiene, $viene);
@@ -748,7 +764,9 @@ namespace Goteo\Model {
                 if (!empty($quita) || !empty($guarda))
                     $this->skills = Project\Skill::get($this->id);
 
-                //costes
+                //--------------------
+                // 多分、（４）費用 / 費用の内訳
+                //--------------------
                 $tiene = Project\Cost::getAll($this->id);
                 $viene = $this->costs;
                 $quita = array_diff_key($tiene, $viene);
@@ -835,7 +853,9 @@ namespace Goteo\Model {
                 if (!empty($quita) || !empty($guarda))
     				$this->individual_rewards = Project\Reward::getAll($this->id, 'individual');
 
-				// colaboraciones
+                //--------------------
+                // 多分、（６）コラボレーション / コラボレーション
+                //--------------------
 				$tiene = Project\Support::getAll($this->id);
                 $viene = $this->supports;
                 $quita = array_diff_key($tiene, $viene); // quitar los que tiene y no viene
@@ -929,10 +949,15 @@ namespace Goteo\Model {
             // reseteamos la puntuación
             $this->setScore(0, 0, true);
 
-            /***************** Revisión de campos del paso 1, PERFIL *****************/
+            //--------------------------------------------------------------------------------
+            // （１）プロフィール
+            //--------------------------------------------------------------------------------
             $score = 0;
             // obligatorios: nombre, email, ciudad
-            // 2 - 名前
+            
+            //--------------------
+            // ユーザー名
+            //--------------------
             if (empty($this->user->name)) {
                 $errors['userProfile']['name'] = Text::get('validate-user-field-name');
             } else {
@@ -946,7 +971,9 @@ namespace Goteo\Model {
                 ++$score;
             }
 
-            // 4 - 居住地
+            //--------------------
+            // 住んでいる場所
+            //--------------------
             if (empty($this->user->location)) {
                 $errors['userProfile']['location'] = Text::get('validate-user-field-location');
             } else {
@@ -954,13 +981,17 @@ namespace Goteo\Model {
                 ++$score;
             }
 
-            // 5 - プロフィール画像
+            //--------------------
+            // プロフィール画像
+            //--------------------
             if(!empty($this->user->avatar) && $this->user->avatar->id != 1) {
                 $okeys['userProfile']['avatar'] = empty($errors['userProfile']['avatar']) ? 'ok' : null;
                 $score+=2;
             }
 
-            // 6 - 自己紹介
+            //--------------------
+            // 私たち自身について何かを伝えます（自己紹介）
+            //--------------------
             if (!empty($this->user->about)) {
                 $okeys['userProfile']['about'] = 'ok';
                 ++$score;
@@ -973,7 +1004,9 @@ namespace Goteo\Model {
                 $errors['userProfile']['about'] = Text::get('validate-user-field-about');
             }
 
-            // 7 - 関心のあるプロジェクトカテゴリ
+            //--------------------
+            // プロジェクトはどのようなほとんどのあなたの動機？（関心のあるプロジェクトカテゴリ）
+            //--------------------
             if (empty($this->user->interests)) {
                 $errors['userProfile']['interests'] = Text::get('カテゴリの選択は必須です。');
             } else {
@@ -981,7 +1014,9 @@ namespace Goteo\Model {
                 ++$score;
             }
 
-            // 8 - スキル
+            //--------------------
+            // スキルを選んでください。（スキル）
+            //--------------------
             if (empty($this->user->skills)) {
                 $errors['userProfile']['skills'] = Text::get('スキルの選択は必須です。');
             } else {
@@ -989,7 +1024,17 @@ namespace Goteo\Model {
                 ++$score;
             }
 
-            // 9 - 自分のホームページサイトやブログのアドレス
+            //--------------------
+            // トピックスあなたの関心こと
+            //--------------------
+
+            //--------------------
+            // あなたは何を提供することができますか？
+            //--------------------
+
+            //--------------------
+            // 私のWEBページ（自分のホームページサイトやブログのアドレス）
+            //--------------------
             if (empty($this->user->webs)) {
                 $errors['userProfile']['webs'] = Text::get('validate-project-userProfile-web');
             } else {
@@ -1013,10 +1058,16 @@ namespace Goteo\Model {
                 }
             }
 
+            //--------------------
+            // 社会のプロフィール ／ フェイスブック
+            //--------------------
             if (!empty($this->user->facebook)) {
                 $okeys['userProfile']['facebook'] = 'ok';
             }
 
+            //--------------------
+            // 社会のプロフィール ／ ツイッター
+            //--------------------
             if (!empty($this->user->twitter)) {
                 $okeys['userProfile']['twitter'] = 'ok';
             }
@@ -1030,13 +1081,25 @@ namespace Goteo\Model {
 //            $this->setScore($score, 10);
             /***************** FIN Revisión del paso 1, PERFIL *****************/
 
-            /***************** Revisión de campos del paso 2,DATOS PERSONALES *****************/
+            //--------------------------------------------------------------------------------
+            // （２）プロモーター
+            //--------------------------------------------------------------------------------
             $score = 0;
             // obligatorios: todos
+
+            //--------------------
+            // プロジェクトプロモーター
+            //--------------------
+
             // +2
             if(empty($this->contract_entity)) {
                 $score+=2;
             } else {
+                
+                //--------------------
+                // プロジェクトリーダーに関する情報 ／ 姓と名
+                //--------------------
+                
                 if (empty($this->entity_name)) {
                     $errors['userPersonal']['entity_name'] = Text::get('mandatory-project-field-entity_name');
                 } else {
@@ -1059,6 +1122,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // プロジェクトリーダーに関する情報 ／ プロジェクトにリンクされている電子メール
+            //--------------------
             // +4
             if (empty($this->contract_email)) {
                 $errors['userPersonal']['contract_email'] = Text::get('mandatory-project-field-contract_email');
@@ -1076,6 +1142,10 @@ namespace Goteo\Model {
                 ++$score;
             }
 */
+
+            //--------------------
+            // プロジェクトリーダーに関する情報 ／ 電話
+            //--------------------
             // +5
             if (empty($this->phone)) {
                 $errors['userPersonal']['phone'] = Text::get('mandatory-project-field-phone');
@@ -1086,6 +1156,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // 法的住所 ／ 住所
+            //--------------------
             // +6
             if (empty($this->address)) {
                 $errors['userPersonal']['address'] = Text::get('mandatory-project-field-address');
@@ -1094,6 +1167,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // 法的住所 ／ 郵便番号１
+            //--------------------
             // +7
             if (empty($this->zipcode)) {
                 $errors['userPersonal']['zipcode'] = Text::get('mandatory-project-field-zipcode');
@@ -1101,6 +1177,10 @@ namespace Goteo\Model {
                  $okeys['userPersonal']['zipcode'] = 'ok';
                  ++$score;
             }
+
+            //--------------------
+            // 法的住所 ／ 郵便番号２
+            //--------------------
 
             /*if (empty($this->location)) {
                 $errors['userPersonal']['location'] = Text::get('mandatory-project-field-residence');
@@ -1119,9 +1199,15 @@ namespace Goteo\Model {
             $this->setScore($score, 7);
             /***************** FIN Revisión del paso 2, DATOS PERSONALES *****************/
 
-            /***************** Revisión de campos del paso 3, DESCRIPCION *****************/
+            //--------------------------------------------------------------------------------
+            // （３）説明
+            //--------------------------------------------------------------------------------
             $score = 0;
             // obligatorios: nombre, subtitulo, imagen, descripcion, about, motivation, categorias, video, localización
+
+            //--------------------
+            // プロジェクトのタイトル
+            //--------------------
             // +3
             if (empty($this->name)) {
                 $errors['overview']['name'] = Text::get('mandatory-project-field-name');
@@ -1130,10 +1216,16 @@ namespace Goteo\Model {
                  $score+=3;
             }
 
+            //--------------------
+            // 概要
+            //--------------------
             if (!empty($this->subtitle)) {
                  $okeys['overview']['subtitle'] = 'ok';
             }
 
+            //--------------------
+            // プロジェクトからの画像
+            //--------------------
             // +6 || +7
             if (empty($this->gallery) && empty($errors['overview']['image'])) {
                 $errors['overview']['image'] .= Text::get('mandatory-project-field-image');
@@ -1143,6 +1235,9 @@ namespace Goteo\Model {
 //                 if (count($this->gallery) >= 2) ++$score;
             }
 
+            //--------------------
+            // 簡単な説明
+            //--------------------
             // +8 || +9
             if (empty($this->description)) {
                 $errors['overview']['description'] = Text::get('mandatory-project-field-description');
@@ -1153,6 +1248,9 @@ namespace Goteo\Model {
                  $score+=2;
             }
 
+            //--------------------
+            // なぜこれが重要です
+            //--------------------
 //            if (empty($this->about)) {
 //                $errors['overview']['about'] = Text::get('mandatory-project-field-about');
 //             } else {
@@ -1160,6 +1258,9 @@ namespace Goteo\Model {
                  ++$score;*/
 //            }
 
+            //--------------------
+            // 動機に関するその他のビデオ
+            //--------------------
             // +9 || +10
             if (empty($this->motivation)) {
                 $errors['overview']['motivation'] = Text::get('mandatory-project-field-motivation');
@@ -1168,6 +1269,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // 試写 ／ クラウドファンディングキャンペーンの目標
+            //--------------------
             // +10 || +11
             if (empty($this->goal)) {
                 $errors['overview']['goal'] = Text::get('mandatory-project-field-goal');
@@ -1176,6 +1280,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // 試写 ／ チームと経験
+            //--------------------
             // +11 || +12
             if (empty($this->related)) {
                 $errors['overview']['related'] = Text::get('mandatory-project-field-related');
@@ -1184,6 +1291,9 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // カテゴリー
+            //--------------------
             // +12 || +13
             if (empty($this->categories)) {
                 $errors['overview']['categories'] = Text::get('mandatory-project-field-category');
@@ -1192,6 +1302,13 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // プロジェクトのキーワード
+            //--------------------
+
+            //--------------------
+            // ロケーション
+            //--------------------
             // +13 || +14
             if (empty($this->project_location)) {
                 $errors['overview']['project_location'] = Text::get('mandatory-project-field-location');
@@ -1200,11 +1317,17 @@ namespace Goteo\Model {
                  ++$score;
             }
 
+            //--------------------
+            // OVERVIEW-FIELD-EVALUATION
+            //--------------------
+
             $this->setScore($score, 13);
 //            $this->setScore($score, 15);
             /***************** FIN Revisión del paso 3, DESCRIPCION *****************/
 
-            /***************** Revisión de campos del paso 4, COSTES *****************/
+            //--------------------------------------------------------------------------------
+            // （４）費用
+            //--------------------------------------------------------------------------------
             $score = 0; $scoreName = $scoreDesc = $scoreAmount = $scoreDate = 0;
 //            if (count($this->costs) < 2) {
 //                $errors['costs']['costs'] = Text::get('mandatory-project-costs');
@@ -1213,6 +1336,9 @@ namespace Goteo\Model {
 //                $score+=2;
 //            }
 
+            //--------------------
+            // 費用の内訳
+            //--------------------
             $anyerror = false;
             foreach($this->costs as $cost) {
                 if (empty($cost->cost)) {
@@ -1276,11 +1402,17 @@ namespace Goteo\Model {
                 ++$score;
             }
 
-            $this->setScore($score, 5);
-            /***************** FIN Revisión del paso 4, COSTES *****************/
+            //--------------------
+            // その他のリソース
+            //--------------------
 
-            /***************** Revisión de campos del paso 5, RETORNOS *****************/
+            $this->setScore($score, 5);
+
+            //--------------------------------------------------------------------------------
+            // （５）利点
+            //--------------------------------------------------------------------------------
             $score = 0; $scoreName = $scoreDesc = $scoreAmount = $scoreLicense = 0;
+
             if (empty($this->social_rewards)) {
                 $errors['rewards']['social_rewards'] = Text::get('validate-project-social_rewards');
             } else {
@@ -1291,6 +1423,9 @@ namespace Goteo\Model {
 //                 }
             }
 
+            //--------------------
+            // 個々の報酬
+            //--------------------
             if (empty($this->individual_rewards)) {
                 $errors['rewards']['individual_rewards'] = Text::get('validate-project-individual_rewards');
             } else {
@@ -1301,6 +1436,9 @@ namespace Goteo\Model {
 //                }
             }
 
+            //--------------------
+            // 集団の利益
+            //--------------------
             $anyerror = false;
             foreach ($this->social_rewards as $social) {
                 if (empty($social->reward)) {
@@ -1386,10 +1524,16 @@ namespace Goteo\Model {
             $this->setScore($score, 6);
             /***************** FIN Revisión del paso 5, RETORNOS *****************/
 
-            /***************** Revisión de campos del paso 6, COLABORACIONES *****************/
+            //--------------------------------------------------------------------------------
+            // （６）コラボレーション
+            //--------------------------------------------------------------------------------
             $scoreName = $scoreDesc = 0;
             $support_type_task = false;
             $anyerror = false;
+            
+            //--------------------
+            // コラボレーション
+            //--------------------
             foreach ($this->supports as $support) {
                 if (empty($support->support)) {
                     $errors['supports']['support-'.$support->id.'-support'] = Text::get('スキル/物品名の入力は必須です');;
@@ -1428,6 +1572,10 @@ namespace Goteo\Model {
             } else {
                 $score = 3;
             }
+
+            //--------------------
+            // OVERVIEW-FIELD-SKILLS
+            //--------------------
 
             $this->setScore($score, 3);
             /***************** FIN Revisión del paso 6, COLABORACIONES *****************/
