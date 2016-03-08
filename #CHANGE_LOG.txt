@@ -8797,4 +8797,121 @@
 		※ファイルを削除。
 
 ────────────────────────────────────────────────────────────
+2016-03-08 23:41
 
+	解説
+		「このプロジェクトのプロモーターにメッセージを送ります」機能の削除。
+		（'project-messages-send_direct-header'で検索）
+
+/db/text(グーグル翻訳化).sql 617
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'project-messages-send_direct-header', 'ja', 'このプロジェクトのプロモーターにメッセージを送ります' );
+	○
+		※削除。
+
+/db/purpose.sql 625
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-send_direct-header', 'Envía un mensaje al impulsor/a del proyecto', NULL, 'project');
+	○
+		※削除。
+
+/db/texts.sql 4253-4261
+	×
+		('project-messages-send_direct-header', 'ca', 'Envia un missatge a l''impulsor/a del projecte'),
+		('project-messages-send_direct-header', 'el', 'Send a message to this project''s promoter'),
+		('project-messages-send_direct-header', 'en', 'Send a message to this project''s promoter'),
+		('project-messages-send_direct-header', 'eu', 'Bidali esaiozu mezua proiektuaren bultzatzaileari'),
+		('project-messages-send_direct-header', 'fr', 'Envoyer un message au porteur du projet'),
+		('project-messages-send_direct-header', 'gl', 'Envía unha mensaxe ó impulsor/a do proxecto'),
+		('project-messages-send_direct-header', 'it', 'Send a message to this project''s promoter'),
+		('project-messages-send_direct-header', 'nl', 'Stuur een bericht naar de promotor van dit project'),
+		('project-messages-send_direct-header', 'pl', 'Send a message to this project''s promoter'),
+	○
+		※削除。
+
+/view/m/project/widget/sendMsg.html.php 27-66
+	×
+		<script type="text/javascript">
+			// Mark DOM as javascript-enabled
+			jQuery(document).ready(function ($) { 
+			    //change div#preview content when textarea lost focus
+				$("#message").blur(function(){
+					$("#preview").html($("#message").val().replace(/\n/g, "<br />"));
+				});
+				
+				//add fancybox on #a-preview click
+		//		$("#a-preview").fancybox({
+		//			'titlePosition'		: 'inside',
+		//			'transitionIn'		: 'none',
+		//			'transitionOut'		: 'none'
+		//		});
+			});
+		</script>
+		<?php if (!empty($_SESSION['user']->id) && $project->status >= 3) : ?>
+		<div class="widget project-message">
+		    
+		    <h<?php echo $level ?> class="title"><?php echo Text::get('project-messages-send_direct-header'); ?></h<?php echo $level ?>>
+		        
+		    <form method="post" action="/message/direct/<?php echo $project->id; ?>">    	
+		    	<div id="bocadillo"></div>
+		        <textarea id="message" name="message" cols="50" rows="5"></textarea>
+		        <?php /*
+		        <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
+		*/ ?>
+		        <div style="display:none">
+		        	<div id="preview" style="width:400px;height:300px;overflow:auto;">
+		                    
+		                </div>
+		        </div>
+		        
+		         
+		        
+		        <button class="green" type="submit"><?php echo Text::get('project-messages-send_message-button'); ?></button>
+		    </form>
+
+		</div>
+		<?php endif; ?>
+	○
+		※削除。
+
+/view/project/widget/sendMsg.html.php 27-61
+	×
+		<script type="text/javascript">
+			// Mark DOM as javascript-enabled
+			jQuery(document).ready(function ($) { 
+			    //change div#preview content when textarea lost focus
+				$("#message").blur(function(){
+					$("#preview").html($("#message").val().replace(/\n/g, "<br />"));
+				});
+				
+				//add fancybox on #a-preview click
+				$("#a-preview").fancybox({
+					'titlePosition'		: 'inside',
+					'transitionIn'		: 'none',
+					'transitionOut'		: 'none'
+				});
+			});
+		</script>
+		<?php if (!empty($_SESSION['user']->id) && $project->status >= 3) : ?>
+		<div class="widget project-message">
+		    
+		    <h<?php echo $level ?> class="title"><?php echo Text::get('project-messages-send_direct-header'); ?></h<?php echo $level ?>>
+		        
+		    <form method="post" action="/message/direct/<?php echo $project->id; ?>">
+		    	<div id="bocadillo"></div>
+		        <textarea id="message" name="message" cols="50" rows="5"></textarea>
+		        
+		        <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
+		        <div style="display:none">
+		        	<div id="preview" style="width:400px;height:300px;overflow:auto;">
+		                </div>
+		        </div>
+		        <button class="green" type="submit"><?php echo Text::get('project-messages-send_message-button'); ?></button>
+		    </form>
+
+		</div>
+		<?php endif; ?>
+	○
+		※削除。
+
+────────────────────────────────────────────────────────────

@@ -622,7 +622,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-menu-
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-menu-updates', 'Novedades', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-answer_it', 'Responder', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-closed', 'Aun no se pueden enviar mensajes al proyecto', NULL, 'project');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-send_direct-header', 'Envía un mensaje al impulsor/a del proyecto', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-send_message-button', 'Enviar', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-send_message-header', 'Escribe tu mensaje', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('project-messages-send_message-your_answer', 'Escribe aquí tu respuesta', NULL, 'general');

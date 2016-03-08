@@ -614,7 +614,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'project-menu_title-supporters', 'ja'
 INSERT INTO text (id, lang, text) VALUES ( 'project-menu_title-updates', 'ja', 'フィードバックやニュースは：その制作者を経由して直接プロジェクトの進捗状況について知らされます。' );
 INSERT INTO text (id, lang, text) VALUES ( 'project-messages-answer_it', 'ja', '反応します' );
 INSERT INTO text (id, lang, text) VALUES ( 'project-messages-closed', 'ja', 'それは、まだプロジェクトにメッセージを送信することはできません' );
-INSERT INTO text (id, lang, text) VALUES ( 'project-messages-send_direct-header', 'ja', 'このプロジェクトのプロモーターにメッセージを送ります' );
 INSERT INTO text (id, lang, text) VALUES ( 'project-messages-send_message-button', 'ja', '送ります' );
 INSERT INTO text (id, lang, text) VALUES ( 'project-messages-send_message-header', 'ja', 'メッセージを書きます' );
 INSERT INTO text (id, lang, text) VALUES ( 'project-messages-send_message-your_answer', 'ja', 'ここにあなたの答えを書きます' );
