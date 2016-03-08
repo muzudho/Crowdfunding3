@@ -934,11 +934,3 @@ INSERT INTO text (id, lang, text) VALUES ( 'validate-user-field-name', 'ja', '�
 INSERT INTO text (id, lang, text) VALUES ( 'validate-user-field-twitter', 'ja', 'Twitterのユーザー名は有効ではありません' );
 INSERT INTO text (id, lang, text) VALUES ( 'validate-user-field-web', 'ja', 'ウェブサイトのアドレス（URL）を入力してください' );
 INSERT INTO text (id, lang, text) VALUES ( 'validate-user-field-webs', 'ja', '私たちはあなたのプロジェクトを評価し、それがサイト名に公開するのに適しているかどうかを判断するために役立つウェブサイトのアドレスを入力してください。' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-embed-button', 'ja', '支持者の壁を公開' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-embed-title', 'ja', 'このウィジェットを公開します' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-follow', 'ja', 'フォロー' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-here', 'ja', 'あなたはここかもしれません' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-join-comunity', 'ja', 'このプロジェクトを可能にしている人のグループに参加しましょう。' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-join-group', 'ja', 'このプロジェクトを可能にしている人のグループに参加しましょう。' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-support', 'ja', 'それをバックアップ' );
-INSERT INTO text (id, lang, text) VALUES ( 'wof-title', 'ja', 'サポーターの壁に' );

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 02:07+0900\n"
-"PO-Revision-Date: 2016-03-08 02:07+0900\n"
+"POT-Creation-Date: 2016-03-08 17:10+0900\n"
+"PO-Revision-Date: 2016-03-08 17:10+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -1425,14 +1425,10 @@ msgid "Convocatorias: dashboard"
 msgstr "スポンサー：ダッシュボード"
 
 #: library/text.php:364
-msgid "Wall of friends"
-msgstr "友達のウォール"
-
-#: library/text.php:365
 msgid "Nodos"
 msgstr "ノード"
 
-#: library/text.php:366
+#: library/text.php:365
 msgid "Formulario Contrato"
 msgstr "問い合わせフォーム"
 
@@ -3441,6 +3437,9 @@ msgstr "お礼希望した支援者に送信"
 #: view/dashboard/projects/selector.html.php:36
 msgid "not yet creat project"
 msgstr "作成済みのプロジェクトはまだありません"
+
+#~ msgid "Wall of friends"
+#~ msgstr "友達のウォール"
 
 #~ msgid "Apoyos institucionales"
 #~ msgstr "制度サポート"

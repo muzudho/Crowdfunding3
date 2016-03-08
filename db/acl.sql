@@ -63,7 +63,6 @@ REPLACE INTO `acl` VALUES(63, '*', '*', '*', '/call/edit/*', 0, '2011-05-18 20:3
 REPLACE INTO `acl` VALUES(64, '*', '*', '*', '/call/raw/*', 0, '2011-05-18 20:39:37');
 REPLACE INTO `acl` VALUES(65, '*', 'root', '*', '/call/raw/*', 1, '2011-05-18 20:39:37');
 REPLACE INTO `acl` VALUES(66, '*', 'superadmin', '*', '/call/edit/*', 1, '2011-05-18 20:43:08');
-REPLACE INTO `acl` VALUES(67, '*', '*', '*', '/wof/*', 1, '2011-12-14 21:16:15');
 REPLACE INTO `acl` VALUES(68, '*', '*', '*', '/call/delete/*', 0, '2011-05-18 20:43:51');
 REPLACE INTO `acl` VALUES(69, '*', 'superadmin', '*', '/call/delete/*', 1, '2011-05-18 20:44:37');
 REPLACE INTO `acl` VALUES(70, '*', '*', '*', '/call/view/*', 0, '2011-09-16 13:46:31');

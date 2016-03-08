@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2016-03-08 02:04+0900\n"
+"POT-Creation-Date: 2016-03-08 17:06+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1372,14 +1372,10 @@ msgid "Convocatorias: dashboard"
 msgstr ""
 
 #: library/text.php:364
-msgid "Wall of friends"
-msgstr ""
-
-#: library/text.php:365
 msgid "Nodos"
 msgstr ""
 
-#: library/text.php:366
+#: library/text.php:365
 msgid "Formulario Contrato"
 msgstr ""
 

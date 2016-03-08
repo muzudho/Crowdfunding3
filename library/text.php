@@ -361,7 +361,6 @@ namespace Goteo\Library {
                 'call_public' => static::_('Convocatorias: publicos'),
                 'call_form' => static::_('Convocatorias: formulario'),
                 'call_dash' => static::_('Convocatorias: dashboard'),
-                'wof' => static::_('Wall of friends'),
                 'node_public' => static::_('Nodos'),
                 'contract' => static::_('Formulario Contrato')
             );
@@ -433,9 +432,6 @@ namespace Goteo\Library {
                     break;
                 case 'fb-nocount':
                     $code = '<div class="fb-like"'.$style.' data-href="'.$url.'" data-send="false" data-layout="box_count" data-width="0" data-height="0" data-show-faces="false"></div>';
-                    break;
-                case 'wof':
-                    $code = '<iframe frameborder="0" height="100%" src="'.$url.'" width="630px" scrolling="no"></iframe>';
                     break;
                 case 'project':
                 default:

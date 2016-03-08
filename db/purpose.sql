@@ -973,11 +973,3 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('validate-user
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('validate-user-field-twitter', 'El usuario de Twitter no es válido', NULL, 'profile');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('validate-user-field-web', 'Debes poner la dirección (URL) de la web', NULL, 'profile');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('validate-user-field-webs', 'Pon tu página web para mejorar la valoración del proyecto de cara a determinar si publicarlo en SiteName.', NULL, 'profile');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-embed-button', 'Publica el muro de apoyos', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-embed-title', 'Difunde este proyecto publicando el widget', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-follow', 'Seguir', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-here', 'Aquí podrías estar tú', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-join-comunity', 'Únete al grupo de personas que están ayudando a hacer posible el proyecto!', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-join-group', 'Únete al grupo de personas que están ayudando a hacer posible el proyecto!', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-support', 'Apoyar', NULL, 'wof');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-title', 'MURO DE APOYOS', NULL, 'wof');

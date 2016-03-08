@@ -8041,9 +8041,193 @@
     実行
         更新して保存して終了。
 
+────────────────────────────────────────────────────────────
+2016-03-08 16:48
 
+	解説
+		WOF（ウォール・オブ・フレンズ）機能の削除。
 
+/controller/wof.php
+	○
+		※ファイル削除。
 
+/library/wallfriends.php
+	○
+		※ファイル削除。
+
+/library/text.php 437-439
+	×
+                case 'wof':
+                    $code = '<iframe frameborder="0" height="100%" src="'.$url.'" width="630px" scrolling="no"></iframe>';
+                    break;
+	○
+		※削除。
+
+/library/text.php 364
+	×
+                'wof' => static::_('Wall of friends'),
+	○
+		※削除。
+
+/controller/widget.php 44-53
+	×
+        public function wof ($id, $width = 608, $all_avatars = 1) {
+			if($wof = new WallFriends($id,$all_avatars)) {
+				echo $wof->html($width, true);
+			}
+			else {
+				throw new Error(Error::NOT_FOUND);
+			}
+        }
+	○
+		※削除。
+
+/controller/widget.php 26
+	×
+		Goteo\Library\WallFriends,
+	○
+		※削除。
+
+/db/acl.sql 66
+	×
+		REPLACE INTO `acl` VALUES(67, '*', '*', '*', '/wof/*', 1, '2011-12-14 21:16:15');
+	○
+		※削除。
+
+/db/purpose.sql 976-984
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-embed-button', 'Publica el muro de apoyos', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-embed-title', 'Difunde este proyecto publicando el widget', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-follow', 'Seguir', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-here', 'Aquí podrías estar tú', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-join-comunity', 'Únete al grupo de personas que están ayudando a hacer posible el proyecto!', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-join-group', 'Únete al grupo de personas que están ayudando a hacer posible el proyecto!', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-support', 'Apoyar', NULL, 'wof');
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('wof-title', 'MURO DE APOYOS', NULL, 'wof');
+	○
+		※削除。
+
+/db/text(グーグル翻訳化).sql
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-embed-button', 'ja', '支持者の壁を公開' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-embed-title', 'ja', 'このウィジェットを公開します' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-follow', 'ja', 'フォロー' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-here', 'ja', 'あなたはここかもしれません' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-join-comunity', 'ja', 'このプロジェクトを可能にしている人のグループに参加しましょう。' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-join-group', 'ja', 'このプロジェクトを可能にしている人のグループに参加しましょう。' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-support', 'ja', 'それをバックアップ' );
+		INSERT INTO text (id, lang, text) VALUES ( 'wof-title', 'ja', 'サポーターの壁に' );
+	○
+		※削除。
+
+/db/texts.sql 7333-7406
+	×
+		('wof-embed-button', 'ca', 'Publica el mur de recolzaments'),
+		('wof-embed-button', 'el', 'Publish wall of backers'),
+		('wof-embed-button', 'en', 'Publish wall of backers'),
+		('wof-embed-button', 'eu', 'Babesten dutenentzako horma argitaratu'),
+		('wof-embed-button', 'fr', 'Publiez le mur de soutiens'),
+		('wof-embed-button', 'gl', 'Publica o muro de apoios'),
+		('wof-embed-button', 'it', 'Publish wall of backers'),
+		('wof-embed-button', 'nl', 'Publiceer wall of backers'),
+		('wof-embed-button', 'pl', 'Publish wall of backers'),
+		('wof-embed-title', 'ca', 'Difon aquest projecte publicant el widget'),
+		('wof-embed-title', 'el', 'Publish this widget'),
+		('wof-embed-title', 'en', 'Publish this widget'),
+		('wof-embed-title', 'eu', 'Zabaldu ezazu proiektu hau, widget-a argitaratzen'),
+		('wof-embed-title', 'fr', 'Diffuser ce projet en publiant le widget'),
+		('wof-embed-title', 'gl', 'Difunde este proxecto publicando o widget'),
+		('wof-embed-title', 'it', 'Publish this widget'),
+		('wof-embed-title', 'nl', 'Publiceer deze widget'),
+		('wof-embed-title', 'pl', 'Publish this widget'),
+		('wof-follow', 'ca', 'Seguir'),
+		('wof-follow', 'el', 'Follow'),
+		('wof-follow', 'en', 'Follow'),
+		('wof-follow', 'eu', 'Jarraitu'),
+		('wof-follow', 'fr', 'Continuer'),
+		('wof-follow', 'gl', 'Seguir'),
+		('wof-follow', 'it', 'Follow'),
+		('wof-follow', 'nl', 'Volg'),
+		('wof-follow', 'pl', 'Follow'),
+		('wof-here', 'ca', 'Aquí podries ser-hi tu'),
+		('wof-here', 'el', 'You could be here'),
+		('wof-here', 'en', 'You could be here'),
+		('wof-here', 'eu', 'Hemen zu egon zinateke'),
+		('wof-here', 'fr', 'Ici vous pourriez être'),
+		('wof-here', 'gl', 'Aquí poderías estar ti'),
+		('wof-here', 'it', 'You could be here'),
+		('wof-here', 'nl', 'Je zou hier kunnen zijn'),
+		('wof-here', 'pl', 'You could be here'),
+		('wof-join-comunity', 'ca', 'Uneix-te al grup de persones que estan ajudant a fer possible el projecte!'),
+		('wof-join-comunity', 'el', 'Join the group of people who are making this project possible!'),
+		('wof-join-comunity', 'en', 'Join the group of people who are making this project possible!'),
+		('wof-join-comunity', 'eu', 'Proiektua babesten eta errealitatea bihurtzen dutenen pertsona taldean sartu zaitez!'),
+		('wof-join-comunity', 'fr', 'Rejoins le groupe de personnes qui contribuent à rendre ce projet possible! '),
+		('wof-join-comunity', 'gl', 'Únete ó grupo de persoas que están axudando a facer posible o proxecto!'),
+		('wof-join-comunity', 'it', 'Join the group of people who are making this project possible!'),
+		('wof-join-comunity', 'nl', 'Voeg je bij de groep mensen die dit project mogelijk maken!'),
+		('wof-join-comunity', 'pl', 'Join the group of people who are making this project possible!'),
+		('wof-join-group', 'ca', 'Uneix-te al grup de persones que estan ajudant a fer possible el projecte!'),
+		('wof-join-group', 'el', 'Join the group of people who are making this project possible!'),
+		('wof-join-group', 'en', 'Join the group of people who are making this project possible!'),
+		('wof-join-group', 'eu', 'Proiektua babesten eta errealitatea bihurtzen dutenen pertsona taldean sartu zaitez!'),
+		('wof-join-group', 'fr', 'Rejoins le groupe de personnes qui contribuent à rendre ce projet possible! '),
+		('wof-join-group', 'gl', 'Únete ó grupo de persoas que están axudando a facer posible o proxecto!'),
+		('wof-join-group', 'it', 'Join the group of people who are making this project possible!'),
+		('wof-join-group', 'nl', 'Voeg je bij de groep mensen die dit project mogelijk maken!'),
+		('wof-join-group', 'pl', 'Join the group of people who are making this project possible!'),
+		('wof-support', 'ca', 'Recolza-ho'),
+		('wof-support', 'el', 'Back it up'),
+		('wof-support', 'en', 'Back it up'),
+		('wof-support', 'eu', 'Babestu'),
+		('wof-support', 'fr', 'Soutenir'),
+		('wof-support', 'gl', 'Apoiar'),
+		('wof-support', 'it', 'Back it up'),
+		('wof-support', 'nl', 'Sla het op'),
+		('wof-support', 'pl', 'Back it up'),
+		('wof-title', 'ca', 'MUR DE RECOLZAMENTS'),
+		('wof-title', 'el', 'WALL OF BACKERS'),
+		('wof-title', 'en', 'WALL OF BACKERS'),
+		('wof-title', 'eu', 'BABESTEN DUTENEN HORMA'),
+		('wof-title', 'fr', 'Tableau des cofinanceurs'),
+		('wof-title', 'gl', 'MURO DE APOIOS'),
+		('wof-title', 'it', 'WALL OF BACKERS'),
+		('wof-title', 'nl', 'WALL OF BACKERS'),
+		('wof-title', 'pl', 'WALL OF BACKERS');
+	○
+		('validate-user-field-webs', 'pl', 'Enter the address of your website to help us evaluate your project and determine if it is suitable for publishing on SiteName.');
+
+/locale/en.po
+    実行
+        更新して保存して終了。
+
+/locale/ca/LC_MESSAGES/ca.po
+    実行
+        更新して保存して終了。
+
+/locale/en_GB/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/eu/LC_MESSAGES/eu.po
+    実行
+        更新して保存して終了。
+
+/locale/fr/fr.po
+    実行
+        更新して保存して終了。
+
+/locale/ja_JP/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/nl_NL/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
+
+/locale/pt_BR/LC_MESSAGES/messages.po
+    実行
+        更新して保存して終了。
 
 ────────────────────────────────────────────────────────────
 
