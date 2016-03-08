@@ -37,7 +37,6 @@ REPLACE INTO `acl` VALUES(36, '*', 'public', '*', '/user/edit/*', 0, '2011-05-18
 REPLACE INTO `acl` VALUES(37, '*', 'superadmin', '*', '/cron/*', 1, '2011-05-26 23:04:02');
 REPLACE INTO `acl` VALUES(38, '*', '*', '*', '/widget/*', 1, '2011-06-10 09:30:39');
 REPLACE INTO `acl` VALUES(39, '*', '*', '*', '/user/recover/*', 1, '2011-06-12 20:31:36');
-REPLACE INTO `acl` VALUES(40, '*', '*', '*', '/news/*', 1, '2011-06-19 11:36:34');
 REPLACE INTO `acl` VALUES(41, '*', 'user', '*', '/community/*', 1, '2011-06-19 11:49:36');
 REPLACE INTO `acl` VALUES(42, '*', '*', '*', '/ws/*', 1, '2011-06-20 21:18:15');
 REPLACE INTO `acl` VALUES(43, '*', 'checker', '*', '/review/*', 1, '2011-06-21 15:18:51');

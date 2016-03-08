@@ -718,7 +718,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-messa
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-message_success', 'Mensaje enviado correctamente', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-months', 'meses', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-more_info', '+ info', NULL, 'general');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-news', 'Noticias:', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-new_project', 'Proyecto nuevo', NULL, 'project');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-no', 'No', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-onrun_mark', 'En marcha!', NULL, 'widget');

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 17:10+0900\n"
-"PO-Revision-Date: 2016-03-08 17:10+0900\n"
+"POT-Creation-Date: 2016-03-08 21:58+0900\n"
+"PO-Revision-Date: 2016-03-08 21:58+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -24,18 +24,17 @@ msgstr "支援を管理"
 #: controller/admin.php:61 controller/admin.php:76 controller/admin.php:85
 #: controller/admin.php:95 controller/admin.php:105 controller/admin.php:121
 #: controller/admin.php:130 controller/admin.php:140 controller/admin.php:149
-#: controller/admin.php:158 controller/admin.php:167 controller/admin.php:182
-#: controller/admin.php:191 controller/admin.php:197 controller/admin.php:212
-#: controller/admin.php:221 controller/admin.php:230 controller/admin.php:239
-#: controller/admin.php:251 controller/translate.php:403
-#: controller/translate.php:410 controller/translate.php:417
-#: controller/translate.php:424 controller/translate.php:431
-#: controller/translate.php:438 controller/translate.php:445
-#: controller/translate.php:452 controller/translate.php:459
-#: controller/translate.php:466 controller/translate.php:478
-#: controller/translate.php:485 controller/translate.php:492
-#: controller/translate.php:504 controller/translate.php:511
-#: controller/translate.php:518
+#: controller/admin.php:158 controller/admin.php:173 controller/admin.php:182
+#: controller/admin.php:188 controller/admin.php:203 controller/admin.php:212
+#: controller/admin.php:221 controller/admin.php:230 controller/admin.php:242
+#: controller/translate.php:403 controller/translate.php:410
+#: controller/translate.php:417 controller/translate.php:424
+#: controller/translate.php:431 controller/translate.php:438
+#: controller/translate.php:445 controller/translate.php:452
+#: controller/translate.php:459 controller/translate.php:466
+#: controller/translate.php:478 controller/translate.php:485
+#: controller/translate.php:497 controller/translate.php:504
+#: controller/translate.php:511
 msgid "Listando"
 msgstr "リスト"
 
@@ -73,7 +72,7 @@ msgid "Viendo logs"
 msgstr "閲覧ログ"
 
 #: controller/admin.php:74 controller/translate.php:401
-#: controller/translate.php:509 library/content.php:42
+#: controller/translate.php:502 library/content.php:41
 msgid "Banners"
 msgstr "バナー"
 
@@ -178,209 +177,193 @@ msgstr "ライセンスを編集する"
 msgid "Traduciendo Licencia"
 msgstr "ライセンスを翻訳する"
 
-#: controller/admin.php:147 controller/translate.php:476
-msgid "Micronoticias"
-msgstr "ミニニュース"
-
-#: controller/admin.php:150
-msgid "Nueva Micronoticia"
-msgstr "新しいミニニュース"
-
-#: controller/admin.php:151
-msgid "Editando Micronoticia"
-msgstr "ミニニュースを編集する"
-
-#: controller/admin.php:152 controller/translate.php:479
-msgid "Traduciendo Micronoticia"
-msgstr "ミニニュースを翻訳する"
-
-#: controller/admin.php:156
+#: controller/admin.php:147
 msgid "Page"
 msgstr "固定ページ"
 
-#: controller/admin.php:159
+#: controller/admin.php:150
 msgid "Editando Página"
 msgstr "ページを編集する"
 
-#: controller/admin.php:160
+#: controller/admin.php:151
 msgid "Nueva Página"
 msgstr "新しい質問"
 
-#: controller/admin.php:161
+#: controller/admin.php:152
 msgid "Traduciendo Página"
 msgstr "ページを翻訳する"
 
-#: controller/admin.php:165
+#: controller/admin.php:156
 msgid "Gestión de proyectos"
 msgstr "プロジェクト管理"
 
-#: controller/admin.php:168
+#: controller/admin.php:159
 msgid "Fechas del proyecto"
 msgstr "プロジェクト日付"
 
-#: controller/admin.php:169
+#: controller/admin.php:160
 msgid "Cuentas del proyecto"
 msgstr "プロジェクトアカウント"
 
-#: controller/admin.php:170
+#: controller/admin.php:161
 msgid "Imágenes del proyecto"
 msgstr "プロジェクト画像"
 
-#: controller/admin.php:171
+#: controller/admin.php:162
 msgid "Moviendo a otro Nodo el proyecto"
 msgstr "プロジェクトを別ノードに移動する"
 
-#: controller/admin.php:172
+#: controller/admin.php:163
 msgid "Asignando a una Convocatoria el proyecto"
 msgstr "プロジェクトにスポンサーを割り当てる"
 
-#: controller/admin.php:173
+#: controller/admin.php:164
 msgid "Informe Financiero del proyecto"
 msgstr "プロジェクトの財務レポート"
 
-#: controller/admin.php:174
+#: controller/admin.php:165
 msgid "Cambiando Id de proyecto"
 msgstr "プロジェクトのIDを変更する"
 
-#: controller/admin.php:175 view/admin/projects/list.html.php:198
+#: controller/admin.php:166 view/admin/projects/list.html.php:198
 msgid "Organizar imágenes"
 msgstr "画像位置を編集"
 
-#: controller/admin.php:180 controller/translate.php:483 library/content.php:36
+#: controller/admin.php:171 controller/translate.php:476 library/content.php:36
 #: model/home.php:43
 msgid "Proyectos destacados"
 msgstr "ピックアッププロジェクト"
 
-#: controller/admin.php:183
+#: controller/admin.php:174
 msgid "Nuevo Destacado"
 msgstr "新規ピックアップ"
 
-#: controller/admin.php:184
+#: controller/admin.php:175
 msgid "Editando Destacado"
 msgstr "ピックアップの編集"
 
-#: controller/admin.php:185 controller/translate.php:486
+#: controller/admin.php:176 controller/translate.php:479
 msgid "Traduciendo Destacado"
 msgstr "ピックアップの翻訳"
 
-#: controller/admin.php:189 model/home.php:45
+#: controller/admin.php:180 model/home.php:45
 msgid "Actividad reciente"
 msgstr "最新のアクティビティ"
 
-#: controller/admin.php:195
+#: controller/admin.php:186
 msgid "Remuneration"
 msgstr "お礼の管理"
 
-#: controller/admin.php:198
+#: controller/admin.php:189
 msgid "Gestionando recompensa"
 msgstr "ユーザー管理"
 
-#: controller/admin.php:203 view/admin/users/manage.html.php:113
+#: controller/admin.php:194 view/admin/users/manage.html.php:113
 msgid "Historial envíos"
 msgstr "メール送信履歴"
 
-#: controller/admin.php:205
+#: controller/admin.php:196
 msgid "Emails enviados"
 msgstr "送信済みメールアドレス"
 
-#: controller/admin.php:210 controller/translate.php:450
+#: controller/admin.php:201 controller/translate.php:450
 msgid "Plantillas de email"
 msgstr "メールテンプレート"
 
-#: controller/admin.php:213
+#: controller/admin.php:204
 msgid "Editando Plantilla"
 msgstr "テンプレートを編集する"
 
-#: controller/admin.php:214 controller/translate.php:453
+#: controller/admin.php:205 controller/translate.php:453
 msgid "Traduciendo Plantilla"
 msgstr "テンプレートを翻訳する"
 
-#: controller/admin.php:219 controller/translate.php:408
+#: controller/admin.php:210 controller/translate.php:408
 msgid "Textos interficie"
 msgstr "テキスト"
 
-#: controller/admin.php:222
+#: controller/admin.php:213
 msgid "Editando Original"
 msgstr "オリジナルを編集する"
 
-#: controller/admin.php:223 controller/translate.php:411
+#: controller/admin.php:214 controller/translate.php:411
 msgid "Traduciendo Texto"
 msgstr "テキストを翻訳する"
 
-#: controller/admin.php:228
+#: controller/admin.php:219
 msgid "Traducciones de proyectos"
 msgstr "翻訳"
 
-#: controller/admin.php:231
+#: controller/admin.php:222
 msgid "Habilitando traducción"
 msgstr "翻訳を有効化"
 
-#: controller/admin.php:232
+#: controller/admin.php:223
 msgid "Asignando traducción"
 msgstr "翻訳を割当"
 
-#: controller/admin.php:237
+#: controller/admin.php:228
 msgid "Gestión de usuarios"
 msgstr "ユーザー管理"
 
-#: controller/admin.php:240
+#: controller/admin.php:231
 msgid "Creando Usuario"
 msgstr "ユーザー作成"
 
-#: controller/admin.php:241
+#: controller/admin.php:232
 msgid "Editando Usuario"
 msgstr "ユーザー編集"
 
-#: controller/admin.php:242
+#: controller/admin.php:233
 msgid "Gestionando Usuario"
 msgstr "ユーザー管理"
 
-#: controller/admin.php:243
+#: controller/admin.php:234
 msgid "Suplantando al Usuario"
 msgstr "成り済ましユーザー"
 
-#: controller/admin.php:244
+#: controller/admin.php:235
 msgid "Moviendo a otro Nodo el usuario "
 msgstr "ユーザーを別ノードに移動する"
 
-#: controller/admin.php:249
+#: controller/admin.php:240
 msgid "Niveles de meritocracia"
 msgstr "支援額ランク"
 
-#: controller/admin.php:252
+#: controller/admin.php:243
 msgid "Editando Nivel"
 msgstr "レベルを編集"
 
-#: controller/admin.php:296 view/admin/users/list.html.php:229
+#: controller/admin.php:287 view/admin/users/list.html.php:229
 msgid "Admin"
 msgstr "管理者"
 
-#: controller/admin.php:476
+#: controller/admin.php:467
 msgid "Contenidos"
 msgstr "コンテンツ"
 
-#: controller/admin.php:477 controller/admin/users.php:460 model/home.php:52
+#: controller/admin.php:468 controller/admin/users.php:460 model/home.php:52
 #: view/admin/index.html.php:72
 msgid "Proyectos"
 msgstr "プロジェクト"
 
-#: controller/admin.php:478 view/admin/index.html.php:73
+#: controller/admin.php:469 view/admin/index.html.php:73
 msgid "Usuarios"
 msgstr "ユーザー"
 
-#: controller/admin.php:479 controller/translate.php:473 library/text.php:329
+#: controller/admin.php:470 controller/translate.php:473 library/text.php:329
 msgid "Portada"
 msgstr "表紙"
 
-#: controller/admin.php:480
+#: controller/admin.php:471
 msgid "Textos y Traducciones"
 msgstr "コンテンツ/マスタ管理"
 
-#: controller/admin.php:481
+#: controller/admin.php:472
 msgid "Servicios"
 msgstr "サービス"
 
-#: controller/admin.php:482
+#: controller/admin.php:473
 msgid "Invest"
 msgstr "支援"
 
@@ -458,9 +441,9 @@ msgid "Categoría"
 msgstr "カテゴリー名"
 
 #: controller/admin/categories.php:69 controller/admin/skills.php:52
-#: controller/translate.php:502 library/content.php:56 library/content.php:60
-#: library/content.php:64 library/content.php:68 library/content.php:72
-#: library/content.php:77 library/content.php:111
+#: controller/translate.php:495 library/content.php:55 library/content.php:59
+#: library/content.php:63 library/content.php:67 library/content.php:71
+#: library/content.php:76 library/content.php:106
 #: view/admin/pages/list.html.php:37 view/admin/promote/edit.html.php:56
 #: view/admin/templates/list.html.php:62
 msgid "Descripción"
@@ -611,9 +594,9 @@ msgstr "メールを送信できませんでした。"
 msgid "a la dirección"
 msgstr "セクションがありません"
 
-#: controller/admin/projects.php:421 library/content.php:67
-#: library/content.php:71 library/content.php:76 library/content.php:89
-#: library/content.php:95 library/content.php:113
+#: controller/admin/projects.php:421 library/content.php:66
+#: library/content.php:70 library/content.php:75 library/content.php:84
+#: library/content.php:90 library/content.php:108
 #: view/admin/icons/list.html.php:45 view/admin/licenses/edit.html.php:39
 msgid "Nombre"
 msgstr "ライセンス名"
@@ -956,32 +939,32 @@ msgstr "支援額ランク"
 msgid "Traduciendo Nivel"
 msgstr "タイプの翻訳"
 
-#: controller/translate.php:490
+#: controller/translate.php:483
 msgid "Proyectos recomendados"
 msgstr "特集プロジェクト"
 
-#: controller/translate.php:493
+#: controller/translate.php:486
 msgid "Traduciendo recomendado"
 msgstr "特集の翻訳"
 
-#: controller/translate.php:499 view/admin/projects/list.html.php:128
+#: controller/translate.php:492 view/admin/projects/list.html.php:128
 #: view/admin/tasks/list.html.php:61 view/admin/users/manage.html.php:47
 msgid "Nodo"
 msgstr "ノード"
 
-#: controller/translate.php:505
+#: controller/translate.php:498
 msgid "Traduciendo"
 msgstr "タグの翻訳"
 
-#: controller/translate.php:512
+#: controller/translate.php:505
 msgid "Traduciendo banner"
 msgstr "バナーを翻訳"
 
-#: controller/translate.php:516
+#: controller/translate.php:509
 msgid "Páginas institucionales"
 msgstr "組織のページ"
 
-#: controller/translate.php:519
+#: controller/translate.php:512
 msgid "Traduciendo página"
 msgstr "ページを翻訳する"
 
@@ -1056,72 +1039,64 @@ msgstr "お礼のタイプ"
 msgid "Categorías"
 msgstr "カテゴリー"
 
-#: library/content.php:41
-msgid "Noticias"
-msgstr "News"
-
-#: library/content.php:43
+#: library/content.php:42
 msgid "Tags"
 msgstr "タグ"
 
-#: library/content.php:44
+#: library/content.php:43
 msgid "Criterios de evaluación"
 msgstr "評価基準"
 
-#: library/content.php:45
+#: library/content.php:44
 msgid "Meritocrácia"
 msgstr "能力主義"
 
-#: library/content.php:46
+#: library/content.php:45
 msgid "Plantillas emails automáticos"
 msgstr "Email templates"
 
-#: library/content.php:47
+#: library/content.php:46
 msgid "Ideas de about"
 msgstr "Ideas about"
 
-#: library/content.php:55 library/content.php:59 library/content.php:63
-#: library/content.php:80 library/content.php:84 library/content.php:92
-#: library/content.php:98 library/content.php:102 library/content.php:116
+#: library/content.php:54 library/content.php:58 library/content.php:62
+#: library/content.php:79 library/content.php:87 library/content.php:93
+#: library/content.php:97 library/content.php:111
 #: view/admin/criteria/list.html.php:46 view/admin/promote/edit.html.php:51
 #: view/admin/templates/edit.html.php:30
 msgid "Título"
 msgstr "タイトル"
 
-#: library/content.php:81
-msgid "Entradilla"
-msgstr "抜粋"
-
-#: library/content.php:85
+#: library/content.php:80
 msgid "Texto entrada"
 msgstr "テキスト入力"
 
-#: library/content.php:86 library/content.php:104
+#: library/content.php:81 library/content.php:99
 msgid "Leyenda media"
 msgstr "メディアの説明文"
 
-#: library/content.php:99 library/content.php:103
+#: library/content.php:94 library/content.php:98
 #: view/admin/templates/edit.html.php:35
 msgid "Contenido"
 msgstr "内容"
 
-#: library/content.php:112 view/admin/projects/images.html.php:89
+#: library/content.php:107 view/admin/projects/images.html.php:89
 msgid "Enlace"
 msgstr "Link"
 
-#: library/content.php:114
+#: library/content.php:109
 msgid "Texto extenso"
 msgstr "追記"
 
-#: library/content.php:115
+#: library/content.php:110
 msgid "Leyenda"
 msgstr "説明文"
 
-#: library/content.php:302 library/worth.php:100
+#: library/content.php:297 library/worth.php:100
 msgid "Sin datos"
 msgstr "データがありません"
 
-#: library/content.php:306
+#: library/content.php:301
 #, fuzzy
 msgid ""
 "No se peude traducir el contenido original, seleccionar un idioma para "
@@ -1130,19 +1105,19 @@ msgstr ""
 "あなたは、翻訳する言語を選択して、オリジナルのコンテンツを翻訳することはでき"
 "ません"
 
-#: library/content.php:332 library/evaluation.php:215
+#: library/content.php:327 library/evaluation.php:215
 #: library/evaluation.php:278 library/page.php:208 library/page.php:239
 #: library/page.php:274 library/template.php:180 library/worth.php:119
 msgid "Ha fallado "
 msgstr "通知失敗"
 
-#: library/content.php:332 library/evaluation.php:215
+#: library/content.php:327 library/evaluation.php:215
 #: library/evaluation.php:278 library/page.php:208 library/page.php:239
 #: library/page.php:274 library/template.php:180 library/worth.php:119
 msgid "con"
 msgstr "と"
 
-#: library/content.php:337
+#: library/content.php:332
 msgid "Error sql al grabar el contenido multiidioma. "
 msgstr "SQLエラーが発生しました。"
 
@@ -1195,7 +1170,7 @@ msgstr "送金"
 msgid "Sistema"
 msgstr "システム"
 
-#: library/feed.php:260 library/feed.php:301 library/feed.php:385
+#: library/feed.php:258 library/feed.php:299 library/feed.php:383
 #: model/banner.php:226 model/category.php:184 model/criteria.php:126
 #: model/icon.php:180 model/image.php:126 model/image.php:189
 #: model/info.php:187 model/invest.php:404 model/license.php:168
@@ -3430,13 +3405,31 @@ msgstr "IMPOSIBLE!!! 記録が見つかりません"
 msgid "Gestionar retornos"
 msgstr "支援の管理"
 
-#: view/dashboard/projects/rewards.html.php:238
+#: view/dashboard/projects/rewards.html.php:237
 msgid "Send it to reward seekers"
 msgstr "お礼希望した支援者に送信"
 
 #: view/dashboard/projects/selector.html.php:36
 msgid "not yet creat project"
 msgstr "作成済みのプロジェクトはまだありません"
+
+#~ msgid "Micronoticias"
+#~ msgstr "ミニニュース"
+
+#~ msgid "Nueva Micronoticia"
+#~ msgstr "新しいミニニュース"
+
+#~ msgid "Editando Micronoticia"
+#~ msgstr "ミニニュースを編集する"
+
+#~ msgid "Traduciendo Micronoticia"
+#~ msgstr "ミニニュースを翻訳する"
+
+#~ msgid "Noticias"
+#~ msgstr "News"
+
+#~ msgid "Entradilla"
+#~ msgstr "抜粋"
 
 #~ msgid "Wall of friends"
 #~ msgstr "友達のウォール"

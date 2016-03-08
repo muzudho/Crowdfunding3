@@ -53,7 +53,7 @@ include 'view/header.html.php';
                         <legend><?php echo $section['label'] ?></legend>
                         <ul>
                             <?php foreach ($section['options'] as $oCode=>$option) :
-                                if ($oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
+                                if ($oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'banners' && !empty($option['label'])):
                                 echo '<li><a href="/admin/'.$oCode.'">'.$option['label'].'</a></li>';
                                 endif;
                             endforeach; ?>

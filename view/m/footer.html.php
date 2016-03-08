@@ -50,7 +50,6 @@ jQuery(document).ready(function($) {
                     <li><a href="<?= SITE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
                     <li><a href="<?= SITE_URL ?>/user_guide/">ユーザーガイド</a></li>
                     <li><a href="<?= SITE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
-                    <li><a href="<?= SITE_URL ?>/mailnews/">メルマガ登録</a></li>
                     <li><a href="<?= SITE_URL ?>/contact/">お問い合わせ</a></li>
                 </ul>
             </div>

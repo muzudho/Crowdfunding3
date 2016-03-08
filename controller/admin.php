@@ -143,15 +143,6 @@ namespace Goteo\Controller {
                     ),
                     'filters' => array('group' => '', 'icon' => '')
                 ),
-                'news' => array(
-                    'label' => Text::_('Micronoticias'),
-                    'actions' => array(
-                        'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'add' => array('label' => Text::_('Nueva Micronoticia'), 'item' => false),
-                        'edit' => array('label' => Text::_('Editando Micronoticia'), 'item' => true),
-                        'translate' => array('label' => Text::_('Traduciendo Micronoticia'), 'item' => true)
-                    )
-            ),
                 'pages' => array(
                     'label' => Text::_('Page'),
                     'actions' => array(
@@ -575,7 +566,6 @@ namespace Goteo\Controller {
                         'home' => array(
                             'label' => $labels['home'],
                             'options' => array(
-                                'news' => $options['news'],
                                 'banners' => $options['banners'],
                                 'promote' => $options['promote'],
                                 'footer' => $options['footer'],

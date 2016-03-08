@@ -18,24 +18,12 @@
  *
  */
 
-use Goteo\Library\Text,
-    Goteo\Model\News; 
-
-$highlights = News::getAll(true);
+use Goteo\Library\Text;
 
 $see_more = Text::get('regular-see_more');
 
 ?>
 <div id="highlights">
-    <!---
-    <h2><a href="/news"><?php //echo Text::get('regular-news'); ?></a></h2>
-
-    <ul>
-        <?php /*foreach ($highlights as $i => $hl) : ?>
-        <li><?php echo htmlspecialchars($hl->title) ?> <?php if (!empty ($hl->url)) : ?><a href="<?php echo $hl->url; ?>" target="_blank"><?php echo $see_more; ?></a><?php endif; ?></li>
-        <?php endforeach */?>
-    </ul>
-    -->
     <script type="text/javascript">
         
     jQuery(document).ready(function ($) {

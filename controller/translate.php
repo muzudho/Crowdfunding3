@@ -58,7 +58,7 @@ namespace Goteo\Controller {
             }
 
             // para el breadcrumbs segun el contenido
-            $section = ($table == 'news' || $table == 'promote') ? 'home' : 'contents';
+            $section = ($table == 'promote') ? 'home' : 'contents';
 
             // muy especial para traducción de nodo
             if ($table == 'node') {
@@ -472,13 +472,6 @@ namespace Goteo\Controller {
                 'home' => array(
                     'label'   => Text::_('Portada'),
                     'options' => array (
-                        'news' => array(
-                            'label' => Text::_('Micronoticias'),
-                            'actions' => array(
-                                'list' => array('label' => Text::_('Listando'), 'item' => false),
-                                'edit' => array('label' => Text::_('Traduciendo Micronoticia'), 'item' => true)
-                            )
-                        ),
                         'promote' => array(
                             'label' => Text::_('Proyectos destacados'),
                             'actions' => array(

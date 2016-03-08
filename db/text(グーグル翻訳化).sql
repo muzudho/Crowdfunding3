@@ -708,7 +708,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'regular-message_fail', 'ja', 'メッ
 INSERT INTO text (id, lang, text) VALUES ( 'regular-message_success', 'ja', 'メッセージ正しく送信' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-months', 'ja', 'ヶ月' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-more_info', 'ja', 'プラスドール情報' );
-INSERT INTO text (id, lang, text) VALUES ( 'regular-news', 'ja', 'ニュース' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-new_project', 'ja', '新たなプロジェクト' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-no', 'ja', 'ノー' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-onrun_mark', 'ja', '進行中！' );

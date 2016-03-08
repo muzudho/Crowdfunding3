@@ -38,7 +38,6 @@ namespace Goteo\Library {
                 'icon'      => Text::_('Tipos de retorno/recompensa'),
                 'license'   => Text::_('Licencias'),
                 'category'  => Text::_('Categorías'),
-                'news'      => Text::_('Noticias'),
                 'banner'    => Text::_('Banners'),
                 'tag'       => Text::_('Tags'),
                 'criteria'  => Text::_('Criterios de evaluación'),
@@ -75,10 +74,6 @@ namespace Goteo\Library {
                 'category' => array (
                     'name' => Text::_('Nombre'),
                     'description' => Text::_('Descripción')
-                ),
-                'news' => array (
-                    'title' => Text::_('Título'),
-                    'description' => Text::_('Entradilla')
                 ),
                 'post' => array (
                     'title' => Text::_('Título'),
