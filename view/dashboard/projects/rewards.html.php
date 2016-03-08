@@ -206,7 +206,6 @@ switch ($order) {
                         <div class="left">
                             <span class="status"><?php echo $cumplida ? '<span class="cumplida">' . Text::get('invests-list-accomplished') . '</span>' : '<span class="pendiente">' . Text::get('invests-list-pending') . '</span>'; ?></span>
                             <span class="profile"><a href="/user/profile/<?php echo $investData->user->id ?>" target="_blank"><?php echo Text::get('profile-widget-button'); ?></a> </span>
-                            <span class="contact"><a href="/user/profile/<?php echo $investData->user->id ?>/message" target="_blank"><?php echo Text::get('regular-send_message'); ?></a></span>
                         </div>
 
                     </div>

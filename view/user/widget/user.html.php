@@ -68,8 +68,6 @@ $user->about = nl2br(Text::urlink($user->about));
                 </ul>
             </dd>
             <?php endif ?>
-            <dt class="message"><?php echo Text::get('regular-send_message')?></dt>
-            <dd class="message"><a href="/user/profile/<?php echo htmlspecialchars($user->id) ?>/message"><?php echo Text::get('regular-send_message')?></a></dd>
         </dl>
 
         <a class="button aqua profile" href="/user/<?php echo $user->id; ?>"><?php echo Text::get('profile-widget-button'); ?></a>

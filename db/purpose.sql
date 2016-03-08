@@ -736,7 +736,6 @@ INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-see_a
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-see_blog', 'Blog', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-see_details', 'Ver detalles', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-see_more', 'Ver más', NULL, 'general');
-INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-send_message', 'Enviar mensaje', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-share-facebook', 'En Facebook', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-share-rss', 'RSS/BLOG', NULL, 'general');
 INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-share-twitter', 'Síguenos en Twitter', NULL, 'general');

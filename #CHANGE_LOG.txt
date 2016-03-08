@@ -8230,4 +8230,118 @@
         更新して保存して終了。
 
 ────────────────────────────────────────────────────────────
+2016-03-08 17:56
+
+	解説
+		『メッセージを送る』機能の削除。
+		（'regular-send_message'をキーワードに検索）
+
+/view/community/sharemates.html.php 82
+	×
+                                <span class="contact"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>/message"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/dashboard/projects/rewards.html.php 209
+	×
+                            <span class="contact"><a href="/user/profile/<?php echo $investData->user->id ?>/message" target="_blank"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/m/community/sharemates.html.php 82
+	×
+                                <span class="contact"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>/message"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/m/dashboard/projects/rewards.html.php 196
+	×
+                        <span class="contact"><a href="/user/profile/<?php echo $investData->user->id ?>/message" target="_blank"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/m/user/sharemates.html.php 116
+	×
+                                <span class="contact"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>/message"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/m/user/widget/about.html.php 94-99
+	×
+	    <?php if (!empty($this['projects'])): ?>
+	     <div class="message">
+	         <p><a href="/user/profile/<?php echo $user->id ?>/message"><?php echo Text::get('regular-send_message')?></a></p>
+	     </div>
+	    <?php endif ?>
+
+/view/m/user/widget/user.html.php 61-74
+	×
+            <?/*
+            <?php if (!empty($user->webs)): ?>
+            <dt class="links"><?php echo Text::get('profile-webs-header'); ?></dt>
+            <dd class="links">
+                <ul>
+                    <?php foreach ($user->webs as $link): ?>
+                    <li><a href="<?php echo htmlspecialchars($link->url) ?>"><?php echo htmlspecialchars($link->url) ?></a></li>
+                    <?php endforeach ?>
+                </ul>
+            </dd>
+            <?php endif ?>
+            <dt class="message"><?php echo Text::get('regular-send_message')?></dt>
+            <dd class="message"><a href="/user/profile/<?php echo htmlspecialchars($user->id) ?>/message"><?php echo Text::get('regular-send_message')?></a></dd>
+            */?>
+	○
+		※削除。
+
+/view/user/sharemates.html.php 117
+	×
+                                <span class="contact"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>/message"><?php echo Text::get('regular-send_message'); ?></a></span>
+	○
+		※削除。
+
+/view/user/widget/about.html.php 94-99
+	×
+	    <?php if (!empty($this['projects'])): ?>
+	     <div class="message">
+	         <p><a href="/user/profile/<?php echo $user->id ?>/message"><?php echo Text::get('regular-send_message')?></a></p>
+	     </div>
+	    <?php endif ?>
+	○
+		※削除。
+
+/view/user/widget/user.html.php 71-72
+	×
+            <dt class="message"><?php echo Text::get('regular-send_message')?></dt>
+            <dd class="message"><a href="/user/profile/<?php echo htmlspecialchars($user->id) ?>/message"><?php echo Text::get('regular-send_message')?></a></dd>
+	○
+		※削除。
+
+/db/purpose.sql 739
+	×
+		INSERT INTO `purpose` (`text`, `purpose`, `html`, `group`) VALUES('regular-send_message', 'Enviar mensaje', NULL, 'general');
+	○
+		※削除。
+
+/db/text(グーグル翻訳化).sql 729
+	×
+		INSERT INTO text (id, lang, text) VALUES ( 'regular-send_message', 'ja', 'メッセージを送る' );
+	○
+		※削除。
+
+/db/texts.sql 5351-5360
+	×
+		('regular-send_message', 'ca', 'Enviar missatge'),
+		('regular-send_message', 'el', 'Send message'),
+		('regular-send_message', 'en', 'Send message'),
+		('regular-send_message', 'eu', 'Mezua bidali'),
+		('regular-send_message', 'fr', 'Envoyez le message.'),
+		('regular-send_message', 'gl', 'Enviar mensaxe'),
+		('regular-send_message', 'it', 'Send message'),
+		('regular-send_message', 'nl', 'Stuur een bericht'),
+		('regular-send_message', 'pl', 'Send message'),
+		('regular-send_message', 'pt', 'Enviar mensagem'),
+	○
+		※削除。
+
+────────────────────────────────────────────────────────────
 

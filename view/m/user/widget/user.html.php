@@ -58,20 +58,6 @@ $user->about = nl2br(Text::urlink($user->about));
             <dd class="location"><?php echo Text::GmapsLink($user->location); ?></dd>
             <?php endif ?>
 
-            <?/*
-            <?php if (!empty($user->webs)): ?>
-            <dt class="links"><?php echo Text::get('profile-webs-header'); ?></dt>
-            <dd class="links">
-                <ul>
-                    <?php foreach ($user->webs as $link): ?>
-                    <li><a href="<?php echo htmlspecialchars($link->url) ?>"><?php echo htmlspecialchars($link->url) ?></a></li>
-                    <?php endforeach ?>
-                </ul>
-            </dd>
-            <?php endif ?>
-            <dt class="message"><?php echo Text::get('regular-send_message')?></dt>
-            <dd class="message"><a href="/user/profile/<?php echo htmlspecialchars($user->id) ?>/message"><?php echo Text::get('regular-send_message')?></a></dd>
-            */?>
             <dt>プロジェクトを見る</dt>
             <dd class="profile"><a href="/user/<?php echo $user->id; ?>"><?php echo Text::get('profile-widget-button'); ?></a></dd>
         </dl>

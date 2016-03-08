@@ -726,7 +726,6 @@ INSERT INTO text (id, lang, text) VALUES ( 'regular-see_all', 'ja', 'すべて�
 INSERT INTO text (id, lang, text) VALUES ( 'regular-see_blog', 'ja', 'ブログ' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-see_details', 'ja', '詳細を参照してください。' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-see_more', 'ja', '続きを見る' );
-INSERT INTO text (id, lang, text) VALUES ( 'regular-send_message', 'ja', 'メッセージを送る' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-share-facebook', 'ja', 'Facebookのサイト名' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-share-rss', 'ja', 'RSS/ブログ' );
 INSERT INTO text (id, lang, text) VALUES ( 'regular-share-twitter', 'ja', 'Twitterでフォローします' );
