@@ -8915,3 +8915,15 @@
 		※削除。
 
 ────────────────────────────────────────────────────────────
+2016-03-09 00:34
+
+	解説
+		「'profile-matched_projects-header'」の日本語翻訳を追加。
+
+	実行
+		INSERT INTO `purpose` (`text`, `purpose`, `group`) VALUES ('profile-matched_projects-header', 'Proyectos coincidentes', 'public_profile');
+		INSERT INTO `text` (`id`, `lang`, `text`) VALUES ('profile-matched_projects-header', 'ja', 'マッチしたプロジェクト');
+
+────────────────────────────────────────────────────────────
+
+
